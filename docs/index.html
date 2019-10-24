@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>JumpStart Guides</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description" />
+    <meta name="description" content="JumpStart Guides" />
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
@@ -14,14 +14,33 @@
   </head>
   <body>
     <div id="app"></div>
+    <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+    <script defer src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script defer src="https://unpkg.com/docsify-copy-code@2"></script>
+    <script defer src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+    <script defer src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
     <script>
+      const documentBase =
+        "https://github.com/thoughtworks-jumpstart/guides/tree/master/docs/";
+
       window.$docsify = {
         name: "JumpStart Guides",
         repo: "https://github.com/thoughtworks-jumpstart/guides",
         loadSidebar: true,
-        subMaxLevel: 2
+        subMaxLevel: 2,
+        // plugin: search
+        search: "auto",
+        // plugin: edit-on-github
+        plugins: [
+          EditOnGithubPlugin.create(documentBase, "", "📝 Edit this page")
+        ],
+        // plugin: docsify-copy-code
+        copyCode: {
+          buttonText: "Copy",
+          errorText: "Error",
+          successText: "Copied"
+        }
       };
     </script>
-    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   </body>
 </html>
