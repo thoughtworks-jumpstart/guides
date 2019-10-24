@@ -1,5 +1,11 @@
 # JumpStart Guides
 
+JumpStart Guides uses [docsify](https://docsify.js.org/#/) to generate our guides. 
+
+The root folder of all our guides can be found in the `docs` folder.
+
+To add a page, create a new Markdown file e.g. `example.md` and update the table of content by editing the `_sidebar.md`.
+
 ## Development 
 
 Clone the repository
