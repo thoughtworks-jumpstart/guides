@@ -1,0 +1,24 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "JumpStart Documentation",
+  "main": "index.js",
+  "scripts": {
+    "start": "docsify serve docs"
+  },
+  "dependencies": {
+    "docsify-cli": "^4.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoughtworks-jumpstart/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thoughtworks-jumpstart/docs/issues"
+  },
+  "homepage": "https://github.com/thoughtworks-jumpstart/docs#readme"
+}
