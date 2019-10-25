@@ -17,10 +17,11 @@
 
   - User stories
   - Estimation
-  - DevOps
+  - Retrospective
 
 - Software Engineering Practices
 
+  - Continuous integration
   - Clean code
   - Refactoring
 
@@ -31,4 +32,4 @@
 
 - Career
 
-  - Preparing for technical interviews
+  - [Preparing for technical interviews](career/interviews.md)
