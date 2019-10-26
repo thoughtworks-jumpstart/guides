@@ -1,39 +1,38 @@
 - **Introduction**
 
-  - [About](introduction/about.md)
-  - [FAQ](introduction/faq.md)
-  - [Prerequisites and preparations](introduction/prerequisite.md)
-  - [Applying to JumpStart](introduction/application.md)
-  - [License](introduction/license.md)
-  - [Program outline](introduction/outline.md)
+  - [About](introduction/about)
+  - [FAQ](introduction/faq)
+  - [Prerequisites and preparations](introduction/prerequisite)
+  - [Applying to JumpStart](introduction/application)
+  - [License](introduction/license)
+  - [Outline](introduction/outline)
 
-- **JavaScript Fundamentals**
+- **JavaScript**
 
 - **Frontend Web Development**
 
 - **Backend Web Development**
 
-- **Agile Software Delivery**
+- **Delivering quality software**
 
-  - User stories
-  - Estimation
-  - Retrospective
-
-- **Software Engineering Practices**
-
-  - Continuous integration
-  - Clean code
-  - Refactoring
+  - [Agile software delivery](delivering-quality-software/agile)
+  - [Software engineering practices](delivering-quality-software/software-engineering)
 
 - **Computer Science**
 
-  - [Data structures](computer-science/data-structures.md)
+  - [Data structures](computer-science/data-structures)
   - Algorithms
 
 - **Career**
 
-  - [Preparing for technical interviews](career/interviews.md)
+  - [Preparing for technical interviews](career/interviews)
 
 - **Articles**
 
-  - [Contributing an article](articles/contribution.md)
+  - [Contributing an article](articles/contribution)
+
+- **Links**
+
+  - [![Website](https://icongr.am/material/web.svg?color=808080&size=16)JumpStart](https://www.thoughtworks.com/jumpstart)
+  - [![GitHub](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)GitHub](https://github.com/thoughtworks-jumpstart)
+  - [![npm](https://icongram.jgog.in/simple/npm.svg?colored&size=16)npm](https://www.npmjs.com/org/thoughtworks-jumpstart)
