@@ -35,6 +35,5 @@
   - [Preparing for technical interviews](career/interviews.md)
 
 - **Articles**
-- Hello
 
   - [Contributing an article](articles/contribution.md)
