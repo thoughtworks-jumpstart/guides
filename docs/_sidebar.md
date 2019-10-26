@@ -1,4 +1,4 @@
-- Introduction
+- **Introduction**
 
   - [About](introduction/about.md)
   - [FAQ](introduction/faq.md)
@@ -7,29 +7,34 @@
   - [License](introduction/license.md)
   - [Program outline](introduction/outline.md)
 
-- JavaScript Fundamentals
+- **JavaScript Fundamentals**
 
-- Frontend Web Development
+- **Frontend Web Development**
 
-- Backend Web Development
+- **Backend Web Development**
 
-- Agile Software Delivery
+- **Agile Software Delivery**
 
   - User stories
   - Estimation
   - Retrospective
 
-- Software Engineering Practices
+- **Software Engineering Practices**
 
   - Continuous integration
   - Clean code
   - Refactoring
 
-- Computer Science
+- **Computer Science**
 
   - [Data structures](computer-science/data-structures.md)
   - Algorithms
 
-- Career
+- **Career**
 
   - [Preparing for technical interviews](career/interviews.md)
+
+- **Articles**
+- Hello
+
+  - [Contributing an article](articles/contribution.md)
