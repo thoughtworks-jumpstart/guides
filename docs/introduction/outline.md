@@ -1,25 +1,58 @@
-# Program outline
+# Outline
 
-## Week 1 - Fundamentals
+### Week 0 - Setup
 
-## Week 2 - JavaScript
+- Setup your machine
 
-## Week 3 - React
+### Week 1 - Fundamentals
 
-## Week 4 - Frontend project
+- Introduction and admin
 
-## Week 5 - Building RESTful APIs
+### Week 2 - JavaScript
 
-## Week 6 - Securing APIs with JWT
+### Week 3 - Building frontend apps in React
 
-## Week 7 - Backend project
+### Week 4 - [Project] Frontend application development
 
-## Week 8 - Agile software delivery
+This week you will build a frontend application in React.
 
-## Week 9 - Group project
+### Week 5 - Building RESTful APIs
 
-## Week 10 - Group project
+### Week 6 - Securing APIs with JWT
 
-## Week 11 - Group project
+### Week 7 - [Project] Backend services with RESTful APIs
 
-## Week 12 - Preparing for technical interviews
+This week you will build a backend service with RESTful API endpoints that will be consumed by your frontend application.
+
+### Week 8 - Agile software delivery
+
+### Week 9 - [Project] - Software devlivery project
+
+In the next three weeks you will be working as a team with a product owner to deliver a working solution based on their requirements.
+
+- Requirements gathering
+- Converting requirements into user stories
+- Writing acceptance criteria
+- Estimating user stories
+- Showcase to product owner
+- Retrospective
+- Guest speakers
+
+### Week 10 - [Project] - Software devlivery project
+
+- Showcase to product owner
+- Retrospective
+- Guest speakers
+
+### Week 11 - [Project] - Software devlivery project
+
+- Showcase and handover to product owner
+- Retrospective
+- Guest speakers
+
+### Week 12 - Final week
+
+- Intro to data structures and algorithms
+- Preparing for technical interviews
+- Showcase your projects to prospective employers
+- Life after JumpStart
