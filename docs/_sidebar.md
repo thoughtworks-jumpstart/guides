@@ -18,10 +18,10 @@
 
 - **Backend Web Development**
 
-- **Delivering quality software**
+- **Delivering software**
 
-  - [Agile software delivery](delivering-quality-software/agile)
-  - [Software engineering practices](delivering-quality-software/software-engineering)
+  - [Agile software delivery](delivering-software/agile)
+  - [Software engineering practices](delivering-software/software-engineering)
 
 - **Computer Science**
 

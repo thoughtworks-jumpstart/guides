@@ -1,6 +1,6 @@
 # Software engineering practices
 
-## Git collaboration
+## Git for teams
 ## Continuous integration
 ## Clean code
 ## Refactoring
