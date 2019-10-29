@@ -11,7 +11,6 @@
 
   - [Machine setup](fundamentals/machine)
   - [Git basics](fundamentals/git-basics)
-  - [Katas](fundamentals/katas)
 
 - **JavaScript**
 
@@ -36,6 +35,11 @@
 - **Articles**
 
   - [Contributing an article](articles/contribution)
+
+- **Miscellaneous**
+
+  - [Katas](miscellaneous/katas)
+  - [Resources](miscellaneous/resources)
 
 - **Links**
 
