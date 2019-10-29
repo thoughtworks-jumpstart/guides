@@ -7,6 +7,12 @@
   - [License](introduction/license)
   - [Outline](introduction/outline)
 
+- **Fundamentals**
+
+  - [Machine setup](fundamentals/machine)
+  - [Git basics](fundamentals/git-basics)
+  - [Katas](fundamentals/katas)
+
 - **JavaScript**
 
 - **Frontend Web Development**
