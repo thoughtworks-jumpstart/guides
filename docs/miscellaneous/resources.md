@@ -4,8 +4,28 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ### Blogs
 
-- [DEV](https://dev.to/)
-- [Pony Foo](https://ponyfoo.com/)
+- [DEV](https://dev.to/) - a community for sharing and discovering great ideas
+- [Pony Foo](https://ponyfoo.com/) - articles on frontend application development
+- [Overreacted](https://overreacted.io/) - Personal blog of Dan Abramov
+- [Kent C. Dodds](https://kentcdodds.com/blog) - Personal blog of Kent C. Dodds
+
+### HTML
+
+- [HTML Reference](https://htmlreference.io/) - HTML reference
+
+### CSS
+
+- [CSS Diner](https://flukeout.github.io/) - A game for learning CSS selectors
+- [Flexbox Froggy](https://flexboxfroggy.com/) - A game for learning Flexbox
+- [Flexbox Defense](http://www.flexboxdefense.com/) - A game for learning Flexbox
+- [Flexplorer](https://bennettfeely.com/flexplorer/) - Explore Flexbox
+- [Grid Garden](https://cssgridgarden.com/) - A game for learning CSS Grid
+- [Unfolding the Box Model](https://rupl.github.io/unfold/) - Exploring CSS 3D transforms
+- [CSS Reference](https://cssreference.io/) - CSS reference
+
+### JavaScript
+
+- [JavaScript Info](https://javascript.info/) - modern JavaScript tutorials
 
 ### Katas
 
@@ -17,6 +37,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 - [Icon8](https://icons8.com/) - free design resources
 - [IconArchive](http://www.iconarchive.com/) - over 600,000 icons for web developers
+- [Icongram](https://icongr.am/) - various icons for web development
 
 ### Computer science
 
