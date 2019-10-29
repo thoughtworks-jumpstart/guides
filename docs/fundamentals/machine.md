@@ -1,13 +1,6 @@
 # Machine setup
 
-Follow the instructions in the General section and then continue on with the specific operating system for your machine.
-
-## General
-
-- Download Slack and join the JumpStart Slack workspace
-- Create a GitHub account
-- Install Visual Studio Code
-- Install Google Chrome web browser
+Follow the instructions with the specific operating system for your machine and then continue on with the General section.
 
 ### Visual Studio Code extensions
 
@@ -23,16 +16,27 @@ Here is a list of useful extensions that you should install
 
 ## Windows
 
+You MUST run the installation commands on [PowerShell with administrator privilege](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10) or [Command Prompt with administrator privilege](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
+
+### Git for Windows
+
+Download and install [Git for Windows](https://gitforwindows.org/).
+
+### Install Chocolatey (package manager)
+
+Install Chocolatey by following these [instructions](https://chocolatey.org/install).
+
+### Upgrading outdated packages
+
+If you already have these packages previously installed on your computer, then you would want to make sure they are up to date. If you previously installed them via `choco` then run the following command to upgrade your packages.
+
+```sh
+choco upgrade <package-name>
+```
 
 ## Mac
 
-If you already have these packages previously installed on your computer, then you would want to make sure they are up to date. To upgrade your packages, run the following command.
-
-```sh
-brew upgrade <package-name>
-```
-
-### Install Homebrew
+### Install Homebrew (package manager)
 
 Open Terminal app and run the following command.
 
@@ -54,12 +58,6 @@ Install Git
 brew install git
 ```
 
-Verify
-
-```
-git --version
-```
-
 ### Install Node.js and npm
 
 Install Node.js via Homebrew. npm will be installed together with Node.js.
@@ -68,17 +66,73 @@ Install Node.js via Homebrew. npm will be installed together with Node.js.
 brew install node
 ```
 
-Verify Node.js was installed.
+### Upgrading outdated packages
+
+If you already have these packages previously installed on your computer, then you would want to make sure they are up to date. If you previously installed them via `brew` then run the following command to upgrade your packages.
 
 ```sh
-node --version
+brew upgrade <package-name>
 ```
 
-Verify npm was installed.
+## Linux
+
+### Package manager
+
+Check which distribution of Linux you are using
 
 ```sh
-npm --version
+lsb_release -a
 ```
+
+Your package manager will differ depending on your Linux distribution.
+
+For Debian based distributions (e.g. Ubuntu) you will use `apt`.
+
+For Fedora based distributions (e.g. RHEL, CentOS) you will use `dnf`. Note that `dnf` is the next-generation version of `yum`. To install `dnf` run `yum install dnf`.
+
+### Install Git
+
+For Debian based distributions
+
+```sh
+sudo apt install git-all
+```
+
+For Fedora based distributions
+
+```sh
+sudo dnf install git-all
+```
+
+### Install Node.js
+
+Official Node.js [binary distributions](https://github.com/nodesource/distributions) for various Linux distributions are provided by NodeSource.
+
+Refer to installation instructions for [Fedora based distributions](https://github.com/nodesource/distributions/blob/master/README.md#rpminstall).
+
+Refer to installation instructions for [Debian based distributions](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).
+
+### Upgrading outdated packages
+
+Run the following command to upgrade outdated packages for your respective Linux distro. 
+
+```sh
+sudo apt install --only-upgrade <package-name>
+```
+
+```sh
+sudo dnf upgrade <package-name>
+```
+
+## General
+
+Follow these instructions for all operating systems
+
+- Download Slack and join the JumpStart Slack workspace
+- Create a GitHub account
+- Install Visual Studio Code
+- Install Firefox web browser
+- Install Google Chrome web browser
 
 ### Install Node version manager
 
@@ -88,10 +142,44 @@ We often need to use different versions of Node on different projects. The easie
 npm install --global n
 ```
 
-Verify
+Verify `n` was installed.
 
 ```
 n --version
 ```
 
-## Linux
+### Configuring Git
+
+To attach your full name to every commit you make simply add this line (of course, change it to your own name):
+
+```sh
+git config --global user.name "Jane Doe"
+```
+
+You can keep your email addresses private by using `<username>@users.noreply.github.com`. Just replace `<username>` with your actual GitHub username (e.g. `janedoe@users.noreply.github.com`)
+
+```sh
+git config --global user.email "<username>@users.noreply.github.com"
+```
+
+Add the following optional, but recommended configurations:
+
+```sh
+git config --global push.default simple
+git config --global credential.helper cache
+git config --global core.autocrlf input
+git config --global pull.rebase true
+git config --global rebase.autoStash true
+git config --global core.editor 'code --wait'
+```
+
+### Verify installations
+
+Verify your packages have been installed correctly
+
+```sh
+git --version
+node --version
+npm --version
+code --version
+```
