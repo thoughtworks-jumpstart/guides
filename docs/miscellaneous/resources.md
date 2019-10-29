@@ -27,3 +27,4 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 - [Free books by Packt](https://www.packtpub.com/free-learning) - free programming books by Packt
 - [Free books by Green Tea Press](https://greenteapress.com) - free programming books by Green Tea Press
+- [Free JavaScript books](https://jsbooks.revolunet.com/) - list of JavaScript books
