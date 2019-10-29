@@ -2,7 +2,7 @@
 
   - [About](introduction/about)
   - [FAQ](introduction/faq)
-  - [Prerequisites and preparations](introduction/prerequisite)
+  - [Prerequisite](introduction/prerequisite)
   - [Applying to JumpStart](introduction/application)
   - [License](introduction/license)
   - [Outline](introduction/outline)

@@ -1,6 +1,8 @@
-# Prerequisites and preparations
+# Prerequisite
 
-## Prerequisites for JumpStart
+## Are you ready for JumpStart?
+
+Before applying to JumpStart, you have to ask yourself if you're ready to take on the challenges at JumpStart. 
 
 Due to the fast pace of the program, JumpStart is not suitable for absolute beginners. We expect you to already be familiar with basic levels of HTML, CSS, and JavaScript.
 
@@ -11,6 +13,8 @@ You should also be familiar with basic programming concepts in JavaScript. Use t
 If you are not familiar with these concepts we highly recommend that you first learn them before applying to JumpStart.
 
 ## Preparing for JumpStart
+
+We have curated a list of online learning resources to help you prepare yourself for the JumpStart program. We recommend that you go through all the learning materials listed on this page to help with your preparation. 
 
 ### Learn touch typing
 
