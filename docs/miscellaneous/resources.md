@@ -15,6 +15,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ### CSS
 
+- [Codepip](https://codepip.com/) - A list of games for learning CSS
 - [CSS Diner](https://flukeout.github.io/) - A game for learning CSS selectors
 - [Flexbox Froggy](https://flexboxfroggy.com/) - A game for learning Flexbox
 - [Flexbox Defense](http://www.flexboxdefense.com/) - A game for learning Flexbox
