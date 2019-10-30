@@ -4,6 +4,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ### Blogs
 
+- [Coding Horror](https://blog.codinghorror.com/) - personal blog of Jeff Atwood
 - [DEV](https://dev.to/) - a community for sharing and discovering great ideas
 - [Pony Foo](https://ponyfoo.com/) - articles on frontend application development
 - [Overreacted](https://overreacted.io/) - Personal blog of Dan Abramov
