@@ -7,8 +7,8 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Coding Horror](https://blog.codinghorror.com/) - personal blog of Jeff Atwood
 - [DEV](https://dev.to/) - a community for sharing and discovering great ideas
 - [Pony Foo](https://ponyfoo.com/) - articles on frontend application development
-- [Overreacted](https://overreacted.io/) - Personal blog of Dan Abramov
-- [Kent C. Dodds](https://kentcdodds.com/blog) - Personal blog of Kent C. Dodds
+- [Overreacted](https://overreacted.io/) - personal blog of Dan Abramov
+- [Kent C. Dodds](https://kentcdodds.com/blog) - personal blog of Kent C. Dodds
 
 ### HTML
 
@@ -16,13 +16,13 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ### CSS
 
-- [Codepip](https://codepip.com/) - A list of games for learning CSS
-- [CSS Diner](https://flukeout.github.io/) - A game for learning CSS selectors
-- [Flexbox Froggy](https://flexboxfroggy.com/) - A game for learning Flexbox
-- [Flexbox Defense](http://www.flexboxdefense.com/) - A game for learning Flexbox
-- [Flexplorer](https://bennettfeely.com/flexplorer/) - Explore Flexbox
-- [Grid Garden](https://cssgridgarden.com/) - A game for learning CSS Grid
-- [Unfolding the Box Model](https://rupl.github.io/unfold/) - Exploring CSS 3D transforms
+- [Codepip](https://codepip.com/) - a list of games for learning CSS
+- [CSS Diner](https://flukeout.github.io/) - a game for learning CSS selectors
+- [Flexbox Froggy](https://flexboxfroggy.com/) - a game for learning Flexbox
+- [Flexbox Defense](http://www.flexboxdefense.com/) - a game for learning Flexbox
+- [Flexplorer](https://bennettfeely.com/flexplorer/) - explore Flexbox
+- [Grid Garden](https://cssgridgarden.com/) - a game for learning CSS Grid
+- [Unfolding the Box Model](https://rupl.github.io/unfold/) - exploring CSS 3D transforms
 - [CSS Reference](https://cssreference.io/) - CSS reference
 
 ### JavaScript
