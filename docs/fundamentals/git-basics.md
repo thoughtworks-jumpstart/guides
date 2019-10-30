@@ -2,16 +2,6 @@
 
 It is worth noting that there are GUI tools to help you with Git commands, but we do not recommend you start learning Git this way. To become a proficient software developer, you must learn Git through the command line.
 
-## Cloning an existing repository
-
-Go to an existing repository and clone it using the following command.
-
-```sh
-git clone https://github.com/thoughtworks-jumpstart/git-basics.git
-```
-
-This clones the repository locally on your computer.
-
 ## Create a local repository
 
 Create a new directory from the Terminal
@@ -31,6 +21,23 @@ This creates a new `.git` folder. Let's take a look inside.
 
 ```sh
 ls -lah .git
+```
+
+These are the files and folders inside `.git`
+
+```sh
+.git
+├── COMMIT_EDITMSG
+├── FETCH_HEAD
+├── HEAD
+├── config
+├── description
+├── hooks
+├── index
+├── info
+├── logs
+├── objects
+└── refs
 ```
 
 ## Create a remote repository
@@ -77,3 +84,56 @@ git status
 ```
 
 What do you notice about `README.md` now?
+
+View changes you have made
+
+```sh
+git diff
+```
+
+Add your changes
+
+```sh
+git add README.md
+git status
+```
+
+Commit your changes (local)
+
+```sh
+git commit -m "Initial commit"
+```
+
+Push your changes (remote)
+
+```sh
+git push origin master
+```
+
+## Write good commit messages
+
+Adding a good commit message is very important in a project. Follow these [rules](https://chris.beams.io/posts/git-commit/) for good commit messages.
+
+The seven rules of a great Git commit message
+
+0. Separate subject from body with a blank line
+1. Limit the subject line to 50 characters
+1. Capitalize the subject line
+1. Do not end the subject line with a period
+1. Use the imperative mood in the subject line
+1. Wrap the body at 72 characters
+1. Use the body to explain what and why vs. how
+
+## Fork an existing repository
+
+When you fork a repository, you are making a copy of that repository into your own GitHub account.
+
+Head to an exisiting repository on GitHub and click on the `fork` button.
+
+## Clone an existing repository
+
+Once you have forked someone's repository, you want to clone it into your own machine.
+
+```sh
+git clone https://github.com/thoughtworks-jumpstart/git-basics.git
+```

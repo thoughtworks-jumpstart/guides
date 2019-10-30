@@ -11,10 +11,14 @@
 
   - [Machine setup](fundamentals/machine)
   - [Git basics](fundamentals/git-basics)
+  - [Git visualized](fundamentals/git-visualize)
 
 - **JavaScript**
 
 - **Frontend Web Development**
+
+  - [React Hooks]()
+  - [React Context]()
 
 - **Backend Web Development**
 
