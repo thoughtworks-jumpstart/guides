@@ -10,6 +10,12 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Overreacted](https://overreacted.io/) - personal blog of Dan Abramov
 - [Kent C. Dodds](https://kentcdodds.com/blog) - personal blog of Kent C. Dodds
 
+### Git
+
+- [Git cheatsheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+- [Videos on Git Basics](https://git-scm.com/videos)
+- [Git Basics - Recording changes to the repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+
 ### HTML
 
 - [HTML Reference](https://htmlreference.io/) - HTML reference
@@ -33,7 +39,8 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 - [Code Kata](http://codekata.com/) - the original code kata from Dave Thomas
 - [Coding Dojo](http://codingdojo.org/kata/) - a list of katas from Coding Dojo
-- [LeetCode - Problems](https://leetcode.com/problemset/all/?difficulty=Easy) - all problems from LeetCode
+- [LeetCode](https://leetcode.com/problemset/all/?difficulty=Easy) - all problems from LeetCode
+- [Exercism](https://exercism.io/)
 - [Codewars](https://www.codewars.com/) - achieve mastery through challenges
 - [HackerRank](https://www.hackerrank.com/) - practice coding, prepare for interviews, and get hired
 
