@@ -17,8 +17,8 @@
 
 - **Frontend Web Development**
 
-  - [React Hooks]()
-  - [React Context]()
+  - [React Hooks](frontend-web-development/react-hooks)
+  - [React Context](frontend-web-development/react-context)
 
 - **Backend Web Development**
 
