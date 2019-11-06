@@ -75,9 +75,20 @@ Indexes are small portions of data which are ordered. They help find documents t
 
 However, too many indexes will affect database performance. They need to be deleted when no longer used.
 
+### Others
+
+- Query
+- Reference
+
 ## MongoDB Schema Design
 
 - [Three ways of modelling a one-to-N relationship](https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1)
+
+## Notes
+
+- It is possible to have a ["join" of documents across collections](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/).
+- (Starting from 4.0 release) [ACID transaction across multiple documents is also supported.](https://www.mongodb.com/transactions)
+- MongoDB creates databases and collections on demand if they do not already exist.
 
 ## Other resources
 
