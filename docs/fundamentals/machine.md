@@ -114,7 +114,7 @@ Refer to installation instructions for [Debian based distributions](https://gith
 
 ### Upgrading outdated packages
 
-Run the following command to upgrade outdated packages for your respective Linux distro. 
+Run the following command to upgrade outdated packages for your respective Linux distro.
 
 ```sh
 sudo apt install --only-upgrade <package-name>
@@ -147,6 +147,21 @@ Verify `n` was installed.
 ```
 n --version
 ```
+
+### Install MongoDB
+
+Find the instructions for your specific OS and version for the [Community Edition](https://docs.mongodb.com/manual/installation/).
+
+If you're running Windows, please add the MongoDB bin folder to your System PATH (e.g. C:\Program Files\MongoDB\Server\4.0\bin) so that the `mongo` command will be able to work in the terminal.
+
+### Install a Visual Studio Code extension for viewing data in MongoDB
+
+0. Open the Extensions pane in Visual Studio Code
+0. Search for the `Azure Cosmos DB extension` by Microsoft
+0. Install it and reload VSCode once the installation completes
+0. Click the new Azure icon on the left sidebar
+0. Create a new MongoDB connection by going to `Cosmos DB` and then clicking the 'plug' icon and selecting `MongoDB` from the dropdown
+0. Make sure to start the server before connecting to it
 
 ### Configuring Git
 
@@ -182,4 +197,5 @@ git --version
 node --version
 npm --version
 code --version
+mongod --version
 ```
