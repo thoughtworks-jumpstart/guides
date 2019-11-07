@@ -38,10 +38,6 @@
 
   - [Preparing for technical interviews](career/interviews)
 
-- **Articles**
-
-  - [Contributing an article](articles/contribution)
-
 - **Miscellaneous**
 
   - [Katas](miscellaneous/katas)
