@@ -48,4 +48,6 @@ Our assessment is designed to be challenging, but not too hard to complete. If y
 
 Our platform is able to detect plagiarism and monitors any attempts to cheat.
 
-Realize that when you decide to find solutions online and submit them as your own work, you are ultimately cheating yourself.
+If you are found to be cheating, your application will be rejected. If you were accepted into the program, you will be asked to withdraw from the program without any compensation.
+
+Realize that when you decide to cheat, you are ultimately cheating yourself.
