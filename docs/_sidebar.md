@@ -4,8 +4,8 @@
   - [FAQ](introduction/faq)
   - [Prerequisite](introduction/prerequisite)
   - [Applying to JumpStart](introduction/application)
-  - [License](introduction/license)
   - [Outline](introduction/outline)
+  - [License](introduction/license)
 
 - **Fundamentals**
 
