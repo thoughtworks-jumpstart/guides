@@ -59,9 +59,9 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ### Books
 
-#### Javascript
+#### JavaScript
 
-- [Eloquent Javascript](https://eloquentjavascript.net/)
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
 
 #### Interviews
 
