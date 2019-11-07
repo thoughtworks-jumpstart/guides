@@ -13,8 +13,6 @@
   - [Git basics](fundamentals/git-basics)
   - [Git visualized](fundamentals/git-visualize)
 
-- **JavaScript**
-
 - **Frontend Web Development**
 
   - [React Hooks](frontend-web-development/react-hooks)
