@@ -1,4 +1,4 @@
-## Visualizing Git
+# Visualizing Git
 
 It often helps to visualize what you're actually doing when you make a commit. This [visual tool](https://git-school.github.io/visualizing-git/) helps to visualize what happens when you add commits to a branch.
 
@@ -39,4 +39,3 @@ Create a new branch
 ```sh
 git checkout -b <branch-name>
 ```
-
