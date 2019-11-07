@@ -29,6 +29,7 @@
 
 - **Computer Science**
 
+  - [Object-oriented programming](computer-science/object-oriented-programming)
   - [Data structures and algorithms](computer-science/data-structures-algorithms)
 
 - **Career**
