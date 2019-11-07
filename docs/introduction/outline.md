@@ -14,7 +14,9 @@
 
 ## Week 4 - [Project] Frontend application development
 
-This week you will build a frontend application in React.
+- Build a frontend application in React
+- Project showcase
+- Individual feedback session with mentors
 
 ## Week 5 - Building RESTful APIs
 
@@ -22,7 +24,9 @@ This week you will build a frontend application in React.
 
 ## Week 7 - [Project] Backend services with RESTful APIs
 
-This week you will build a backend service with RESTful API endpoints that will be consumed by your frontend application.
+- Build a backend service with RESTful API endpoints
+- Project showcase
+- Individual feedback session with mentors
 
 ## Week 8 - Agile software delivery
 
@@ -48,10 +52,12 @@ In the next three weeks you will be working as a team with a product owner to de
 
 - Showcase and handover to product owner
 - Retrospective
+- Individual feedback session with mentors
 - Guest speakers
 
 ## Week 12 - Final week
 
+- Object oriented programming
 - Intro to data structures and algorithms
 - Preparing for technical interviews
 - Meet & Hire - showcase your projects to prospective employers
