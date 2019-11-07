@@ -1,6 +1,6 @@
 # Preparing for technical interviews
 
-Interviews for software development roles are known to be nutoriously hard. This is because companies are trying to ascertain the competency level of their job applicants. 
+Interviews for software development roles are known to be notoriously hard. This is because companies are trying to ascertain the competency level of their job applicants. 
 
 ## Types of interviews
 
