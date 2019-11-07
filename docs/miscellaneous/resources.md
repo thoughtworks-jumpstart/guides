@@ -57,6 +57,21 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ### Books
 
+#### Javascript
+
+- [Eloquent Javascript](https://eloquentjavascript.net/)
+
+#### Interviews
+
+- [Elements Programming Interviews Insiders Guide](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949/)
+
+#### Software Engineering Processes
+
+- [Code Complete 2](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
+- [Art of Agile Development](https://www.amazon.com/Art-Agile-Development-Pragmatic-Software/dp/0596527675)
+
+#### Collection of books
+
 - [Free books by Packt](https://www.packtpub.com/free-learning) - free programming books by Packt
 - [Free books by Green Tea Press](https://greenteapress.com) - free programming books by Green Tea Press
 - [Free JavaScript books](https://jsbooks.revolunet.com/) - list of JavaScript books
