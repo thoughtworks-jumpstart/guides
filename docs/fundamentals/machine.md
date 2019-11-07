@@ -1,28 +1,23 @@
 # Machine setup
 
-Follow the instructions with the specific operating system for your machine and then continue on with the General section.
+Follow the instructions with the specific operating system for your machine.
 
-### Visual Studio Code extensions
-
-Here is a list of useful extensions that you should install
-
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
-- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+Once that's done, follow instructions in the [General](#general) section.
 
 ## Windows
 
-You MUST run the installation commands on [PowerShell with administrator privilege](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10) or [Command Prompt with administrator privilege](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
+**⚠️ You MUST run all installation commands with administrator privileges**
+
+Follow the folowing instructions to run commands with administrator privileges:
+
+- Run [PowerShell with administrator privilege](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10)
+- Run [Command Prompt with administrator privilege](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
 
 ### Git for Windows
 
 Download and install [Git for Windows](https://gitforwindows.org/).
 
-### Install Chocolatey (package manager)
+### Install Chocolatey package manager
 
 Install Chocolatey by following these [instructions](https://chocolatey.org/install).
 
@@ -36,7 +31,7 @@ choco upgrade <package-name>
 
 ## Mac
 
-### Install Homebrew (package manager)
+### Install Homebrew package manager
 
 Open Terminal app and run the following command.
 
@@ -128,11 +123,23 @@ sudo dnf upgrade <package-name>
 
 Follow these instructions for all operating systems
 
-- Download Slack and join the JumpStart Slack workspace
-- Create a GitHub account
-- Install Visual Studio Code
-- Install Firefox web browser
-- Install Google Chrome web browser
+- Download Slack and join the JumpStart Slack workspace (please ask instructors for invite link)
+- Create a GitHub account (if you don't have one already)
+- Install Visual Studio Code for your operating system
+- Install Firefox web browser for your operating system
+- Install Google Chrome web browser for your operating system
+
+### Install Visual Studio Code extensions
+
+Here is a list of useful extensions that you should install
+
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
 ### Install Node version manager
 
