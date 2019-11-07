@@ -31,8 +31,7 @@
 
 - **Computer Science**
 
-  - [Data structures](computer-science/data-structures)
-  - Algorithms
+  - [Data structures and algorithms](computer-science/data-structures-algorithms)
 
 - **Career**
 
