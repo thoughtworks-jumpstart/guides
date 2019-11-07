@@ -26,7 +26,7 @@ This week you will build a backend service with RESTful API endpoints that will 
 
 ### Week 8 - Agile software delivery
 
-### Week 9 - [Project] - Software devlivery project
+### Week 9 - [Project] - Software delivery project
 
 In the next three weeks you will be working as a team with a product owner to deliver a working solution based on their requirements.
 
@@ -38,13 +38,13 @@ In the next three weeks you will be working as a team with a product owner to de
 - Retrospective
 - Guest speakers
 
-### Week 10 - [Project] - Software devlivery project
+### Week 10 - [Project] - Software delivery project
 
 - Showcase to product owner
 - Retrospective
 - Guest speakers
 
-### Week 11 - [Project] - Software devlivery project
+### Week 11 - [Project] - Software delivery project
 
 - Showcase and handover to product owner
 - Retrospective
@@ -54,5 +54,5 @@ In the next three weeks you will be working as a team with a product owner to de
 
 - Intro to data structures and algorithms
 - Preparing for technical interviews
-- Showcase your projects to prospective employers
+- Meet & Hire - showcase your projects to prospective employers
 - Life after JumpStart
