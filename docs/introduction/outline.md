@@ -1,18 +1,25 @@
 # Outline {docsify-ignore-all}
 
-## Week 0 - Setup
-
-- Setup your machine
-
 ## Week 1 - Fundamentals
 
-- Introduction and admin
+- Welcome to JumpStart
+- Ice breaker session
+- Adminstration
+- Setup your machine
+- Object oriented programming
+- How the web works
 
 ## Week 2 - JavaScript
 
-## Week 3 - Building frontend apps in React
+- Node.js and npm
 
-## Week 4 - [Project] Frontend application development
+## Week 3 - Building frontend applications in React and React Router
+
+- React Router
+- React Hooks
+- React Context
+
+## Week 4 - Frontend project
 
 - Build a frontend application in React
 - Project showcase
@@ -22,15 +29,23 @@
 
 ## Week 6 - Securing APIs with JWT
 
-## Week 7 - [Project] Backend services with RESTful APIs
+## Week 7 - Backend project
 
 - Build a backend service with RESTful API endpoints
 - Project showcase
 - Individual feedback session with mentors
 
-## Week 8 - Agile software delivery
+## Week 8 - Agile software delivery and software engineering practices
 
-## Week 9 - [Project] - Software delivery project
+- Agile manifesto
+- Agile principles
+- Agile methodologies
+- User stories
+- Acceptance criteria
+- Estimating user stories
+- Continuous integration
+
+## Week 9 - Capstone project
 
 In the next three weeks you will be working as a team with a product owner to deliver a working solution based on their requirements.
 
@@ -40,24 +55,26 @@ In the next three weeks you will be working as a team with a product owner to de
 - Estimating user stories
 - Showcase to product owner
 - Retrospective
+- Team feedback session
 - Guest speakers
 
-## Week 10 - [Project] - Software delivery project
+## Week 10 - Capstone project
 
 - Showcase to product owner
 - Retrospective
+- Team feedback session
 - Guest speakers
 
-## Week 11 - [Project] - Software delivery project
+## Week 11 - Capstone project
 
 - Showcase and handover to product owner
 - Retrospective
+- Team feedback session
 - Individual feedback session with mentors
 - Guest speakers
 
 ## Week 12 - Final week
 
-- Object oriented programming
 - Intro to data structures and algorithms
 - Preparing for technical interviews
 - Meet & Hire - showcase your projects to prospective employers
