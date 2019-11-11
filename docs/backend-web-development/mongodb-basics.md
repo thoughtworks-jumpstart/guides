@@ -1,6 +1,8 @@
-# MongoDB
+# MongoDB basics
 
 MongoDB is a open-source **NoSQL** non-relational database. It is a document-orientated database that is flexible and scalable. It is best used for large amounts of unstructured data.
+
+Learn more about [MongoDB](MongoDB)
 
 ## Start your MongoDB server
 
@@ -29,7 +31,7 @@ Once the MongoDB server is started, you should see the following line on your co
 [initandlisten] waiting for connections on port 27017
 ```
 
-## Pros
+## Why use MongoDB?
 
 - Schema-less, fields can vary from document to document and data structure can be changed over time
 - Maps to the objects in your application code, making data easy to work with
@@ -37,7 +39,7 @@ Once the MongoDB server is started, you should see the following line on your co
 - Fast, indexing is supported by B-trees
 - Has high availablily due to it being a distributed database
 
-## Cons
+## Disadvantages of MongoDB
 
 - High data consumption
 - No joins, but joins can technically be done using other ways
@@ -80,11 +82,11 @@ However, too many indexes will affect database performance. They need to be dele
 - Query
 - Reference
 
-## MongoDB Schema Design
+## MongoDB schema design
 
 - [Three ways of modelling a one-to-N relationship](https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1)
 
-## Notes
+## Good to know
 
 - It is possible to have a ["join" of documents across collections](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/).
 - (Starting from 4.0 release) [ACID transaction across multiple documents is also supported.](https://www.mongodb.com/transactions)

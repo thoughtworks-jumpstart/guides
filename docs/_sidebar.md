@@ -20,7 +20,7 @@
 
 - **Backend Web Development**
 
-  - [MongoDB](backend-web-development/mongodb)
+  - [MongoDB basics](backend-web-development/mongodb-basics)
 
 - **Delivering software**
 
