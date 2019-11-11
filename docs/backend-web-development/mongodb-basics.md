@@ -39,9 +39,12 @@ Once the MongoDB server is started, you should see the following line on your co
 - Fast, indexing is supported by B-trees
 - Has high availablily due to it being a distributed database
 
+> ...when leveraging the richness and power of the document model, we estimate 80%-90% of applications don’t need multi-document transactions at all.
+
 ## Disadvantages of MongoDB
 
 - High data consumption
+- Have to think in terms of the document model rather than the traditional relational model for databases
 - No joins, but joins can technically be done using other ways
 - Has a 16MB document limit
 
