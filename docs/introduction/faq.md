@@ -14,6 +14,10 @@ No. As this is a fast paced program, we do not recommend this for complete begin
 
 Please read our [prerequisites](/introduction/prerequisite) for joining JumpStart.
 
+## What is the start date for the program?
+
+We run three batches each year. Please refer to this [page](/introduction/about?id=batches) for confirmed and tentative dates of future batches.
+
 ## Are there any grants available for this program?
 
 ### For Singapore citizens
