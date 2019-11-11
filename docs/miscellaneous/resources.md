@@ -4,7 +4,9 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ## Tools
 
-- [Retro Pair](https://retropair.herokuapp.com/) - a tool created by one of our jumplings and widely used here at JumpStart
+- [Retro Pair](https://retropair.herokuapp.com/) - a tool to pair people up (built by a jumpling)
+- [Who's Next](https://whoisnext.netlify.com/) - a tool to select the next person in the class
+- [Date Calculator](https://www.timeanddate.com/date/dateadd.html) - add to or subtract from a date
 
 ## Articles
 
