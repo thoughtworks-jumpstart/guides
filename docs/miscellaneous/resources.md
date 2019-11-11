@@ -4,7 +4,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ## Tools
 
-- [Retro Pair](https://retropair.herokuapp.com/) - a tool creted by one of our jumplings and widely used here at JumpStart
+- [Retro Pair](https://retropair.herokuapp.com/) - a tool created by one of our jumplings and widely used here at JumpStart
 
 ## Articles
 
