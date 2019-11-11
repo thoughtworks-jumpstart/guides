@@ -2,7 +2,7 @@
 
 MongoDB is a open-source **NoSQL** non-relational database. It is a document-orientated database that is flexible and scalable. It is best used for large amounts of unstructured data.
 
-Learn more about [MongoDB](MongoDB)
+Learn more about [MongoDB](https://docs.mongodb.com/manual/tutorial/getting-started/#getting-started)
 
 ## Start your MongoDB server
 
