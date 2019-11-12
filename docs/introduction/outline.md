@@ -75,7 +75,9 @@ In the next three weeks you will be working as a team with a product owner to de
 
 ## Week 12 - Final week
 
+- Object-oriented programming
 - Intro to data structures and algorithms
+- Clean code and refactoring
 - Preparing for technical interviews
 - Meet & Hire - showcase your projects to prospective employers
 - Life after JumpStart
