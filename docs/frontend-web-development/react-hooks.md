@@ -1,5 +1,7 @@
 # React Hooks
 
+React Hooks is an advanced topic and you should already be familiar with basic React concepts before proceeding with the rest of this topic.
+
 Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
 Learn more about [React Hooks](https://reactjs.org/docs/hooks-intro.html)
@@ -95,7 +97,7 @@ function Example() {
 It is important to note that **React relies on the order in which Hooks are called**. See [explanation](https://reactjs.org/docs/hooks-rules.html#explanation).
 
 0. Always use Hooks at the top level of your React function. Don’t call Hooks inside loops, conditions, or nested functions.
-0. Only call Hooks from React functions. Don’t call Hooks from regular JavaScript functions
+1. Only call Hooks from React functions. Don’t call Hooks from regular JavaScript functions
 
 To ensure these rules are enforced, configure [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks).
 
