@@ -11,6 +11,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 ## Articles
 
 - [Things I don’t know as of 2018](https://overreacted.io/things-i-dont-know-as-of-2018/) by Dan Abramov
+- [You might not need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367) by Dan Abramov
 
 ## Blogs
 
