@@ -1,5 +1,9 @@
 # Outline {docsify-ignore-all}
 
+The following is a rough outline of the topics covered in the program. This is subject to change due to various factors, including public holidays. Some topics may not be covered at the discretion of the instructors.
+
+Please check the [schedule](https://github.com/thoughtworks-jumpstart/guides/projects/1) for the topics that will be covered for that week.
+
 ## Week 1 - Fundamentals
 
 - Welcome to JumpStart
