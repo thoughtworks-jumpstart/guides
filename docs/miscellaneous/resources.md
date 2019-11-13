@@ -52,9 +52,10 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Code Kata](http://codekata.com/) - the original code kata from Dave Thomas
 - [Coding Dojo](http://codingdojo.org/kata/) - a list of katas from Coding Dojo
 - [LeetCode](https://leetcode.com/problemset/all/?difficulty=Easy) - all problems from LeetCode
-- [Exercism](https://exercism.io/)
+- [Exercism](https://exercism.io/) - code practice and mentorship for everyone
 - [Codewars](https://www.codewars.com/) - achieve mastery through challenges
 - [HackerRank](https://www.hackerrank.com/) - practice coding, prepare for interviews, and get hired
+- [Coderbyte](https://coderbyte.com/challenges) - a variety of coding challenges with varying difficulty
 
 ## Design, illustrations, icons
 
