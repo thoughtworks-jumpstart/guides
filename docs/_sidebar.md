@@ -21,6 +21,7 @@
 - **Backend Web Development**
 
   - [MongoDB basics](backend-web-development/mongodb-basics)
+  - [Mongoose basics](backend-web-development/mongoose-basics)
 
 - **Delivering software**
 
