@@ -22,6 +22,7 @@
 
   - [MongoDB basics](backend-web-development/mongodb-basics)
   - [Mongoose basics](backend-web-development/mongoose-basics)
+  - [Database Security](backend-web-development/database-security)
 
 - **Delivering software**
 
