@@ -66,6 +66,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 ## Computer science
 
 - [VisuAlgo](https://visualgo.net/en) - animated visualizations of data structures and algorithms
+- [CS50 Introduction to Computer Science by Harvard University](https://cs50.harvard.edu/x/) - popular opencourseware introduction to computer science and the art of programming
 - [Teach Yourself Computer Science](https://teachyourselfcs.com/) - online resources to teach yourself computer science topics
 - [Videos on algorithms](https://www.youtube.com/watch?v=KEEKn7Me-ms&list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL) - video playlist of various algorithms by HackerRank
 - [Videos on data structures](https://www.youtube.com/watch?v=IhJGJG-9Dx8&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX) - video playlist of various data structures by HackerRank
