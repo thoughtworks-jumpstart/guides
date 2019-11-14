@@ -163,12 +163,14 @@ If you're running Windows, please add the MongoDB bin folder to your System PATH
 
 ### Install a Visual Studio Code extension for viewing data in MongoDB
 
-0. Open the Extensions pane in Visual Studio Code
-0. Search for the `Azure Cosmos DB extension` by Microsoft
-0. Install it and reload VSCode once the installation completes
-0. Click the new Azure icon on the left sidebar
-0. Create a new MongoDB connection by going to `Cosmos DB` and then clicking the 'plug' icon and selecting `MongoDB` from the dropdown
-0. Make sure to start the server before connecting to it
+1. Open the Extensions pane in Visual Studio Code
+1. Search for the `Azure Cosmos DB extension` by Microsoft
+1. Install it and reload VSCode once the installation completes
+1. Click the new Azure icon on the left sidebar
+1. Create a new MongoDB connection by going to `Cosmos DB` and then clicking the 'plug' icon and selecting `MongoDB` from the dropdown
+1. Make sure to start the server before connecting to it
+
+Alternatively, use [MongoDB Compass](https://www.mongodb.com/products/compass).
 
 ### Configuring Git
 
