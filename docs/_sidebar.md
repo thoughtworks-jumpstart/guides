@@ -10,6 +10,7 @@
 - **Fundamentals**
 
   - [Machine setup](fundamentals/machine)
+  - [Command line tools](fundamentals/command-line)
   - [Git basics](fundamentals/git-basics)
   - [Git visualized](fundamentals/git-visualize)
 
