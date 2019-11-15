@@ -41,6 +41,7 @@
 - **Miscellaneous**
 
   - [Katas](miscellaneous/katas)
+  - [Recommended books](miscellaneous/books)
   - [Resources](miscellaneous/resources)
 
 - **Links**

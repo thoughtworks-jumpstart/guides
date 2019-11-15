@@ -71,25 +71,10 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Videos on algorithms](https://www.youtube.com/watch?v=KEEKn7Me-ms&list=PLI1t_8YX-ApvMthLj56t1Rf-Buio5Y8KL) - video playlist of various algorithms by HackerRank
 - [Videos on data structures](https://www.youtube.com/watch?v=IhJGJG-9Dx8&list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX) - video playlist of various data structures by HackerRank
 
-## Books
+## Free books
 
-### JavaScript
-
-- [Eloquent JavaScript](https://eloquentjavascript.net/)
-
-### Interviews
-
-- [Elements Programming Interviews Insiders Guide](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949/)
-
-### Software Engineering
-
-- [Code Complete 2](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
-- [Art of Agile Development](https://www.amazon.com/Art-Agile-Development-Pragmatic-Software/dp/0596527675)
-- [Test-Driven Development By Example](https://www.bookdepository.com/Test-Driven-Development-Kent-Beck/9780321146533?ref=grid-view&qid=1573456344533&sr=1-1)
-- [Clean Architecture](https://www.bookdepository.com/Clean-Architecture-Robert-C.-Martin/9780134494166)
-
-### Collection of books
-
+- [Teaching Tech Together](https://teachtogether.tech) - How to create and deliver lessons that work
+  and build a teaching community around them
 - [Free books by Packt](https://www.packtpub.com/free-learning) - free programming books by Packt
 - [Free books by Green Tea Press](https://greenteapress.com) - free programming books by Green Tea Press
 - [Free JavaScript books](https://jsbooks.revolunet.com/) - list of JavaScript books
