@@ -33,6 +33,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ## CSS
 
+- [CSS Reference](https://cssreference.io/) - CSS reference
 - [Codepip](https://codepip.com/) - a list of games for learning CSS
 - [CSS Diner](https://flukeout.github.io/) - a game for learning CSS selectors
 - [Flexbox Froggy](https://flexboxfroggy.com/) - a game for learning Flexbox
@@ -40,7 +41,6 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Flexplorer](https://bennettfeely.com/flexplorer/) - explore Flexbox
 - [Grid Garden](https://cssgridgarden.com/) - a game for learning CSS Grid
 - [Unfolding the Box Model](https://rupl.github.io/unfold/) - exploring CSS 3D transforms
-- [CSS Reference](https://cssreference.io/) - CSS reference
 
 ## JavaScript
 
