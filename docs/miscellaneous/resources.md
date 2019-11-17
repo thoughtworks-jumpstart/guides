@@ -79,3 +79,17 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Free books by Green Tea Press](https://greenteapress.com) - free programming books by Green Tea Press
 - [Free JavaScript books](https://jsbooks.revolunet.com/) - list of JavaScript books
 - [Free programming books by Ebook Foundation](https://ebookfoundation.github.io/free-programming-books/free-programming-books.html) - a massive collection of free programming books
+
+## Meetups
+
+- [Junior Developers Singapore](https://www.meetup.com/Junior-Developers-Singapore/)
+- [ReactJS Singapore](https://www.meetup.com/React-Singapore/)
+- [SingaporeJS](https://www.meetup.com/Singapore-JS/)
+- [SingaporeCSS](https://www.meetup.com/SingaporeCSS/)
+- [Singapore Pair Programming Puzzles](https://www.meetup.com/Singapore-Pair-Programming-Puzzles/)
+- [Women Who Code](https://www.meetup.com/Women-Who-Code-Singapore/)
+- [ThoughtWorks Talks Tech](https://www.meetup.com/ThoughtWorks-Talks-Tech/)
+- [General Assembly Singapore](https://www.meetup.com/General-Assembly-Singapore/)
+- [Le Wagon Singapore](https://www.meetup.com/Le-Wagon-Singapore-Coding-Bootcamp/)
+- [Developer Space @ Google Singapore](https://www.meetup.com/developer-space/)
+- [Google Developer Group - Singapore](https://www.meetup.com/gdg-singapore/)
