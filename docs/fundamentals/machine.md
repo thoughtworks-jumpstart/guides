@@ -13,6 +13,10 @@ Follow the folowing instructions to run commands with administrator privileges:
 - Run [PowerShell with administrator privilege](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10)
 - Run [Command Prompt with administrator privilege](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
 
+### Windows Subsystem for Linux (WSL)
+
+If you're on Windows 10, you can use [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about?redirectedfrom=MSDN), which provides a familiar Bash environment with Unix command line utilities.
+
 ### Git for Windows
 
 Download and install [Git for Windows](https://gitforwindows.org/).
