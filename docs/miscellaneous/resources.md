@@ -17,10 +17,10 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ## Git
 
-- [Git cheatsheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
-- [Visualizing Git](https://git-school.github.io/visualizing-git/)
-- [Videos on Git Basics](https://git-scm.com/videos)
-- [Git Basics - Recording changes to the repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+- [Git cheatsheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/) - Git cheatsheet
+- [Visualizing Git](https://git-school.github.io/visualizing-git/) - visualizing Git
+- [Videos on Git Basics](https://git-scm.com/videos) - videos on Git basics
+- [Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) - recording changes to the repository
 
 ## HTML
 
@@ -84,7 +84,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Free JavaScript books](https://jsbooks.revolunet.com/) - list of JavaScript books
 - [Free programming books by Ebook Foundation](https://ebookfoundation.github.io/free-programming-books/free-programming-books.html) - a massive collection of free programming books
 
-## Meetups
+## Community
 
 - [Junior Developers Singapore](https://www.meetup.com/Junior-Developers-Singapore/)
 - [ReactJS Singapore](https://www.meetup.com/React-Singapore/)
