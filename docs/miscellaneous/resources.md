@@ -1,12 +1,6 @@
 # Resources {docsify-ignore-all}
 
-Have a resource to add? Add your suggestions under an appropriate section (or create a new one) and make a pull request.
-
-## Tools
-
-- [Retro Pair](https://retropair.herokuapp.com/) - a tool to pair people up (built by a jumpling)
-- [Who's Next](https://whoisnext.netlify.com/) - a tool to select the next person in the class
-- [Date Calculator](https://www.timeanddate.com/date/dateadd.html) - add to or subtract from a date
+Have a resource to add? Add your suggestions under an appropriate section (or create a new one) and make a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## Articles
 
@@ -24,12 +18,15 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 ## Git
 
 - [Git cheatsheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
+- [Visualizing Git](https://git-school.github.io/visualizing-git/)
 - [Videos on Git Basics](https://git-scm.com/videos)
 - [Git Basics - Recording changes to the repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 
 ## HTML
 
 - [HTML Reference](https://htmlreference.io/) - HTML reference
+- [Learn HTML](https://www.learn-html.org/) - learn HTML interactively
+- [HTML Fundamentals](https://www.sololearn.com/Course/HTML/) - learn HTML fundamentals on SoloLearn
 
 ## CSS
 
@@ -45,6 +42,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 ## JavaScript
 
 - [JavaScript Info](https://javascript.info/) - modern JavaScript tutorials
+- [JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/) - learn JavaScript fundamentals on SoloLearn
 
 ## Katas
 
@@ -62,6 +60,12 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Icon8](https://icons8.com/) - free design resources
 - [IconArchive](http://www.iconarchive.com/) - over 600,000 icons for web developers
 - [Icongram](https://icongr.am/) - various icons for web development
+
+## Agile and software engineering practices
+
+- [Code smells and refactoring](https://refactoring.guru/refactoring) - learn about code smells and refactoring by Refactoring Guru
+- [Design patterns](https://refactoring.guru/design-patterns) - learn about design patterms by Refactoring Guru
+- [Design patterns](https://www.geeksforgeeks.org/software-design-patterns/) - learn about design patterns by GeeksforGeeks
 
 ## Computer science
 
@@ -93,3 +97,9 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Le Wagon Singapore](https://www.meetup.com/Le-Wagon-Singapore-Coding-Bootcamp/)
 - [Developer Space @ Google Singapore](https://www.meetup.com/developer-space/)
 - [Google Developer Group - Singapore](https://www.meetup.com/gdg-singapore/)
+
+## Tools
+
+- [Retro Pair](https://retropair.herokuapp.com/) - a tool to pair people up (built by a jumpling)
+- [Who's Next](https://whoisnext.netlify.com/) - a tool to select the next person in the class
+- [Date Calculator](https://www.timeanddate.com/date/dateadd.html) - add to or subtract from a date

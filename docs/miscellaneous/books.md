@@ -1,4 +1,4 @@
-# Recommended books {docsify-ignore-all}
+# Books {docsify-ignore-all}
 
 ## JavaScript
 
@@ -8,7 +8,7 @@
 
 - [Elements Programming Interviews Insiders Guide](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949/)
 
-## Software Engineering
+## Software engineering
 
 - [Code Complete 2](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670)
 - [Art of Agile Development](https://www.amazon.com/Art-Agile-Development-Pragmatic-Software/dp/0596527675)

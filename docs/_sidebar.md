@@ -35,14 +35,15 @@
   - [Object-oriented programming](computer-science/object-oriented-programming)
   - [Data structures and algorithms](computer-science/data-structures-algorithms)
 
-- **Career**
+- **Life after JumpStart**
 
-  - [Preparing for technical interviews](career/interviews)
+  - [Preparing for technical interviews](life-after-jumpstart/interviews)
+  - [Becoming a better programmer](life-after-jumpstart/becoming-a-better-programmer)
 
 - **Miscellaneous**
 
   - [Katas](miscellaneous/katas)
-  - [Recommended books](miscellaneous/books)
+  - [Books](miscellaneous/books)
   - [Resources](miscellaneous/resources)
 
 - **Links**
