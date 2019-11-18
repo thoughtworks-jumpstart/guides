@@ -6,7 +6,7 @@ Please check the [schedule](https://github.com/thoughtworks-jumpstart/guides/pro
 
 ## Week 1 - Fundamentals
 
-- Welcome to JumpStart
+- Welcome to Jumpstart
 - Ice breaker session
 - Adminstration
 - Setup your machine
@@ -84,4 +84,4 @@ In the next three weeks you will be working as a team with a product owner to de
 - Clean code and refactoring
 - Preparing for technical interviews
 - Meet & Hire - showcase your projects to prospective employers
-- Life after JumpStart
+- Life after Jumpstart

@@ -3,7 +3,7 @@
   - [About](introduction/about)
   - [FAQ](introduction/faq)
   - [Prerequisite](introduction/prerequisite)
-  - [Applying to JumpStart](introduction/application)
+  - [Applying to Jumpstart](introduction/application)
   - [Outline](introduction/outline)
   - [License](introduction/license)
 
@@ -35,7 +35,7 @@
   - [Object-oriented programming](computer-science/object-oriented-programming)
   - [Data structures and algorithms](computer-science/data-structures-algorithms)
 
-- **Life after JumpStart**
+- **Life after Jumpstart**
 
   - [Preparing for technical interviews](life-after-jumpstart/interviews)
   - [Becoming a better programmer](life-after-jumpstart/becoming-a-better-programmer)
@@ -48,7 +48,7 @@
 
 - **Links**
 
-  - [![Website](https://icongr.am/material/web.svg?color=808080&size=16)JumpStart](https://www.thoughtworks.com/jumpstart)
+  - [![Website](https://icongr.am/material/web.svg?color=808080&size=16)Jumpstart](https://www.thoughtworks.com/jumpstart)
   - [![Guides](https://icongr.am/material/book-open-variant.svg?color=808080&size=16)Guides](https://thoughtworks-jumpstart.github.io/guides)
   - [![GitHub](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)GitHub](https://github.com/thoughtworks-jumpstart)
   - [![npm](https://icongram.jgog.in/simple/npm.svg?color=808080&size=16)npm](https://www.npmjs.com/org/thoughtworks-jumpstart)

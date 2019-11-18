@@ -1,6 +1,6 @@
-# Applying to JumpStart
+# Applying to Jumpstart
 
-JumpStart application process:
+Jumpstart application process:
 
 1. Self-assessment - attempt all questions in JavaScript at your own time - start self-assessment
 
@@ -27,7 +27,7 @@ We ask that you complete this self-assessment as a way for you to assess yoursel
 
 [Complete the self-assessment](https://www.codewars.com/collections/jumpstart-self-assessment)
 
-## Submit your application to JumpStart
+## Submit your application to Jumpstart
 
 | Application Period   | Batch Period          |
 | -------------------- | --------------------- |
@@ -39,7 +39,7 @@ Visit our homepage and submit your [application](https://www.thoughtworks.com/ju
 
 Be sure to include your portfolio of projects in your resume, if you have any.
 
-## Complete the JumpStart assessment
+## Complete the Jumpstart assessment
 
 Once you submit your application we will send you an invitation to start the assessment.
 

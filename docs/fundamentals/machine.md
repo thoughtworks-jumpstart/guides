@@ -127,7 +127,7 @@ sudo dnf upgrade <package-name>
 
 Follow these instructions for all operating systems
 
-- Download Slack and join the JumpStart Slack workspace (please ask instructors for invite link)
+- Download Slack and join the Jumpstart Slack workspace (please ask instructors for invite link)
 - Create a GitHub account (if you don't have one already)
 - Install Visual Studio Code for your operating system
 - Install Firefox web browser for your operating system

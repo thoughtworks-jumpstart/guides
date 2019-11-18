@@ -4,4 +4,4 @@
 
 -- Dave Thomas, [Code Kata](http://codekata.com)
 
-Try the Katas in this repository: [Katas for ThoughtWorks JumpStart](https://github.com/thoughtworks-jumpstart/katas)
+Try the Katas in this repository: [Katas for ThoughtWorks Jumpstart](https://github.com/thoughtworks-jumpstart/katas)

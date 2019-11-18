@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "JumpStart Documentation",
+  "description": "Jumpstart Documentation",
   "main": "index.js",
   "scripts": {
     "start": "docsify serve docs"

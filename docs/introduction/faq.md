@@ -2,17 +2,17 @@
 
 Don't see your question here? Email us at jumpstart@thoughtworks.com
 
-## Who should apply to JumpStart?
+## Who should apply to Jumpstart?
 
-JumpStart is ideally suited for working professionals who are looking to switch careers and transition to fullstack software developers.
+Jumpstart is ideally suited for working professionals who are looking to switch careers and transition to fullstack software developers.
 
-JumpStart is also suitable for fresh graduates who want to gain practical industry knowledge as fullstack software developers.
+Jumpstart is also suitable for fresh graduates who want to gain practical industry knowledge as fullstack software developers.
 
 ## Is this program suitable for complete beginners?
 
 No. As this is a fast paced program, we do not recommend this for complete beginners. We require you to already be familiar with basic concepts of HTML, CSS, and JavaScript.
 
-Please read our [prerequisites](/introduction/prerequisite) for joining JumpStart.
+Please read our [prerequisites](/introduction/prerequisite) for joining Jumpstart.
 
 ## What is the start date for the program?
 
@@ -36,7 +36,7 @@ Applicants who receive the grant are required to seek employment in a tech-relat
 
 No. Unfortunately, there are no grants available for foreigners at this time.
 
-## Which programming language will be taught at JumpStart?
+## Which programming language will be taught at Jumpstart?
 
 JavaScript.
 
@@ -44,6 +44,6 @@ JavaScript.
 
 Our classes are from Mondays to Fridays and start at 9.30am till 5.30pm.
 
-## Is there a part-time JumpStart program?
+## Is there a part-time Jumpstart program?
 
-No. JumpStart is a full-time program.
+No. Jumpstart is a full-time program.

@@ -1,6 +1,6 @@
-# JumpStart Guides
+# Jumpstart Guides
 
-JumpStart Guides uses [docsify](https://docsify.js.org/#/) to generate our guides.
+Jumpstart Guides uses [docsify](https://docsify.js.org/#/) to generate our guides.
 
 The root folder of all our guides can be found in the `docs` folder.
 

@@ -46,7 +46,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ## Katas
 
-- [Katas for ThoughtWorks JumpStart](https://github.com/thoughtworks-jumpstart/katas) - katas collated for JumpStart
+- [Katas for ThoughtWorks Jumpstart](https://github.com/thoughtworks-jumpstart/katas) - katas collated for Jumpstart
 - [Code Kata](http://codekata.com/) - the original code kata from Dave Thomas
 - [Coding Dojo](http://codingdojo.org/kata/) - a list of katas from Coding Dojo
 - [LeetCode](https://leetcode.com/problemset/all/?difficulty=Easy) - all problems from LeetCode
