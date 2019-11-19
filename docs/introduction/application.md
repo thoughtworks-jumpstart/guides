@@ -21,9 +21,11 @@ Check that you meet our [prerequisites](/introduction/prerequisite) before apply
 
 ## Complete self-assessment
 
-We ask that you complete this self-assessment as a way for you to assess yourself on your level of competency, but JavaScript is recommended
+We ask that you complete this self-assessment as a way for you to assess yourself on your level of competency.
+We recommend that you complete the self-assessment twice - once in whatever programming language you prefer (e.g. Python, Ruby, C++) and then again in JavaScript.
+
 1. No imposed time limits
-1. Attempt these problems as many times as you like
+2. Attempt these problems as many times as you like
 
 [Complete the self-assessment](https://www.codewars.com/collections/jumpstart-self-assessment)
 
@@ -45,11 +47,11 @@ Once you submit your application we will send you an invitation to start the ass
 
 Things to take note:
 
-0. You must complete all problems in the assessment in JavaScript
-1. You have 3 days to start the assessment before the assessment expires
-1. You have 3 hours to complete the assessment once you decide to start
-1. You may make changes to your solution _before_ your final submission
-1. You may _not_ make any changes once you have made your final submission
+1. You must complete all problems in the assessment in JavaScript
+2. You have 3 days to start the assessment before the assessment expires
+3. You have 3 hours to complete the assessment once you decide to start
+4. You may make changes to your solution _before_ your final submission
+5. You may _not_ make any changes once you have made your final submission
 
 ### A note on the assessment
 
@@ -65,6 +67,10 @@ If you are found to be cheating, your application will be rejected. If you were 
 
 Realize that when you decide to cheat, you are ultimately cheating yourself.
 
-## Phone screening
+## Phone interview
 
-We will arrange for a phone screening with you to assess your motivations for joining the program and your level of commitment. We will also ask you questions relating to your previous work experience and your aspirations after completing the program.
+You will receive an email from us for you to book an appointment with us for a short phone interview.
+
+This phone interview is for us to learn more about you, your motivations for joining the program, and your level of commitment.
+
+We will also ask you questions relating to your previous work experience and your aspirations after completing the program.
