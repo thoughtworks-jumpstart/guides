@@ -30,26 +30,40 @@
       src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"
     ></script>
     <script>
+      function footerPlugin(hook) {
+        const year = new Date(Date.now()).getFullYear();
+        const footerContent = [
+          "<hr/>",
+          "<footer>",
+          "<span>&copy; " + year + " - </span>",
+          "<span>Content developed by the Jumpstart team at ThoughtWorks</span>",
+          "</footer>"
+        ].join("");
+
+        hook.afterEach(function(html) {
+          return html + footerContent;
+        });
+      }
+
       const documentBase =
         "https://github.com/thoughtworks-jumpstart/guides/tree/master/docs/";
 
       window.$docsify = {
         name: "Jumpstart Guides",
         repo: "https://github.com/thoughtworks-jumpstart/guides",
+        coverpage: true,
         loadSidebar: true,
         subMaxLevel: 2,
-        // plugin: search
         search: "auto",
-        // plugin: edit-on-github
-        plugins: [
-          EditOnGithubPlugin.create(documentBase, "", "📝 Edit this page")
-        ],
-        // plugin: docsify-copy-code
         copyCode: {
           buttonText: "Copy",
           errorText: "Error",
           successText: "Copied"
-        }
+        },
+        plugins: [
+          footerPlugin,
+          EditOnGithubPlugin.create(documentBase, "", "📝 Edit this page")
+        ]
       };
     </script>
   </body>
