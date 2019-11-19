@@ -14,12 +14,10 @@ This program is supported by the Singapore government under the [TechSkills Acce
 
 We run three batches each year - one in the beginning of the year, one in the middle of the year, and one at the end of the year. Dates are tentative and subject to change unless otherwise stated.
 
-| Year   | Batch   | Start date       | End date         | Status          |
-| ------ | ------- | ---------------- | ---------------- | --------------- |
-| 2019/3 | Batch 6 | 2 September 2019 | 22 November 2019 | Ongoing         |
-| 2020/1 | Batch 7 | 6 January 2020   | 27 March 2020    | Tentative       |
-| 2020/2 | Batch 8 | May 2020         | July 2020        | To be confirmed |
-| 2020/3 | Batch 9 | September 2020   | November 2020    | To be confirmed |
+| Year   | Batch   | Start date       | End date         | Status    |
+| ------ | ------- | ---------------- | ---------------- | --------- |
+| 2019/3 | Batch 6 | 2 September 2019 | 22 November 2019 | Ongoing   |
+| 2020/1 | Batch 7 | 6 January 2020   | 27 March 2020    | Tentative |
 
 ## Getting to ThoughtWorks
 
