@@ -2,6 +2,6 @@
 
 # Jumpstart Guides
 
-The official guide book for the Jumpstart program
+The official guide book for the ThoughtWorks Jumpstart program
 
-[Read the guides](/?id=jumpstart-guides)
+[Get started](/?id=jumpstart-guides)
