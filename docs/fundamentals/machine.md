@@ -133,7 +133,7 @@ Follow these instructions for all operating systems
 - Install Firefox web browser for your operating system
 - Install Google Chrome web browser for your operating system
 
-### Install Visual Studio Code 'code' command in PATH
+### Install Visual Studio Code `code` command in PATH
 
 - Open the command palette (Mac: Cmd+Shift+P; Windows: Ctrl+Shift+P or just press F1.)
 - Type `shell` and select `Shell Command: Install 'code' command in PATH`.
@@ -142,17 +142,9 @@ Follow these instructions for all operating systems
 
 ### Install Visual Studio Code extensions
 
-Here is a list of useful extensions that you should install
+Install these useful Visual Studio Code [extensions](/miscellaneous/resources?id=vs-code-extenstions)
 
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
-- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
-
-### Install Node version manager
+### Install Node version manager (optional)
 
 We often need to use different versions of Node on different projects. The easiest way to manage different versions of Node for multiple projects on your computer, is to use a version manager like [`n`](https://github.com/tj/n).
 
@@ -185,13 +177,13 @@ Alternatively, use [MongoDB Compass](https://www.mongodb.com/products/compass).
 
 ### Configuring Git
 
-To attach your full name to every commit you make simply add this line (of course, change it to your own name):
+To attach your full name to every commit you, simply add this line (of course, change it to your own name):
 
 ```sh
 git config --global user.name "Jane Doe"
 ```
 
-You can keep your email addresses private by using `<username>@users.noreply.github.com`. Just replace `<username>` with your actual GitHub username (e.g. `janedoe@users.noreply.github.com`)
+You can keep your email address private by using `<username>@users.noreply.github.com`. Just replace `<username>` with your actual GitHub username (e.g. `janedoe@users.noreply.github.com`)
 
 ```sh
 git config --global user.email "<username>@users.noreply.github.com"

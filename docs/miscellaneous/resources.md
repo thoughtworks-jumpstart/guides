@@ -103,3 +103,17 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Retro Pair](https://retropair.herokuapp.com/) - a tool to pair people up (built by a jumpling)
 - [Who's Next](https://whoisnext.netlify.com/) - a tool to select the next person in the class
 - [Date Calculator](https://www.timeanddate.com/date/dateadd.html) - add to or subtract from a date
+- [Figma](https://www.figma.com/) - a collaborative interface design tool
+- [Timer](https://bayo-timer.firebaseapp.com/) - a neat timer tool
+- [Useful tools for developers](https://dev.to/lucasnaja/useful-tools-for-developers-2c00) - a large collection of useful tools for developers by DEV community
+
+## VS Code extenstions
+
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - visualize your git repository
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - supercharge git features
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - a linting tool for JavaScript
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - a code formatter
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - automatically rename HTML tags
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - automatically close HTML tags
+- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest) - a JavaScript testing framework
+- [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - a YAML linter
