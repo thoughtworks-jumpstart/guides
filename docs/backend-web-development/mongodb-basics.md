@@ -39,8 +39,6 @@ Once the MongoDB server is started, you should see the following line on your co
 - Fast, indexing is supported by B-trees
 - Has high availablily due to it being a distributed database
 
-> ...when leveraging the richness and power of the document model, we estimate 80%-90% of applications don’t need multi-document transactions at all.
-
 ## Disadvantages of MongoDB
 
 - High data consumption
@@ -91,8 +89,6 @@ However, too many indexes will affect database performance. They need to be dele
 
 ## Good to know
 
-- It is possible to have a ["join" of documents across collections](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/).
-- (Starting from 4.0 release) [ACID transaction across multiple documents is also supported.](https://www.mongodb.com/transactions)
 - MongoDB creates databases and collections on demand if they do not already exist.
 
 ## Other resources
