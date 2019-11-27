@@ -133,6 +133,13 @@ Follow these instructions for all operating systems
 - Install Firefox web browser for your operating system
 - Install Google Chrome web browser for your operating system
 
+### Install Visual Studio Code 'code' command in PATH
+
+- Open the command palette (Mac: Cmd+Shift+P; Windows: Ctrl+Shift+P or just press F1.)
+- Type `shell` and select `Shell Command: Install 'code' command in PATH`.
+
+![code](../_media/code.png)
+
 ### Install Visual Studio Code extensions
 
 Here is a list of useful extensions that you should install
@@ -167,12 +174,12 @@ If you're running Windows, please add the MongoDB bin folder to your System PATH
 
 ### Install a Visual Studio Code extension for viewing data in MongoDB
 
-1. Open the Extensions pane in Visual Studio Code
-1. Search for the `Azure Cosmos DB extension` by Microsoft
-1. Install it and reload VSCode once the installation completes
-1. Click the new Azure icon on the left sidebar
-1. Create a new MongoDB connection by going to `Cosmos DB` and then clicking the 'plug' icon and selecting `MongoDB` from the dropdown
-1. Make sure to start the server before connecting to it
+- Open the Extensions pane in Visual Studio Code
+- Search for the `Azure Cosmos DB extension` by Microsoft
+- Install it and reload VSCode once the installation completes
+- Click the new Azure icon on the left sidebar
+- Create a new MongoDB connection by going to `Cosmos DB` and then clicking the 'plug' icon and selecting `MongoDB` from the dropdown
+- Make sure to start the server before connecting to it
 
 Alternatively, use [MongoDB Compass](https://www.mongodb.com/products/compass).
 
