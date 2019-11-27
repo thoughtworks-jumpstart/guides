@@ -22,6 +22,7 @@
 - **Backend Web Development**
 
   - [MongoDB basics](backend-web-development/mongodb-basics)
+  - [MongoDB vs Relational](backend-web-development/mongodb-vs-relational)
   - [Mongoose basics](backend-web-development/mongoose-basics)
   - [Database Security](backend-web-development/database-security)
 
