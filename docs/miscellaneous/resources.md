@@ -39,10 +39,12 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Grid Garden](https://cssgridgarden.com/) - a game for learning CSS Grid
 - [Unfolding the Box Model](https://rupl.github.io/unfold/) - exploring CSS 3D transforms
 
-## JavaScript
+## JavaScript and other programming languages
 
 - [JavaScript Info](https://javascript.info/) - modern JavaScript tutorials
 - [JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/) - learn JavaScript fundamentals on SoloLearn
+- [Learn X in Y Minutes](https://learnxinyminutes.com/docs/javascript) - a quick reference to common operations performed in JavaScript
+- [Reference for scripting languages](http://hyperpolyglot.org/scripting) - a side-by-side reference sheet for JavaScript, Python, Ruby, and PHP
 
 ## Katas
 
