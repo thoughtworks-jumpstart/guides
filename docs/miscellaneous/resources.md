@@ -55,6 +55,14 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [HackerRank](https://www.hackerrank.com/) - practice coding, prepare for interviews, and get hired
 - [Coderbyte](https://coderbyte.com/challenges) - a variety of coding challenges with varying difficulty
 
+## Technical interviews
+
+- [Interview Cake](https://www.interviewcake.com/)
+- [Elements of Programming Interviews](https://elementsofprogramminginterviews.com/) - companion website with solution code for questions found in the book
+- [Elements of Programming Interviews in Python](http://elementsofprogramminginterviews.com/sample/epilight_python_new.pdf) - a book sample
+- [Elements of Programming Interviews in Java](http://elementsofprogramminginterviews.com/sample/epilight_java_new.pdf) - a book sample
+- [Cracking the Coding Interview solutions in JavaScript](https://github.com/careercup/CtCI-6th-Edition-JavaScript) - Solutions in JavaScript for questions found in the book
+
 ## Design, illustrations, icons
 
 - [Icon8](https://icons8.com/) - free design resources
@@ -107,7 +115,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Timer](https://bayo-timer.firebaseapp.com/) - a neat timer tool
 - [Useful tools for developers](https://dev.to/lucasnaja/useful-tools-for-developers-2c00) - a large collection of useful tools for developers by DEV community
 
-## VS Code extenstions
+## VS Code extensions
 
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - visualize your git repository
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - supercharge git features
