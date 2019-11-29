@@ -13,6 +13,7 @@
   - [Command line tools](fundamentals/command-line)
   - [Git basics](fundamentals/git-basics)
   - [Git visualized](fundamentals/git-visualize)
+  - [How the Internet works](fundamentals/how-internet-works)
 
 - **Frontend Web Development**
 
