@@ -31,24 +31,26 @@
 
   - [Agile software delivery](delivering-software/agile)
   - [Software engineering practices](delivering-software/software-engineering)
+  - [Clean code and refactoring](delivering-software/clean-code-and-refactoring)
 
-- **Computer Science**
+* **Computer Science**
 
   - [Object-oriented programming](computer-science/object-oriented-programming)
   - [Data structures and algorithms](computer-science/data-structures-algorithms)
 
-- **Life after Jumpstart**
+* **Life after Jumpstart**
 
+  - [Career advice](life-after-jumpstart/career-advice)
   - [Preparing for technical interviews](life-after-jumpstart/interviews)
   - [Becoming a better programmer](life-after-jumpstart/becoming-a-better-programmer)
 
-- **Miscellaneous**
+* **Miscellaneous**
 
   - [Katas](miscellaneous/katas)
   - [Books](miscellaneous/books)
   - [Resources](miscellaneous/resources)
 
-- **Links**
+* **Links**
 
   - [![Website](https://icongr.am/material/web.svg?color=808080&size=16)Jumpstart](https://www.thoughtworks.com/jumpstart)
   - [![Guides](https://icongr.am/material/book-open-variant.svg?color=808080&size=16)Guides](https://thoughtworks-jumpstart.github.io/guides)
