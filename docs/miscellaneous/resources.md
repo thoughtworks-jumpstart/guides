@@ -87,7 +87,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 
 ## Free books
 
-- [Teaching Tech Together](https://teachtogether.tech) - How to create and deliver lessons that work
+- [Teaching Tech Together](https://teachtogether.tech) - how to create and deliver lessons that work
   and build a teaching community around them
 - [Free books by Packt](https://www.packtpub.com/free-learning) - free programming books by Packt
 - [Free books by Green Tea Press](https://greenteapress.com) - free programming books by Green Tea Press
