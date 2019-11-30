@@ -1,10 +1,14 @@
-# Command line tools {docsify-ignore-all}
+# Command line basics {docsify-ignore-all}
 
-Get familiar with these essential command line tools.
+After developing an application, you want to serve this applicaton on a server. Since most servers are typically Linux based, it's important to get familiar with these essential commands so that you are able to navigate around easily.
+
+There may be times you might be asked to navigate a server to view the logs in order to determine the cause of a bug or you might be asked to complete a manual task that can be automated with a shell script and a cron job.
 
 ## Shell
 
-A shell is a command line user interface. Most Unix-like operating systems use Bash. The default shell for macOS, since 10.15 Catalina, is Z shell.
+A shell is a command line user interface. Most Unix-like operating systems use Bash.
+
+However, the default shell for macOS, since 10.15 Catalina, is Z shell. Prior versions of macOS used Bash. Windows does not have Bash, but an emulator can be installed.
 
 - Use the `Tab` key on your keyboard to complete arguments or list available commands
 - Use `CTRL` + `R` to search through previously used commands
@@ -16,7 +20,7 @@ A shell is a command line user interface. Most Unix-like operating systems use B
 
 Read more tips on [everyday uses for Bash](https://github.com/jlevy/the-art-of-command-line#everyday-use).
 
-## Navigating around
+## Navigating around the terminal
 
 ### pwd
 
@@ -56,21 +60,39 @@ $ cd -
 
 ### cat
 
+View a file in its entirety with `cat`.
+
 ### head
+
+View the top of a file with `head`.
 
 ### tail
 
+View the end of a file with `tail`.
+
+This program is commonly used to view logfiles. To view 'live' updates of a logfile you can append the `-f` argument like so `tail -f /path/to/my/file`.
+
+To learn more about `tail` you can do `man tail`.
+
 ### less
+
+`less` is a program that is used to view large files. It's more efficient when opening large files because it does not have to load the entire file to display the first page.
+
+To learn more about `less` you can do `man less` or `less --help`.
 
 ### man
 
 The `man` pages actually uses `less` to display its content, so learning how to navigate through pages with `less` is essential.
 
+Unfortunately, Windows users do not have `man` pages because the emulator does not typically come with it.
+
+To learn more about `man` you can do `man man`.
+
 ## Miscellaneous
 
 ### history
 
-Type `history` to list previous commands used; follow up with `!n`, where `n` is the command number, to execute that command (e.g `!1234`)
+Type `history` to list previous commands used; follow up with `!n`, where `n` is the command number, to execute that command (e.g `!1234`).
 
 ```sh
 $ history
@@ -81,3 +103,9 @@ $ history
 $ !125
 $ npm install
 ```
+
+### Linux file system and directory structure
+
+For those of us who are curious to learn about the Linux file system and directory structure, you can watch this video.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HbgzrKJvDRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
