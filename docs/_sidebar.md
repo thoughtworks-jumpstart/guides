@@ -16,6 +16,7 @@
   - [How the Internet works](fundamentals/how-internet-works)
 
 - **JavaScript**
+
   - [Node basics](node-basics.md)
 
 - **Frontend Web Development**
@@ -26,9 +27,9 @@
 - **Backend Web Development**
 
   - [MongoDB basics](backend-web-development/mongodb-basics)
-  - [MongoDB vs Relational](backend-web-development/mongodb-vs-relational)
+  - [MongoDB vs relational](backend-web-development/mongodb-vs-relational)
   - [Mongoose basics](backend-web-development/mongoose-basics)
-  - [Database Security](backend-web-development/database-security)
+  - [Database security](backend-web-development/database-security)
 
 - **Delivering software**
 
