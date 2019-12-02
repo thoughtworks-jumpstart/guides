@@ -206,7 +206,9 @@ Verify your packages have been installed correctly
 
 ```sh
 git --version
+which node
 node --version
+which npm
 npm --version
 code --version
 mongod --version

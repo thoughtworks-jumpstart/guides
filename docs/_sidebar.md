@@ -15,6 +15,9 @@
   - [Git visualized](fundamentals/git-visualize)
   - [How the Internet works](fundamentals/how-internet-works)
 
+- **JavaScript**
+  - [Node basics](node-basics.md)
+
 - **Frontend Web Development**
 
   - [React Hooks](frontend-web-development/react-hooks)
