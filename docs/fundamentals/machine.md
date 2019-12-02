@@ -140,6 +140,14 @@ Follow these instructions for all operating systems
 
 ![code](../_media/code.png)
 
+You can now use the `code` command to open Visual Studio Code.
+
+To open the entire folder / directory:
+
+```
+code .
+```
+
 ### Install Visual Studio Code extensions
 
 Install these useful Visual Studio Code [extensions](/miscellaneous/resources?id=vs-code-extenstions)
