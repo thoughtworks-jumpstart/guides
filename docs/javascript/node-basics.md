@@ -25,9 +25,13 @@ Don't use NodeJS to build your server side application under the following cases
 
 Many of the frontend developer tools (e.g. webpack, gulp, etc) are built on top of NodeJS.
 
+### What is single-threaded, non-blocking I/O?
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jOupHNvDIq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Node.js architecture
 
-<img src="../_media/nodejs.jpg" alt="node.js architecture" width="400"/>
+<img src="_media/nodejs.jpg" alt="node.js architecture" width="400"/>
 
 - libuv: the low-level I/O engine of Node.js. it encapsulate the details of different I/O APIs on various operating systems
 - V8: the JavaScript engine originally developed by Google for the Chrome browser
@@ -53,9 +57,13 @@ You can write your own modules too!
 
 It uses `require` and `module.exports`.
 
-## Package management
+### Package management
 
 Node.js by default uses `npm`, short for Node Package Manager, for managing packages.
+
+## Quick start with Node.js
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pU9Q6oiQNd0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## More resources
 
