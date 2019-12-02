@@ -11,6 +11,7 @@
 
   - [Machine setup](fundamentals/machine)
   - [Command line tools](fundamentals/command-line)
+  - [Common shortcuts](fundamentals/shortcuts)
   - [Git basics](fundamentals/git-basics)
   - [Git visualized](fundamentals/git-visualize)
   - [How the Internet works](fundamentals/how-internet-works)
