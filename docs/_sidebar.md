@@ -17,7 +17,7 @@
 
 - **JavaScript**
 
-  - [Node basics](node-basics.md)
+  - [Node basics](javascript/node-basics.md)
 
 - **Frontend Web Development**
 
