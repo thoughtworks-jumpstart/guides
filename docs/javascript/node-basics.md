@@ -40,22 +40,26 @@ Many of the frontend developer tools (e.g. webpack, gulp, etc) are built on top 
 
 ## Executing JavaScript
 
-You can execute javascript scripts with `node` like this:
+Execute javascript scripts with the `node` command:
 
 ```
 node app.js
 ```
 
-## Node modules
+Adding .js is optional. If a directory path instead of a file path is provided, Node.js will try to resolve for a `index.js` file.
+
+```
+node .
+```
+
+## Node.js modules
 
 Node.js uses the CommonJS module system.
-A Node module is a reusable block of code.
+A Node module is a reusable block of code. When you import a file inside another file, it is called a module.
 
 Node.js has a set of built-in modules which you can use without any further installation.
 
 You can write your own modules too!
-
-It uses `require` and `module.exports`.
 
 ### Package management
 
@@ -68,3 +72,4 @@ Node.js by default uses `npm`, short for Node Package Manager, for managing pack
 ## More resources
 
 - [History of Node.js](https://blog.risingstack.com/history-of-node-js/)
+- [Introduction to Node.js](https://itnext.io/introduction-to-node-js-a-beginners-guide-to-node-js-and-npm-eca9c408f9fe)
