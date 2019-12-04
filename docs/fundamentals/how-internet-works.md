@@ -1,5 +1,13 @@
 # How the Internet works
 
+How the Internet Works in 5 Minutes
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7_LPdttKXPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+DNS Explained
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/72snZctFFtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Wires, cables, and WiFi | Internet 101 | Computer Science | Khan Academy
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iV-YqG70wbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
