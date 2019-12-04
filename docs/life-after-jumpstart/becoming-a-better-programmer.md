@@ -64,6 +64,10 @@ Other related groups are [Geek Brunch](https://geekbrunch.sg/) and [Geek Path](h
 
 [Engineers.sg](https://engineers.sg/) is a community of volunteers who record videos of various talks and put them up on YouTube. You can sign up as a volunteer.
 
-## Going for developer conferences
+## Attending developer conferences
 
 Go to conferences. Some conferences may be expensive, but you can volunteer with [Engineers.sg](https://engineers.sg/) to record these videos and attend these conferences for free.
+
+You can also watch videos of past [developer conferences](https://engineers.sg/conferences).
+
+Some noteworthy conferences in Singapore include, FOSSASIA Summit, GeekCampSG, YOW! Singapore, PyConSG, GopherConSG, and iOSConfSG.
