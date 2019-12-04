@@ -66,7 +66,9 @@ Be sure to include a link to your LinkedIn account on your resume and online por
 
 ### GitHub
 
-A lot can be learned from a developer's GitHub account. How often they push code, how many projects that have created, how many open source software they have contributed to. The more activity you are on GitHub the more you can stand out.
+A lot can be learned from a developer's GitHub account - how often they push code, how many projects they have created, how many open source projects they have contributed to. The more activity you have on GitHub the more you will stand out.
+
+If you've never contributed to an open source project before, we suggest you take part in Hacktoberfest in October. It's an easy way to get started.
 
 GitHub is also a good way to connect with other developers, so be sure to follow people on GitHub.
 
