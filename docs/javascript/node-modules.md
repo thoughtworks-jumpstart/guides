@@ -107,7 +107,7 @@ To solve this problem, Node.js can import modules for us without relative paths 
 
 ### Using node_modules
 
-For example, if the `lib` folder is placed inside `node_modules`, it will become a package that we can import in `calculate.js`.
+For example, if the `lib` folder is placed inside `node_modules`, it will become a package that you can import in `calculate.js`.
 
 Folder structure:
 
@@ -119,9 +119,13 @@ Folder structure:
    └── calculate.js
 ```
 
-Now we can import `math.js` file from the `lib` package.
+Now you can import `math.js` file from the `lib` package.
 
 ```
 // calculate.js
 var math = require("lib/math");
 ```
+
+Note that if you use `require("lib")`, Node.js will try to search for a index.js file inside the lib package directory.
+
+Package management gets tough when we add more packages, especially those that are 3rd party and open-source. This is why we will use a package manager such as `npm` to manage and update our packages.
