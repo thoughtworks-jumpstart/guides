@@ -1,5 +1,7 @@
 # Node modules and packages
 
+## Importing modules in scripts
+
 ### Importing a module with `require`
 
 The `require` function is provided by Node.js to import modules into a file.
@@ -75,20 +77,51 @@ var sum = math(1, 2);
 console.log(sum); // 3
 ```
 
-### Packages in Node.js
+## Packages in node_modules
 
-If you have more modules like `math.js`, you might want to put them all into a folder called `lib` and import them. However, if our `calculate.js` is nested in a folder named calculate (`calculate/calculate.js`), then for you to import `math.js` using a different relative path (`../lib/math.js`).
+### Why use node_modules?
+
+Relative paths are confusing.
+
+If you have more modules like `math.js`, you might want to put them all into a folder called `lib` and import them. However, if our `calculate.js` is nested in a folder named calculate (`calculate/calculate.js`), then for you to import `math.js`, you would have to use a different relative path (`../lib/math.js`).
+
+Folder structure:
 
 ```
 ├── lib/
 |  └── math.js
 └── calculate/
-   ├── calculate.js
+   └── calculate.js
 ```
+
+Importing `math.js` module in `calculate.js`:
 
 ```
 // calculate.js
-var math = require("../lib/math.js");
+var math = require("../lib/math");
 ```
 
 The relative paths eventually becomes very difficult to determine as files get more nested.
+
+To solve this problem, Node.js can import modules for us without relative paths if they are placed in a folder called `node_modules`. Modules in this folder are called _packages_.
+
+### Using node_modules
+
+For example, if the `lib` folder is placed inside `node_modules`, it will become a package that we can import in `calculate.js`.
+
+Folder structure:
+
+```
+├── node_modules/
+|  └── lib/
+|      └── math.js
+└── calculate/
+   └── calculate.js
+```
+
+Now we can import `math.js` file from the `lib` package.
+
+```
+// calculate.js
+var math = require("lib/math");
+```
