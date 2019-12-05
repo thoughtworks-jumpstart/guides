@@ -4,7 +4,7 @@ Refer to the github repository: [Create simple Node.js modules with no server](h
 
 ## Importing modules in scripts
 
-### Importing a module with `require`
+### Importing a module with require
 
 The `require` function is provided by Node.js to import modules into a file.
 It returns what the module is exporting.
@@ -22,7 +22,7 @@ What is exported by `math.js` if it is an empty file? It will export an empty ob
 console.log(math); // this will log {} to the console
 ```
 
-### Export functions in a module with `module.exports`
+### Export functions in a module with module.exports
 
 Using the `exports` object you can export a function named `add` in the `math.js` module.
 The `exports` object will be the object exported from the module.
