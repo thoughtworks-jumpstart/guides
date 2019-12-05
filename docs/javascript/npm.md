@@ -3,7 +3,7 @@
 npm is Node.js' default package manager. You can run it using the `npm` command.
 Not only it is a popular JavaScript package manager, it has an online public repository of open-source packages.
 
-## Creating package.json
+## Create package.json
 
 `package.json` is a configuration file that npm uses.
 

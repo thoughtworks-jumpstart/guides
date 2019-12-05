@@ -38,7 +38,7 @@ Many of the frontend developer tools (e.g. webpack, gulp, etc) are built on top 
 - bindings: responsible for wrapping and exposing libuv and other low-level functionality to JavaScript
 - node-core, a core JavaScript library that implements the high-level Node.js API
 
-## Executing JavaScript
+## Execute JavaScript with node
 
 Execute javascript scripts with the `node` command:
 
