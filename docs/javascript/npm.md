@@ -3,6 +3,13 @@
 npm is Node.js' default package manager. You can run it using the `npm` command.
 Not only it is a popular JavaScript package manager, it has an online public repository of open-source packages.
 
+## Uses of npm
+
+- Packaging our Node.js modules into libraries and share them with others
+- Reuse libraries built by other people
+- Manage dependencies (libraries and their versions) used in a project
+- Building our projects (by providing the scripts in package.json file)
+
 ## Create package.json
 
 `package.json` is a configuration file that npm uses.
@@ -51,6 +58,20 @@ Dependencies appearing under the `devDependencies` key in the `package.json` fil
 
 See [npm docs for dependencies and dev dependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
 
+Install a package globally:
+
+```
+npm install -g <packagename>
+```
+
+This is rarely needed. Prefer local dependencies and npx where possible.
+
+Remove packages used in your project:
+
+```
+npm uninstall <packagename>
+```
+
 ### Semantic versioning
 
 After installing and saving a package into `package.json`, you might notice that it has a version specified in the format of:
@@ -74,6 +95,22 @@ For example, "~5.4.0" in the `package.json` may install version "5.4.7".
 Use the caret (^) character to allow npm to update to the latest package which has the same Major ver as stated, but may have newer Minor and Patch versions
 
 For example, "^5.4.0" in `package.json` may install version "5.6.0".
+
+## Execute a package
+
+Use npx to execute a locally-installed package or a package that was not installed previously:
+
+```
+npx <packagename/command>
+```
+
+This is very useful for create-react-app to run once at the start of a project.
+
+```
+npx create-react-app my-app
+```
+
+This also ensures that you always use the latest version without having to upgrade.
 
 ## npm audit
 
