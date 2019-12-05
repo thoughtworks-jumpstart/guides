@@ -2,9 +2,9 @@
 
 Refer to the github repository: [Create simple Node.js modules with no server](https://github.com/thoughtworks-jumpstart/simple-node-modules)
 
-## Importing modules in scripts
+## Import modules in scripts
 
-### Importing a module with require
+### Import a module with require
 
 The `require` function is provided by Node.js to import modules into a file.
 It returns what the module is exporting.
@@ -107,7 +107,7 @@ The relative paths eventually becomes very difficult to determine as files get m
 
 To solve this problem, Node.js can import modules for us without relative paths if they are placed in a folder called `node_modules`. Modules in this folder are called _packages_.
 
-### Using node_modules
+### How to import packages in node_modules
 
 For example, if the `lib` folder is placed inside `node_modules`, it will become a package that you can import in `calculate.js`.
 
