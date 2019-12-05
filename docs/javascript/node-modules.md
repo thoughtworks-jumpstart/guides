@@ -1,4 +1,4 @@
-# Node modules and packages
+# Node.js modules and packages
 
 Refer to the github repository: [Create simple Node.js modules with no server](https://github.com/thoughtworks-jumpstart/simple-node-modules)
 

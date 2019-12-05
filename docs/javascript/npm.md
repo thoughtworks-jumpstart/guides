@@ -10,9 +10,11 @@ Not only it is a popular JavaScript package manager, it has an online public rep
 - Manage dependencies (libraries and their versions) used in a project
 - Building our projects (by providing the scripts in package.json file)
 
-## Create package.json
+## package.json
 
 `package.json` is a configuration file that npm uses.
+
+### Creating package.json
 
 Generate the `package.json` file for a project:
 
@@ -22,7 +24,66 @@ npm init
 
 Bypass the questions with the `--yes` or `-y` flag.
 
-See an example of a `package.json` file in the [npm docs for creating a package json file](https://docs.npmjs.com/creating-a-package-json-file).
+An example of a package.json
+
+```json
+{
+  "name": "simple-node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoughtworks-jumpstart/simple-node-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thoughtworks-jumpstart/simple-node-server/issues"
+  },
+  "homepage": "https://github.com/thoughtworks-jumpstart/simple-node-server#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
+```
+
+See more examples of a `package.json` file in the [npm docs for creating a package json file](https://docs.npmjs.com/creating-a-package-json-file).
+
+### Scripts
+
+In the above example, notice that there are already two scripts in the `scripts` object. npm scripts are just JSON key-value pairs where the key is the name of the script (such as `start`) and the value contains the script you want to execute (such as `node index.js`).
+
+```json
+"scripts": {    "start": "node index.js",    ...}
+```
+
+Being a popular npm script, it can be run like this:
+
+```
+npm start
+```
+
+What if you have custom npm scripts such as `start:dev` like in the above example?
+
+```json
+"scripts": {...    "start:dev": "nodemon index.js"   }
+```
+
+Now, npm start:dev would not work because it is a custom npm script. Custom npm scripts must be preceded by either `run-script` or `run` for them to be executed.
+
+Run the custom script like this:
+
+```
+npm run start:dev
+```
+
+See more use cases of custom npm scripting [here](https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/).
 
 ## Manage dependencies
 
