@@ -11,14 +11,14 @@ It returns what the module is exporting.
 
 Import a module named `math.js` into `calculate.js` file and put whatever the module is exporting into a variable named `math`.
 
-```
+```js
 // calculate.js
-var math = require( './math.js' );
+var math = require("./math.js");
 ```
 
 What is exported by `math.js` if it is an empty file? It will export an empty object `{}`.
 
-```
+```js
 console.log(math); // this will log {} to the console
 ```
 
@@ -27,7 +27,7 @@ console.log(math); // this will log {} to the console
 Using the `exports` object you can export a function named `add` in the `math.js` module.
 The `exports` object will be the object exported from the module.
 
-```
+```js
 // math.js
 exports.add = function(number1, number2) {
   return number1 + number2;
@@ -36,13 +36,15 @@ exports.add = function(number1, number2) {
 
 The `math` variable in `calculate.js` will now be an object that contains the `add` key which has the function as a value.
 
-```
-{ add: [Function] }
+```js
+{
+  add: [Function];
+}
 ```
 
 You can now execute the function in calculate.js.
 
-```
+```js
 // calculate.js
 var sum = math.add(1, 2); //sum is 3
 ```
@@ -54,7 +56,7 @@ The `exports` object you youre using previously points to exports key on the mod
 
 Exporting a function as `exports.add` is the same as exporting it as `module.exports.add`.
 
-```
+```js
 // math.js
 console.log(exports === module.exports); // true
 console.log(exports.add === module.exports.add); // true
@@ -62,7 +64,7 @@ console.log(exports.add === module.exports.add); // true
 
 Thus you can export the the same function in `math.js` like this:
 
-```
+```js
 // math.js
 module.exports = function(number1, number2) {
   return number1 + number2;
@@ -71,7 +73,7 @@ module.exports = function(number1, number2) {
 
 The `math.js` module can now be used in `calculate.js` like this:
 
-```
+```js
 // calculate.js
 var math = require("./math.js");
 console.log(math); // [Function]
@@ -98,7 +100,7 @@ Folder structure:
 
 Importing `math.js` module in `calculate.js`:
 
-```
+```js
 // calculate.js
 var math = require("../lib/math");
 ```
@@ -123,7 +125,7 @@ Folder structure:
 
 Now you can import `math.js` file from the `lib` package.
 
-```
+```js
 // calculate.js
 var math = require("lib/math");
 ```
@@ -131,3 +133,16 @@ var math = require("lib/math");
 Note that if you use `require("lib")`, Node.js will try to search for a index.js file inside the lib package directory.
 
 Package management gets tough when we add more packages, especially those that are 3rd party and open-source. This is why we will use a package manager such as `npm` to manage and update our packages.
+
+## Built-in packages
+
+Node.js comes with built-in packages provided as the Node Standard Library. Being built-in packages, you do not need to install them to import them.
+Their sources are on [Github](https://github.com/nodejs/node/tree/master/lib).
+
+When we require(<packagename>) a package, Node.js first searches for the package name in the built-in packages. If it doesn’t find it in the standard library, it then searches for it in node_modules.
+
+For example, to import the `fs` built-in package for reading files:
+
+```js
+var fs = require("fs");
+```

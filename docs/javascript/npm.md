@@ -119,16 +119,3 @@ Use npm audit to generate a security report:
 ```
 npm audit
 ```
-
-## npm built-in packages
-
-Node.js comes with built-in packages provided as the Node Standard Library. Being built-in packages, you do not need to install them to import them.
-Their sources are on [Github](https://github.com/nodejs/node/tree/master/lib).
-
-When we require(<packagename>) a package, Node.js first searches for the package name in the built-in packages. If it doesn’t find it in the standard library, it then searches for it in node_modules.
-
-For example, to import the `fs` built-in package for reading files:
-
-```
-var fs = require('fs');
-```
