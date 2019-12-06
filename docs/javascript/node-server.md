@@ -72,3 +72,7 @@ const server = http.createServer((req, res) => {
 ```
 
 To know more details, check the official Node.js docs about the anatomy of an [HTTP transaction](https://nodejs.org/es/docs/guides/anatomy-of-an-http-transaction/).
+
+## Create Node.js servers using Express.js
+
+Node.js is a low-level, I/O framework. It does not come with security, user sessions, error handling etc. This is where the Express.js framework comes in. Express.js is built on top of Node.js to make the creation of Node.js servers a lot simpler. We will discover this when we create the same simple server in Express.js.
