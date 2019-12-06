@@ -20,6 +20,7 @@
 
   - [Node.js basics](javascript/node-basics.md)
   - [Node.js modules and packages](javascript/node-modules.md)
+  - [Node.js server](javascript/node-server.md)
   - [npm](javascript/npm.md)
   - [Labs for JavaScript](javascript/javascript-labs.md)
 
