@@ -146,3 +146,11 @@ For example, to import the `fs` built-in package for reading files:
 ```js
 var fs = require("fs");
 ```
+
+## Commonly used Node.js libraries
+
+### Nodemon
+
+When a change is in made in the project files, you normally would need to restart the Node.js server to see the change.
+
+Nodemon is a library that will make Node.js server automatically restart when there is a change.

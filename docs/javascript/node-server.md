@@ -26,6 +26,9 @@ console.log('Method', req.method)
 console.log('Path', req.url)
 ```
 
+Node.js uses event emitters and thus you can add a callback function (a listener) to the `request` event.
+To know why Node.js use event emitters with the HTTP server, [read more here](https://codeburst.io/event-emitters-and-listeners-in-javascript-9cf0c639fd63).
+
 Continue adding code to this function.
 If a user accesses the url `/books` (a GET request is made), display "Here are the books 📖" to the user
 
