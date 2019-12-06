@@ -1,7 +1,5 @@
 # Labs for JavaScript
 
-## Thoughtworks JumpStart
-
 ### Programming JavaScript
 
 - [Functions](https://github.com/thoughtworks-jumpstart/learning-functions)
