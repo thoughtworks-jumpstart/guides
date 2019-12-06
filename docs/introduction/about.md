@@ -17,7 +17,7 @@ We run three batches each year - one in the beginning of the year, one in the mi
 | Year   | Batch   | Start date       | End date         | Status    |
 | ------ | ------- | ---------------- | ---------------- | --------- |
 | 2019/3 | Batch 6 | 2 September 2019 | 22 November 2019 | Ongoing   |
-| 2020/1 | Batch 7 | 6 January 2020   | 27 March 2020    | Tentative |
+| 2020/1 | Batch 7 | 6 January 2020   | 27 March 2020    | Confirmed |
 
 ## Getting to ThoughtWorks
 
