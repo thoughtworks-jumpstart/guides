@@ -1,5 +1,23 @@
 # Becoming a better programmer
 
+## What to learn next?
+
+> "Skate to where the puck is going, not where it has been." -- Steve Jobs
+
+So we've come to the end of our 12-week journey together here at Jumpstart. You've learned a lot, but there's still a vast ocean of things to learn out there. It can be quite daunting when deciding what to learn next. There's really so much out there, so how can you make a good decision?
+
+### Wisdom of the crowd
+
+Looking at [Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2019#technology), we can see that JavaScript, Node.js, Express, and MongoDB are among the most popular technologies today. That's why we chose them when we developed our curriculum.
+
+You can also see that there are other interesting insights to be gained from the survey. TypeScript has been steadily gaining popularity, along with Python and Rust. React Native and PostgreSQL are among the most popular frameworks and databases respectively. Stack Overflow releases these surveys each year, so don't forget to look at those results as and when they come out.
+
+Another useful reference is the [ThoughtWorks Radar](https://www.thoughtworks.com/radar). These are broken into four areas - Techniques, Tools, Platforms, as well as Languages and Frameworks. The radar is updated frequently, so be sure to check back for [updates](https://www.thoughtworks.com/radar#subscribe).
+
+### Build stuff
+
+There's nothing quite like putting ideas into action and building a project; especially [silly ones](https://firstround.com/review/Spotifys-Design-Lead-on-Why-Side-Projects-Should-be-Stupid/). However, we caution against blindly following tutorials to build a project. You should rely on reading documentation and figuring out how to build stuff from scratch.
+
 ## Having the right mindset
 
 > “I'm not a great programmer; I'm just a good programmer with great habits.” -- Kent Beck
