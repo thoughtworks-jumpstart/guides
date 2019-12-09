@@ -32,12 +32,12 @@
 - **Backend Web Development**
 
   - [Express.js basics](backend-web-development/express-basics)
-  - [Quick Start for backend](backend-web-development/backend-quick-start)
+  - [Quick start for backend](backend-web-development/backend-quick-start)
   - [MongoDB basics](backend-web-development/mongodb-basics)
   - [MongoDB vs relational](backend-web-development/mongodb-vs-relational)
   - [Mongoose basics](backend-web-development/mongoose-basics)
   - [Database security](backend-web-development/database-security)
-  - [Labs for Backend](backend-web-development/backend-labs)
+  - [Labs for backend](backend-web-development/backend-labs)
 
 - **Delivering software**
 
