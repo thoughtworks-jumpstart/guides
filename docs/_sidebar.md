@@ -18,11 +18,11 @@
 
 - **JavaScript**
 
-  - [Node.js basics](javascript/node-basics.md)
-  - [Node.js modules and packages](javascript/node-modules.md)
-  - [Node.js server](javascript/node-server.md)
-  - [npm](javascript/npm.md)
-  - [Labs for JavaScript](javascript/javascript-labs.md)
+  - [Node.js basics](javascript/node-basics)
+  - [Node.js modules and packages](javascript/node-modules)
+  - [Node.js server](javascript/node-server)
+  - [npm](javascript/npm)
+  - [Labs for JavaScript](javascript/javascript-labs)
 
 - **Frontend Web Development**
 
@@ -32,10 +32,12 @@
 - **Backend Web Development**
 
   - [Express.js basics](backend-web-development/express-basics)
+  - [Quick Start for backend](backend-web-development/backend-quick-start)
   - [MongoDB basics](backend-web-development/mongodb-basics)
   - [MongoDB vs relational](backend-web-development/mongodb-vs-relational)
   - [Mongoose basics](backend-web-development/mongoose-basics)
   - [Database security](backend-web-development/database-security)
+  - [Labs for Backend](backend-web-development/backend-labs)
 
 - **Delivering software**
 
