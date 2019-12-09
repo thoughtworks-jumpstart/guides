@@ -127,6 +127,8 @@ npm install -g <packagename>
 
 This is rarely needed. Prefer local dependencies and npx where possible.
 
+If a package is installed globally, you will be able to run its command directly in the command line in any terminal. However, it is better to install locally, add it as a custom npm script and run it using `npm run <custom_script>`. Why is this better?
+
 Remove packages used in your project:
 
 ```
