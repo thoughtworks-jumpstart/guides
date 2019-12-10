@@ -16,6 +16,8 @@ Import a module named `math.js` into `calculate.js` file and put whatever the mo
 var math = require("./math.js");
 ```
 
+It is a loose convention to give the variable the same name as what you are importing but this is not enforced.
+
 What is exported by `math.js` if it is an empty file? It will export an empty object `{}`.
 
 ```js
@@ -69,6 +71,17 @@ Thus you can export the the same function in `math.js` like this:
 module.exports = function(number1, number2) {
   return number1 + number2;
 };
+```
+
+It can also be written like this:
+
+```js
+// math.js
+function add(number1, number2) {
+  return number1 + number2;
+}
+
+module.exports = add;
 ```
 
 The `math.js` module can now be used in `calculate.js` like this:

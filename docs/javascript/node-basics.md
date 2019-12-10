@@ -29,6 +29,10 @@ Many of the frontend developer tools (e.g. webpack, gulp, etc) are built on top 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jOupHNvDIq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### What is an event loop?
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8aGhZQkoFbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Node.js architecture
 
 <img src="_media/nodejs.jpg" alt="node.js architecture" width="400"/>
@@ -54,12 +58,11 @@ node .
 
 ## Node.js modules
 
-Node.js uses the CommonJS module system.
-A Node module is a reusable block of code. When you import a file inside another file, it is called a module.
+A module is a reusable block of code. When you import a file inside another file, it is called a module. Its a way of including the code in file A from inside file B so that code can be split into multiple files.
 
-Node.js has a set of built-in modules which you can use without any further installation.
+Node.js uses the CommonJS module system. This is because prior to ES6 of JavaScript, there was no official way of importing modules.
 
-You can write your own modules too!
+Node.js has a set of built-in modules which you can use without any further installation. You can also use third-party modules developed by others or write your own modules.
 
 ### Package management
 
