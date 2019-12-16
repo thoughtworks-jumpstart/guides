@@ -4,6 +4,12 @@ Refer to the github repository: [A simple server written in Node.js](https://git
 
 ## Write a simple node server
 
+You might be wondering, so how does Node.js allow me to create a website?
+
+You might have created a static HTML website before and have had your static files served by a web server (Apache, for example) so that the browser can view the static files. Navigating to http://localhost/index.html will allow you to view the index.html page.
+
+For Node, you will have to write the web server yourself. Node provides you with the framework to write the web server. The app you write is the web server. Don't worry, even though it sounds daunting, the frameworks have made it easy for you to write a web server, plus the control you gain over your application is worth it.
+
 You will require a built-in module of Node.js `http` which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP). Import this into the file.
 
 Note that this does not use _https_ by default (a security issue!). You can decide to use HTTPS later.
@@ -24,8 +30,8 @@ It takes two arguments, `req` is an object that represents the request and `res`
 ```js
 // index.js
 server.on('request', (req, res) => {
-console.log('Method', req.method)
-console.log('Path', req.url)
+console.log('Method', req.method);
+console.log('Path', req.url);
 ```
 
 Node.js uses event emitters and thus you can add a callback function (a listener) to the `request` event.
@@ -46,7 +52,7 @@ Allow a user to create a new book when a POST request is made to `/books`
 ```js
 // index.js
 else if (req.url === '/books' && req.method === 'POST') {
-res.end('You have created a new book')
+res.end('You have created a new book');
 }
 ```
 
@@ -55,7 +61,7 @@ Display a default message if other urls are accessed
 ```js
 // index.js
 else {
-res.end('Thank you for visiting the server')
+res.end('Thank you for visiting the server');
 }
 })
 ```

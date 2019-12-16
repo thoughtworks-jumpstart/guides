@@ -97,7 +97,7 @@ When cloning an existing project and running it for the first time on your compu
 npm install
 ```
 
-The version of the packages that are downloaded will meet the semantic version requirements.
+The version of the packages that are downloaded will meet the semantic version requirements. You should realise by now that it would have been less confusing if `node_modules` was called npm packages or something similar.
 
 Install a remote package _locally_ and add it into the `dependencies` attribute of the `package.json` file:
 

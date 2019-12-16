@@ -120,7 +120,7 @@ var math = require("../lib/math");
 
 The relative paths eventually becomes very difficult to determine as files get more nested.
 
-To solve this problem, Node.js can import modules for us without relative paths if they are placed in a folder called `node_modules`. Modules in this folder are called _packages_.
+To solve this problem, Node.js can import modules for us without relative paths if they are placed in a folder called `node_modules`. This is an unfortunate name because these are actually not just normal modules anymore. Modules in this folder are called _packages_.
 
 ### How to import packages in node_modules
 
@@ -167,3 +167,11 @@ var fs = require("fs");
 When a change is in made in the project files, you normally would need to restart the Node.js server to see the change.
 
 Nodemon is a library that will make Node.js server automatically restart when there is a change.
+
+Install nodemon globally:
+
+```
+npm install -g nodemon
+```
+
+JavaScript utilities like nodemon are generally installed globally. Packages specific to your project should still be only installed locally.
