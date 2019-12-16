@@ -15,6 +15,7 @@
   - [Git basics](fundamentals/git-basics)
   - [Git visualized](fundamentals/git-visualize)
   - [How the Internet works](fundamentals/how-internet-works)
+  - [Technical terms](fundamentals/technical-terms)
 
 - **JavaScript**
 
@@ -33,6 +34,7 @@
 
   - [Express.js basics](backend-web-development/express-basics)
   - [Express.js simple server](backend-web-development/express-simple-server)
+  - [Express.js routing](backend-web-development/express-routing)
   - [Quick start for backend](backend-web-development/backend-quick-start)
   - [MongoDB basics](backend-web-development/mongodb-basics)
   - [MongoDB vs relational](backend-web-development/mongodb-vs-relational)
