@@ -3,4 +3,5 @@
 ### Express.js
 
 - [Express.js playground](https://github.com/thoughtworks-jumpstart/express-playground)
-- [Express.js kittens](https://github.com/thoughtworks-jumpstart/express-kittens)
+- [Express.js books api](https://github.com/thoughtworks-jumpstart/express-books-api)
+- [Express.js kittens with mongoose](https://github.com/thoughtworks-jumpstart/express-kittens)
