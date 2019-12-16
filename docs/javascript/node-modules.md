@@ -147,10 +147,19 @@ Note that if you use `require("lib")`, Node.js will try to search for a index.js
 
 Package management gets tough when we add more packages, especially those that are 3rd party and open-source. This is why we will use a package manager such as `npm` to manage and update our packages.
 
-## Built-in packages
+## Node.js Core Modules
 
-Node.js comes with built-in packages provided as the Node Standard Library. Being built-in packages, you do not need to install them to import them.
+Node.js comes with core modules (built-in packages) provided as the Node Standard Library. Being built-in packages, you do not need to install them to import them.
 Their sources are on [Github](https://github.com/nodejs/node/tree/master/lib).
+
+The main (not all!) core modules are:
+
+- [http](http://nodejs.org/api/http.html#http_http): HTTP clients and servers
+- [util]http://nodejs.org/api/util.html): Utilities
+- [querystring](http://nodejs.org/api/querystring.html): Parses query-string formatted data
+- [url](http://nodejs.org/api/url.html): Parses URL data
+- [fs](http://nodejs.org/api/fs.html): Writing and reading files
+
 
 When we require(<packagename>) a package, Node.js first searches for the package name in the built-in packages. If it doesn’t find it in the standard library, it then searches for it in node_modules.
 

@@ -37,8 +37,14 @@ console.log('Path', req.url);
 Node.js uses event emitters and thus you can add a callback function (a listener) to the `request` event.
 To know why Node.js use event emitters with the HTTP server, [read more here](https://codeburst.io/event-emitters-and-listeners-in-javascript-9cf0c639fd63).
 
+Set the content-type header to `text/plain` because our response will be in plain text and set status code to 200:
+
+```js
+res.writeHead(200, { "Content-Type": "text/plain" });
+```
+
 Continue adding code to this function.
-If a user accesses the url `/books` (a GET request is made), display "Here are the books 📖" to the user
+If a user accesses the url `/books` (a GET request is made), display "Here are the books 📖" to the user:
 
 ```js
 // index.js
@@ -47,7 +53,7 @@ if (req.url === "/books" && req.method === "GET") {
 }
 ```
 
-Allow a user to create a new book when a POST request is made to `/books`
+Allow a user to create a new book when a POST request is made to `/books`:
 
 ```js
 // index.js
@@ -66,7 +72,7 @@ res.end('Thank you for visiting the server');
 })
 ```
 
-To serve requests, the server needs to listen to a specific port number. Listen to `PORT` number that was set earlier.
+To serve requests, the server needs to listen to a specific port number. Listen to `PORT` number that was set earlier:
 
 ```js
 // index.js
@@ -84,6 +90,8 @@ const server = http.createServer((req, res) => {
 });
 ```
 
+### Running the server
+
 Run the server:
 
 ```
@@ -96,6 +104,14 @@ Try other URLs like http://localhost:3000/hello or http://localhost:3000/bye. Do
 Now try visiting http://localhost:3000/books.
 
 To make a POST request to http://localhost:3000/books, try using a API tester tool like Postman.
+
+You could also make a POST request using cURL:
+
+```
+curl -X POST http://localhost:3000/books
+```
+
+To shut down the server, press Control+C.
 
 To know more details, check the official Node.js docs about the anatomy of an [HTTP transaction](https://nodejs.org/es/docs/guides/anatomy-of-an-http-transaction/).
 
