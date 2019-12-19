@@ -22,7 +22,6 @@
 
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
-  - [Node.js server](javascript/node-server)
   - [npm](javascript/npm)
   - [Labs for JavaScript](javascript/javascript-labs)
 
@@ -34,6 +33,7 @@
 - **Backend Web Development**
 
   - [CRUD and REST api](backend-web-development/rest-api)
+  - [Node.js server](backend-web-development/node-server)
   - [Express.js basics](backend-web-development/express-basics)
   - [Express.js simple server](backend-web-development/express-simple-server)
   - [Express.js routing](backend-web-development/express-routing)
