@@ -25,7 +25,7 @@ When a GET request is sent to the root `/`, "Welcome to my homepage" is the resp
 ```js
 // express_basic_example_1.js
 app.get("/", (req, res) => {
-  res.end("Welcome to my homepage");
+  res.send("Welcome to my homepage");
 });
 ```
 
