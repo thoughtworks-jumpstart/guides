@@ -10,7 +10,7 @@ const app = express();
 const PORT = 3000;
 ```
 
-## Route handlers
+## GET request method
 
 When loading the app (sending a GET request) at the root URL `/`, the server should send a response saying "Hello World!". Define a route like this:
 
@@ -20,8 +20,7 @@ app.get("/", (req, res) => {
 });
 ```
 
-You have just defined a route handler for a route!
-Let's start the server by making it listen at port 3000.
+You have just defined a route to the root of the app! Let's start the server by making it listen at port 3000.
 
 ```js
 const server = app.listen(PORT, () => {
@@ -31,7 +30,7 @@ const server = app.listen(PORT, () => {
 
 Use an API testing tool like Postman to test the route you just created.
 
-### Responding to other HTTP requests
+### Other request methods
 
 When making a POST, PUT or DELETE request at the root URL `/`, the server should send a response.
 

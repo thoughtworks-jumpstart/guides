@@ -14,13 +14,13 @@ The HTTP request consist of a verb (GET), a URI (/jumpstart), and the HTTP versi
 
 A browser (the client) can make a GET, POST, PUT or DELETE HTTP request for various URLs (e.g. GET http://localhost:3000/books or DELETE http://localhost:3000/students/42).
 
-## Simple routing example
-
 Refer to the script: [Express.js playground: express_basic_example_1](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_1.js)
 
-### Request to the root
+## Request methods
 
-When a GET request is sent to the root `/`, "Welcome to my homepage" is the response.
+A request method is derived from one of the HTTP methods like GET, POST and PUT etc.
+
+Route that is defined for the GET method to the root of the app:
 
 ```js
 // express_basic_example_1.js
@@ -29,9 +29,23 @@ app.get("/", (req, res) => {
 });
 ```
 
-### Matching fixed routes
+The request handler (callback function) is called when a GET request is sent by the browser to the root `/`. In the request handler, "Welcome to my homepage" is sent as the response.
 
-The request handler (callback function) is then called when a request to /books comes in. Thus, when a GET request is sent to /books, a message is sent back in the response.
+Route that is defined for the POST method to the root of the app:
+
+```js
+app.post("/", (req, res) => {
+  res.send("POST request to the homepage");
+});
+```
+
+## Route paths
+
+Route paths, in combination with a request method, define the endpoints at which requests can be made. Route paths can be strings, string patterns, or regular expressions. We shall see more examples soon.
+
+### Fixed route path
+
+The request handler is called when a GET request is sent by the browser to the fixed route `/books`. In the request handler, "You requested a list of books...." is sent as the response.
 
 ```js
 app.get("/books", (req, res) => {
@@ -39,9 +53,10 @@ app.get("/books", (req, res) => {
 });
 ```
 
-### Matching complex routes
+### Route parameters
 
-We can grab data from routes using request parameters.
+We can grab data from the route using route parameters. Route parameters are named segments of the URL used to capture values at their specified position. 
+
 GET a specific book with ID:
 
 ```js
@@ -50,12 +65,31 @@ app.get("/books/:bookId", (req, res) => {
   // NOTE: the above line poses a security issue, we should always treat any user input as unsafe (see XSS attack)
 });
 ```
+This route will match paths `/books/1`, `/books/2` and so on. Will it match `/books/abc`? 
 
-Now `req.params` has a property called `bookId`.
+`bookId` is used to capture values at that position of the path. Thus `req.params` has a property called `bookId` storing `1` or `2` etc depending on the path.
+
+### Regular expressions
+
+This route path will match /books and /book.
+
+```js
+app.get('/books?', function (req, res) {
+  res.send('You requested a list of books...')
+})
+```
+
+This route path will match butterfly and dragonfly, but not butterflyman, dragonflyman, and so on.
+
+```js
+app.get(/.*fly$/, function (req, res) {
+  res.send('/.*fly$/')
+})
+```
 
 ### Multiple request handlers
 
-Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js)
+Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js).
 
 More than one request handler can be defined for a route.
 
@@ -103,10 +137,5 @@ The handlers are executed in the same order as declaration. In the example above
 
 If you send a request to http://localhost:3000/students, you should see the output of both route handlers, printed in the right sequence.
 
-## Tracking HTTP requests
 
-Using developer tools on a browser, we can track and view the HTTP requests made on a website.
-
-For example, when we visit http://localhost:3000/books, we could use the Network developer tool to view the GET request made.
-
-<img src="../_media/get-request.png" alt="get request on /books uri" width="600"/>
+For more examples, see the [express docs](https://expressjs.com/tr/guide/routing.html).
