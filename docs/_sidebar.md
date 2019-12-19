@@ -15,6 +15,7 @@
   - [Git basics](fundamentals/git-basics)
   - [Git visualized](fundamentals/git-visualize)
   - [How the Internet works](fundamentals/how-internet-works)
+  - [HTTP](fundamentals/http)
   - [Technical terms](fundamentals/technical-terms)
 
 - **JavaScript**
