@@ -59,6 +59,8 @@ Refer to the script: [Express.js playground: express_basic_example_2](https://gi
 
 More than one request handler can be defined for a route.
 
+Request handler 1:
+
 ```js
 // express_basic_example_2.js
 const requestHandler1 = (req, res, next) => {
@@ -67,6 +69,7 @@ const requestHandler1 = (req, res, next) => {
 };
 ```
 
+Request handler 2:
 ```js
 const requestHandler2 = (req, res) => {
   res.write("Jesstern\n");
@@ -77,12 +80,13 @@ const requestHandler2 = (req, res) => {
 };
 ```
 
-The first request handler passes the request to the next request handler via `next()` call
+The first request handler passes the request to the next request handler via `next()` call.
+
 When we are not ready to send back the response yet, we use the `res.write()` method to update the response, instead of using the `res.send()` method.
 
 If a request handler needs to send the response back to client, it should call the `res.end()` method.
 
-You can call app.METHOD multiple times:
+You can call `app.METHOD()` multiple times:
 
 ```js
 app.get(path, requestHandler1);
@@ -97,7 +101,7 @@ app.get("/students", requestHandler1, requestHandler2);
 
 The handlers are executed in the same order as declaration. In the example above, requestHandler1 is called before requestHandler2.
 
-If you send a request to `http://localhost:3000/students", you should see the output of both route handlers, printed in the right sequence.
+If you send a request to http://localhost:3000/students, you should see the output of both route handlers, printed in the right sequence.
 
 ## Tracking HTTP requests
 
