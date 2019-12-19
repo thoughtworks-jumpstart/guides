@@ -33,6 +33,7 @@
 
 - **Backend Web Development**
 
+  - [CRUD and REST api](backend-web-development/rest-api)
   - [Express.js basics](backend-web-development/express-basics)
   - [Express.js simple server](backend-web-development/express-simple-server)
   - [Express.js routing](backend-web-development/express-routing)
