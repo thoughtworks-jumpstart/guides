@@ -2,7 +2,9 @@
 
 ## Are you ready for Jumpstart?
 
-Before applying to Jumpstart, you have to ask yourself if you're ready to take on the challenges at Jumpstart.
+Just as there is a distinction between someone who is learning to play a musical instrument as a hobby and someone who is training to become a professional musician, there is a difference between a hobbyist coder and a professional software developer.
+
+Before applying, you have to ask yourself if you're ready to take on the challenges at Jumpstart.
 
 Due to the fast pace of the program, Jumpstart is not suitable for absolute beginners. We expect you to already be familiar with basic levels of HTML, CSS, and JavaScript.
 
@@ -11,6 +13,14 @@ Jumpstart is designed for advanced beginners who have some experience in web dev
 You should also be familiar with basic programming concepts in JavaScript. Use this checklist to see if you have the necessary knowledge of [JavaScript Fundamentals](https://javascript.info/first-steps).
 
 If you are not familiar with these concepts we highly recommend that you first learn them before applying to Jumpstart.
+
+## Personal projects
+
+Having personal projects is the easiest way for us to assess your technical abilities.
+
+At a minimum, we expect you to have a GitHub account with at least one public repository containing a personal project that is built with HTML, CSS, and JavaScript. You may optionally host your project on GitHub Pages.
+
+This demonstrates that you are familiar with the fundamentals of web development - HTML, CSS, and JavaScript.
 
 ## Preparing for Jumpstart
 
@@ -53,4 +63,4 @@ If you're up for the challenge, you can even publish your website for free on [G
 
 A code kata is a short coding exercise that allows you to practice your understanding of programming concepts.
 
-We recommend you practice on [HackerRank](https://www.hackerrank.com/).
+We recommend you practice on [HackerRank](https://www.hackerrank.com/) and on [Codewars](https://www.codewars.com/).

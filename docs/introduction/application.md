@@ -4,6 +4,8 @@ Jumpstart application process:
 
 1. Meet program prerequisites - check that you meet all prerequisites for the program
 
+1. Personal project - submit at least one personal project that you built using HTML, CSS, and JavaScript
+
 1. Self-assessment - attempt all questions in JavaScript at your own time - start self-assessment
 
 1. Coding assessment - an invitation will be sent to you by email later this week to complete the coding assessment. You must complete all problems in JavaScript. Applicants who score above 80% for the coding assessment will move on to the next round
@@ -39,6 +41,14 @@ Things to take note of:
 2. Attempt these problems as many times as you like
 
 [Complete the self-assessment](https://www.codewars.com/collections/jumpstart-self-assessment)
+
+## Submit personal project
+
+We require that you have at least one personal project to demonstrate your technical knowledge of HTML, CSS, and JavaScript.
+
+- Upload your project to a public repository on GitHub
+- [Optional] Host your project on GitHub Pages (or some other hosting service)
+- Share that project link with us when you submit your application
 
 ## Submit your application to Jumpstart
 
