@@ -19,3 +19,9 @@ What is the difference between a framework and a library?
 What is the difference between URI, URL and URN?
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/if0pzXWZOfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Protocol (HTTP)
+
+Protocol is a set of rules to communicate, why is HTTP a protocol?
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BfZ0zZGT0_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
