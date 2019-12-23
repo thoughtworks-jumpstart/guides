@@ -18,7 +18,7 @@ Refer to the script: [Express.js playground: express_basic_example_1](https://gi
 
 ## Request methods
 
-A request method is derived from one of the HTTP methods like GET, POST and PUT etc.
+A request method is derived from one of the HTTP methods (also known as HTTP verbs) like GET, POST and PUT etc.
 
 Route that is defined for the GET method to the root of the app:
 
@@ -29,14 +29,32 @@ app.get("/", (req, res) => {
 });
 ```
 
-The request handler (callback function) is called when a GET request is sent by the browser to the root `/`. In the request handler, "Welcome to my homepage" is sent as the response.
-
 Route that is defined for the POST method to the root of the app:
 
 ```js
 app.post("/", (req, res) => {
   res.send("POST request to the homepage");
 });
+```
+
+The request handler (callback function) is called when a GET request is sent by the browser to the root `/`. In the request handler, "Welcome to my homepage" is sent as the response. To understand more about the HTTP requests and responses, read about [HTTP](../fundamentals/http).
+
+Express.js will call the request handler with two parameters. The first parameter is the request object and the second parameter is the response object.
+
+## Request object
+
+The Request object passed to the request handler holds all the HTTP request information that was sent to your server like query strings.
+
+```js
+console.log("Method: " + req.method);
+```
+
+## Response object
+
+The Response object passed to the request handler holds information that your server will respond with when the connection is ended with the client.
+
+```js
+console.log("Path: " + res.url);
 ```
 
 ## Route paths
@@ -55,7 +73,7 @@ app.get("/books", (req, res) => {
 
 ### Route parameters
 
-We can grab data from the route using route parameters. Route parameters are named segments of the URL used to capture values at their specified position. 
+We can grab data from the route using route parameters. Route parameters are named segments of the URL used to capture values at their specified position.
 
 GET a specific book with ID:
 
@@ -65,7 +83,8 @@ app.get("/books/:bookId", (req, res) => {
   // NOTE: the above line poses a security issue, we should always treat any user input as unsafe (see XSS attack)
 });
 ```
-This route will match paths `/books/1`, `/books/2` and so on. Will it match `/books/abc`? 
+
+This route will match paths `/books/1`, `/books/2` and so on. Will it match `/books/abc`?
 
 `bookId` is used to capture values at that position of the path. Thus `req.params` has a property called `bookId` storing `1` or `2` etc depending on the path.
 
@@ -74,24 +93,22 @@ This route will match paths `/books/1`, `/books/2` and so on. Will it match `/bo
 This route path will match /books and /book.
 
 ```js
-app.get('/books?', function (req, res) {
-  res.send('You requested a list of books...')
-})
+app.get("/books?", function(req, res) {
+  res.send("You requested a list of books...");
+});
 ```
 
 This route path will match butterfly and dragonfly, but not butterflyman, dragonflyman, and so on.
 
 ```js
-app.get(/.*fly$/, function (req, res) {
-  res.send('/.*fly$/')
-})
+app.get(/.*fly$/, function(req, res) {
+  res.send("/.*fly$/");
+});
 ```
 
 ### Multiple request handlers
 
 Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js).
-
-More than one request handler can be defined for a route.
 
 Request handler 1:
 
@@ -104,6 +121,7 @@ const requestHandler1 = (req, res, next) => {
 ```
 
 Request handler 2:
+
 ```js
 const requestHandler2 = (req, res) => {
   res.write("Jesstern\n");
@@ -120,6 +138,8 @@ When we are not ready to send back the response yet, we use the `res.write()` me
 
 If a request handler needs to send the response back to client, it should call the `res.end()` method.
 
+More than one request handler can be defined for a route. You can define the above two request handlers for the same route.
+
 You can call `app.METHOD()` multiple times:
 
 ```js
@@ -127,15 +147,14 @@ app.get(path, requestHandler1);
 app.get(path, requestHandler2);
 ```
 
-or you can declare the handler in one line:
+or you can declare the handlers in one line:
 
 ```js
 app.get("/students", requestHandler1, requestHandler2);
 ```
 
-The handlers are executed in the same order as declaration. In the example above, requestHandler1 is called before requestHandler2.
+Note that the handlers are executed in the same order as declaration. In the example above, requestHandler1 is called before requestHandler2.
 
 If you send a request to http://localhost:3000/students, you should see the output of both route handlers, printed in the right sequence.
-
 
 For more examples, see the [express docs](https://expressjs.com/tr/guide/routing.html).

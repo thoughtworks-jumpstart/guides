@@ -22,7 +22,9 @@ const server = app.listen(PORT, () => {
 });
 ```
 
-### Routing with route handlers
+### Routing with request handlers
+
+When you listen for connections on a route in Express, the request handler (callback function) will be invoked with a request
 
 ```js
 app.get("/", (req, res) => {

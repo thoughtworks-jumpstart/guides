@@ -2,7 +2,7 @@
 
 The request handler usually needs to call a method on the response object to send back some responses.
 
-#### res.send()
+## Sending a string
 
 In the routing example, we used `res.send()` to send a string as a response and to close the connection.
 
@@ -16,7 +16,8 @@ If you pass in an object or an array, it sets the application/json `Content-Type
 
 `res.send()` automatically sets the `Content-Length` HTTP response header and closes the connection. You should only call `res.send()` once.
 
-### res.write()
+## Writing parts of response body
+
 In the multiple request handler routing example, we used `res.write()` to update the response before sending the response back to the client.
 
 ```js
@@ -26,11 +27,11 @@ res.write("Here is a list of students:\n");
 `res.write()` allows you to provide successive parts of the response body and can be called multiple times.
 
 ```js
-response.write('<html>');
-response.write('<body>');
-response.write('<h1>Hello, World!</h1>');
-response.write('</body>');
-response.write('</html>');
+response.write("<html>");
+response.write("<body>");
+response.write("<h1>Hello, World!</h1>");
+response.write("</body>");
+response.write("</html>");
 response.end();
 ```
 
@@ -44,7 +45,7 @@ To avoid that issue, you can set `Content-Type` response header by yourself, cal
 
 See [this stackoverflow response](https://stackoverflow.com/questions/44692048/what-is-the-difference-between-res-send-and-res-write-in-express) for more information.
 
-## Setting status code
+## Setting HTTP response status code
 
 Sets the response HTTP status code to 200 and calls the `res.send()` method to send the corresponding string message.
 
@@ -56,6 +57,24 @@ This can be simplified with `sendStatus(statusCode)` which will send the default
 
 ```js
 res.sendStatus(200);
+// === res.status(200).send('OK')
+
+res.sendStatus(403);
+// === res.status(403).send('Forbidden')
+
+res.sendStatus(404);
+// === res.status(404).send('Not Found')
+
+res.sendStatus(500);
+// === res.status(500).send('Internal Server Error')
 ```
 
 See [Express.js api docs](https://expressjs.com/en/api.html#res.sendStatus) for more info.
+
+## Send JSON response
+
+You can send JSON to the client by using Response.json(), a useful method.
+
+It accepts an object or array, and converts it to JSON before sending it:
+
+res.json({ username: 'Flavio' })
