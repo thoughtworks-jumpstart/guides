@@ -1,6 +1,4 @@
-# FAQ {docsify-ignore-all}
-
-Don't see your question here? Email us at jumpstart@thoughtworks.com
+# FAQ
 
 ## Who should apply to Jumpstart?
 
@@ -14,7 +12,17 @@ No. As this is a fast paced program, we do not recommend this for complete begin
 
 Please read our [prerequisites](/introduction/prerequisite) for joining Jumpstart.
 
-## What is the start date for the program?
+## What is the admissions process?
+
+0. Submit your resume
+1. Submit at least one personal project
+1. Complete the online coding trial assessment
+1. Complete the online coding assessment
+1. Book an appointment for a phone interview
+
+\* If you receive an offer to join the program, you will sign an enrollment agreement and proceed to make payment
+
+## What is the start date of the program?
 
 We run three batches each year. Please refer to this [page](/introduction/about?id=batches) for confirmed and tentative dates of future batches.
 
@@ -38,7 +46,7 @@ No. Unfortunately, there are no grants available for foreigners at this time.
 
 ## Which programming language will be taught at Jumpstart?
 
-JavaScript.
+JavaScript, which includes ES5 and ES6.
 
 ## What are your office hours?
 
@@ -47,3 +55,19 @@ Our classes are from Mondays to Fridays and start at 9.30am till 5.30pm.
 ## Is there a part-time Jumpstart program?
 
 No. Jumpstart is a full-time program.
+
+## What is the program outline?
+
+Our program outline can be found [here](/introduction/outline).
+
+## How can I prepare for the program?
+
+We suggest you read our [prerequisites](/introduction/prerequisite) for the program.
+
+## Where will the program be taught?
+
+The program is taught in Singapore at the ThoughtWorks office. We are located at 18 Cross Street, China Square Central #11-08, Singapore 048423.
+
+## Other questions?
+
+Don't see your question here? Email us at [info@jumpstart.sh](mailto:info@jumpstart.sh)
