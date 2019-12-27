@@ -42,8 +42,8 @@ const animal1 = new Animal();
 ### Constructor
 
 - A method that will run immediately on the object after using the `new` operator to create a new object.
-
-The constructor method is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class. A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method.
+- The constructor method is a special method for creating and initializing an object created with a class.
+- There can only be one special method with the name "constructor" in a class. A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method.
 
 ```js
 class Movie {
@@ -161,7 +161,7 @@ There are two types of polymorphism. The first type of polymorphism involves a c
 
 The second polymorphism involves method overloading whereby the class has methods of the same name but with different parameters (Methods with the same name but different parameters have a different _signature_). However, JavaScript does not support method overloading natively. If there are two methods with the same name, JavaScript will only consider the last defined function and override the first one. See [this website for more information](https://www.codeproject.com/Articles/797997/JavaScript-Does-NOT-Support-Method-Overloading-Tha).
 
-#### Overriding
+### Overriding
 
 Overriding is the first type of polymorphism.
 
@@ -186,8 +186,8 @@ class Rabbit extends Animal {
     alert(`${this.name} hides!`);
   }
 
+  // this overrides the method inherited from the Animal class
   stop() {
-    // this overrides the method inherited from the Animal class
     this.hide();
   }
 }
@@ -234,13 +234,16 @@ class Rabbit extends Animal {
   }
 
   stop() {
-    super.stop(); // call parent's stop method which was overriden
+    // call parent's stop method which was overriden
+    super.stop();
     this.hide();
   }
 }
 ```
 
 ## Why is polymorphism and inheritance useful?
+
+Let's say we have three animals, Dog, Cat and Lion. We want them to be able to woof, meow or roar respectively.
 
 ```js
 class Dog {
@@ -260,7 +263,11 @@ class Lion {
     console.log("i'm a lion, hear me roar!");
   }
 }
+```
 
+We did not design the above three classes with polymorphism in mind. Thus we are unable to generalise the following code that will make all three classes woof, meow or roar.
+
+```js
 var dog = new Dog();
 var cat = new Cat();
 var lion = new Lion();
@@ -277,6 +284,47 @@ for (let i = 0; i < animals.length; i++) {
   } else if (currentAnimal.constructor === Lion) {
     currentAnimal.roar();
   }
+}
+```
+
+What happens if a new animal is required?
+
+However, if we designed the three classes with polymorphism in mind, we are able to produce cleaner and easily extensible code.
+
+Steps to achieving polymorphism:
+
+- Make Dog, Cat and Lion extend Animal
+- Make Dog, Cat and Lion implement the same method: makeSound()
+
+```js
+class Animal {
+  makeSound() {
+    // do nothing, because we can't actually implement this method.
+    // think about it. what sound does Animal make?
+  }
+}
+class Dog extends Animal {
+  makeSound() {
+    console.log("i'm a dog, hear me woof!");
+  }
+}
+
+class Cat extends Animal {
+  makeSound() {
+    console.log("i'm a cat, hear me meow!");
+  }
+}
+
+class Lion extends Animal {
+  makeSound() {
+    console.log("i'm a lion, hear me roar!");
+  }
+}
+
+// Wow! polymorphism just made our life so much simpler!
+// Now we can scale nicely to a circus with many more types of animals with ease!
+for (let i = 0; i < this.animals.length; i++) {
+  this.animals[i].makeSound();
 }
 ```
 
