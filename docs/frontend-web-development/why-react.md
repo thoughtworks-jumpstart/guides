@@ -17,15 +17,17 @@ You don't have to use react or other JS library to create UI components but havi
 
 ## How is react different from bootstrap or material UI
 
-Bootstrap, Material UI and such are UI component library. While it sounds the same, the difference is significant. A UI component library provides you with components ready for use. They are pre-build and already styled and have interaction functionality while a JS library like React can use to create custom components.
+Bootstrap, Material UI are UI component library. While it sounds the same, the difference is significant. A UI component library provides you with components ready for use. They are pre-build and already styled and have interaction functionality while a JS library like React are use to create new components and group them together.
 
-A JS library used to create UI components is often used together with UI component libraries to speed up requirements. But for web applications that require very customised design, it might be better to use without a UI component library. Developers will have to spend too much time trying to make UI components similar to the required design. Updating the UI component libraries might cause breakage in the system also.
+A JS library used to create UI components like React is often used together with UI component libraries to speed up development time.
+
+For web applications that require a highly customised design, it might be better not to use any UI component library. Adding styles to components from a UI Component library requires some amount of time and effort. When updating the libraries, styles added might cause bugs or undesired behaviour, developers would have time to spend time checking the components carefully.
 
 If there is the flexibility to follow a UI component library, it will be best to use one. You will get the best of both worlds of being able to use a very well developer UI component library and use a JS library such as React to group components together to form Views.
 
 ## Why do we want to use a JS framework
 
-Having a JS framework for creating components gives structure to your code and encourage reusability of components. The timing to triggering a re-render can be a challenging task without a library helping you to keep track of your data has changed.
+Having a JS framework for creating components gives structure to your code and encourage reusability of components. The timing to triggering a re-render can be a challenging task without a library helping you to keep track of whether your data has changed.
 
 - Give structure
 - Encourage reusability

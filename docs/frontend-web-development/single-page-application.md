@@ -1,6 +1,6 @@
 # Single Page Applicaiton
 
-Introduction to single page application(SPA)
+Introduction to Single Page Application(SPA)
 
 ## Covers
 
@@ -10,16 +10,16 @@ Introduction to single page application(SPA)
 
 ## Motivation of SPA
 
-Just a while back, web application used to be dreadful to use. Every action by a user would require the browser to refresh. The page would go white, and the new content would be shown to the user again.
+Just a while back, web application used to be dreadful to use. Every action by the user would requires the browser to refresh. The page would go white, and the new content would be shown to the user again.
 
 Example of a web app that requires the browser to reload: https://forums.xamarin.com/
 
-As you can probably tell, the user experience is not that good. The load time takes longer, the screen goes blank before new content is loaded and native applications were still the preferred way to interact with any software. Many attempts by web developers made to improve this experience with some degree of success such as Iframes(website in another website), Java applets, Flash in website each bringing security or performance issue.
+As you can probably tell, the user experience is not that good. The load time takes longer, the screen goes blank before new content is loaded. Native applications were still the preferred way to interact with any software. Many attempts by web developers made to improve this experience has some degree of success such as Iframes(website in another website), Java applets, Flash in website but each bringing security or performance issue.
 
 The introduction to Asynchronous JavaScript And XML(AJAX) in the 2000s changes everything. When AJAX got famous, and browser support for DOM manipulation techniques improves, web developers now have a tool to change part of the content of a website rather than causing a full page to reload.
 
 Web application has improved significantly since, reaching the standards of even beyond
-comparing to Native applications. The benefits of having a fast, responsive and always up to date software makes browsing a joy. SPA prevents users from even noticing all the controlling logic behind the scene.
+comparing to Native applications. The benefits of having a fast, responsive and always up to date software makes browsing a joy.
 
 ## Overview of SPA
 
@@ -31,7 +31,7 @@ Components:
 - Model, the data that end-user would see
 - Controller, logics that updates the model also controls what the user can or cannot do
 
-When a user loads a page, the View would take the information it needs from the model and present it to the user. When a user does an action, the controller will determine can the action be done(check for permissions, validation) then execute the action most likely to update the model. The View would take the updated model and present the newly updated View to the user.
+When a user loads a page, the View would take the information it needs from the model and present it to the user. When a user does an action, the controller will determine can the action be done(check for permissions, validation) then execute the action most likely to view or update the model. The View would take the updated model and present it to the user.
 
 ## Server-Side Rendering
 
