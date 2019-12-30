@@ -51,9 +51,9 @@ Having a JS framework for creating components gives structure to your code and e
   - angular + angularjs(v1): 442
   - vue: 0
 
-  ![glassdoor-react](../_media/frontend-web-development/glassdoor-react.png)
-  ![glassdoor-angular](../_media/frontend-web-development/glassdoor-angular.png)
-  ![glassdoor-vue](../_media/frontend-web-development/glassdoor-vue.png)
+  ![glassdoor-react](_media/glassdoor-react.png)
+  ![glassdoor-angular](_media/glassdoor-angular.png)
+  ![glassdoor-vue](_media/glassdoor-vue.png)
 
 - LinkedIn Jobs
 
@@ -61,9 +61,9 @@ Having a JS framework for creating components gives structure to your code and e
   - angular + angularjs(v1): 852
   - vue: 204
 
-  ![linkedin-react](../_media/frontend-web-development/linkedin-react.png)
-  ![linkedin-angular](../_media/frontend-web-development/linkedin-angular.png)
-  ![linkedin-vue](../_media/frontend-web-development/linkedin-vue.png)
+  ![linkedin-react](_media/linkedin-react.png)
+  ![linkedin-angular](_media/linkedin-angular.png)
+  ![linkedin-vue](_media/linkedin-vue.png)
 
 ### Flexibility
 
@@ -76,7 +76,7 @@ Having a JS framework for creating components gives structure to your code and e
 
   - Download trends: https://www.npmtrends.com/angular-vs-react-vs-vue
 
-  ![react-trends](../_media/frontend-web-development/angular-react-vue-trends.png)
+  ![react-trends](/_media/angular-react-vue-trends.png)
 
 ### Learning Curve
 
