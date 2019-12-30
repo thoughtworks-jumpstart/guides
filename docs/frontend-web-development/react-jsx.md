@@ -21,13 +21,15 @@ function App() {
 }
 ```
 
-o probably realise the App function is returning an HTML like code. Instead of having the class as "class", it became "className"
+You might probably realise that the App function is returning an HTML like code. Instead of having the class as "class", it becomes "className".
 
-The class becomes a className . This syntax is call a JSX. JSX is possible because of babel helping to translate the jsx syntax into javascript. We will not look further into babel instead we going to focus on JSX.
+This syntax is called a Javascript Extension(JSX). JSX is possible because of babel helping to translate the jsx syntax into javascript. We will not look further into babel instead we going to focus on JSX.
 
 Using JSX, attribute typically available becomes camelCase and some have a slight change in name. Example class to className.
 
 Later we will see how we can create custom props that can be passed in as an attribute, for now just notice the difference.
+
+## Adding logic to customise behaviour
 
 In JSX, we can use the full power of javascript. Considering the following code.
 
