@@ -27,6 +27,7 @@
 
 - **Frontend Web Development**
 
+  - [Single Page Application](frontend-web-development/single-page-application)
   - [React Hooks](frontend-web-development/react-hooks)
   - [React Context](frontend-web-development/react-context)
 
