@@ -96,6 +96,30 @@ function App() {
 export default App;
 ```
 
+### Arrays
+
+Very often, you will have to show a list of items to the end user.
+For example, a list of available drinks in a vending machine, list of favorite items.
+JSX allow you to return array of elements / components.
+
+```javascript
+function listDisneyMovies() {
+  const favDisneyMovies = [
+    " Tangled",
+    " Monsters, Inc.",
+    "Aladdin",
+    "Toy Story",
+    "Mulan",
+  ];
+
+  return favDisneyMovies.map(movie => <div>{movie}</div>);
+}
+
+function App() {
+  return <div className="App">{listDisneyMovies()}</div>;
+}
+```
+
 ### Exercise
 
 1. create a function and use it to make the Hello World! all lowercase.

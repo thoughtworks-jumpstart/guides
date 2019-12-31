@@ -76,10 +76,7 @@ App.css
 ## Exercise
 
 1. Create a new react app and print out "Hello \<your favourite character name\>"
-
-### Optional
-
-1. Add the image of your favourite character.
+2. Add the image of your favourite character.
    ![react start page](_media/react-hello-world-ex1.png)
 
 - tips
