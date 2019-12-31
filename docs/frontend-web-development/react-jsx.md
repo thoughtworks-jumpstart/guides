@@ -108,6 +108,10 @@ export default App;
 
 ### To Infinity And Beyond
 
-1. create another function that alternates the character in the sentence. Ignoring spaces.
+3. create another function that alternates the character in the sentence. Ignoring spaces.
 
 ![Lorem Ipsum alt char case](/_media/loremIpsumAltCharCase.png)
+
+4. modify the function from 3, add different colors to the alternate charachters.
+
+![Lorem Ipsum alt color char case](/_media/loremIpsumAltColorCharCase.png)
