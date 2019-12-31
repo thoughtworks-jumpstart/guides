@@ -31,6 +31,8 @@
   - [Why React](frontend-web-development/why-react)
   - [Getting Started](frontend-web-development/react-hello-world)
   - [React JSX](frontend-web-development/react-jsx)
+  - [Imports and Exports of Component](frontend-web-development/import-export-components)
+  - [React Props with Func](frontend-web-development/react-props-with-func)
   - [React Hooks](frontend-web-development/react-hooks)
   - [React Context](frontend-web-development/react-context)
 
