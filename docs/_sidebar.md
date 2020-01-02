@@ -33,6 +33,7 @@
   - [React JSX](frontend-web-development/react-jsx)
   - [Imports and Exports of Component](frontend-web-development/import-export-components)
   - [React Props with Func](frontend-web-development/react-props-with-func)
+  - [React States with Class Component](frontend-web-development/react-state-with-class)
   - [React Hooks](frontend-web-development/react-hooks)
   - [React Context](frontend-web-development/react-context)
 
