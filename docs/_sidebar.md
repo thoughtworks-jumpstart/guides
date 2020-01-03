@@ -35,6 +35,7 @@
   - [React Props with Func](frontend-web-development/react-props-with-func)
   - [React States with Class Component](frontend-web-development/react-state-with-class)
   - [Lifecycle of React Components](frontend-web-development/react-lifecycle)
+  - [Building a Todolist](frontend-web-development/react-todo-list)
   - [React Hooks](frontend-web-development/react-hooks)
   - [React Context](frontend-web-development/react-context)
 
