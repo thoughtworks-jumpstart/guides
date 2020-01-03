@@ -104,6 +104,19 @@ The browser will display the content of the response message according to the me
 
 ### Status codes
 
+<img src="../_media/http-status-codes.jpg" alt="http status codes" width="300"/>
+
+Source: [https://www.youtube.com/watch?v=LtNSd_4txVc](https://www.youtube.com/watch?v=LtNSd_4txVc)
+
+#### Commonly used status codes
+
+- 200 OK: The request is successful. The meaning of success depends on the request method. The response includes information.
+- 301 Moved Permanently: The resource requested has permanently moved to the URL given by the Location headers. Browsers and search engines can be redirected.
+- 401 Unauthorized: The access is not authorized.
+- 403 Forbidden: The access is forbidden and the response includes information on access denied.
+- 404 Not Found
+- 500 Internal Server Error: This describes a general server error. We often do not want to elaborate on the server error so as to prevent hackers.
+
 ### Tracking HTTP requests and responses
 
 Using developer tools on a browser, we can track and view the HTTP requests made on a website.
