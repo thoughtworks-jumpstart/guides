@@ -3,31 +3,31 @@
 ## Covers
 
 1. Creating a react app with create-react-app
-2. Understanding what was created
+2. Understanding the different component that makes up react
 
 ## Creating a hello-world with create-react-app
 
 ### creating the project folder
 
-In bash, when type create-react-app with the application name, a folder will be created for us.
+We can use create-react-app to start point with everything set up for us
 
 ```sh
   npx create-react-app hello-world
 ```
 
-verify this by type the "ls" command and you should see the folder listed out
+verify this by type the "ls" command, and you should see the folder listed out
 
 ```sh
 ls
 ```
 
-We can go into the folder by using cd command
+We can go into the folder by using `cd` command.
 
 ```sh
 cd hello-world
 ```
 
-We can then install out dependencies
+We can then install our dependencies.
 
 ```sh
 npm install
@@ -46,7 +46,7 @@ You should see the following image startup in your default browser.
 ### Cleaning Up
 
 1. Replace the header tag with a paragraph tag and type "Hello World!".
-2. Remove all styles in the App.css other than .App
+2. Remove all styles in the `App.css` other than `.App`
 
 App.js
 
@@ -75,7 +75,7 @@ App.css
 
 ## Exercise
 
-1. Create a new react app and print out "Hello \<your favourite character name\>"
+1. Create a new react app and print out `Hello \<your favourite character name\>`
 2. Add the image of your favourite character.
    ![react start page](_media/react-hello-world-ex1.png)
 
