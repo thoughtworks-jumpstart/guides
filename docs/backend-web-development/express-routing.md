@@ -45,6 +45,16 @@ Express.js will call the request handler with two parameters. The first paramete
 
 The Request object passed to the request handler holds all the HTTP request information that was sent to your server like query strings.
 
+It starts off as an instance of _http.IncomingMessage_, a core Node object. Express then extends the object to add further functionality.
+
+These are the commonly used and useful properties of the request object:
+
+- `req.params`
+  An array containing named route parameters. This will be further explained below.
+
+- `req.query`
+  An object containing querystring parameters as name/value pairs. This will also be further explained below.
+
 ```js
 console.log("Method: " + req.method);
 ```
@@ -59,7 +69,7 @@ console.log("Path: " + res.url);
 
 ## Route paths
 
-Route paths, in combination with a request method, define the endpoints at which requests can be made. Route paths can be strings, string patterns, or regular expressions. We shall see more examples soon.
+Route paths, in combination with a request method, define the endpoints at which requests can be made. Route paths can be strings, string patterns, or regular expressions.
 
 ### Fixed route path
 
@@ -68,6 +78,24 @@ The request handler is called when a GET request is sent by the browser to the f
 ```js
 app.get("/books", (req, res) => {
   res.send("You requested a list of books....");
+});
+```
+
+### Regular expressions
+
+This route path will match /books and /book.
+
+```js
+app.get("/books?", function(req, res) {
+  res.send("You requested a list of books...");
+});
+```
+
+This route path will match butterfly and dragonfly, but not butterflyman, dragonflyman, and so on.
+
+```js
+app.get(/.*fly$/, function(req, res) {
+  res.send("/.*fly$/");
 });
 ```
 
@@ -88,25 +116,54 @@ This route will match paths `/books/1`, `/books/2` and so on. Will it match `/bo
 
 `bookId` is used to capture values at that position of the path. Thus `req.params` has a property called `bookId` storing `1` or `2` etc depending on the path.
 
-### Regular expressions
+The captured values are populated in the `req.params` object, with the name of the route parameter specified in the path as their respective keys.
 
-This route path will match /books and /book.
+```
+Route path: /books/:bookId
+Request URL: http://localhost:3000/books/8989
+req.params: {"bookId": "8989" }
+```
+
+it is possible to capture more than one value using multiple parameters.
+
+```
+Route path: /users/:userId/books/:bookId
+Request URL: http://localhost:3000/users/34/books/8989
+req.params: { "userId": "34", "bookId": "8989" }
+```
+
+### Route querystrings
+
+Refer to the script: [Express.js playground: query_parameter_example](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/query_parameter_example.js).
 
 ```js
-app.get("/books?", function(req, res) {
-  res.send("You requested a list of books...");
+app.get("/food", (req, res) => {
+  console.log(req.query);
+
+  const results = data
+    // Using if statements
+    .filter(item => {
+      if (req.query.type) {
+        return item.type === req.query.type;
+      }
+
+      return true;
+    })
+    // Using the ternary operator
+    .filter(item => (req.query.name ? item.name === req.query.name : true))
+    .filter(item => (req.query.color ? item.color === req.query.color : true));
+
+  res.json(results);
 });
 ```
 
-This route path will match butterfly and dragonfly, but not butterflyman, dragonflyman, and so on.
-
-```js
-app.get(/.*fly$/, function(req, res) {
-  res.send("/.*fly$/");
-});
+```
+Route path: /food
+Request URL: http://localhost:3000/food?type=FRUIT
+req.query: { "type": "FRUIT"}
 ```
 
-### Multiple request handlers
+## Multiple request handlers
 
 Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js).
 
