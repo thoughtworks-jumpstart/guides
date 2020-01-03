@@ -1,6 +1,6 @@
 # Express.js responses
 
-The request handler usually needs to call a method on the response object to send back some responses.
+The handler function usually needs to call a method on the response object to send back some responses.
 
 ## Sending a string
 
@@ -18,7 +18,7 @@ If you pass in an object or an array, it sets the application/json `Content-Type
 
 ## Writing parts of response body
 
-In the multiple request handler routing example, we used `res.write()` to update the response before sending the response back to the client.
+In the multiple handler functions routing example, we used `res.write()` to update the response before sending the response back to the client.
 
 ```js
 res.write("Here is a list of students:\n");

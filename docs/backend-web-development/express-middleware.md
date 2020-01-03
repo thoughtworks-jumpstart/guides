@@ -1,6 +1,6 @@
 # Express.js middleware
 
-Middleware is any number of functions that are invoked by the Express.js routing layer before your final request handler is, and thus sits in the middle between a raw request and the final intended route. We often refer to these functions as the middleware stack since they are always invoked in the order they are added.
+Middleware is all the functions that are invoked by the Express.js routing layer before your final handler function is called. Thus they sit in the middle between a raw request and the final intended route. We often refer to these functions as the middleware stack since they are always invoked in the order they are added.
 The following diagram shows how the middlewares work together:
 
 ## Why do we need middlewares?
@@ -12,7 +12,7 @@ Examples of cross cutting concerns include:
 - logging request details
 - authenticating the client sending the request
 
-Middleware also give you a chance to do some pre-processing on a request before the route handlers handle it. For instance, after a user has logged in, you could fetch their user details from a database, and then store those details in res.user.
+Middleware also give you a chance to do some pre-processing on a request before the handler function handle it. For instance, after a user has logged in, you could fetch their user details from a database, and then store those details in res.user.
 
 ## Implementation
 

@@ -24,7 +24,7 @@ const server = http.createServer();
 
 We shall later make the server listen to port 3000.
 
-Add a function that is called every time a HTTP request is made to the server. It is called the request handler.
+Add a function that is called every time a HTTP request is made to the server. It is called the handler function.
 It takes two arguments, `req` is an object that represents the request and `res` is an object that represents the response.
 
 ```js
@@ -81,7 +81,7 @@ server.listen(PORT, () => {
 });
 ```
 
-You could also use a shorthand for adding the request handler:
+You could also use a shorthand for adding the handler function:
 
 ```js
 // index.js

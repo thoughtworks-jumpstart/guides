@@ -10,7 +10,7 @@ When using a browser to visit example.com/jumpstart, the raw HTTP request might 
 GET /jumpstart http/1.1
 ```
 
-The HTTP request consist of a verb (GET), a URI (/jumpstart), and the HTTP version (1.1). When we are routing, we take the verb and the URI and map it to a request handler. In this case, when Express sees a GET request to /jumpstart, some code is run.
+The HTTP request consist of a verb (GET), a URI (/jumpstart), and the HTTP version (1.1). When we are routing, we take the verb and the URI and map it to a handler function. In this case, when Express sees a GET request to /jumpstart, some code is run.
 
 A browser (the client) can make a GET, POST, PUT or DELETE HTTP request for various URLs (e.g. GET http://localhost:3000/books or DELETE http://localhost:3000/students/42).
 
@@ -37,13 +37,13 @@ app.post("/", (req, res) => {
 });
 ```
 
-The request handler (callback function) is called when a GET request is sent by the browser to the root `/`. In the request handler, "Welcome to my homepage" is sent as the response. To understand more about the HTTP requests and responses, read about [HTTP](../fundamentals/http).
+The handler function (callback function) is called when a GET request is sent by the browser to the root `/`. In the handler function, "Welcome to my homepage" is sent as the response. To understand more about the HTTP requests and responses, read about [HTTP](../fundamentals/http).
 
-Express.js will call the request handler with two parameters. The first parameter is the request object and the second parameter is the response object.
+Express.js will call the handler function with two parameters. The first parameter is the request object and the second parameter is the response object.
 
 ## Request object
 
-The Request object passed to the request handler holds all the HTTP request information that was sent to your server like query strings.
+The Request object passed to the handler function holds all the HTTP request information that was sent to your server like query strings.
 
 It starts off as an instance of _http.IncomingMessage_, a core Node object. Express then extends the object to add further functionality.
 
@@ -61,7 +61,7 @@ console.log("Method: " + req.method);
 
 ## Response object
 
-The Response object passed to the request handler holds information that your server will respond with when the connection is ended with the client.
+The Response object passed to the handler function holds information that your server will respond with when the connection is ended with the client.
 
 ```js
 console.log("Path: " + res.url);
@@ -73,7 +73,7 @@ Route paths, in combination with a request method, define the endpoints at which
 
 ### Fixed route path
 
-The request handler is called when a GET request is sent by the browser to the fixed route `/books`. In the request handler, "You requested a list of books...." is sent as the response.
+The handler function is called when a GET request is sent by the browser to the fixed route `/books`. In the handler function, "You requested a list of books...." is sent as the response.
 
 ```js
 app.get("/books", (req, res) => {
@@ -163,11 +163,11 @@ Request URL: http://localhost:3000/food?type=FRUIT
 req.query: { "type": "FRUIT"}
 ```
 
-## Multiple request handlers
+## Multiple handler functions
 
 Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js).
 
-Request handler 1:
+handler function 1:
 
 ```js
 // express_basic_example_2.js
@@ -177,7 +177,7 @@ const requestHandler1 = (req, res, next) => {
 };
 ```
 
-Request handler 2:
+handler function 2:
 
 ```js
 const requestHandler2 = (req, res) => {
@@ -189,13 +189,13 @@ const requestHandler2 = (req, res) => {
 };
 ```
 
-The first request handler passes the request to the next request handler via `next()` call.
+The first handler function passes the request to the next handler function via `next()` call.
 
 When we are not ready to send back the response yet, we use the `res.write()` method to update the response, instead of using the `res.send()` method.
 
-If a request handler needs to send the response back to client, it should call the `res.end()` method.
+If a handler function needs to send the response back to client, it should call the `res.end()` method.
 
-More than one request handler can be defined for a route. You can define the above two request handlers for the same route.
+More than one handler function can be defined for a route. You can define the above two handler functions for the same route.
 
 You can call `app.METHOD()` multiple times:
 
@@ -212,6 +212,6 @@ app.get("/students", requestHandler1, requestHandler2);
 
 Note that the handlers are executed in the same order as declaration. In the example above, requestHandler1 is called before requestHandler2.
 
-If you send a request to http://localhost:3000/students, you should see the output of both route handlers, printed in the right sequence.
+If you send a request to http://localhost:3000/students, you should see the output of both handler functions, printed in the right sequence.
 
 For more examples, see the [express docs](https://expressjs.com/tr/guide/routing.html).

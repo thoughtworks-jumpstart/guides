@@ -10,9 +10,9 @@ npm install express
 
 ## Features of Express.js
 
-- Uses middleware to break your app into smaller bits of behaviour
 - Routing helps to split your app into smaller functions that are called when user visits a resource (like a specific URL)
-- Routers can break large apps into smaller subapplications
+- Routers can further break large apps into smaller subapplications
+- Middleware functions help to process a request before it is passed on to the final handler functions
 
 ### Starting the server
 
@@ -22,9 +22,11 @@ const server = app.listen(PORT, () => {
 });
 ```
 
-### Routing with request handlers
+### Routing with handler function
 
-When you listen for connections on a route in Express, the request handler (callback function) will be invoked with a request
+When you listen for connections on a route in Express, the handler function (callback function) will be invoked when a request comes in.
+
+The request object and response object are passed to the handler function.
 
 ```js
 app.get("/", (req, res) => {
@@ -33,6 +35,10 @@ app.get("/", (req, res) => {
 ```
 
 ### Middleware
+
+Middleware functions are run by Express.js on the request before passing it on to the final handler function.
+
+The request object, response object and the `next` function are passed to each middleware function. To move on to the `next` function to be run in the stack (could be a middleware function or handler function), the `next` function needs to be called.
 
 ```js
 app.use(function(req, res, next) {
