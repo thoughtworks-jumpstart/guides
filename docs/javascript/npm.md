@@ -115,7 +115,7 @@ npm install <packagename> --save-dev
 
 The `--save-dev` flag indicates that it is a devDependency.
 
-Dependencies appearing under the `devDependencies` key in the `package.json` file are packages needed for development but are not needed for the running of the app. Examples of packages required only in development are testing libraries like Jest, linters like EsLint and transpilers like webpack.
+Dependencies appearing under the `devDependencies` key in the `package.json` file are packages needed for development but are not needed for the running of the app. Examples of packages required only in development are testing libraries like Jest, linters like ESLint and transpilers like Webpack.
 
 See [npm docs for dependencies and dev dependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
 
@@ -182,3 +182,13 @@ Use npm audit to generate a security report:
 ```
 npm audit
 ```
+
+## Exercises
+
+- Start a new project
+- Generate a `package.json` file for your project called my-first-project
+- Add a `index.js` file
+- Add custom scripts `start` and `start:dev` to the file
+- Install Express as a dependency
+- Install ESLint as a dev dependency
+- Install nodemon as a global dependency
