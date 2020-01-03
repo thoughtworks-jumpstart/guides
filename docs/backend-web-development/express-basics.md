@@ -22,11 +22,11 @@ const server = app.listen(PORT, () => {
 });
 ```
 
-### Routing with handler function
+### Routing
 
-When you listen for connections on a route in Express, the handler function (callback function) will be invoked when a request comes in.
+Routing is to add a handler function that is called when a user visit a particular route, for example the homepage `/` or `/books`. When you listen for connections on a route in Express, the handler function (callback function) will be invoked when a request comes in.
 
-The request object and response object are passed to the handler function.
+The request object and response object are passed to the handler function when the handler function is called.
 
 ```js
 app.get("/", (req, res) => {
@@ -43,7 +43,7 @@ The request object, response object and the `next` function are passed to each m
 ```js
 app.use(function(req, res, next) {
   console.log("Method: " + req.method);
-  console.log("Path: " + res.url);
+  console.log("Path: " + req.url);
   next();
 }
 ```
