@@ -5,11 +5,11 @@ Javascript Extention
 ## Covers
 
 1. What is JSX
-2. Adding logic to customise behaviour
+2. Adding logic to customise the behaviour
 
 ## What is JSX
 
-In our Hello World app we saw the following code bellow in App.js
+In our Hello World app, we saw the following code bellow in App.js.
 
 ```javascript
 function App() {
@@ -21,17 +21,17 @@ function App() {
 }
 ```
 
-You might probably realise that the App function is returning an HTML like code. Instead of having the class as "class", it becomes "className".
+You might probably realise that the App function is returning an HTML like code. Instead of having the class "class", it becomes "className".
 
-This syntax is called a Javascript Extension(JSX). JSX is possible because of babel helping to translate the jsx syntax into javascript. We will not look further into babel instead we going to focus on JSX.
+This syntax is called a JavaScript XML(JSX). JSX is possible because of babel helping to translate the JSX syntax into javascript.
 
-Using JSX, attribute typically available becomes camelCase and some have a slight change in name. Example class to className.
+Using JSX, attribute typically available becomes camelCase, and some have a slight change in name. Example class to className.
 
-Later we will see how we can create custom props that can be passed in as an attribute, for now just notice the difference.
+Later we can see how we can create custom props that can be passed in as an attribute, for now, notice the difference.
 
-## Adding logic to customise behaviour
+## Adding logic to customise the behaviour
 
-In JSX, we can use the full power of javascript. Considering the following code.
+In JSX, we can use the full power of javascript. Let's consider the following code.
 
 ```javascript
 import React from "react";
@@ -52,9 +52,9 @@ function App() {
 export default App;
 ```
 
-You can also change the value that will be passed into an attribute. Let trying adding a new class.
+You can also change the value that got passed into an attribute. Let trying adding a new class.
 
-First lets add a new classname `.app--red`
+First, let us add a new class name `.app--red`
 
 ```css
 .app {
@@ -98,9 +98,11 @@ export default App;
 
 ### Arrays
 
-Very often, you will have to show a list of items to the end user.
-For example, a list of available drinks in a vending machine, list of favorite items.
-JSX allow you to return array of elements / components.
+Very often, you need to show a list of items to the user.
+
+- a list of available drinks in a vending machine
+- list of favourite items
+  JSX allows you to return an array of elements/components.
 
 ```javascript
 function listDisneyMovies() {
@@ -122,20 +124,20 @@ function App() {
 
 ### Exercise
 
-1. create a function and use it to make the Hello World! all lowercase.
+1. create a function and use it to make the Hello World! All lowercase.
 2. create another function that makes odd number words uppercase and even number of word lowercase
 
-- from "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-- to "LOREM ipsum IS simply DUMMY text OF the PRINTING and TYPESETTING industry."
+- from `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
+- to `LOREM ipsum IS simply DUMMY text OF the PRINTING and TYPESETTING industry.`
 
 ![Lorem Ipsum](/_media/loremIpsumAltCase.png)
 
 ### To Infinity And Beyond
 
-3. create another function that alternates the character in the sentence. Ignoring spaces.
+3. create another function that alternates the character in the sentence — ignoring spaces.
 
 ![Lorem Ipsum alt char case](/_media/loremIpsumAltCharCase.png)
 
-4. modify the function from 3, add different colors to the alternate charachters.
+4. modify the function from 3, add different colours to the alternate characters.
 
 ![Lorem Ipsum alt color char case](/_media/loremIpsumAltColorCharCase.png)
