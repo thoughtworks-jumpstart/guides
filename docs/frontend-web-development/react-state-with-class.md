@@ -1,17 +1,17 @@
-# React States with Class Compoent
+# React States with Class Component
 
 ## Covers
 
-1. Why do we need state in a React component
+1. Why do we need `state` in a React component
 2. What is the difference between state and props?
-3. What is local state in a React component
+3. What is a `local state` in a React component
 4. Initialize component state of a component
-5. How to update state of a component
+5. How to update `state` of a component
 6. Pitfalls
 
-## Why do we need state in a React component
+## Why do we need `state` in a React component
 
-An React application typically needs to maintain some state information. For example, if you are building the frontend for GrabTaxi for users to book cabs in React, the React application needs to keep a lot of information in its state:
+A React application typically needs to maintain some state information. For example, if you are building the frontend for GrabTaxi for users to book cabs in React, the React application needs to keep much information in its state:
 
 - Who is the customer?
 - Location of the customer
@@ -20,7 +20,7 @@ An React application typically needs to maintain some state information. For exa
 
 ## What is the difference between state and props?
 
-props (short for "properties") and `state` are both plain JavaScript objects. While both hold information that influences the output of render, they are different in one important way: props get passed to the component (similar to function parameters) whereas `state` is managed within the component (similar to variables declared within a function).
+Props and `state` are both just JavaScript objects. While both hold information that influences the output of render, they are different in one crucial way: props get passed to the component (similar to function parameters) whereas `state` manages data within the component (similar to variables declared within a function).
 
 To find out whether a piece of data should reside in `state` or in `props`, simply ask three questions about the piece of data:
 
@@ -28,7 +28,7 @@ To find out whether a piece of data should reside in `state` or in `props`, simp
 2. Does it remain unchanged over time? If so, it probably isn’t state.
 3. Can you compute it based on any other state or props in your component? If so, it isn’t state.
 
-## What is local state in a React component?
+## What is a `local state` in a React component?
 
 - `state` is a plain javascript object ({}) where we store data that is internal/local to the component
 - Only components declared as a class can have its own state. Functional React components don't have state.
@@ -131,7 +131,7 @@ class Counter extends React.Component {
 }
 ```
 
-With this approach, you can derive new state from the current state. Note that currentState is a reference to the component state at the time the change is being applied. It should not be directly mutated. Instead, changes should be represented by building a new object based on the input from curentState and props of the component.
+With this approach, you can derive a new state from the current state. Note that currentState is a reference to the component state at the time the change is being applied. It should not be directly mutated. Instead, changes should be represented by building a new object based on the input from curentState and props of the component.
 
 ### A new state object is created after setState is executed
 
@@ -146,7 +146,7 @@ This basically means a state object is immutable once it's created (unless you m
 ### The output of the updater is merged with the new state object
 
 The object returned from the updater argument is merged with the newly created state object.
-Conceptually, this is what React does in the previous example
+Conceptually, this is what React does in the previous example.
 
 ```javascript
 this.state = Object.assign(this.state, { value: this.state.value + 1 });
@@ -193,7 +193,7 @@ First reason: because React is not aware that the state is updated if you update
 
 In contrast, when you call setState, React is aware of the state update and re-render the component correctly.
 
-### Don't mutate existing state object
+### Don't mutate the existing state object
 
 You might ask: "can I update the state object myself and then call the setState API?", like the following case:
 
@@ -212,17 +212,17 @@ Hence is generally a good practice to avoid mutating existing state object. If y
 
 ### Don't call setState in some React lifecycle methods like render
 
-There are some React lifecyle methods where you should not call setState. You can find more discussion in this article
+There are some React lifecycle methods where you should not call setState. You can find more discussion in this article.
 
 ## Exercise
 
 1. Create a Counter component with 2 buttons
 
 - Create a new react app
-- Display a initial value of 0
+- Display an initial value of 0
 - Create 2 button
-  - First button increases the count
-  - Second button decreases the count.
+  - The first button increases the count
+  - The second button decreases the count.
 
 ### Optional
 
@@ -230,7 +230,7 @@ There are some React lifecyle methods where you should not call setState. You ca
 
 - Modify the counter above.
   - Display the word "Fizz" instead of the number if it can be divided by 3
-  - Display the word "Buzz" instead of the number if it can be divide by 5
-  - Display the word "FizzBuzz" instead of "Fizz" or "Buzz" if it can be divded by both 3 and 5
-  - Display number 0 if counter value is at 0.
+  - Display the word "Buzz" instead of the number if it can be divided by 5
+  - Display the word "FizzBuzz" instead of "Fizz" or "Buzz" if it can be divided by both 3 and 5
+  - Display number 0 if the counter value is at 0.
   - Display the number value otherwise.

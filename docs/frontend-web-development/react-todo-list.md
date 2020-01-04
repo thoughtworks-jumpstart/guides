@@ -24,8 +24,8 @@ class Todolist extends React.Component {
 export default Todolist;
 ```
 
-Our todolist will hold some data about the items in the todolist.
-We will likely to use `state` to keep track of the items inside of the list so we will use class to help us.
+Our todo list holds some data about the items in the todo list.
+We are likely to use `state` to keep track of the items inside of the list so we can use a class component to help us.
 
 4. import Todolist in App.js
 
@@ -50,7 +50,7 @@ We should now see the word "Todolist" displayed at the top left of the browser.
 ## Displaying Todo items
 
 1. In `this.state`, add an array `todos`
-2. Intialise it with some dummy value for now. A todo should be an object with a `name` and `isDone` property.
+2. Initialise it with some dummy value for now. A todo should be an object with a `name` and `isDone` property.
 
 ```javascript
 class Todolist extends React.Component {
@@ -89,7 +89,7 @@ export default Todolist;
 ## Creating a Todo Component
 
 1. Create a Todo component to host todo logic
-2. find a nice green tick image and put it inside the public folder
+2. find a good looking green tick image and put it inside the public folder
 
 ```javascript
 import React from "react";
@@ -123,7 +123,7 @@ export default ({ name, isDone }) => (
 
 ![todo1](_media/todo1.png)
 
-Lets try to style the component a little.
+Let's try to style the component a little.
 
 In Todo.css
 
@@ -176,8 +176,8 @@ export default ({ name, isDone }) => (
 
 ## Complete or Uncomplete a todo item
 
-To achieve this, we will need to identify individual item.
-We can do this by assigning an Universally Unique Identifier(UUID) to individual item.
+To achieve this, we can identify an individual item.
+We can do this by assigning a Universally Unique Identifier(UUID) to the individual item.
 
 ```sh
 npm install uuid
@@ -258,9 +258,9 @@ export default ({ name, isDone, setTodo }) => (
 
 ![todo3](_media/todo3.gif)
 
-## Deleting item
+## Deleting an item
 
-1. First we can add a method to delete the Todo
+1. First, we can add a method to delete the Todo
 2. Add it as a Prop in the todo item
 
 ```javascript
@@ -293,7 +293,7 @@ export default ({ name, isDone, setTodo }) => (
     });
 ```
 
-3. Add a X, on clicking on the X, we can delete the item. We can also use an image like how we did for the tick.
+3. Add an X, on clicking on the X. We can delete the item. We can also use an image like how we did for the tick.
 
 ```javascript
 export default ({ name, isDone, setTodo, deleteTodo }) => (
@@ -310,7 +310,7 @@ export default ({ name, isDone, setTodo, deleteTodo }) => (
 );
 ```
 
-4. Style to make it looks nicer
+4. Style to make it looks nice
 
 ```css
 .todo__delete {
@@ -326,11 +326,11 @@ export default ({ name, isDone, setTodo, deleteTodo }) => (
 }
 ```
 
-Now we have a todolist that items can be deleted.
+Now we have a todo list that items we can delete.
 
 ## Adding new todo items
 
-1. Add a input box in Todolist
+1. Add an input box in Todolist
 
 ```javascript
 <input
@@ -341,7 +341,7 @@ Now we have a todolist that items can be deleted.
 />
 ```
 
-2. Add a handleChange function
+2. Add a handle change function
 
 ```javascript
 handleChange = event => {
@@ -349,7 +349,7 @@ handleChange = event => {
 };
 ```
 
-Notice that the handleChange function is an arrow function. Arrow function bind the current context allowing `this` in `this.setState` pointing to the Todolist.
+Notice that the `handleChange` function is an arrow function. Arrow function bind the current context allowing `this` in `this.setState` pointing to the Todolist.
 
 3. Add a button below the input box and create a new function addNewTodo
 
@@ -378,18 +378,18 @@ Notice that the handleChange function is an arrow function. Arrow function bind 
   }
 ```
 
-In addNewTodo, we check that name is not empty, if is empty, we will ignore the request to add the item.
+In `addNewTodo`, we check that name is not empty; if the name is empty, we can ignore the request to add the item.
 
-When adding new item , we clear the state of newItemName as user is unlikely to add 2 items of the same name.
+When adding a new item, we clear the state of `newItemName` as the user is unlikely to add 2 items of the same name.
 
 ![todo4](_media/todo4.gif)
 
 In the console, we currently see the warning:
 `index.js:1 Warning: Each child in a list should have a unique "key" prop.`
 
-This is cause by an array of elements not having a key property. This helps react to improve performance when content within the array changes.
+Having an array of elements without a `key` property creates a warning shown above. Having a key also helps React to improve performance when content within the array changes.
 
-The fix is to just add a unique id as key in the array of Todo items
+The fix is to add a unique id as key in the array of Todo items.
 
 ```javascript
   displayTodos() {
@@ -410,7 +410,7 @@ The fix is to just add a unique id as key in the array of Todo items
   }
 ```
 
-Currently, the displayTodos function is long, we can try to shorten the logic by moving the creating of the `setTodo` and `deleteTodo` to a seperate function
+Currently, the `displayTodos` function is long. We can try to shorten the logic by moving the creating of the `setTodo` and `deleteTodo` to a separate function
 
 ```javascript
 createSetTodo(todo) {
@@ -453,5 +453,5 @@ displayTodos() {
 ## Exercise
 
 1. Make the Todolist looks nice
-2. Add a prop that takes in the title of the todolist and display it as the title.
-3. Add a input box and a button to create new todolist.
+2. Add a prop that takes in the title of the todo list and display it as the title.
+3. Add an input box and a button to create a new todo list.
