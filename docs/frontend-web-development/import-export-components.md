@@ -1,7 +1,7 @@
 # Import and Export of Components
 
-Moving Components into seperate file makes codes more maintable.
-Individual file should be as small as possible while containing enough logic to serve a complete purpose.
+Moving Components into separate file makes codes more maintainable.
+The individual file should be as small as possible while containing enough logic to serve a whole purpose.
 
 ## Covers
 
@@ -30,7 +30,7 @@ function App() {
 export default App;
 ```
 
-## import export of components
+## Import export of components
 
 1. Create a folder "components" in the "src" folder
 2. Create a new file "greetings.js"
@@ -67,9 +67,9 @@ function App() {
 }
 ```
 
-We ususally use this method to import functions that are related but there is no one main function that will typically be use.
+We usually use this method to import functions that are closely related.
 
-## import export of default component
+## Import and export of a default component
 
 ```javascript
 import React from "react";
@@ -92,10 +92,7 @@ function App() {
 }
 ```
 
-This is perhaps the most common pattern to import and export components.
-One file to hold only one component.
-
-## import export of default object
+## Import and export of a default object
 
 There is also an option to export all items as an Object to group related items together.
 Is more commonly to use utility functions than Component.

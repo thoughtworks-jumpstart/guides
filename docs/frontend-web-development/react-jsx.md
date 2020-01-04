@@ -1,6 +1,6 @@
 # React JSX
 
-Javascript Extention
+JavaScript XML
 
 ## Covers
 
