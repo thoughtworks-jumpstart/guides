@@ -135,4 +135,4 @@ git push -u origin master
 - Create a PokemonGallery component that renders out all the pokemon.
 - import PokemonGallery from App.js and use the component.
 
-![Pokemon Gallery](/_media/pokemonGallery.png ":size=600")
+![Pokemon Gallery](/_media/pokemonGalleryDemo.png ":size=600")
