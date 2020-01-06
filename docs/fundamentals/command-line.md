@@ -4,6 +4,8 @@ After developing an application, you want to serve this applicaton on a server. 
 
 There may be times you might be asked to navigate a server to view the logs in order to determine the cause of a bug or you might be asked to complete a manual task that can be automated with a shell script and a cron job.
 
+You could refer to the repository: [Learn Shell](https://github.com/thoughtworks-jumpstart/learn-shell)
+
 ## Shell
 
 A shell is a command line user interface. Most Unix-like operating systems use Bash.
