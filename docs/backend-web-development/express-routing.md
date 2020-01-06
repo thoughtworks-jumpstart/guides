@@ -14,6 +14,8 @@ The HTTP request consist of a verb (GET), a URI (/jumpstart), and the HTTP versi
 
 A browser (the client) can make a GET, POST, PUT or DELETE HTTP request for various URLs (e.g. GET http://localhost:3000/books or DELETE http://localhost:3000/students/42).
 
+Make sure to understand more about [HTTP](../fundamentals/http) before learning about routing.
+
 Refer to the script: [Express.js playground: express_basic_example_1](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_1.js)
 
 ## Request methods
@@ -37,35 +39,59 @@ app.post("/", (req, res) => {
 });
 ```
 
-The handler function (callback function) is called when a GET request is sent by the browser to the root `/`. In the handler function, "Welcome to my homepage" is sent as the response. To understand more about the HTTP requests and responses, read about [HTTP](../fundamentals/http).
+The handler function (callback function) is called when a GET request is sent by the browser to the root `/`. In the handler function, "Welcome to my homepage" is sent as the response.
 
 Express.js will call the handler function with two parameters. The first parameter is the request object and the second parameter is the response object.
 
 ## Request object
 
-The Request object passed to the handler function holds all the HTTP request information that was sent to your server like query strings.
+The Request object (req) passed to the handler function holds all the HTTP request information that was sent to your server like query strings.
 
 It starts off as an instance of _http.IncomingMessage_, a core Node object. Express then extends the object to add further functionality.
 
-These are the commonly used and useful properties of the request object:
+These are the commonly used properties of the request object:
 
 - `req.params`
-  An array containing named route parameters. This will be further explained below.
+  Added by Express. An array containing named route parameters. This will be further explained below.
 
 - `req.query`
-  An object containing querystring parameters as name/value pairs. This will also be further explained below.
+  Added by Express. An object containing querystring parameters as name/value pairs. This will also be further explained below.
+
+- `req.url`
+  The request URL string.
+
+- `req.method`
+  The HTTP method (GET, POST, PUT, DELETE).
+
+These could be used for debugging.
 
 ```js
 console.log("Method: " + req.method);
+console.log("Path: " + req.url);
 ```
 
 ## Response object
 
-The Response object passed to the handler function holds information that your server will respond with when the connection is ended with the client.
+The Response object (res) passed to the handler function holds information that your server will respond with when the connection is ended with the client.
 
-```js
-console.log("Path: " + res.url);
-```
+It starts off as an instance of _http.ServerResponse_, a core Node object. The res object is an enhanced version of the response object found in Node.js.
+
+These are the commonly used properties or methods of the response object:
+
+- `res.send()`
+  Added by Express. Use it to send a response back to the client.
+
+- `res.json()`
+  Added by Express. Use it to send a JSON response back to the client.
+
+- `res.status(statusCode)`
+  Added by Express. Use it to set the status code of the response.
+
+- `res.sendStatus(statusCode)`
+  Added by Express. Shortcut for the above and sending the string representation of the status code as the response body.
+
+- `res.end()`
+  Send an empty response back to the client without any body.
 
 ## Route paths
 
@@ -105,6 +131,12 @@ We can grab data from the route using route parameters. Route parameters are nam
 
 GET a specific book with ID:
 
+```
+Route path: /books/:bookId
+Request URL: http://localhost:3000/books/8989
+req.params: {"bookId": "8989" }
+```
+
 ```js
 app.get("/books/:bookId", (req, res) => {
   res.send(`You requested information on book ${req.params.bookId}`);
@@ -118,12 +150,6 @@ This route will match paths `/books/1`, `/books/2` and so on. Will it match `/bo
 
 The captured values are populated in the `req.params` object, with the name of the route parameter specified in the path as their respective keys.
 
-```
-Route path: /books/:bookId
-Request URL: http://localhost:3000/books/8989
-req.params: {"bookId": "8989" }
-```
-
 it is possible to capture more than one value using multiple parameters.
 
 ```
@@ -132,13 +158,78 @@ Request URL: http://localhost:3000/users/34/books/8989
 req.params: { "userId": "34", "bookId": "8989" }
 ```
 
+```js
+app.get("/users/:userId/books/:bookId", (req, res) => {
+  //...
+});
+```
+
 ### Route querystrings
 
 Refer to the script: [Express.js playground: query_parameter_example](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/query_parameter_example.js).
 
+We can use querystrings to filter data, provide information to a page or even alter the action of a page.
+
+Considering that we have the following data:
+
+```js
+const data = [
+  {
+    id: 1,
+    type: "FRUIT",
+    name: "Banana",
+    color: "yellow",
+  },
+  {
+    id: 2,
+    type: "FRUIT",
+    name: "Tomato",
+    color: "red",
+  },
+  {
+    id: 3,
+    type: "VEGETABLE",
+    name: "Broccoli",
+    color: "green",
+  },
+  {
+    id: 4,
+    type: "VEGETABLE",
+    name: "Red pepper",
+    color: "red",
+  },
+];
+```
+
+These four items have a few properties / fields that we can use to filter the actual items that we return to the user.
+
+If we only want to get items which type is FRUIT:
+
+```
+Route path: /food
+Request URL: http://localhost:3000/food?type=FRUIT
+req.query: { "type": "FRUIT" }
+```
+
+If we only want to get items which color is red:
+
+```
+Route path: /food
+Request URL: http://localhost:3000/food?color=red
+req.query: { "color": "red" }
+```
+
+If we want to get items which color is red and type is also FRUIT:
+
+```
+Route path: /food
+Request URL: http://localhost:3000/food?color=red&type=FRUIT
+req.query: { "color": "red", "type": "FRUIT" }
+```
+
 ```js
 app.get("/food", (req, res) => {
-  console.log(req.query);
+  //console.log(req.query);
 
   const results = data
     // Using if statements
@@ -157,17 +248,13 @@ app.get("/food", (req, res) => {
 });
 ```
 
-```
-Route path: /food
-Request URL: http://localhost:3000/food?type=FRUIT
-req.query: { "type": "FRUIT"}
-```
+The querystrings are populated in the `req.query` object, with the name of the query as their respective keys. What do you think the above code does?
 
 ## Multiple handler functions
 
 Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js).
 
-handler function 1:
+Handler function 1:
 
 ```js
 // express_basic_example_2.js
@@ -177,7 +264,7 @@ const requestHandler1 = (req, res, next) => {
 };
 ```
 
-handler function 2:
+Handler function 2:
 
 ```js
 const requestHandler2 = (req, res) => {
