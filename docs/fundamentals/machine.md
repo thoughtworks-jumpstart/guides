@@ -33,6 +33,23 @@ If you already have these packages previously installed on your computer, then y
 choco upgrade <package-name>
 ```
 
+### Install Node.js and npm
+
+Install Node.js and npm
+
+```sh
+choco install nodejs
+```
+
+If node is already installed, upgrade to the latest version of node
+
+```sh
+choco upgrade nodejs
+```
+
+For more details, see https://chocolatey.org/packages/nodejs.
+Alternatively, you can also download nodejs and npm from the [official website](https://nodejs.org/en/).
+
 ## Mac
 
 ### Install Homebrew package manager
