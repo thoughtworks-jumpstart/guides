@@ -6,18 +6,18 @@ managing multiple views in a React app
 
 1. Why we want to use it
 2. Setup
-3. Conditional rendering based on path
+3. Conditional rendering based on a path
 4. Navigating Pages
-5. Accessing Router information within component.
+5. Accessing Router information within Component.
 6. Query params
 
 ## Why we want to use it
 
-When our application grows, is common to have too much contents to make sense within a page.
+When our application grows, it is common to have too many contents to make sense within a page.
 
-One possible solution is to seperate the contents into different workflows or different Views.
+One possible solution is to separate the contents into different workflows or different Views.
 
-Having a Router within the application allows users to reach out to the different views while staying within our application. React Router is a handy JS library that allow us to easily achieve this functionality.
+Having a Router within the application allows users to reach out to the different views while staying within our application. React Router is a handy JS library that allows us to achieve this functionality quickly.
 
 Say our application have
 
@@ -25,9 +25,7 @@ Say our application have
 - /photo-gallery
 - /weather
 
-When a user hit the url `/weather` in a browser, the react app with react router will load our react application, look at the url, checks the mapping of what to render and then renders only the `todo-list` portion of the code.
-
-We will also want to show some links for user to have easy access to different part of our application.
+When a user hit the URL `/weather` in a browser, the react app with React Router loads our react application, look at the URL, checks the mapping of what to render and then renders only the `todo-list` portion of the code.
 
 ## Setup
 
@@ -55,19 +53,19 @@ function App() {
 export default App;
 ```
 
-## Conditional rendering based on path
+## Conditional rendering based on a path
 
 ### Rendering JSX directly
 
 `Route` component helps to decide if a component should render.
 
-First we can import a Route
+First, we can import the Route component.
 
 ```javascript
 import { BrowserRouter, Route } from "react-router-dom";
 ```
 
-then we can add 2 Routes, `/home` and `weather`. For now we just going to render the title of the page
+Then we can add 2 Routes, `/home` and `weather`. For now, we are just going to render the title of the page.
 
 ```javascript
 <BrowserRouter
@@ -82,19 +80,19 @@ then we can add 2 Routes, `/home` and `weather`. For now we just going to render
 </BrowserRouter>
 ```
 
-Try hitting url `<path to react app>/home` (i.e. http://localhost:3000/home)
+Try hitting URL `<path to react app>/home` (i.e. http://localhost:3000/home)
 You should be able to see the "Home" printed below the hello world.
 
-Now try to hit the url to weather.
-You will see "Weather" being printed insteaad of "Home".
+Now try to hit the URL to weather.
+You can see "Weather" is printed instead of "Home".
 
-The behavior of route is very simple.
+The behaviour of the route is straightforward.
 
 1. Look at our current URL
-2. Checks if path of url **begins with** the path provided
+2. Checks if the path of URL **begins with** the path provided
 3. render if matches, else do nothing
 
-the checking logic can seems a little weird at the beginning.
+The checking logic can seem a little weird at the beginning.
 Say `<Route path="/home" render={() => <h1>Home</h1>} />`
 
 - http://<host>/home is a match
@@ -141,22 +139,22 @@ import Weather from "./containers/Weather"
 // ...
 ```
 
-Everything should works the same as before.
+Everything should work the same as before.
 
 ### Rendering only one component with Switch
 
-As long as a path is match, Route will render the component.
+When path matches, the `Route` component will then render the state component.
 
 ```javascript
 <Route path="/home/admin" render={() => <div>Admin</div>} />
 <Route path="/home" render={() => <div>User</div>} />
 ```
 
-when we hit the path `<host>/home/admin`, but "Admin" and "User" will be printed out
-to fix this, we can add the Switch.
+When we hit the path `<host>/home/admin`, both "Admin" and "User" is printed out.
+To fix this, we can add the Switch.
 
-Sometimes we only want one match component to be rendered.
-React router allow us to do so with the `<Switch>` component.
+Sometimes we only want to render the first matching component.
+React Router allow us to do so with the `<Switch>` Component.
 
 ```javascript
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -169,23 +167,23 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 </Switch>
 ```
 
-Hit `<host>/home/admin` again, now only "Admin" will be printed out.
+Hit `<host>/home/admin` again, now only "Admin" is printed out.
 
-### Guarding with default page
+### Showing a default page
 
-Using `Switch`, we can prepare a "Page not found" component and render out when no path are match.
+Using `Switch`, we can prepare a "Page not found" Component and render out when no path matches.
 
 ```javascript
-<Switch>
+< Switch>
   <Route path="/home/admin" render={() => <div>Admin</div>} />
   <Route path="/home" render={() => <div>User</div>} />
   <Route path="/" render={() => <div>Page Not Found</div>}>
 </Switch>
 ```
 
-Ending the swich with a Route with path `/` will always be hit.
+Ending the Switch with a Route with path `/` ensures the page is always reachable.
 
-If we want the user be redirect to a specific page, we can use a `Redirect`
+If we want to redirect to a specific page, we can use a `Redirect`
 
 ```javascript
 //...
@@ -202,11 +200,13 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 ## Navigating Page
 
-We have learnt to setup Routes to do conditional rendering
+We have learnt to set up Routes to do the conditional rendering.
 
-### Wrong way using anchor tag or windows.
+### Do not use anchor tag or windows object to navigate.
 
-Using anchor tag or window.location.href will cause the browser to reload the whole React app breaking the Single Page Application experience.
+Using anchor tag or `window.location.href` causes the browser to reload the whole React app breaking the Single Page Application experience.
+
+Let's try it out
 
 ```javascript
 <BrowserRouter>
@@ -250,14 +250,14 @@ import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 </BrowserRouter>;
 ```
 
-Using Link, the React app no longer refreshes on load.
+When we switch to the `Link` component, the React app no longer refreshes on load.
 
 ### Using Navlink to style active links
 
-Say we want to tell the user where they are by showing the active links in a different color.
+Say we want to tell the user where they are by showing the active links in a different colour.
 We can do that using `NavLink` instead of `Link`
 
-`NavLink` works exactly same as `Link` but adds a "active" classname that allow us to style the active link differntly.
+`NavLink` works the same as `Link` but adds an "active" class name that allows us to style the active link differently.
 
 src/App.css
 
@@ -298,25 +298,25 @@ import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 </BrowserRouter>;
 ```
 
-The `a.active` in `App.css` styles the active component. This is possible because of the add `active` class.
+The `a.active` in `App.css` styles the active component. The style is added correctly because of the add `active` class.
 
-Is also possible to change the added classname with `activeClassName` or add inline styling `activeStyle`. In most cases you will not have to use them.
+Is also possible to change the added class name with `activeClassName` or add inline styling `activeStyle`. In most cases, you do not need to customise the class name or inline styling.
 
 ![NavLink](_media/navLink.png)
 
-## Accessing Router information within component
+## Accessing Router information within Component
 
-React router provides you will 3 objects
+React Router provides you will 3 objects.
 
-1. history: allow you to navigate or goback to previous page
-2. location: get the current path in the react app
-3. match: information about the `Route` and query parameters that can be passed on
+1. history: allow you to `navigate` or `goback` to the previous page
+2. location: get the current path in the React app
+3. match: information about the `Route` and access to the query parameters.
 
-you can refer to the official document for the usage, in here we going to focus on how to access them.
+You can refer to the official document for the usage, in here we going to focus on how to access them.
 
 ### Components that render from route.
 
-Components rendered from `Rotue` will have these 3 objects injected into the properties.
+Components rendered from `Rotue` contains these 3 objects injected into the properties.
 
 src/containers/Home.js
 
@@ -343,24 +343,24 @@ export default props => {
 ```
 
 1. we gain access to location object which consist of the pathname
-2. on clicking the "to weather" link, it brings us to weather. Similarly there are functions like `goBack` in the `history` object that allow us to return to where we come from.
+2. on clicking the "to weather" link, it brings us to weather. Similarly, there are functions like `goBack` in the `history` object that allow us to return to the previous page.
 
-note: inline styling is not recommmended in general.
+Note: we do not recommend inline styling in general.
 
 ![routerObject](_media/routerObjects.png)
 
 ### Accessing router objects from child component
 
-We can accessing `history`, `location` and `match` in the Child component by
+We can access `history`, `location` and `match` in the Child component by
 
 1. passing from parent
-2. using the withRouter higher order component
+2. using the `withRouter` higher-order component
 
-The second way is preferred to decouple router related information from the components.
-In the example below, we try to print out the current pathname if we have access to the location object, if not, we will print "???".
+The second way is preferred to decouple Router related information from the components.
+In the example below, we try to print out the current pathname if we have access to the location object; if not we print "???".
 
-In our Home component, we render a component wrapped with `withRouter` and another without.
-The same component wrapped within the `withRouter` gain access to the location object and print out the current path as expected.
+In our Home component, we render the Component and the same Component wrapped with `withRouter`.
+The same Component wrapped within the `withRouter` gain access to the location object and print out the current path as expected.
 
 src/containers/Home.js
 
@@ -393,9 +393,9 @@ export default props => {
 
 ## Query params
 
-Query params are helpful when comes to select specific information to render or to filter down items from a list.
+Query params are helpful when it comes to select specific information to render or to filter down items from a list.
 
-For example if we have a menu of items. Each food item is mapped to a specific id.
+For example, if we have a menu of items. Each food item maps to a specific id.
 We can fetch item based on the query params.
 
 src/containers/Food.js
@@ -431,7 +431,7 @@ src/App.js
 ```
 
 try accessing `/food/2`
-"you have selected: laksa" will be displayed
+The Component will then displays "you have selected: laksa".
 
 ## Exercise
 
