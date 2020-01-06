@@ -1,20 +1,57 @@
 # Express.js responses
 
-The handler function usually needs to call a method on the response object to send back some responses.
+The handler function or middleware function usually needs to call a method on the response object (res) to modify and send back a response.
 
-## Sending a string
+## Ending a response
 
-In the routing example, we used `res.send()` to send a string as a response and to close the connection.
+We have ended a response by using `res.end` when we were creating a basic Node.js server previously without Express.js.
+
+```js
+res.status(404).end();
+```
+
+We will use `end()` to end the response without providing any data.
+
+Why do we need to end a response? We need to close the HTTP connection or else the connection will be kept alive until the end of the server timeout. Read about [Concurrent HTTP connections in Node.js](https://blog.fullstacktraining.com/concurrent-http-connections-in-node-js/) for more info.
+
+## Sending responses
+
+By calling the `res.send()` method, we can send a response.
+
+The signature of the method is `res.send([body])` where the body can be a Buffer, String, an Object or an Array.
+
+The `Content-Type` header is automatically set based on the type of the body passed to the method. If you pass in a string , it sets the `Content-Type` header to text/html. If you pass in an object or an array, it sets the header to application/json, and parses that parameter into JSON.
+
+### Sending a string response
+
+In the previous routing example, we already used `res.send()` to send a string as a response and to close the connection.
 
 ```js
 res.send("Welcome to my homepage");
 ```
 
-If you pass in a string , it sets the `Content-Type` header to text/html.
+`res.send()` automatically sets the `Content-Type` and `Content-Length` HTTP response headers and closes the connection. You should only call `res.send()` once.
 
-If you pass in an object or an array, it sets the application/json `Content-Type` header, and parses that parameter into JSON.
+### Sending a JSON response
 
-`res.send()` automatically sets the `Content-Length` HTTP response header and closes the connection. You should only call `res.send()` once.
+In the previous routing example. we have also already used `res.json()` to send JSON to the client as a response and to close the connection.
+
+It is different from `res.send()` because it respects the JSON application settings such as `json spaces` and `json replacer`.
+
+It can accept an object or array, and converts it to JSON before sending it:
+
+```js
+res.json({ username: "Flavio" });
+res.status(500).json({ error: "message" });
+```
+
+It will also convert _null_ and _undefined_ which are not valid JSON to JSON.
+
+```js
+res.json(null);
+```
+
+Read [this blog at Fullstacktraining](https://blog.fullstacktraining.com/res-json-vs-res-send-vs-res-end-in-express/) for more information.
 
 ## Writing parts of response body
 
@@ -47,7 +84,7 @@ See [this stackoverflow response](https://stackoverflow.com/questions/44692048/w
 
 ## Setting HTTP response status code
 
-Sets the response HTTP status code to 200 and calls the `res.send()` method to send the corresponding string message.
+Set the response HTTP status code to 200 and call the `res.send()` method to send the corresponding string message.
 
 ```js
 res.status(200).send("OK");
@@ -70,11 +107,3 @@ res.sendStatus(500);
 ```
 
 See [Express.js api docs](https://expressjs.com/en/api.html#res.sendStatus) for more info.
-
-## Send JSON response
-
-You can send JSON to the client by using Response.json(), a useful method.
-
-It accepts an object or array, and converts it to JSON before sending it:
-
-res.json({ username: 'Flavio' })
