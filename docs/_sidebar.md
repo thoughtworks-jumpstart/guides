@@ -37,6 +37,7 @@
   - [Lifecycle of React Components](frontend-web-development/react-lifecycle)
   - [Building a Todolist](frontend-web-development/react-todo-list)
   - [React-Router](frontend-web-development/react-router)
+  - [Http request](frontend-web-development/http-request)
   - [[Bonus] React Hooks](frontend-web-development/react-hooks)
   - [[Bonus] React Context](frontend-web-development/react-context)
 
