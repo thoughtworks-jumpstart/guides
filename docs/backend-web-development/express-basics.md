@@ -63,7 +63,7 @@ console.log("Method: " + req.method);
 console.log("Path: " + req.url);
 ```
 
-You are unable to access the body of a reques with `req.body` if the body is not parsed yet. This will be further explained in the [parsing request body](express-parsing-request-body) page.
+You are unable to access the body of a request with `req.body` if the body is not parsed yet. This will be further explained in the [parsing request body](express-parsing-request-body) page.
 
 ## Response object
 
