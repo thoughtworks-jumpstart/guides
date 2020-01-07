@@ -38,6 +38,7 @@
   - [Building a Todolist](frontend-web-development/react-todo-list)
   - [React-Router](frontend-web-development/react-router)
   - [Http request](frontend-web-development/http-request)
+  - [Test with React testing library](frontend-web-development/react-testing-library)
   - [[Bonus] React Hooks](frontend-web-development/react-hooks)
   - [[Bonus] React Context](frontend-web-development/react-context)
 
