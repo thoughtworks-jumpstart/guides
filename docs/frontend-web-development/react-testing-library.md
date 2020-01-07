@@ -6,8 +6,8 @@
 2. Installation
 3. Running test
 4. Triggering click events
-5. Enter text into input box
-6. Testing if component exist with data-testid
+5. Enter text into an input box
+6. Testing if the component exists with `data-testid`
 7. Testing API
 8. What to test for
 9. F.I.R.S.T principle
@@ -20,19 +20,19 @@ From: https://testing-library.com/docs/react-testing-library/intro
 ### The problem
 
 - Avoid including implementation details
-- Mainainable in long run
-  - Changing of internal implenetations that outputs the same system should not cause test to fail.
+- Maintainable in the long run
+  - Changing of internal implementations that output the same system should not cause a test to fail.
 
 ### The solution
 
 - React Testing Library
   - very light-weight solution for testing React components.
-  - tests will work with actual DOM nodes
+  - tests that works with actual DOM nodes
   - provides facilitate querying the DOM in the same way the user would
 
 ## Installation
 
-As of create-react-app 3.3.0 (2019-12-04), you do not have to do the following steps as testing-library is installed already.
+As of create-react-app 3.3.0 (2019-12-04), you do not have to do the following steps. `create-react-app` installs the required package for you.
 
 ```sh
 npm install --save @testing-library/react @testing-library/jest-dom
@@ -62,10 +62,10 @@ test("renders learn react link", () => {
 });
 ```
 
-`@testing-library/react"` provides us with API that help us to interact and get information from out component.
+`@testing-library/react"` provides us with API that helps us to interact and get information from out component.
 Available api: https://testing-library.com/docs/preact-testing-library/api
 
-The `render` functions renders the component to a DOM and provide you with methods that let you interact with the DOM. In, `const { getByText } = render(<App />);`, the `getByText` function allow us to find the element with the matching text in the DOM.
+The `render` functions render the component to a DOM and provide you with methods that let you interact with the DOM. In, `const { getByText } = render(<App />);`, the `getByText` function allow us to find the element with the matching text in the DOM.
 Avaialble functions: https://testing-library.com/docs/react-testing-library/cheatsheet
 
 `toBeInTheDocument` came from a library, `@testing-library/jest-dom`, that extends the available matches in `jest`. `toBeInTheDocument` checks if an element is inside the dom.
@@ -73,9 +73,9 @@ Available matchers: https://github.com/testing-library/jest-dom
 
 ## Triggering click events
 
-In most cases, the things we want to test haven't appear on the screen yet. We will need to interact with the DOM and trigger the actual interaction to get results we want to show.
+In most cases, the things we want to test haven't appeared on the screen yet. We will have to interact with the DOM and trigger the actual interaction to get results we want to show.
 
-Say we have a counter
+Say we have a counter.
 
 ```javascript
 class App extends React.Component {
@@ -125,7 +125,7 @@ describe("+1 button", () => {
 
 ## Testing for input events
 
-Text input fields are very common. Let's take a look an example.
+You are going to see text input fields a lot in projects. Let's take a look at how to work with them.
 
 Say we have some data:
 
@@ -133,7 +133,7 @@ Say we have some data:
 ["apple", "orange", "apricot", "durian", "water melon", "water chestnut"];
 ```
 
-We want to display all the items. When I add text into a inbox box, it will filter the items and show me only data that contains the specific strings.
+We want to display all the items. When I add text into an inbox box, we want to see only the data that contain the specific strings.
 
 ![data before filter](_media/dataBeforeFilter.png)
 
@@ -168,11 +168,11 @@ We can find the text using `getByLabelText` because we added an aria-label in ou
 We then use `fireEvent` to simulate typing of "ap".
 We can now `expect` to only find text that contains "ap".
 
-# Testing if component exist with data-testid
+# Testing if the component exists with`data-testid`.
 
-Sometimes, we just want to test if a component exist. We can the internal implementation of the component to another test file.
+Sometimes, we just want to test if a component exists. We can use the internal implementation of the component to another test file.
 
-One example is testing of navigating between Views. We do not really care about the content of the View or the functionality.
+One example is testing of navigating between Views. We do not care about the content of the View or the functionality.
 
 App.js
 
@@ -245,8 +245,8 @@ describe("NavLink", () => {
 
 ## Testing API
 
-Is common for react app to be interacting with web server outside of the app. Testing this interaction is good but we want to limit it to the bare minimum, this is due to cost and stability.
-We usually do this on a seperate End to End test.
+Is common for react app to be interacting with web server outside of the app. Testing this interaction is good, but we want to limit it to the bare minimum, this is due to cost and stability.
+We usually do this on a separate End to End test.
 
 So we want to mock our API.
 We can use another package to help use.
@@ -326,23 +326,23 @@ describe("Todolist", () => {
 
 ## What to test for
 
-1. Test components that should be rendered
-2. Test for events or user interactions
+1. Test for components that are rendered
+2. Test for events and user interactions
 3. Test for state change
 
 - by interactions
-- UI change cause by incoming data
+- UI change caused by incoming data
 
-4. Test for correct output going out
+4. Test for the correctness of payload to be sent out
 5. Test for corner/edge cases
 6. Test for possible regression
 
 ## F.I.R.S.T principle
 
-1. Fast, whole test suite should take seconds
-2. Independent, test should pass when run independenly or as a suite
-3. Repeatable, test will always give the same result no matter how many times I run it
-4. Self Checking, result in pass or fail, clear expect statement
+1. Fast: whole test suite should take seconds
+2. Independent: test should pass when run independently or as a suite
+3. Repeatable: the test is going to give the same result no matter how many times I run it
+4. Self Checking: result in a pass or fail. Expect statement should have a clear intent.
 5. Timely, written same time same as the code ideally using TDD
 
 ## Test Coverage
