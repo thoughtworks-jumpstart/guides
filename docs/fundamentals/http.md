@@ -64,7 +64,16 @@ The format is: ?key1=value1&key2=value2
 ?type=VEGETABLE&color=red
 ```
 
-## HTTP requests and responses
+## HTTP messages
+
+HTTP messages consist of:
+
+- Request line or Status line
+- Headers
+- An empty line
+- Optional HTTP message body data
+
+### Request
 
 Example of a GET request made when visiting www.example.com using a browser:
 
@@ -78,7 +87,10 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
 (blank line)
 ```
 
-`Host`, `User-Agent` are request headers that exist in the HTTP request.
+`GET /index.html HTTP/1.1` is called the _request line_.
+`Host`, `User-Agent` are some of the _request headers_ that exist in the HTTP request.
+
+### Response
 
 Example of the response:
 
@@ -92,15 +104,17 @@ Accept-Ranges: bytes
 Content-Length: 44
 Connection: close
 Content-Type: text/html
-
+(blank line)
 <html><body><h1>this is an example</h1></body></html>
 ```
 
-The first line is called the _status line_. It consists of the HTTP version `1.1`, the status code `200` and the reason phrase `OK`. We will look into more status codes later.
+`HTTP/1.1 200 OK` is called the _status line_. It consists of the HTTP version `1.1`, the status code `200` and the reason phrase `OK`. We will look into more status codes later.
 
-`Content-Length`, `Content-Type` are response headers in the HTTP response.
+`Content-Length`, `Content-Type` are some of the _response headers_ in the HTTP response.
 
-The browser will display the content of the response message according to the media type of the response (as in the `Content-Type` response header). Possible content types include "text/plain", "text/html", "image/gif", "image/jpeg", "audio/mpeg", "video/mpeg", "application/msword", and "application/pdf".
+The lines after the blank line consist of the _body data_.
+
+The browser will display the body of the response message according to the media type of the response (as in the `Content-Type` response header). Possible content types include "text/plain", "text/html", "image/gif", "image/jpeg", "audio/mpeg", "video/mpeg", "application/msword", and "application/pdf".
 
 ### Status codes
 
