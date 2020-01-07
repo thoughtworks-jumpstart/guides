@@ -11,7 +11,7 @@
 
 ## Overview
 
-In an application that does server-side rendering, an endpoint call typically fetches the full page which includes the HTML page View and all the data that is already embedded inside. Moving to Single Page Application, we already have all the HTML and Javascript code in the browser all we need is the data. Fetching data only reduces the size of data transfer over the network but also introduce other issues such as the need for a loader and error handling.
+In an application that does server-side rendering, an endpoint call typically fetches the full page which includes the HTML page View and all the data that is already embedded inside. Moving to Single Page Application, we already have all the HTML and Javascript code in the browser all we need is the data. Fetching data only not only reduces the size of data transfer over the network but also introduce other issues such as the need for a loader and error handling.
 
 In this course, we are going to use JavaScript Object Notation(JSON) to transfer data over the network. You can read more about JSON in https://en.wikipedia.org/wiki/JSON. In JSON, our data are group into objects and array. The object should contain many key-value pairs. Accepted values are string, boolean, number and null.
 
