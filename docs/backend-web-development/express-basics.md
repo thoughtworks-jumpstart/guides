@@ -14,7 +14,7 @@ npm install express
 - Routers can further break large apps into smaller subapplications
 - Middleware functions help to process a request before it is passed on to the final handler functions
 
-### Starting the server
+## Starting the server
 
 ```js
 const server = app.listen(PORT, () => {
@@ -22,9 +22,9 @@ const server = app.listen(PORT, () => {
 });
 ```
 
-### Routing
+## Routing
 
-Routing is to add a handler function that is called when a user visit a particular route, for example the homepage `/` or `/books`. When you listen for connections on a route in Express, the handler function (callback function) will be invoked when a request comes in.
+Routing is to add a handler function (a callback function) that is called when a user visit a particular route, for example the homepage `/` or `/books`. When you listen for connections on a route in Express, the handler function will be invoked when a request comes in.
 
 The request object and response object are passed to the handler function when the handler function is called.
 
@@ -34,7 +34,61 @@ app.get("/", (req, res) => {
 });
 ```
 
-### Middleware
+Routing is described in detail on another page.
+
+## Request object
+
+The Request object (req) passed to a callback function holds all the HTTP request information that was sent to your server like query strings.
+
+It starts off as an instance of _http.IncomingMessage_, a core Node object. Express then extends the object to add further functionality.
+
+These are the commonly used properties of the request object:
+
+- `req.params`
+  Added by Express. An array containing named route parameters. This will be further explained below.
+
+- `req.query`
+  Added by Express. An object containing querystring parameters as name/value pairs. This will also be further explained below.
+
+- `req.url`
+  The request URL string.
+
+- `req.method`
+  The HTTP method (GET, POST, PUT, DELETE).
+
+These could be used for debugging.
+
+```js
+console.log("Method: " + req.method);
+console.log("Path: " + req.url);
+```
+
+You are unable to access the body of a reques with `req.body` if the body is not parsed yet. This will be further explained in the [parsing request body](express-parsing-request-body) page.
+
+## Response object
+
+The Response object (res) passed to a callback function holds information that your server will respond with when the connection is ended with the client.
+
+It starts off as an instance of _http.ServerResponse_, a core Node object. The res object is an enhanced version of the response object found in Node.js.
+
+These are the commonly used properties or methods of the response object:
+
+- `res.send()`
+  Added by Express. Use it to send a response back to the client.
+
+- `res.json()`
+  Added by Express. Use it to send a JSON response back to the client.
+
+- `res.status(statusCode)`
+  Added by Express. Use it to set the status code of the response.
+
+- `res.sendStatus(statusCode)`
+  Added by Express. Shortcut for the above and sending the string representation of the status code as the response body.
+
+- `res.end()`
+  Send an empty response back to the client without any body.
+
+## Middleware
 
 Middleware functions are run by Express.js on the request before passing it on to the final handler function.
 
@@ -47,6 +101,8 @@ app.use(function(req, res, next) {
   next();
 }
 ```
+
+Middleware is described in detail on another page.
 
 ## Testing the server with an API testing tool
 
