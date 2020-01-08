@@ -8,10 +8,12 @@ See [this website](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming
 
 HTTP protocol defines a set of request methods, these are the common ones that we regularly use:
 
-GET: A client can use the GET request to get a web resource from the server.
-POST: Used to post data up to the web server.
-PUT: Ask the server to store the data.
-DELETE: Ask the server to delete the data.
+- GET: A client can use the GET request to get a web resource from the server.
+- POST: Create a new resource on the server
+- PUT: Update a resource on the server
+- DELETE: Delete a resource on the server
+
+Resources could be a page, an image or even a video file.
 
 ## Browser
 
@@ -88,7 +90,9 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
 ```
 
 `GET /index.html HTTP/1.1` is called the _request line_.
-`Host`, `User-Agent` are some of the _request headers_ that exist in the HTTP request.
+`Host: www.example.com`, `User-Agent: Mozilla/4.0` are some of the _request headers_ that exist in the HTTP request. HTTP Headers are key-value pairs that are separated by a colon.
+
+You can find a list of valid headers on [MDN’s HTTP Headers Reference](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
 ### Response
 
@@ -110,7 +114,7 @@ Content-Type: text/html
 
 `HTTP/1.1 200 OK` is called the _status line_. It consists of the HTTP version `1.1`, the status code `200` and the reason phrase `OK`. We will look into more status codes later.
 
-`Content-Length`, `Content-Type` are some of the _response headers_ in the HTTP response.
+`Content-Length: 44`, `Content-Type: text/html` are some of the _response headers_ in the HTTP response.
 
 The lines after the blank line consist of the _body data_.
 
@@ -138,5 +142,3 @@ Using developer tools on a browser, we can track and view the HTTP requests made
 For example, when we visit http://localhost:3000/books, we could use the Network developer tool to view the GET request made.
 
 <img src="../_media/get-request.png" alt="get request on /books uri" width="600"/>
-
-## HTTP Headers
