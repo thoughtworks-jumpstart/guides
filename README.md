@@ -1,6 +1,6 @@
 # Jumpstart Guides
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Jumpstart Guides uses [docsify](https://docsify.js.org/#/) to generate our guides.
@@ -47,6 +47,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/elsonlim-tw"><img src="https://avatars1.githubusercontent.com/u/49974808?v=4" width="100px;" alt=""/><br /><sub><b>Elson</b></sub></a><br /><a href="#content-elsonlim-tw" title="Content">🖋</a></td>
     <td align="center"><a href="https://jsstrn.me/"><img src="https://avatars2.githubusercontent.com/u/1199611?v=4" width="100px;" alt=""/><br /><sub><b>Jesstern Rays</b></sub></a><br /><a href="#content-jsstrn" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/mabelleeyanhwa"><img src="https://avatars1.githubusercontent.com/u/55967697?v=4" width="100px;" alt=""/><br /><sub><b>Mabel Lee</b></sub></a><br /><a href="#content-mabelleeyanhwa" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/nevtay"><img src="https://avatars3.githubusercontent.com/u/41568907?v=4" width="100px;" alt=""/><br /><sub><b>nevtay</b></sub></a><br /><a href="#content-nevtay" title="Content">🖋</a></td>
   </tr>
 </table>
 
