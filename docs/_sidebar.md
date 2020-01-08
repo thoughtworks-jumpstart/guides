@@ -40,7 +40,8 @@
   - [Http request](frontend-web-development/http-request)
   - [Test with React testing library](frontend-web-development/react-testing-library)
   - [Publish React App](frontend-web-development/publish-react)
-  - [Planning for a new UI project](frontend-web-development/planning-new-project)
+  - [[Bonus] Planning for a new UI project](frontend-web-development/planning-new-project)
+  - [[Bonus] React Environment Variable](frontend-web-development/react-env-variable)
   - [[Bonus] React Hooks](frontend-web-development/react-hooks)
   - [[Bonus] React Context](frontend-web-development/react-context)
 
