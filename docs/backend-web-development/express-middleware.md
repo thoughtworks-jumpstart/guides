@@ -44,13 +44,20 @@ The `next` argument is a callback function for each middleware. Calling it will 
 
 Remember to call the next function, otherwise Express.js will keep waiting for the call to next(), and the client would not receive any response.
 
+Middleware can do all of the following though it is optional:
+
+- Execute any code
+- Make changes to the request and the response objects
+- End the request-response cycle (by calling `res.send`, for example)
+- Call the next middleware function in the stack
+
 ## Using a middleware function
 
 ### Application-level middleware
 
 Refer to the script: [Express.js playground: middleware_example_1](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/middleware_example_1.js).
 
-Add a middleware function that will be called for all routes.
+Add a middleware function that will be called for all routes. It has no mount path.
 
 ```js
 app.use(function(req, res, next) {
@@ -161,3 +168,18 @@ You could add the Content-Type header with a value of application/json and make 
 Now the server will thank you for your json request.
 
 <img src="_media/middleware-POST-with-json-response.png" alt="the response from a POST without json" width="600"/>
+
+### Router-level middleware (Optional)
+
+You are also able to add middleware on the router level instead of the application level.
+
+Add a middleware function that is executed for every request to the router. It has no mount path.
+
+```js
+var router = express.Router();
+
+router.use(function(req, res, next) {
+  console.log("I am middleware for the router");
+  next();
+});
+```
