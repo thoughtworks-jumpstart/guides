@@ -82,6 +82,8 @@ More documentation can be found [here](https://devcenter.heroku.com/articles/con
 - Click on Deploy tab → Deployment method → select GitHub
 - Search for the repo of the application that you’re deploying → click Connect
 
+![connect heroku app](_media/herokuConnectApp.png)
+
 ### Trigger a manual depoly
 
 (Only for the first time deploying this app) click on “Deploy branch” at the end of the page
