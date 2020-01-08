@@ -129,3 +129,7 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - automatically close HTML tags
 - [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest) - a JavaScript testing framework
 - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) - a YAML linter
+
+## Browser extensions
+
+- [Octotree](https://www.octotree.io/) - navigate repo traversal on GitHub with ease
