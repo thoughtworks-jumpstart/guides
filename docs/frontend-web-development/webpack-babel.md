@@ -313,6 +313,8 @@ Open `dist/index.html` in the browser, and you should now see `This is a react a
 
 ![react-custom-webpack](_media/react-helloworld-custom-webpack.png)
 
+The code can be found here: https://github.com/thoughtworks-jumpstart/Babel-React
+
 ### End note
 
 In the demo above, we took a look at a straightforward setup to get a React app up and running.
