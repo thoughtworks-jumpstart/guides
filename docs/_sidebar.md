@@ -44,6 +44,7 @@
   - [[Bonus] React Environment Variable](frontend-web-development/react-env-variable)
   - [[Bonus] React Hooks](frontend-web-development/react-hooks)
   - [[Bonus] React Context](frontend-web-development/react-context)
+  - [[Bonus] React Redux](frontend-web-development/react-redux)
   - [[Bonus] Webpack and Babel](frontend-web-development/webpack-babel)
 
 - **Backend Web Development**
