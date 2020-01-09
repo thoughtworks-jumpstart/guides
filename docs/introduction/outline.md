@@ -19,9 +19,12 @@ Please check the [schedule](https://github.com/thoughtworks-jumpstart/guides/pro
 
 ## Week 3 - Building frontend applications in React and React Router
 
-- React Router
-- React Hooks
-- React Context
+- Introduction to React
+- Using Create React App
+- Learning the Basics of React
+- Navigating pages with React Router
+- Unit testing React applications
+- Deploying your apps
 
 ## Week 4 - Frontend project
 
