@@ -44,20 +44,23 @@ REACT_APP_SECRET=YsayE3FKcHHbN9A5g
 ### Temporary enviroment variable
 
 Windows(CMD): `set "REACT_APP_NOT_SECRET_CODE=abcdef" && npm start`
+
 Windows(Powershell): `($env:REACT_APP_NOT_SECRET_CODE = "abcdef") -and (npm start)`
+
 Linux, macOS (Bash): `REACT_APP_NOT_SECRET_CODE=abcdef npm start`
 
 ## Priority of environment variable files
 
 The value of `process.env.NODE_ENV` is going to result in different environment variable files read.
+
 For example, when `process.env.NODE_ENV === "production"`, react will look into files containing `.env.production*`.
 
 ### Priority from top to bottom
 
-1. Setting it as a temporary variable
+1. Setting a temporary environment variable
 2. `.env.production.local` | `.env.development.local` | `.env.test.local`
 3. `.env.production` | `.env.development` | `.env.test`
 4. `.env.local`
 5. `.env`
 
-**Do not commit files with `.local`**
+**Do not commit files ending with `.local`**

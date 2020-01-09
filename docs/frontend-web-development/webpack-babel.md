@@ -309,7 +309,7 @@ In the Webpack configurations, we added a new module. Modules are small programs
 `test` is a regular expression that finds all of the files that we want to apply the rule too. We can also `excludes` files and folder such as `node_modules`, and the `module` we are using is the `babel-loader`. There are other loaders such as `css-loader`..
 
 Run `npm run webpack:dev` again.
-Open `dist/index.html` in the browser, and you should now see `This is a react app` printout out.
+Open `dist/index.html` in the browser, and you should now see `This is a react app` gets printed out.
 
 ![react-custom-webpack](_media/react-helloworld-custom-webpack.png)
 
