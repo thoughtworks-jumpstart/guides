@@ -120,6 +120,24 @@ The lines after the blank line consist of the _body data_.
 
 The browser will display the body of the response message according to the media type of the response (as in the `Content-Type` response header). Possible content types include "text/plain", "text/html", "image/gif", "image/jpeg", "audio/mpeg", "video/mpeg", "application/msword", and "application/pdf".
 
+### Practical usage
+
+#### Size limit on URL length
+
+When using HTTP GET method, you typically need to send some query strings, for example
+`GET /api/users?country=SG&age=M&hobby=football..`
+You need to be aware that there is a size limit on the total length of the URL, which is somewhere between 2KB and 8KB. A question to ask is: [What is the maximum length of URL in the different browsers](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers)?
+
+#### GET method with querystrings
+
+If you are using the GET method, you are limited to a maximum of 2,048 characters, minus the number of characters in the actual path.
+
+However, [the POST method is not limited by the size of the URL for querystrings](https://helpx.adobe.com/mt/experience-manager/scene7/kb/base/is_protocol-_-forming_is/url-character-limit-get-requests.html) because these are transferred in the header and not in the URL.
+
+#### Can I use request body with HTTP GET method?
+
+Since there is a size limit on the URL length of GET method, can I put the data into the request body? You can do that, but it's not a good idea. One of the reasons is the request body is not cached when browser (or the server side) caches a request. More discussion regarding this can be found [here](https://stackoverflow.com/questions/978061/http-get-with-request-body).
+
 ### Status codes
 
 <img src="../_media/http-status-codes.jpg" alt="http status codes" width="300"/>
@@ -129,6 +147,7 @@ Source: [https://www.youtube.com/watch?v=LtNSd_4txVc](https://www.youtube.com/wa
 #### Commonly used status codes
 
 - 200 OK: The request is successful. The meaning of success depends on the request method. The response includes information.
+- 204 No Content: The server successfully processed the request, but is not returning any content
 - 301 Moved Permanently: The resource requested has permanently moved to the URL given by the Location headers. Browsers and search engines can be redirected.
 - 401 Unauthorized: The access is not authorized.
 - 403 Forbidden: The access is forbidden and the response includes information on access denied.

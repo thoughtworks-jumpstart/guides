@@ -200,12 +200,6 @@ app.get("/food", (req, res) => {
 
 The querystrings are populated in the `req.query` object, with the name of the query as their respective keys. What do you think the above code does?
 
-#### Size limit
-
-When using HTTP GET method, you typically need to send some query strings, for example
-GET /api/users?country=SG&age=M&hobby=football..
-You need to be aware that there is a size limit on the total length of the URL, which is somewhere between 2KB and 8KB. A question to ask is: [What is the maximum length of URL in the different browsers](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers)?
-
 ## Multiple handler functions
 
 Refer to the script: [Express.js playground: express_basic_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_2.js).
