@@ -3,7 +3,7 @@
 Middlewares are all the functions that are invoked by the Express.js routing layer before the final handler function is called. They sit in the middle between a raw request and the final intended route. We often refer to these functions as the middleware stack since they are always invoked in the order they are added.
 The following diagram shows how the middlewares work together in a _pipeline_ like water flowing in a pipe:
 
-<img src="_media/middleware.png" alt="how middleware work together" width="600"/>
+<img src="backend-web-development/_media/middleware.png" alt="how middleware work together" width="700"/>
 
 (image source: https://manuel-rauber.com)
 
@@ -128,7 +128,8 @@ Send a GET request to http://localhost:3000/users?color=blue or http://localhost
 
 As mentioned earlier, middleware is executed in a _pipeline_, the order that the middleware functions are added matters.
 
-<img src="_media/middleware-order.png" alt="order of middleware" width="600"/>
+<img src="backend-web-development/_media/middleware-order.png" alt="order of middleware" width="700"/>
+
 (image source: https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples)
 
 If the third middleware is added before the first middleware, the third middleware will be called first.
@@ -159,15 +160,15 @@ app.post("/", requireJsonContent, (req, res, next) => {
 
 Run the server. Open Postman and create a POST request to http://localhost:3000. Don’t set any headers nor send anything in the request body. What is the response of the server?
 
-<img src="_media/middleware-POST-without-json-response.png" alt="the response from a POST without json" width="600"/>
+<img src="backend-web-development/_media/middleware-POST-without-json-response.png" alt="the response from a POST without json" width="800"/>
 
 You could add the Content-Type header with a value of application/json and make a POST request again. Alternatively, you could add some JSON content to the body of the request. Postman will automatically set the header.
 
-<img src="_media/middleware-POST-with-json-request.png" alt="the response from a POST without json" width="600"/>
+<img src="backend-web-development/_media/middleware-POST-with-json-request.png" alt="the response from a POST without json" width="800"/>
 
 Now the server will thank you for your json request.
 
-<img src="_media/middleware-POST-with-json-response.png" alt="the response from a POST without json" width="600"/>
+<img src="backend-web-development/_media/middleware-POST-with-json-response.png" alt="the response from a POST without json" width="800"/>
 
 ### Router-level middleware (Optional)
 
@@ -178,7 +179,7 @@ Add a middleware function that is executed for every request to the router. It h
 ```js
 var router = express.Router();
 
-router.use(function(req, res, next) {
+router.use((req, res, next) => {
   console.log("I am middleware for the router");
   next();
 });
