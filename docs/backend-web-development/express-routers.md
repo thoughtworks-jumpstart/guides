@@ -14,11 +14,11 @@ const router = express.Router();
 
 The difficult part is deciding / designing what to put in it.
 
-### Exercises
+## Exercises
 
 For example, if we are implementing an API for a library system, the API endpoint for users and books can be put into their own routers / modules. We can refactor our basic example to use routers.
 
-#### Basic organisation of routes
+### Basic organisation of routes
 
 Refer to the script: [Express.js playground: express_basic_example_with_router](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_basic_example_with_router.js).
 
@@ -84,11 +84,13 @@ const booksRouter = require("./routes/books");
 const usersRouter = require("./routes/users");
 ```
 
-#### Using routers for API versioning
+### Using routers for API versioning
+
+Refer to the script: [Express.js playground: library.js](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/library.js).
 
 Imagine having a famous API that many applications depend on. You feel that it is getting old, and you will like to update it. However, you are unable to change the API because people are still using your API and you cannot make breaking changes or else their applications will not work.
 
-There are various ways to deal with different versions as we have briefly mentioned in the [REST and CRUD topic](rest-api). A simple solution (but might not be the best) is to add version information to your API.
+There are various ways to deal with different versions as we have briefly mentioned in the [REST and CRUD topic](backend-web-development/rest-api). A simple solution (but might not be the best) is to add version information to your API.
 
 For example, a request that wants to use version 1 of your library API might come to this URL:
 
@@ -128,6 +130,7 @@ How has the file changed? Notice that the api is a router instead of a full app 
 Create a new file `library.js` for the main app code. We will use the version 1 api router in the app.
 
 ```js
+// library.js
 const express = require("express");
 const apiVersion1 = require("./library_v1");
 const app = express();
