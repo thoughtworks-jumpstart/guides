@@ -56,6 +56,10 @@ app.get("/users/:userId", (req, res) => {
 
 ## Router-level
 
-Note that the routers will not be affected by `app.param`.
+Note that the routers will not inherit the callbacks we add using `app.param`.
 
-`router.param`
+Quoting the Express.js docs on `app.param`:
+
+> Param callback functions are local to the router on which they are defined. They are not inherited by mounted apps or routers. Hence, param callbacks defined on app will be triggered only by route parameters defined on app routes.
+
+To define the parameter callbacks on a router instead, use `router.param`.
