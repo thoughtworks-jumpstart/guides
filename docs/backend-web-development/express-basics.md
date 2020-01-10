@@ -104,7 +104,36 @@ app.use(function(req, res, next) {
 
 Middleware is described in detail on another page.
 
-## Testing the server with an API testing tool
+## Testing the server
 
-To see it working, you need to use an API testing tool like Postman or Insomnia.
-Using those tools, compose a request to "http://localhost:port/" where `port` is the port that your server is listening to.
+### cURL
+
+Client URL
+cURL is by default already installed in Mac OS. For Windows, you can download cURL separately.
+You can send different HTTP requests.
+
+For example, let's send a POST request to https://localhost:3000/users with a JSON message body.
+
+```sh
+curl --request POST \
+  --url https://localhost:3000/users \
+  --header 'content-type: application/json' \
+  --data '{
+    "username": "babel",
+}'
+```
+
+Alternatives to the flags:
+
+```sh
+curl -X POST \
+  http://localhost:3000/users \
+  -H 'content-type: application/json' \
+  -d '{
+    "username": "babel"
+}'
+```
+
+### API testing tool
+
+Instead of cURL, you can use an API testing tool like Postman or Insomnia. You can even save your requests and organise them into folders. Using those tools, compose a request to "http://localhost:port/" where `port` is the port that your server is listening to.
