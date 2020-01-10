@@ -81,12 +81,6 @@ We can grab data from the route using route parameters. Route parameters are nam
 
 GET a specific book with ID:
 
-```
-Route path: /books/:bookId
-Request URL: http://localhost:3000/books/8989
-req.params: {"bookId": "8989" }
-```
-
 ```js
 app.get("/books/:bookId", (req, res) => {
   res.send(`You requested information on book ${req.params.bookId}`);
@@ -100,18 +94,32 @@ This route will match paths `/books/1`, `/books/2` and so on. Will it match `/bo
 
 The captured values are populated in the `req.params` object, with the name of the route parameter specified in the path as their respective keys.
 
+Go to http://localhost:3000/books/8989, what do you see?
+
+```
+Route path: /books/:bookId
+Request URL: http://localhost:3000/books/8989
+req.params: {"bookId": "8989" }
+```
+
+#### Multiple parameters
+
+Refer to the script: [Express.js playground: express_route_parameter_example_1](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/express_route_parameter_example_1.js)
+
 it is possible to capture more than one value using multiple parameters.
+
+```js
+app.get("/users/:userId/books/:bookId", (req, res) => {
+  res.send(req.params);
+});
+```
+
+Go to http://localhost:3000/users/34/books/8989. What do you see?
 
 ```
 Route path: /users/:userId/books/:bookId
 Request URL: http://localhost:3000/users/34/books/8989
 req.params: { "userId": "34", "bookId": "8989" }
-```
-
-```js
-app.get("/users/:userId/books/:bookId", (req, res) => {
-  //...
-});
 ```
 
 ### Route querystrings
