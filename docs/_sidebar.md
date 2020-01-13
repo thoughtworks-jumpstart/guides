@@ -61,6 +61,7 @@
   - [Express.js param processing](backend-web-development/express-param-processing)
   - [Express.js error handling](backend-web-development/express-error-handling)
   - [Express.js env variable](backend-web-development/express-env-variable)
+  - [Express.js Joi validation](backend-web-development/express-joi-validation)
   - [Quick start for backend](backend-web-development/backend-quick-start)
   - [MongoDB basics](backend-web-development/mongodb-basics)
   - [MongoDB vs relational](backend-web-development/mongodb-vs-relational)
