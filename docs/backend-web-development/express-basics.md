@@ -22,6 +22,16 @@ const server = app.listen(PORT, () => {
 });
 ```
 
+## Your first Express.js app
+
+```js
+const express = require("express");
+const app = express();
+```
+
+You created your first Express.js app!
+When express() is called in app.js, an app object is returned. Think of an app object as an Express application.
+
 ## Routing
 
 Routing is to add a handler function (a callback function) that is called when a user visit a particular route, for example the homepage `/` or `/books`. When you listen for connections on a route in Express, the handler function will be invoked when a request comes in.
@@ -103,6 +113,41 @@ app.use(function(req, res, next) {
 ```
 
 Middleware is described in detail on another page.
+
+## Routers
+
+From Express.js [documentation for Router](https://expressjs.com/en/guide/routing.html#express-router),
+
+> Use the express.Router class to create modular, mountable route handlers. A Router instance is a complete middleware and routing system; for this reason, it is often referred to as a “mini-app”.
+
+In other words, routers are just like the root level app you created using `express()` so much so that they are mini-apps.
+
+You can mount them to an app. For example, a router can be mounted to the `/empty` route of an app.
+
+```js
+const router = express.Router();
+
+router.get("/", (res, req) => res.end());
+router.post("/", (res, req) => res.end());
+
+app.use("/empty", router);
+```
+
+## Layer stack
+
+How does all these work together?
+
+When we call `app.use` or `app.get` etc, we are adding a layer into the app or router.
+Every app or router will have a layer stack - a stack of layers where every _Layer_ has its own _path_.
+
+This layer can be a
+
+- middleware
+- route
+- error handler
+- another router
+
+See this [Medium article](https://medium.com/@viral_shah/express-middlewares-demystified-f0c2c37ea6a1) if you are curious to understand how this layer stack works.
 
 ## Testing the server
 
