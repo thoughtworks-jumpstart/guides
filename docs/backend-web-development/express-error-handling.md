@@ -49,6 +49,8 @@ app.use(function(err, req, res, next) {
 });
 ```
 
+Since Express.js middleware run in the order that they are called, define error handler functions **last** so that they will be correctly called when there is an error.
+
 Refer to the script: [Express.js playground: error_handler_example_2](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/error_handler_example_2.js).
 
 We can define properties to the error object such as a `code` so that we can return the correct status code in the response header.
@@ -120,9 +122,11 @@ app.use(function(err, req, res, next) {
 });
 ```
 
-A realistic example of error handling with an asynchronous API is as follows:
+An example of error handling with an asynchronous API is as follows:
 
 ```js
+const fs = require("fs");
+
 app.get("/", function(req, res, next) {
   fs.readFile("/file-does-not-exist", function(err, data) {
     if (err) {
@@ -133,6 +137,57 @@ app.get("/", function(req, res, next) {
   });
 });
 ```
+
+### Why do we need error handling middleware?
+
+To see the value of having error handling middleware, imagine having the following code instead.
+
+```js
+const fs = require("fs");
+
+app.get("/", function(req, res, next) {
+  fs.readFile("/file-does-not-exist", function(err, data) {
+    if (err) {
+      res.status(500).json({ error: error.toString() });
+    } else {
+      res.send(data);
+    }
+  });
+});
+```
+
+This is acceptable if you have one or two endpoints dealing with asynchronous functions, but chances are that you are going to have to maintain many more endpoints. You will find that this method is quickly not scalable. If it is suddenly decided that the _503 response code_ is more appropriate than _500 internal server error_, you're going to have to change that for every single endpoint.
+
+How about responding to different types of error conditions? Error handlers can easily do that.
+
+```js
+const { AssertionError } = require("assert");
+const { MongoError } = require("mongodb");
+
+app.use(handleAssertionError(err, req, res, next) => {
+  if (err instanceof AssertionError) {
+    return res.status(400).json({
+      type: "AssertionError",
+      message: err.message,
+    });
+  }
+  next(err);
+});
+
+app.use(handleDatabaseError(err, req, res, next) => {
+  if (err instanceof MongoError) {
+    return res.status(503).json({
+      type: "MongoError",
+      message: err.message,
+    });
+  }
+  next(err);
+});
+```
+
+Example is from http://thecodebarbarian.com/80-20-guide-to-express-error-handling.
+
+You can see now that error handling middleware allows you to consolidate error handling logic.
 
 ## Best practices
 
