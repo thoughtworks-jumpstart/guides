@@ -153,6 +153,47 @@ class CoupleSeat extends Seat {
 
 See [this javascript.info lesson on class inheritance](https://javascript.info/class-inheritance) for more information.
 
+### Class-based Inheritance vs Prototype-based Inheritance
+
+Class-based Inheritance: a child class inherits methods from its parent/ancestor class.
+Prototype-based Inheritance: one object inherits methods from its prototype object.
+
+Some languages (like Java, C#) adopts Class-based Inheritance.
+
+JavaScript actually follows Prototype-based Inheritance, although the class syntax gives us an illusion of class-based inheritance.
+
+In ES5, we would have created a class like this:
+
+```js
+function Person(name) {
+  this.name = name;
+}
+
+var bob = new Person("Bob");
+console.log(typeof bob);
+```
+
+In ES6, we have syntactic sugar of a "class".
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+var bob = new Person("Bob");
+console.log(bob instanceof Person);
+```
+
+Compare this with object literals in JavaScript:
+
+```js
+const bob = {
+  name: "Bob",
+};
+```
+
 ## Polymorphism
 
 Polymorphism means "One name, with many forms."
