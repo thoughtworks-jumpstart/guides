@@ -59,6 +59,7 @@
   - [Express.js routers](backend-web-development/express-routers)
   - [Express.js parsing body](backend-web-development/express-parsing-request-body)
   - [Express.js param processing](backend-web-development/express-param-processing)
+  - [Express.js error handling](backend-web-development/express-error-handling)
   - [Express.js env variable](backend-web-development/express-env-variable)
   - [Quick start for backend](backend-web-development/backend-quick-start)
   - [MongoDB basics](backend-web-development/mongodb-basics)
