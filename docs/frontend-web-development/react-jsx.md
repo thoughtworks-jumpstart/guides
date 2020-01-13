@@ -21,17 +21,17 @@ function App() {
 }
 ```
 
-You might probably realise that the App function is returning an HTML like code. Instead of having the class "class", it becomes "className".
+You might probably realise that the App function is returning HTML-like code. Instead of having the class _class_, we use the attribute _className_.
 
-This syntax is called a JavaScript XML(JSX). JSX is possible because of babel helping to translate the JSX syntax into javascript.
+This syntax is called JavaScript XML(JSX). We are able to use JSX because Babel helps to translate the JSX syntax into javascript.
 
-Using JSX, attribute typically available becomes camelCase, and some have a slight change in name. Example class to className.
+When using JSX, attributes that are typically available to us in HTML changes to _camelCase_, and some have slight changes in name. A good example would be how the _class_ attribute has changed to _className_.
 
-Later we can see how we can create custom props that can be passed in as an attribute, for now, notice the difference.
+Later, we shall also see how we can create custom props that can be passed in as an attribute. For now, just make sure to notice the difference.
 
 ## Adding logic to customise the behaviour
 
-In JSX, we can use the full power of javascript. Let's consider the following code.
+In JSX, we can utilise the full power of JavaScript. Let's consider the following code.
 
 ```javascript
 import React from "react";
@@ -52,9 +52,9 @@ function App() {
 export default App;
 ```
 
-You can also change the value that got passed into an attribute. Let trying adding a new class.
+You can also insert the value that is returned by a function into an attribute. Let's try adding a new class.
 
-First, let us add a new class name `.app--red`
+Firstly, let us add a new class name `.app--red`
 
 ```css
 .app {
@@ -96,19 +96,24 @@ function App() {
 export default App;
 ```
 
+We insert the return value of `getAppClassName()` into the `className` attribute dynamically.
+
 ### Arrays
 
-Very often, you need to show a list of items to the user.
+Very often, you might need to show a list of items to the user.
+
+For example, you might need to show the user:
 
 - a list of available drinks in a vending machine
-- list of favourite items
-  JSX allows you to return an array of elements/components.
+- a list of favourite items
+
+JSX allows you to return an array of elements/components.
 
 ```javascript
 function listDisneyMovies() {
   const favDisneyMovies = [
-    " Tangled",
-    " Monsters, Inc.",
+    "Tangled",
+    "Monsters, Inc.",
     "Aladdin",
     "Toy Story",
     "Mulan",
