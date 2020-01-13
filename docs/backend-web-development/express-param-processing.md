@@ -1,6 +1,6 @@
-# Express.js parameter processing
+# Express.js param processing
 
-If we want to process parameters before calling the handler function, we can add callback functions that will be called when a request comes to the server with a certain parameter.
+If we want to process parameters (those in the `req.params` object) before calling the handler function, we can add callback functions that will be called when a request comes to the server with a certain parameter.
 
 ## Callback function
 
@@ -42,6 +42,8 @@ app.param("userId", (req, res, next, userId) => {
   next();
 });
 ```
+
+Notice that the value of the userId param is placed in the `userId` variable.
 
 Now this handler function will be able to access the req.user that was created in the previous handler function.
 
