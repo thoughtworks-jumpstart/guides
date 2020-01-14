@@ -28,8 +28,29 @@ Note that the path to mongod.exe and the path to your data folder could be diffe
 Once the MongoDB server is started, you should see the following line on your console:
 
 ```
+
 [initandlisten] waiting for connections on port 27017
+
 ```
+
+## Check if MongoDB server is running
+
+```sh
+mongo
+```
+
+If you can successfully launch the MongoDB terminal, your server is running.
+
+## Stop MongoDB server
+
+For Windows / Mac, you can launch the MongoDB terminal and run the following commands:
+
+```sh
+use admin
+db.shutdownServer()
+```
+
+For Linux, you have a few more options as [mentioned in the documentation](https://docs.mongodb.com/manual/tutorial/manage-mongodb-processes/#stop-mongod-processes).
 
 ## Why use MongoDB?
 
