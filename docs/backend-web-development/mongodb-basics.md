@@ -54,8 +54,8 @@ MongoDB stores documents in BSON (a binary form of JSON) format like the one bel
 
 ```json
 {
-  "firstName": "Gordon",
-  "lastName": "Song"
+  "firstName": "Babel",
+  "lastName": "Watermelon"
 }
 ```
 
