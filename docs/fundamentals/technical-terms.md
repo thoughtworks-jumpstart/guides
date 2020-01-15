@@ -37,3 +37,10 @@ Analogy:
 Basics:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/haz4SBcEYAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## API vs SDK
+
+SDK includes the tools, libraries, simulators to develop for a particular environment, Node.js is not a SDK but there could be SDK developed for the Node.js SDK. For example, [Amazon AWS SDK for Node.js](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/welcome.html).
+
+There could be many APIs within SDK.
+Read https://nordicapis.com/what-is-the-difference-between-an-api-and-an-sdk/
