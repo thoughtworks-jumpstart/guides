@@ -2,44 +2,44 @@
 
 ## Covers
 
-1. Creating a react app with create-react-app
-2. Understanding the different component that makes up react
+1. Creating a React app with create-react-app
+2. Understanding the different components that makes up React
 
-## Creating a hello-world with create-react-app
+## Creating a hello-world app with create-react-app
 
-### creating the project folder
+### Creating the project folder
 
-We can use create-react-app to start point with everything set up for us
+We can use _create-react-app_ to easily setup a project for us
 
 ```sh
   npx create-react-app hello-world
 ```
 
-verify this by type the "ls" command, and you should see the folder listed out
+Verify this by type the "ls" command, and you should see the folder `hello-world` in the listing
 
 ```sh
 ls
 ```
 
-We can go into the folder by using `cd` command.
+Go into the folder by using `cd` command.
 
 ```sh
 cd hello-world
 ```
 
-We can then install our dependencies.
+Install dependencies.
 
 ```sh
 npm install
 ```
 
-we can then start the app
+Start the app.
 
 ```sh
 npm run start
 ```
 
-You should see the following image startup in your default browser.
+You should see something similar to the image below in your default browser.
 
 ![react start page](_media/react-placeholder.png)
 
