@@ -14,12 +14,11 @@ Just a while back, web applications used to be dreadful to use. Every action by 
 
 Example of a web app that requires the browser to reload: https://forums.xamarin.com/
 
-As you can probably tell, the user experience is not that good. The load time takes longer. The screen goes blank before new content is loaded. Native applications were still the preferred way to interact with any software. Many attempts by web developers made to improve this experience have some degree of success such as Iframes(website in another website), Java applets, Flash in a website but each bringing security or performance issue.
+As you can probably tell, the user experience is not that good. The load time takes longer. The screen goes blank before new content is loaded. Native applications were still the preferred way to interact with any software. Many attempts by web developers made to improve this experience have some degree of success such as Iframes(website in another website), Java applets, Flash in a website but each brought security or performance issues.
 
-The introduction to Asynchronous JavaScript And XML(AJAX) in the 2000s changes everything. When AJAX got famous, and browser support for DOM manipulation techniques improves, web developers now have a tool to change part of the content of a website rather than causing a full page to reload.
+The introduction to Asynchronous JavaScript And XML(AJAX) in the 2000s changed everything. When AJAX got famous, and browser support for DOM manipulation techniques improved, web developers now have a tool to change the content of a website rather than causing a full page to reload.
 
-The web application has improved significantly since, reaching the standards of even beyond
-comparing to Native applications. The benefits of having a fast, responsive and always up to date software makes browsing a joy.
+Web applications have improved significantly since, even reaching standards beyond that of Native applications. The benefits of having a fast, responsive and always up to date software makes browsing a joy.
 
 ## Overview of SPA
 
