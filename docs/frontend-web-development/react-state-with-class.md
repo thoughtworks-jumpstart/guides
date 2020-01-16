@@ -20,7 +20,7 @@ A React application typically needs to maintain some state information. For exam
 
 ## What is the difference between state and props?
 
-Props and `state` are both just JavaScript objects. While both hold information that influences the output of render, they are different in one crucial way: props get passed to the component (similar to function parameters) whereas `state` manages data within the component (similar to variables declared within a function).
+Props and `state` are both just JavaScript objects. While both hold information that influences the output of rendering of the pages, they are different in one crucial way:`props` **get passed** to the component (similar to function parameters) whereas `state` manages data **within** the component (similar to variables declared within a function).
 
 To find out whether a piece of data should reside in `state` or in `props`, simply ask three questions about the piece of data:
 
@@ -56,20 +56,24 @@ export default Counter;
 
 ## How to update state of a component
 
-- The only way to change state is by calling this.setState().
-- Warning: never modify this.state object directly. We will talk about this in details below.
-- Where can you call setState()? Typically in some event handlers. You can also call it in some React lifecycle methods such as componentDidUpdate.
+- The only way to change state is by calling `this.setState()`.
+- Warning: never modify `this.state` object directly. We will talk about this in details below.
+- Where can you call `setState()`? Typically in some event handlers. You can also call it in some React lifecycle methods such as `componentDidUpdate`.
 
 ### setState API
 
 The full signature of the setState() API is
+
+```js
 setState(updater[, callback])
+```
+
 Where
 
-- updater is either an object with the updated state, or a function that returns updated state
-- callback is called once state is updated and the component is re-rendered
+- `updater` is either an object with the updated state, or a function that returns updated state
+- `callback` is called once state is updated and the component is re-rendered
 
-To update this.state.value, we call this.setState(). Update your code and try clicking on your <Counter/> component on your browser. You should see the name is changed when you click it.
+To update `this.state.value`, we call `this.setState()`. Update your code and try clicking on your <Counter/> component on your browser. You should see the name is changed when you click it.
 
 ```javascript
 class Counter extends React.Component {
@@ -97,7 +101,7 @@ class Counter extends React.Component {
 
 Bonus exercise:
 
-- Inspect the HTML elements in your browser devtools and observe that only one line of the DOM is changed when you click on the component. This is what makes React fast
+- Inspect the HTML elements in your browser devtools and observe that only one line of the DOM is changed when you click on the component. This is what makes React fast!
 
 ### Example: updater can be a function that returns updated state
 
@@ -160,18 +164,18 @@ The API call schedules an update to a component’s state object. When state cha
 
 Note that the update to the state may not be done immediately. For performance optimization reasons, React internally buffers a few updates to state and flush all the changes in one go.
 
-If you are trying to read the value of state object right after calling setState, you may not get the latest value.
+If you are trying to read the value of state object right after calling `setState()`, you may not get the latest value.
 
-In short, think of setState() as a request rather than an immediate command to update the component. Refer to the documentation of setState for more details.
+In short, think of `setState()` as a request rather than an immediate command to update the component. Refer to the documentation of `setState()` for more details.
 
 ### How do I know when the state is updated?
 
-Since the setState API call is asynchronous, we have a challenge: If we have some logic to run when the state is updated, where should I put that piece of logic?
+Since the `setState()` API call is asynchronous, we have a challenge: If we have some logic to run when the state is updated, where should I put that piece of logic?
 
 There are two solutions.
 
-- First one, the lifecycle method componentDidUpdate would be called when the state object is updated. setState() will always lead to a re-render unless shouldComponentUpdate() returns false.
-- Second one, the setState() API actually can take in a callback, which is called when the state is updated.
+- First one, the lifecycle method componentDidUpdate would be called when the state object is updated. `setState()` will always lead to a re-render unless shouldComponentUpdate() returns false.
+- Second one, the `setState()` API actually can take in a callback, which is called when the state is updated.
 
 Out of these two solutions, the first solution is preferred.
 
@@ -191,7 +195,7 @@ Why?
 
 First reason: because React is not aware that the state is updated if you update the state object directly. Hence React won't re-render the component after you update the state object by yourself.
 
-In contrast, when you call setState, React is aware of the state update and re-render the component correctly.
+In contrast, when you call `setState`, React is aware of the state update and re-render the component correctly.
 
 ### Don't mutate the existing state object
 
@@ -206,9 +210,9 @@ this.setState({ items: items });
 
 With the codes above, the changes in items cannot be detected by React because the items object is the same object before and after the state update.
 
-One example is given in this article. In the example, a parent component passes some of its state as props to a child component (which happens to be a PureComponent). If you modify the state.items of the parent component directly instead of creating a new items object, the child component could not detect the change in its items prop and does not re-render.
+One example is given in this article. In the example, a parent component passes some of its state as props to a child component (which happens to be a PureComponent). If you modify the `state.items` of the parent component directly instead of creating a new items object, the child component could not detect the change in its items prop and does not re-render.
 
-Hence is generally a good practice to avoid mutating existing state object. If you need to update any field/value in the state, you should create a new copy of the value and call setState.
+Hence it is generally a good practice to avoid mutating existing state object. If you need to update any field/value in the state, you should create a new copy of the value and call setState.
 
 ### Don't call setState in some React lifecycle methods like render
 
