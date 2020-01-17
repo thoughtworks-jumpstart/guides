@@ -13,6 +13,45 @@ Configuration changes across different environments (such as local/QA environmen
 
 In Node.js, we use the global object `process.env` to access environment variables.
 
+`NODE_ENV` is an example of an environment variable that Express.js projects will usually have. It is set to **development** when the server is run during development and set to **production** when released for production. However, you have to set it yourself. If you do not set it, it will be undefined.
+
+It could also be set to **test**.
+
+> Jest will set process.env.NODE_ENV to 'test' if it's not set to something else. You can use that in your configuration to conditionally setup only the compilation needed for Jest, e.g.
+
+(From Jest documentation https://jestjs.io/docs/en/24.0/getting-started.html)
+
+#### But why specifically `NODE_ENV`? Why is it everywhere?
+
+This environment variable was popularised by Express.js.
+
+> The `NODE_ENV` environment variable specifies the environment in which an application is running (usually, development or production). Setting NODE_ENV to “production” makes Express: Cache view templates. Cache CSS files generated from CSS extensions. Generate less verbose error messages.
+
+(From Express.js documentation on best practices https://expressjs.com/en/advanced/best-practice-performance.html)
+
+Read more about it [here at Packt about why it matters](https://hub.packtpub.com/building-better-bundles-why-processenvnodeenv-matters-optimized-builds/).
+
+### Checking for the value of `NODE_ENV`
+
+```js
+var env = process.env.NODE_ENV || "development";
+if (env === "development") {
+  // do development things
+}
+```
+
+Alternatively, you can also use `app.get("env")`.
+
+```js
+if (app.get("env") === "development") {
+  // do development things
+}
+```
+
+Express.js `app.get('env')` returns 'development' if `NODE_ENV` is not defined. Therefore you will not need to give it a default value unlike `process.env.NODE_ENV`.
+
+### Checking for the value of `PORT`
+
 For example, we often need a `PORT` environment variable to store the port number that our Express.js server will listen to.
 
 ```js
