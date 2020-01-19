@@ -75,13 +75,13 @@ We usually use this method to import functions that are closely related.
 import React from "react";
 
 export default ({ name }) => {
-  return <div>{name}</div>;
+  return <div>{name} says Hi</div>;
 };
 ```
 
 ```
 import React from "react";
-import SayHi, { SayHello } from "./components/SayHi";
+import SayHi from "./components/SayHi";
 
 function App() {
   return (
@@ -101,7 +101,7 @@ Is more commonly to use utility functions than Component.
 import React from "react";
 
 const SayHi = ({ name }) => {
-  return <div>{name}</div>;
+  return <div>{name} says Hi</div>;
 };
 
 const SayHello = ({ name }) => {
