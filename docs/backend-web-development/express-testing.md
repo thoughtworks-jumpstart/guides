@@ -154,6 +154,7 @@ describe("testing_example_1", () => {
     return request(app)
       .get("/")
       .then(response => {
+        expect(response.status).toEqual(200);
         expect(response.text).toEqual("Welcome to my homepage");
       });
   });
@@ -165,7 +166,9 @@ Oh no. Let's use async/await instead.
 ```js
 describe("testing_example_1", () => {
   it("GET / should respond with Welcome to my homepage", async done => {
-    const response = await request(app).get("/");
+    const response = await request(app)
+      .get("/")
+      .expect(200);
     expect(response.text).toEqual("Welcome to my homepage");
     done();
   });
@@ -188,4 +191,43 @@ it("should respond correctly", async done => {
 
 `request(app)` passes the app to SuperTest. We are then able to send GET, POST, PUT, PATCH and DELETE requests.
 `done` is a callback passed by Jest. Jest will wait until the done callback is called before finishing the test. Read more about it in the [Jest documentation](https://jestjs.io/docs/en/asynchronous#callbacks).
+
+How should we test this POST "/" route? We will need to POST some JSON and non-JSON content to the server, and then check its response.
+
+```js
+const requireJsonContent = (req, res, next) => {
+  if (req.headers["content-type"] !== "application/json") {
+    res.status(400).send("Server wants application/json!");
+  } else {
+    next();
+  }
+};
+
+app.post("/", requireJsonContent, (req, res, next) => {
+  res.send("Thanks for the JSON!");
+});
+```
+
+Using SuperTest, we can easily send strings or JSON to the server:
+
+```js
+describe("POST /", () => {
+  it("should respond correctly when sending json", async done => {
+    const { text } = await request(app)
+      .post("/")
+      .send({ thisIsJson: "json!" })
+      .expect(200);
+    expect(text).toEqual("Thanks for the JSON!");
+    done();
+  });
+
+  it("should respond with status 400 and correct string when sending non-json", async done => {
+    const { text } = await request(app)
+      .post("/")
+      .send("This is not json!")
+      .expect(400);
+    expect(text).toEqual("Server wants application/json!");
+    done();
+  });
+});
 ```
