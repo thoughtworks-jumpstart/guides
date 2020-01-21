@@ -18,15 +18,54 @@
 3. Prioritise the user workflow in terms of the value
 4. Decide on the most simple workflow that brings value to the user
 
+## Brainstorming
+
+- Take a piece of A4 paper, tear into half, split it into 4 parts
+- Draw out an idea on each part
+- Don't be afraid of judgement. Don't think that your idea is silly
+- Brainstorm as many ideas as possible for now: Quantity is better than quality when it comes to brainstorming
+- Consider techniques such as **SCAMPER**
+
+## Prioritisation
+
+- Let us take a step back and consider which ideas can be priortised based on desirability and feasibility. (We usually consider viability for a sustainable business model but for now let's do this for free)
+- **Desirability** is delivering a product that your customer / target audience really needs. What is the value that you bring to your customer? Are you solving their pain points? Is this a nice to have or must have?
+- **Feasibility** is given your own capabilities and strengths, does the idea help to leverage on your strengths?
+
+Could be useful to use prioritisation matrices to decide on which are the best ideas. You could draw a chart based on User Value vs Feasibility.
+
+See [this website for more information on prioritisation matrices](https://www.nngroup.com/articles/prioritization-matrices/).
+
 ## Product design
 
-- it can be words
-- sketches
-- workflow diagrams
-- one drawing that represents the UI
-- multiple drawing that represents the workflow
+- Design brief
+- Mood board
+- It can be words
+- Rough sketches
+- Mutliple workflow diagrams
+- UI sketch
 - Prototype on [Figma](https://www.figma.com/) or [Sketch](https://www.sketch.com/)
 - Present the idea to your friends or intended users and listen to what they want to say with an open mind.
+
+## Create design brief / mood board
+
+See [exercises on Figma](https://www.figma.com/file/cBhTeRdS3e1XqN6CzXGgA3/Design-Brief-and-Mood-Board-Exercise?node-id=0%3A1).
+
+## Presenting your ideas
+
+Give yourself only 5-7 minutes.
+
+- Grab their attention with a great start - Why does your presentation matter to the audience? What does your idea solve?
+- Summarise your idea in 60 seconds - Do you have a Unique Selling Proposition? “What makes you different from the competition?”
+- Three minutes of content, split into points
+- End off your presentation with a short summary again and a call to action - Should they give feedback? Should they start using your application?
+
+## Effective feedback
+
+- Don't be defensive and feel like you need to justify your ideas when people are commenting, allow them to comment
+- Give more description instead of judgement. For example, say "Your UI seems easy to use" instead of just "Your UI is good"
+- State your feelings and observations instead of blaming the product or person. Your feelings are always true but blaming the product / person could stem from misunderstandings.
+- Provide a balance of positive and negative feedback
 
 ## Research on libraries
 
