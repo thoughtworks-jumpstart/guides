@@ -95,11 +95,11 @@ The behaviour of the route is straightforward.
 The checking logic can seem a little weird at the beginning.
 Say `<Route path="/home" render={() => <h1>Home</h1>} />`
 
-- http://<host>/home is a match
-- http://<host>/hom is **NOT** a match
-- http://<host>/homealone is **NOT** a match
-- http://<host>/home-alone is **NOT** a match
-- http://<host>/home/dinosaur a match
+- http://`<host>`/home is a match
+- http://`<host>`/hom is **NOT** a match
+- http://`<host>`/homealone is **NOT** a match
+- http://`<host>`/home-alone is **NOT** a match
+- http://`<host>`/home/dinosaur a match
 
 if we do not want `home/dinosaur` to be a match, we can add `exact` property
 `<Route path="/home" exact render={() => <h1>Home</h1>} />`
