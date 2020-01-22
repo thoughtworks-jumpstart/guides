@@ -68,6 +68,7 @@
   - [MongoDB basics](backend-web-development/mongodb-basics)
   - [MongoDB vs relational](backend-web-development/mongodb-vs-relational)
   - [Mongoose basics](backend-web-development/mongoose-basics)
+  - [Security auth](backend-web-development/security-auth)
   - [Database security](backend-web-development/database-security)
   - [Labs for backend](backend-web-development/backend-labs)
 
