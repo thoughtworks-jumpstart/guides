@@ -117,6 +117,10 @@ show collections
 
 The **users** collections was automatically created.
 
+### Using MongoDB Compass
+
+You can also use [MongoDB Compass](https://www.mongodb.com/products/compass) to explore your databases and collections.
+
 ## Why use MongoDB?
 
 - Schema-less, fields can vary from document to document and data structure can be changed over time
@@ -164,7 +168,7 @@ A database is a container of collections. Various databases can be run on a sing
 
 ### Query
 
-To see how MongoDB’s query language works, let’s take a simple example involving posts and comments. Suppose you want to find all posts tagged with the term poli- tics having more than 10 votes. A SQL query would look like this:
+Let's say we have posts on a website. Suppose you want to find all posts tagged with the term politics having more than 10 votes. A SQL query would look like this:
 
 ```sql
 SELECT * FROM posts
@@ -172,9 +176,11 @@ INNER JOIN posts_tags ON posts.id = posts_tags.post_id INNER JOIN tags ON posts_
 WHERE tags.text = 'politics' AND posts.vote_count > 10;
 ```
 
-The equivalent query in MongoDB is specified using a document as a matcher. The relevant fields have to match but additional fields are allowed but ignored. Specifying the value directly checks for equality. The special `\$gt` key indicates the greater-than condition.
+(Example is from [MongoDB in Action 2nd Edition](https://livebook.manning.com/book/mongodb-in-action-second-edition/chapter-1/41))
 
-The **AND** condition is indicated by the comma ",".
+In MongoDB, we use a document (object literal in JavaScript) as a matcher. The relevant fields have to match but additional fields are allowed but ignored.
+
+Specifying the value directly checks for equality. The special `\$gt` key indicates the greater-than condition. The **AND** condition is indicated by the comma ",".
 
 ```js
 db.posts.find({ tags: "politics", vote_count: { $gt: 10 } });
