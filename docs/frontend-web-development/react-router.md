@@ -9,7 +9,7 @@ managing multiple views in a React app
 3. Conditional rendering based on a path
 4. Navigating Pages
 5. Accessing Router information within Component.
-6. Query params
+6. Params
 
 ## Why we want to use it
 
@@ -391,14 +391,51 @@ export default props => {
 
 ![withRouter](_media/withRouterDemo.png)
 
-## Query params
+## Params
 
-Query params are helpful when it comes to select specific information to render or to filter down items from a list.
+### Query params
 
+Query params are helpful when it comes to filter down items from a list.
+
+src/containers/Food.js
+
+`/food?type=fruit`
+
+```javascript
+import React from "react";
+import { withRouter } from "react-router-dom";
+
+const menu = [
+  { name: "chicken rice", type: "meal" },
+  { name: "laksa", type: "meal" },
+  { name: "durian", type: "fruit" },
+];
+
+const Food = props => {
+  const useQuery = new URLSearchParams(props.location.search);
+  const type = useQuery.get("type");
+  const filteredFoods = menu.filter(food => food.type === type);
+
+  return (
+    <div>
+      <span>you have selected: </span>
+      {filteredFoods.map(food => (
+        <b>{food.name}</b>
+      ))}
+    </div>
+  );
+};
+
+export default withRouter(Food);
+```
+
+### Path params
+
+path params are useful when select specific information to render
 For example, if we have a menu of items. Each food item maps to a specific id.
 We can fetch item based on the query params.
 
-src/containers/Food.js
+`/food/1`
 
 ```javascript
 import React from "react";
