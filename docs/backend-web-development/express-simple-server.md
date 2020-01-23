@@ -24,7 +24,7 @@ You have just defined a route to the root of the app! Let's start the server by 
 
 ```js
 const server = app.listen(PORT, () => {
-  console.log(`Express app started on port ${PORT}...`);
+  console.log(`Express app started on http://localhost:${PORT}`);
 });
 ```
 

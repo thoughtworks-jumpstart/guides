@@ -29,6 +29,15 @@ Server is run via an executable called **mongod**
 The `--dbpath` option specifies the location where MongoDB should store data. It can be any folder you create. `/data/db` is just one example.
 Note that the path to mongod.exe and the path to your data folder could be different on your system.
 
+You can add this to the `scripts` in package.json.
+
+```json
+"scripts": {
+    "start:db": "mongod --dbpath ~/data/db",
+    ...
+},
+```
+
 Once the MongoDB server is started, you should see the following line on your console:
 
 ```

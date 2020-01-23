@@ -43,6 +43,7 @@ touch index.js
 ```
 
 Create a file which will serve as the entry point to your app:
+(Read more about app.js vs index.js in [Express.js testing](express-testing))
 
 ```
 touch app.js

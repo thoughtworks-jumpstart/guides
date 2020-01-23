@@ -89,7 +89,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to my homepage");
 });
 
-...
+... //other code
 
 const server = app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

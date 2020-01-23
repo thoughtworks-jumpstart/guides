@@ -160,7 +160,6 @@ The main (not all!) core modules are:
 - [url](http://nodejs.org/api/url.html): Parses URL data
 - [fs](http://nodejs.org/api/fs.html): Writing and reading files
 
-
 When we require(<packagename>) a package, Node.js first searches for the package name in the built-in packages. If it doesn’t find it in the standard library, it then searches for it in node_modules.
 
 For example, to import the `fs` built-in package for reading files:
@@ -184,3 +183,5 @@ npm install -g nodemon
 ```
 
 JavaScript utilities like nodemon are generally installed globally. Packages specific to your project should still be only installed locally.
+
+However, if your project team wants to use nodemon in the project, it will be good to add it to devDependencies.

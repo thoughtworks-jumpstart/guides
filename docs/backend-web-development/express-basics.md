@@ -14,6 +14,17 @@ npm install express
 - Routers can further break large apps into smaller subapplications
 - Middleware functions help to process a request before it is passed on to the final handler functions
 
+## Your first Express.js app
+
+```js
+const express = require("express");
+const app = express();
+const PORT = 3000;
+```
+
+You created your first Express.js app!
+When express() is called in app.js, an app object is returned. Think of an app object as an Express application.
+
 ## Starting the server
 
 ```js
@@ -21,16 +32,6 @@ const server = app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}...`);
 });
 ```
-
-## Your first Express.js app
-
-```js
-const express = require("express");
-const app = express();
-```
-
-You created your first Express.js app!
-When express() is called in app.js, an app object is returned. Think of an app object as an Express application.
 
 ## Routing
 
