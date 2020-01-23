@@ -184,7 +184,7 @@ We can build our loader, or we can use an external package to help us.
 For simplicity, we are going to use a package to help us.
 
 ```
-npm install react-loading
+npm install react-loader-spinner --save
 ```
 
 src/components/Loader.js

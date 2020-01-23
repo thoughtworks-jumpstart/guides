@@ -382,7 +382,7 @@ export default props => {
   return (
     <div>
       <h1>Home</h1>
-      <UserName name="Elsa" />
+      <UserName name="Bob" />
       <UserNameWRouter name="Alice" />
     </div>
   );
