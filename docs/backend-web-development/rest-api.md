@@ -99,6 +99,8 @@ But, like all the rules, there are exceptions. One situation is when there isn't
 GET|PUT|DELETE http://www.example.com/configuration
 ```
 
+See this [REST resource naming guide](https://restfulapi.net/resource-naming/).
+
 ### Make APIs Idempotent if possible
 
 To be idempotent, the API should allow clients to make that same call to the API repeatedly, and the status of the resource should reach the same end state no matter how many calls are made.

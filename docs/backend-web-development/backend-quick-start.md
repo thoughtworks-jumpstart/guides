@@ -67,10 +67,10 @@ Run project in production mode
 npm start
 ```
 
-Install Nodemon
+Install Nodemon (devDependencies)
 
 ```
-npm install nodemon
+npm install nodemon --save-dev
 ```
 
 Add a `start:dev` script to package.json
