@@ -28,6 +28,7 @@ const mongoOptions = {
   useNewUrlParser: true, // prevent deprecation warnings
   useUnifiedTopology: true,
   useFindAndModify: false, // For find one and update
+  useCreateIndex: true, // for creating index with unique
 };
 
 // will create a new db if does not exist
@@ -72,6 +73,7 @@ const simplePokemonSchema = Schema({
     type: String,
     required: true,
     minlength: 3,
+    unique: true,
   },
   japaneseName: String,
   baseHP: Number,
@@ -82,6 +84,8 @@ const simplePokemonSchema = Schema({
 We define a property called `name` with a schema type `String` which maps to an internal **validator** that will be triggered when **saving** documents to the database (if the documents are using this schema). The validation will fail if the data type of the `name` path of the document is not a string type.
 
 `name` is also a `required` field, which means that a document using this schema must have this field. The value of `name` has to have a length of at least 3.
+
+Note that the `unique` field of `name` does not enforce uniqueness with validation but instead will try to an unique index in your the MongoDB database. If the index is not built correctly, this might not always work.
 
 The following Schema Types are allowed:
 
