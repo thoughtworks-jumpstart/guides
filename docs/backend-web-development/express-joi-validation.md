@@ -13,8 +13,10 @@ npm install @hapi/joi
 ### Requiring Joi in your module
 
 ```js
-const Joi = require("joi");
+const Joi = require("@hapi/joi");
 ```
+
+Why `@hapi`? Hapi [moved all their modules to the new Hapi scope](https://twitter.com/hapijs/status/1120237246425133057).
 
 ## Why use Joi?
 
@@ -71,7 +73,7 @@ If the validation fails, the value attribute is undefined and the error attribut
 Let's define a schema for our object.
 
 ```js
-const schema = {
+const schema = Joi.object({
   username: Joi.string()
     .alphanum() //must contain only alphanumeric characters
     .min(3)
@@ -90,7 +92,7 @@ const schema = {
   //email a valid email address string
   //must have two domain parts e.g. example.com
   email: Joi.string().email({ minDomainAtoms: 2 }),
-};
+});
 ```
 
 Once we have the schema, we can validate the request we received from the client.
@@ -111,7 +113,7 @@ requestBody = {
 We can now validate the requestBody object.
 
 ```js
-result = Joi.validate(requestBody, schema);
+result = schema.validate(requestBody);
 
 if (result.error) {
   console.log("The data is invalid");
@@ -128,7 +130,7 @@ We could put the schema in a function that will return the result object.
 
 ```js
 function validateSong(song) {
-  const schema = {
+  const schema = Joi.object({
     id: Joi.number().integer(),
     name: Joi.string()
       .min(3)
@@ -136,8 +138,8 @@ function validateSong(song) {
     artist: Joi.string()
       .min(3)
       .required(),
-  };
-  return Joi.validate(song, schema);
+  });
+  return schema.validate(song);
 }
 ```
 
@@ -146,7 +148,7 @@ If validation does not pass, `validation.error` will be defined. We will create 
 ```js
 const validation = validateSong(req.body);
 if (validation.error) {
-  let error = new Error(validation.error.details[0].message);
+  const error = new Error(validation.error.details[0].message);
   // 400 Bad Request
   error.statusCode = 400;
   return next(error);
