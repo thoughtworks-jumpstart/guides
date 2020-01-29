@@ -1,5 +1,23 @@
 # Security Authentication and Authorization
 
+## Information security CIA triad
+
+Why do we need to protect our information? What do we need to protect?
+
+### Confidentiality
+
+We need to keep information secret from others. No one else should be allowed to know the information except those that are authorized to.
+
+### Integrity
+
+We need to protect our information from being modified by unauthorized users. Otherwise, we will be unable to determine the integrity of our information.
+
+### Availability
+
+We need to have access to our information when we need it. We should be able to allow users that are authorized to access our information.
+
+With authentication and authorization, we can protect our information.
+
 ## Authentication
 
 Authentication is the process for the server side to identify who is the current user on the client/browser side. This process is triggered when the user login, or when the user tries to access a protected resource on the server side.
