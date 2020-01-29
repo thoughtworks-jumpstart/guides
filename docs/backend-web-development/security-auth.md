@@ -4,6 +4,10 @@
 
 Why do we need to protect our information? What do we need to protect?
 
+<img src="backend-web-development/_media/cia-triad.png" alt="cia triad" width="600"/>
+
+(From: https://thorteaches.com/cissp-the-cia-triad-and-its-opposites/)
+
 ### Confidentiality
 
 We need to keep information secret from others. No one else should be allowed to know the information except those that are authorized to.
