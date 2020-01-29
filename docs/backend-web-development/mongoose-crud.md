@@ -1,5 +1,7 @@
 # Mongoose CRUD
 
+Refer to the repository: [Mongoose pokemon basics](https://github.com/thoughtworks-jumpstart/mongoose-pokemon-basics)
+
 ## Create
 
 Use `save` to save in to the database.
