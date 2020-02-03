@@ -73,6 +73,7 @@
   - [Mongoose virtuals](backend-web-development/mongoose-virtuals)
   - [Security auth](backend-web-development/security-auth)
   - [Security cryptography basics](backend-web-development/security-cryptography-basics)
+  - [Security encrypt decrypt](backend-web-development/security-encrypt-decrypt)
   - [Security hashing and others](backend-web-development/security-hash-others)
   - [Database security](backend-web-development/database-security)
   - [Labs for backend](backend-web-development/backend-labs)
