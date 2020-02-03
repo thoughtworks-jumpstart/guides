@@ -144,7 +144,7 @@ API versioning is a difficult topic. You could read about [how Stripe does its A
 
 ### Be aware of caching
 
-The result of HTTP GET methods might be cached by the browsers (and the intermediate routers in the network). As an API developer, you can control how those responses are cached using _Cache Control Headers_.
+The result of HTTP GET requests might be cached by the browsers (and the intermediate routers in the network). As an API developer, you can control how those responses are cached using _Cache Control Headers_.
 
 ### Designing a good API
 
