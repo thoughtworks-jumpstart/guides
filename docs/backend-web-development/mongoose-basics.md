@@ -48,6 +48,13 @@ db.once("open", () => {
 
 We put this in a "db.js" file in a utils folder.
 
+To connect to the database:
+
+```js
+//index.js
+require("./utils/db");
+```
+
 ## Creating schemas
 
 Refer to the repository: [Mongoose pokemon basics](https://github.com/thoughtworks-jumpstart/mongoose-pokemon-basics)
@@ -58,17 +65,13 @@ A schema is where we can specify the kind of properties that we expect of docume
 
 We create a new file "simple-pokemon.model.js".
 
-To connect to the database:
-
-```js
-//simple-pokemon.model.js
-require("./utils/db");
-```
-
 Let's create a simple pokemon schema!
 
 ```js
 //simple-pokemon.model.js
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
 const simplePokemonSchema = Schema({
   name: {
     type: String,
