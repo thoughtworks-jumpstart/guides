@@ -43,7 +43,7 @@ touch index.js
 ```
 
 Create a file which will serve as the entry point to your app:
-(Read more about app.js vs index.js in [Express.js testing](express-testing))
+(Read more about app.js vs index.js in [Express.js testing](https://guides.jumpstart.sh/#/backend-web-development/express-testing?id=refactoring-for-tests))
 
 ```
 touch app.js
