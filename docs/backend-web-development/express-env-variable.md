@@ -31,6 +31,33 @@ This environment variable was popularised by Express.js.
 
 Read more about it [here at Packt about why it matters](https://hub.packtpub.com/building-better-bundles-why-processenvnodeenv-matters-optimized-builds/).
 
+### Setting NODE_ENV with cross-env
+
+In Linux/Mac, the way to set an environment variable is to `NODE_ENV="production"`.
+
+Thus we can edit our package.json to be like this:
+
+```json
+"scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "start:dev": "NODE_ENV=development nodemon index.js",
+}
+```
+
+But for Windows, if it is PowerShell, an env var is set this way: `$env:NODE_ENV="production"`
+CMD will set it this way: `set NODE_ENV=production`.
+
+Therefore, different team members with computers of different operating systems will stumble having to use the same way of setting an enviornment variable. The above scripts will not work.
+
+We can use a npm package to help us. It is called **cross-env**.
+
+```json
+"scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon index.js",
+}
+```
+
 ### Checking for the value of `NODE_ENV`
 
 ```js

@@ -7,7 +7,7 @@
 Lab: Build a basic CRUD API for the "who is next" (Create / Read / Update / Delete)
 
 Requirements
-In this lab we will implement a basic CRUD API in Express for a song list with the below 5 routes:
+In this lab we will implement a basic CRUD API in Express with the below 8 routes:
 
 We are creating an API to interact with the resources on the server.
 
