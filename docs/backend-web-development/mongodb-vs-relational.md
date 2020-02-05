@@ -16,6 +16,8 @@ MongoDB, on the other hand, is a non-relational, document-orientated database.
 In relational databases, there are tables.
 In other words, MySQL (a popular relational database) keeps its data in tables of rows, while MongoDB keeps its data in collections of documents, which you can think of as a group of documents.
 
+See articles like https://medium.com/@jon.perera/sql-vs-nosql-a-beginners-guide-f80991f76a4b comparing SQL vs NoSQL.
+
 ## Data structures
 
 > Imagine you are modelling products in an e-commerce website. With a **fully normalized relational** data model, the information for any one product might be divided among dozens of tables. If you want to get a product representation from the database shell, you’ll need to write a SQL query full of joins. With a **document model**, by contrast, most of a product’s information can be represented within a single document.
