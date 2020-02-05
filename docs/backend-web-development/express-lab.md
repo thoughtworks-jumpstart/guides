@@ -20,45 +20,20 @@ Expected response:
 ```json
 {
   "0": "GET    /",
-  "1": "POST   /whonext",
-  "2": "GET    /whonext",
-  "3": "-----------------------",
-  "4": "GET    /participants",
-  "5": "POST   /participants",
-  "6": "GET /participants/:id",
-  "7": "PUT /participants/:id",
-  "8": "DELETE /participants/:id"
+  "1": "GET    /jumplings",
+  "2": "POST   /jumplings",
+  "3": "GET /jumplings/:id",
+  "4": "PUT /jumplings/:id",
+  "5": "DELETE /jumplings/:id",
+  "6": "-----------------------",
+  "7": "POST   /jumplings/presenters",
+  "8": "GET    /jumplings/presenters"
 }
 ```
 
 Notice the plural form. We have 8 endpoints.
 
-#### 1. Generate the next winner - who is next?
-
-Route: POST /whonext
-HTTP Response status code: 201
-Expected Response:
-
-```json
-[{ "id": 1, "name": "xxx" }]
-```
-
-This is a POST request instead of a GET request because we are recording the history of participants that were next. This creates a resource on the server.
-
-#### 2. Get a history of who was next
-
-Route: GET /whonext
-HTTP Response status code: 200  
-Expected response:
-
-```json
-[
-  { "id": 1, "name": "xxx" },
-  { "id": 2, "name": "xxx" }
-]
-```
-
-#### 3. Get participants
+#### 1. Get participants
 
 Route: GET /participants
 HTTP Response status code: 200
@@ -71,7 +46,7 @@ Expected Response:
 ]
 ```
 
-#### 4. Add one participant
+#### 2. Add one participant
 
 Route: POST /participants
 HTTP Response status code: 201
@@ -81,7 +56,7 @@ Expected Response:
 [{ "id": 1, "name": "xxx }]
 ```
 
-#### 5. Get participants with id
+#### 3. Get participants with id
 
 Route: GET /participants/:id
 HTTP Response status code: 200
@@ -91,7 +66,7 @@ Expected Response:
 [{ "id": 1, "name": "xxx" }]
 ```
 
-#### 6. Update (replace) participant with id
+#### 4. Update (replace) participant with id
 
 Route: PUT /participants/:id
 HTTP Response status code: 200
@@ -101,7 +76,7 @@ Expected Response:
 [{ "id": 1, "name": "xxx" }]
 ```
 
-#### 7. Delete participant with id
+#### 5. Delete participant with id
 
 Route: DELETE /participants/:id
 HTTP Response: 200
@@ -109,6 +84,31 @@ Expected Response:
 
 ```json
 [{ "id": 1, "name": "xxx" }]
+```
+
+#### 6. Generate the next winner - who is next?
+
+Route: POST /jumplings/presenters
+HTTP Response status code: 201
+Expected Response:
+
+```json
+[{ "id": 1, "name": "xxx" }]
+```
+
+This is a POST request instead of a GET request because we are recording the history of participants that were next. This creates a resource on the server.
+
+#### 2. Get a history of who was next
+
+Route: GET /jumplings/presenters
+HTTP Response status code: 200  
+Expected response:
+
+```json
+[
+  { "id": 1, "name": "xxx" },
+  { "id": 2, "name": "xxx" }
+]
 ```
 
 Setup a new Github project and install Express.js
