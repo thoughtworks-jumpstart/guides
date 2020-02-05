@@ -77,6 +77,7 @@
   - [Security encrypt decrypt](backend-web-development/security-encrypt-decrypt)
   - [Security hashing and others](backend-web-development/security-hash-others)
   - [Database security](backend-web-development/database-security)
+  - [Express.js deploy](backend-web-development/express-deploy)
   - [Labs for backend](backend-web-development/backend-labs)
 
 - **Delivering software**
