@@ -33,9 +33,9 @@ Expected response:
 
 Notice the plural form. We have 8 endpoints.
 
-#### 1. Get participants
+#### 1. Get jumplings
 
-Route: GET /participants
+Route: GET /jumplings
 HTTP Response status code: 200
 Expected Response:
 
@@ -46,9 +46,9 @@ Expected Response:
 ]
 ```
 
-#### 2. Add one participant
+#### 2. Add one jumpling
 
-Route: POST /participants
+Route: POST /jumplings
 HTTP Response status code: 201
 Expected Response:
 
@@ -56,9 +56,9 @@ Expected Response:
 [{ "id": 1, "name": "xxx }]
 ```
 
-#### 3. Get participants with id
+#### 3. Get jumplings with id
 
-Route: GET /participants/:id
+Route: GET /jumplings/:id
 HTTP Response status code: 200
 Expected Response:
 
@@ -66,9 +66,9 @@ Expected Response:
 [{ "id": 1, "name": "xxx" }]
 ```
 
-#### 4. Update (replace) participant with id
+#### 4. Update (replace) jumpling with id
 
-Route: PUT /participants/:id
+Route: PUT /jumplings/:id
 HTTP Response status code: 200
 Expected Response:
 
@@ -76,9 +76,9 @@ Expected Response:
 [{ "id": 1, "name": "xxx" }]
 ```
 
-#### 5. Delete participant with id
+#### 5. Delete jumplings with id
 
-Route: DELETE /participants/:id
+Route: DELETE /jumplings/:id
 HTTP Response: 200
 Expected Response:
 
