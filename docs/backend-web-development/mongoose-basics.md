@@ -105,7 +105,7 @@ The following Schema Types are allowed:
 The following schema uses all the available schema types.
 
 ```js
-var schema = new Schema({
+const schema = new Schema({
   name: String,
   binary: Buffer,
   living: Boolean,
@@ -120,6 +120,16 @@ var schema = new Schema({
 ```
 
 This example is from Mozilla. See more at [Mozilla's Express.js's tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#related_documents).
+
+### Schema options
+
+```js
+const thingSchema = new Schema({..}, { timestamps: true });
+```
+
+By setting `timestamps` to true, mongoose assigns createdAt and updatedAt fields to your schema, the type assigned is Date.
+
+See https://mongoosejs.com/docs/guide.html#timestamps
 
 ## Models
 
