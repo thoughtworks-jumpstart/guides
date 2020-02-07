@@ -56,7 +56,7 @@ const pokemonData = [
 
 #### 1. Find all pokemon
 
-Route: GET /pokemon
+Route: GET /pokemons
 HTTP Response status code: 200
 
 #### 2. Filter pokemon by name (not exact match, use regex)
@@ -92,7 +92,7 @@ Respond with updated pokemon
 
 #### 7. Delete pokemon with id
 
-Route: DELETE /participants/:id
+Route: DELETE /pokemons/:id
 HTTP Response: 200
 
 Respond with deleted pokemon
