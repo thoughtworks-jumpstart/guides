@@ -7,7 +7,7 @@ We will be building an API for returning pokemon data with Mongoose.
 Lab: Build a basic CRUD API for the pokemon list (Create / Read / Update / Delete)
 
 Requirements
-In this lab we will implement a basic CRUD API in Express for pokemon list with the below 7 routes:
+In this lab we will implement a basic CRUD API in Express for pokemon list with the below 8 routes:
 
 We are creating an API to interact with the resources on the server.
 
@@ -25,11 +25,12 @@ Expected response:
   "3": "POST    /pokemons",
   "4": "GET /pokemons/:id",
   "5": "PUT /pokemons/:id",
-  "6": "DELETE /pokemons/:id"
+  "6": "PATCH /pokemons/:id",
+  "7": "DELETE /pokemons/:id"
 }
 ```
 
-Notice the plural form. We have 7 endpoints.
+Notice the plural form. We have 8 endpoints.
 
 Pokemon looks like this:
 Note the slight change in schema, we have id now!
@@ -73,11 +74,20 @@ HTTP Response status code: 201
 Route: GET /pokemons/:id
 HTTP Response status code: 200
 
-#### 6. Update (replace) pokemon with id
+#### 5. Replace pokemon with id
 
 Route: PUT /pokemons/:id
 HTTP Response status code: 200
 
+`findOneAndReplace`
+Respond with new pokemon
+
+#### 6. Update pokemon with id
+
+Route: PATCH /pokemons/:id
+HTTP Response status code: 200
+
+`findOneAndUpdate`
 Respond with updated pokemon
 
 #### 7. Delete pokemon with id
