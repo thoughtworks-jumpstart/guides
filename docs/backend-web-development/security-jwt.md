@@ -117,11 +117,14 @@ A library called jsonwebtoken is used to sign and verify JWT tokens.
 
 Clone the project, start the server, and test the API using REST API clients like Postman.
 
-### Using cookies
+### Using cookies and same origin policy
 
-For us to read cookies, we need cookie parser.
+For us to read cookies, we need `cookie-parser`.
 
-(For front-end to use this backend, we use cors)
+For front-end to use this backend, we use `cors`.
+Same origin policy, see https://jonhilton.net/cross-origin-request-blocked/
+
+`cors` helps us to efficiently handle cross domain requests.
 
 ```js
 const cookieParser = require("cookie-parser");
@@ -136,11 +139,13 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 ```
 
-### Install json web token
+### Install json web token and bcryptjs
 
 ```
 npm install json web token
 ```
+
+We shall use bcryptjs for hashing our passwords.
 
 ```
 npm install bcryptjs
@@ -157,7 +162,7 @@ const ownerSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    index: true,
+    index: true, // helps us to find by username, note that this has a significant production impact
     unique: true,
     minlength: 3,
     lowercase: true,
@@ -166,7 +171,6 @@ const ownerSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 8,
-    // select: false
   },
   firstName: String,
   lastName: String,
