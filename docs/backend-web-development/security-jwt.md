@@ -121,13 +121,26 @@ Clone the project, start the server, and test the API using REST API clients lik
 
 For us to read cookies, we need `cookie-parser`.
 
+```
+npm install cookie-parser
+```
+
 For front-end to use this backend, we use `cors`.
 Same origin policy, see https://jonhilton.net/cross-origin-request-blocked/
 
 `cors` helps us to efficiently handle cross domain requests.
 
+```
+npm install cors
+```
+
+In app.js, we use these middleware.
+
 ```js
+// app.js
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
+
 const corsOptions = {
   credentials: true,
   allowedHeaders: "content-type",
@@ -141,11 +154,13 @@ app.use(cookieParser());
 
 ### Install json web token and bcryptjs
 
+Install the star of the show, the token we will be creating and reading.
+
 ```
-npm install json web token
+npm install jsonwebtoken
 ```
 
-We shall use bcryptjs for hashing our passwords.
+We shall use bcryptjs for hashing our passwords. (which uses bcrypt)
 
 ```
 npm install bcryptjs
@@ -153,12 +168,14 @@ npm install bcryptjs
 
 ### Add a schema with user and password
 
+We shall create an `Trainer` model.
+
 ```js
-//owners.js
+//trainer.model.js
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-const ownerSchema = new mongoose.Schema({
+const trainerSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -180,39 +197,41 @@ const ownerSchema = new mongoose.Schema({
   },
 });
 
-ownerSchema.virtual("fullName").get(function() {
+trainerSchema.virtual("fullName").get(function() {
   return `${this.salutation} ${this.firstName} ${this.lastName}`;
 });
 
-ownerSchema.virtual("reverseName").get(function() {
+trainerSchema.virtual("reverseName").get(function() {
   return `${this.lastName}, ${this.firstName}`;
 });
 
-ownerSchema.pre("save", async function(next) {
+trainerSchema.pre("save", async function(next) {
   const rounds = 10;
   this.password = await bcrypt.hash(this.password, rounds);
   next();
 });
 
-const Owner = mongoose.model("Owner", ownerSchema);
+const Trainer = mongoose.model("Trainer", trainerSchema);
 
-module.exports = Owner;
+module.exports = Trainer;
 ```
 
-New owner route:
+New trainer route for creating a new Trainer.
 
 ```js
-router.post("/new", async (req, res, next) => {
+router.post("/", async (req, res, next) => {
   try {
-    const owner = new Owner(req.body);
-    await Owner.init();
-    const newOwner = await owner.save();
-    res.send(newOwner);
+    const trainer = new Trainer(req.body);
+    await Trainer.init();
+    const newTrainer = await trainer.save();
+    res.send(newTrainer);
   } catch (err) {
     next(err);
   }
 });
 ```
+
+Try using Postman now!
 
 Login and logout:
 
@@ -224,15 +243,15 @@ router.post("/logout", (req, res) => {
 router.post("/login", async (req, res, next) => {
   try {
     const { username, password } = req.body;
-    const owner = await Owner.findOne({ username });
+    const trainer = await Trainer.findOne({ username });
     const bcrypt = require("bcryptjs");
-    const result = await bcrypt.compare(password, owner.password);
+    const result = await bcrypt.compare(password, trainer.password);
 
     if (!result) {
       throw new Error("Login failed");
     }
 
-    const payload = { name: owner.username };
+    const payload = { name: trainer.username };
     const token = jwt.sign(payload, process.env.JWT_SECRET_KEY);
 
     const oneDay = 24 * 60 * 60 * 1000;
@@ -273,8 +292,8 @@ router.get("/:firstName", protectRoute, async (req, res, next) => {
   try {
     const firstName = req.params.firstName;
     const regex = new RegExp(firstName, "gi");
-    const owners = await Owner.find({ username: regex });
-    res.send(owners);
+    const trainers = await Trainer.find({ username: regex });
+    res.send(trainers);
   } catch (err) {
     next(err);
   }
