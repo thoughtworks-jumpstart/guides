@@ -78,6 +78,7 @@
   - [Security encrypt decrypt](backend-web-development/security-encrypt-decrypt)
   - [Security hashing and others](backend-web-development/security-hash-others)
   - [Security cookie](backend-web-development/security-cookie)
+  - [Mongoose middleware](backend-web-development/mongoose-middleware)
   - [Security jwt](backend-web-development/security-jwt)
   - [Express.js Mongoose lab](backend-web-development/express-mongoose-lab)
   - [Database security](backend-web-development/database-security)
