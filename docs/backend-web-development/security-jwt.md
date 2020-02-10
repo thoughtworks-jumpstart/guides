@@ -231,11 +231,51 @@ router.post("/", async (req, res, next) => {
 });
 ```
 
+```json
+{
+  "username": "ash3",
+  "password": "iWannaB3DVeryBest"
+}
+```
+
+I can create trainers now! Note that the hash is different even for same passwords. This is thanks to the salting of bcrypt.
+
 Try using Postman now!
 
-Login and logout:
+Protect a route trying to find trainers by username:
 
 ```js
+const protectRoute = (req, res, next) => {
+  try {
+    if (!req.cookies.token) {
+      throw new Error("You are not authorized");
+    }
+    req.user = jwt.verify(req.cookies.token, process.env.JWT_SECRET_KEY);
+    next();
+  } catch (err) {
+    err.statusCode = 401;
+    next(err);
+  }
+};
+
+router.get("/:username", protectRoute, async (req, res, next) => {
+  try {
+    const username = req.params.username;
+    const regex = new RegExp(username, "gi");
+    const trainers = await Trainer.find({ username: regex });
+    res.send(trainers);
+  } catch (err) {
+    next(err);
+  }
+});
+```
+
+Login and logout:
+See `res.cookie` and `res.clearCookie` first.
+
+```js
+const bcrypt = require("bcryptjs");
+
 router.post("/logout", (req, res) => {
   res.clearCookie("token").send("You are now logged out!");
 });
@@ -244,7 +284,6 @@ router.post("/login", async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const trainer = await Trainer.findOne({ username });
-    const bcrypt = require("bcryptjs");
     const result = await bcrypt.compare(password, trainer.password);
 
     if (!result) {
@@ -252,6 +291,7 @@ router.post("/login", async (req, res, next) => {
     }
 
     const payload = { name: trainer.username };
+    console.log("secret key is" + process.env.JWT_SECRET_KEY);
     const token = jwt.sign(payload, process.env.JWT_SECRET_KEY);
 
     const oneDay = 24 * 60 * 60 * 1000;
@@ -263,38 +303,13 @@ router.post("/login", async (req, res, next) => {
       httpOnly: true,
     });
 
+    // why can't we have secure: true?
+
     res.send("You are now logged in!");
   } catch (err) {
     if (err.message === "Login failed") {
-      err.status = 400;
+      err.statusCode = 400;
     }
-    next(err);
-  }
-});
-```
-
-Protect a route:
-
-```js
-const protectRoute = (req, res, next) => {
-  try {
-    if (!req.cookies.token) {
-      throw new Error("You are not authorized");
-    }
-    req.user = jwt.verify(req.cookies.token, process.env.JWT_SECRET_KEY);
-    next();
-  } catch (err) {
-    res.status(401).end();
-  }
-};
-
-router.get("/:firstName", protectRoute, async (req, res, next) => {
-  try {
-    const firstName = req.params.firstName;
-    const regex = new RegExp(firstName, "gi");
-    const trainers = await Trainer.find({ username: regex });
-    res.send(trainers);
-  } catch (err) {
     next(err);
   }
 });
