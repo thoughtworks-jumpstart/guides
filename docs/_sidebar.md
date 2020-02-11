@@ -80,6 +80,7 @@
   - [Security cookie](backend-web-development/security-cookie)
   - [Mongoose middleware](backend-web-development/mongoose-middleware)
   - [Security jwt](backend-web-development/security-jwt)
+  - [Security jwt testing](backend-web-development/security-jwt-testing)
   - [Express.js Mongoose lab](backend-web-development/express-mongoose-lab)
   - [Database security](backend-web-development/database-security)
   - [Express.js deploy](backend-web-development/express-deploy)
