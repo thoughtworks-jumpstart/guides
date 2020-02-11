@@ -270,6 +270,8 @@ router.get("/:username", protectRoute, async (req, res, next) => {
 });
 ```
 
+`req.cookies` is populated by the `cookie-parser` middleware.
+
 Login and logout:
 See `res.cookie` and `res.clearCookie` first.
 
@@ -314,6 +316,16 @@ router.post("/login", async (req, res, next) => {
   }
 });
 ```
+
+How to generate a good JWT_SECRET_KEY? Because we use HS256 algoithm for the signature, we should have a 256 bits key of 32 characters.
+
+You can generate a good random 256 bits key (crypographically strong pseudorandom) with
+
+```sh
+node -e "console.log(require('crypto').randomBytes(256 / 8).toString('hex'));"
+```
+
+Save it in `.env` file and do not commit it. Remember to add the `.env` file to `.gitignore`.
 
 ## Security Concerns of using JWT
 
