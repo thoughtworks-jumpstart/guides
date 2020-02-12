@@ -40,7 +40,7 @@ https://my-react-app.heroku.com
 Your users would visit "https://my-react-app.heroku.com" to download the frontend React app into their browser, and then the JavaScript in your React app needs to make calls to your backend API, which is "https://my-backend-api.heroku.com". This is NOT allowed by the browsers by default, due to Same Origin Policy.
 The walk around is to enable CORS in your backend API.
 
-If you build the API using Express, you can configure the Express CORS middleware to allow the API to be called by another React application loaded from Heorku.
+If you build the API using Express, you can configure the Express CORS middleware to allow the API to be called by another React application loaded from Heroku.
 
 For example, here is a sample code for app.js in Express:
 
@@ -49,10 +49,16 @@ const express = require("express");
 const cors = require("cors");
 
 var corsOptions = {
-  origin: [/http:\/\/localhost:.*/, /http[s]*:\/\/.*\.herokuapp.com/],
-  credentials: true
+  origin: process.env.FRONTEND_URL || "http://localhost:3001",
+  credentials: true,
 };
 
 const app = express();
 app.use(cors(corsOptions));
+```
+
+To allow calls from any port for localhost and any application on Heroku:
+
+```js
+origin: [/http:\/\/localhost:.*/, /http[s]*:\/\/.*\.herokuapp.com/],
 ```
