@@ -72,7 +72,7 @@ Let's create a simple pokemon schema!
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const simplePokemonSchema = Schema({
+const simplePokemonSchema = new Schema({
   name: {
     type: String,
     required: true,

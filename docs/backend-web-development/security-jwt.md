@@ -216,7 +216,7 @@ const Trainer = mongoose.model("Trainer", trainerSchema);
 module.exports = Trainer;
 ```
 
-New trainer route for creating a new Trainer.
+### New trainer route for creating a new Trainer
 
 ```js
 router.post("/", async (req, res, next) => {
@@ -242,7 +242,7 @@ I can create trainers now! Note that the hash is different even for same passwor
 
 Try using Postman now!
 
-Protect a route trying to find trainers by username:
+### Protect a route trying to find trainers by username
 
 ```js
 const protectRoute = (req, res, next) => {
@@ -272,8 +272,52 @@ router.get("/:username", protectRoute, async (req, res, next) => {
 
 `req.cookies` is populated by the `cookie-parser` middleware.
 
-Login and logout:
-See `res.cookie` and `res.clearCookie` first.
+### Generating a JWT token and finding the secret
+
+```js
+const getJWTSecret = () => {
+  const secret = process.env.JWT_SECRET_KEY;
+  if (!secret) {
+    throw new Error("Missing secrets to sign JWT token");
+  }
+  return secret;
+};
+
+const createJWTToken = username => {
+  const today = new Date();
+  const exp = new Date(today);
+
+  const secret = getJWTSecret();
+  exp.setDate(today.getDate() + 60);
+
+  const payload = { name: username, exp: parseInt(exp.getTime() / 1000) };
+  const token = jwt.sign(payload, secret);
+  return token;
+};
+```
+
+You can refactor this to put `getJWTSecret` in a `config` folder.
+
+- Create the config folder under your project root directory.
+- Then create a `jwt.js` file inside the config folder, with the `getJWTSecret` function.
+
+For your tests and your code to be able to find the `JWT_SECRET_KEY`, you can load the environment variables using `dotenv` in **app.js**.
+
+```js
+require("dotenv").config();
+```
+
+#### More on the exp field in the JWT payload
+
+In the example above, the expiration date of the JWT token is set to 60 days later after it's generated. Then the expiration time is saved into the exp field of the JWT token.
+
+What is this exp field? Why must I use this term?
+
+It represents **Token Expiration,** and you can find [more details here](https://www.npmjs.com/package/jsonwebtoken#token-expiration-exp-claim). Once this field is set in a token, it's validated later on when we call the jwt.verify(token, secret). So a token that passes the expiration time will fail the verification.
+
+#### Login and logout
+
+Read documentation about `res.cookie` and `res.clearCookie` first.
 
 ```js
 const bcrypt = require("bcryptjs");
@@ -292,14 +336,13 @@ router.post("/login", async (req, res, next) => {
       throw new Error("Login failed");
     }
 
-    const payload = { name: trainer.username };
-    console.log("secret key is" + process.env.JWT_SECRET_KEY);
-    const token = jwt.sign(payload, process.env.JWT_SECRET_KEY);
+    const token = createJWTToken(trainer.username);
 
     const oneDay = 24 * 60 * 60 * 1000;
     const oneWeek = oneDay * 7;
     const expiryDate = new Date(Date.now() + oneWeek);
 
+    // Can expiry date on cookie be changed? How about JWT token?
     res.cookie("token", token, {
       expires: expiryDate,
       httpOnly: true,
@@ -317,7 +360,7 @@ router.post("/login", async (req, res, next) => {
 });
 ```
 
-How to generate a good JWT_SECRET_KEY? Because we use HS256 algoithm for the signature, we should have a 256 bits key of 32 characters.
+How to generate a good `JWT_SECRET_KEY`? Because we use HS256 algoithm for the signature, we should have a 256 bits key of 32 characters.
 
 You can generate a good random 256 bits key (crypographically strong pseudorandom) with
 
