@@ -82,9 +82,9 @@
   - [Security jwt](backend-web-development/security-jwt)
   - [Security jwt testing](backend-web-development/security-jwt-testing)
   - [Express.js Mongoose lab](backend-web-development/express-mongoose-lab)
-  - [Database security](backend-web-development/database-security)
   - [Express.js to production](backend-web-development/express-to-production)
   - [Express.js deploy](backend-web-development/express-deploy)
+  - [Express.js Mongoose frontend lab](backend-web-development/express-mongoose-with-frontend-lab)
   - [Labs for backend](backend-web-development/backend-labs)
 
 - **Delivering software**
