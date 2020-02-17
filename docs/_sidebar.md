@@ -91,6 +91,7 @@
 
   - [Agile software delivery](delivering-software/agile)
   - [CI/CD](delivering-software/ci-cd)
+  - [Circle CI](delivering-software/circle-ci)
   - [Software engineering practices](delivering-software/software-engineering)
   - [Clean code and refactoring](delivering-software/clean-code-and-refactoring)
 
