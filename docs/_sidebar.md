@@ -90,6 +90,7 @@
 - **Delivering software**
 
   - [Agile software delivery](delivering-software/agile)
+  - [CI/CD](delivering-software/ci-cd)
   - [Software engineering practices](delivering-software/software-engineering)
   - [Clean code and refactoring](delivering-software/clean-code-and-refactoring)
 
