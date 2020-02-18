@@ -15,14 +15,14 @@ An agreement on what needs to be completed before a story is fully completed and
 1. DOD gives everyone in the team the same expectations on what is included and what is not in a user story.
 2. Gives team more clarity during estimations on how much a team can likely complete
 3. Setting the right expectations for PO, why features might take longer than the time to get barely working code.
-4. Prevent rework and arguements why certain things were not covered.
+4. Prevent rework and arguements on why certain things were not covered.
 
 ### Common DOD incluces but not limited to
 
 1. All acceptance criteria(AC) is completed
 2. Code does not break any linting rules
 3. Unit test coverage higher than a certain percentage
-4. Code have been viewed by at least 1 other member
+4. Code have been viewed by at least 1 other core team member
 5. All behaviors and edge cases are tested by QA
 6. The PO understands the scope of the changes and have verified
 
@@ -30,13 +30,14 @@ An agreement on what needs to be completed before a story is fully completed and
 
 1. DOD should contain things that are only really required by the story
 2. Not all stories will have the same DOD
-3. A common misbelief that DOD is only for the developer. This is definetely not true.
-   For example
+3. A common misbelief that DOD is only for the developer. This is definetely not true. All other members should help to achieve DOD when possible.
 
-- User story should be clearly written(remember to INVEST). PO should be available to clarify and verify any requirements.
-- QA can help to identify which part of the code causes issue.
-- QA should take ownership of the test and work closely with developers.
-- BA or PO can also work on task that extract data out of the database.
+Examples:
+
+- User story should be clearly written(INVEST). Developer should have full clarity before starting a task. PO should be available to clarify and verify any requirements.
+- If a test is failing, QA can help to identify which part of the code causes issue.
+- If the DOD includes other test(not unit test), QA could potentially help.
+- If AC includes data extraction, BA or PO can work on task that extract data out of the database.
 
 ## Continous Integration
 
