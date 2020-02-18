@@ -4,11 +4,11 @@
 
 ### Set NODE_ENV to development or production
 
-cross-env
+Use the `cross-env` package.
 
-### Environment variables
+### Load environment variables
 
-dot env
+Use the `dotenv` package.
 
 ### JSON web token
 
@@ -55,6 +55,19 @@ var corsOptions = {
 
 const app = express();
 app.use(cors(corsOptions));
+```
+
+We need `credentials: true` for accepting requests with cookies. Note that origin cannot be the wildcard `*` if credentials is true.
+
+> Cannot use wildcard in Access-Control-Allow-Origin when credentials flag is true
+
+Basic cors options:
+
+```js
+const corsOptions = {
+  origin: ["http://localhost:3000", "http://localhost:3001"], // should come from env var
+  credentials: true,
+};
 ```
 
 To allow calls from any port for localhost and any application on Heroku:
