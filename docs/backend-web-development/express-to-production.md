@@ -42,7 +42,7 @@ The walk around is to enable CORS in your backend API.
 
 If you build the API using Express, you can configure the Express CORS middleware to allow the API to be called by another React application loaded from Heroku.
 
-For example, here is a sample code for app.js in Express:
+For example, here is a sample code for app.js in Express (assuming that your frontend localhost is on port 3001). Set the environment variable `FRONTEND_URL` on Heroku if you are hosting your backend there.
 
 ```js
 const express = require("express");
@@ -61,14 +61,16 @@ We need `credentials: true` for accepting requests with cookies. Note that origi
 
 > Cannot use wildcard in Access-Control-Allow-Origin when credentials flag is true
 
-Basic cors options:
+If you would like to have multiple origins, you can also use an array.
 
 ```js
 const corsOptions = {
-  origin: ["http://localhost:3000", "http://localhost:3001"], // should come from env var
+  origin: [process.env.FRONTEND_URL, "http://localhost:3001"],
   credentials: true,
 };
 ```
+
+Make sure your URL does not have a slash at the back.
 
 To allow calls from any port for localhost and any application on Heroku:
 
