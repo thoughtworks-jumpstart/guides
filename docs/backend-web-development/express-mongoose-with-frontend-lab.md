@@ -239,12 +239,10 @@ jwt
 dotenv
 JWT_SECRET_KEY
 
-## Keep trying TDD!
+### Keep trying TDD!
 
 ## More routing
 
 Lab: Integrate app.param() middleware if needed
 
-## Add tests for protected routes
-
-## Express to production
+Lab: Add tests for protected routes

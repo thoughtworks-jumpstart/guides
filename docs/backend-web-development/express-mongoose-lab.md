@@ -194,5 +194,3 @@ const protectRoute = (req, res, next) => {
 ## Add tests for protected routes
 
 jest.mock("jsonwebtoken");
-
-## Express to production
