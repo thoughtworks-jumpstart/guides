@@ -34,7 +34,7 @@ Setting state in a class component
 this.setState({count: 1});
 ```
 
-### Managing state in function components
+### Managing state in functional components
 
 Declaring state in a functional component with `useState`. `useState` is a function that takes one argument as the initial value of the state.
 
@@ -42,7 +42,7 @@ Declaring state in a functional component with `useState`. `useState` is a funct
 const [count, setCount] = useState(0);
 ```
 
-Setting state in a class component
+Setting state in a functional component
 
 ```js
 setCount(1);
