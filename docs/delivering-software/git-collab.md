@@ -2,11 +2,13 @@
 
 ## Merge conflicts
 
-Merge conflicts can occur when you have an existing commit on your local repo and you try to pull the latest commits from the remote repo. Maybe you are behind the remote branch by a few commits. Your commit edits the same line on a same file with another commit (on the remote repo) that you have not integrated with.
+Merge conflicts can occur when you have an existing commit on your local repo and you try to **pull** the latest commits from the remote repo. Maybe you are behind the remote branch by a few commits. Your commit edits the same line on a same file with another commit (on the remote repo) that you have not integrated with.
 
 Merge conflict can also occur when merging another branch to master branch.
 
 You can manually fix merge conflicts by removing the `<<<<<< HEAD` and `======` strange lines that were added by git when it detected a merge conflict.
+
+If you would like to review the latest commits without causing merge conflicts, use **fetch** instead of pull.
 
 ### Fixing merge conflict in VS Code
 
@@ -42,6 +44,9 @@ There are two common git workflows.
 
 ### Trunk-based development
 
+![smaller trunk based](_media/smaller-trunk-based.png)
+(Image from https://trunkbaseddevelopment.com/)
+
 In trunk-based development (TBD), developers always check into one branch, typically the **master branch** also called the “trunk”.
 
 They check in (git push) as frequently as possible to the master — at few times a day.
@@ -51,6 +56,13 @@ Every developer is touching the trunk, so all features grow in the mainline whic
 This workflow is meant to be used together with a **Continuous Integration** server that runs the test after every commit to ensure that no commit breaks the build.
 
 Read https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines to understand how trunk-based development can be enabled with pipelines and processes.
+
+#### Scaled Trunk-based development (optional)
+
+![scaled trunk based](_media/scaled-trunk-based.png)
+(Image from https://trunkbaseddevelopment.com/)
+
+You might wonder, in a larger team, how do we enforce the reviewing of pull requests if everyone pushes directly to the master branch? It is stil possible, with developers pushing to **short-lived** feature branches. The difference is that these feature branches do not last more than a few days and are not related to any specific versions.
 
 #### Pros
 
@@ -64,7 +76,7 @@ Many frequent changes to master every day. If there is not enough automated test
 
 Might need feature toggles to switch off features that are in testing but not supposed to be in production.
 
-#### How to merge to master
+#### How to merge to master for trunk-based
 
 1. Start from master
 1. Develop a new feature on master
@@ -72,8 +84,9 @@ Might need feature toggles to switch off features that are in testing but not su
 1. `git pull --rebase`
 1. Run all tests. If failing, fix the error, amend the commit `git commit --amend` and back to Step 4
 1. If there are conflicts, solve the merge conflicts and then run `git rebase --continue`
-1. git push
-   Note: if switching between different work stash your changes
+1. `git push`
+
+Note: if switching between different work stash your changes
 
 ### Feature Branch
 
@@ -94,19 +107,22 @@ If there are "long lived branches" (eg: developer keeps a branch for many days w
 
 Not merging often may lead to less communication between developers and cause incompatible features to be developed by different developers.
 
-#### How to merge to master
+#### How to merge to master for feature branch
 
-1. Start on master do a git pull --rebase to get latest changes from remote
+1. Start on master do a git pull --rebase to get latest changes from remote.
 1. `git checkout -b new-branch` where `new-branch` is the name of your new feature branch name. This will create a new local branch.
-1. Develop a new feature on local branch
+1. Develop a new feature on local branch.
 1. Periodically do `git pull --rebase origin master` this will get the latest changes from remote master and integrate it to your local branch so that you are not too far behind on your local branch. This reduces further merge conflicts.
 1. `git add -p` and `git commit -m "Add..."`
+
+When we decide to merge to master...
 1. `git pull --rebase origin master` to pull latest changes from remote master
-1. git checkout master
-1. git merge new-branch
-   Run all tests. If failing, fix the error, and amend the commit
-   git push
-   git branch -d new-branch
+1. There could be merge conflicts, solve them.
+1. `git checkout master`
+1. `git merge new-branch` where `new-branch` is the name of your new feature branch name
+1. Run all tests. If failing, fix the error, and amend the commit
+1. `git push`
+1. `git branch -d new-branch`. Delete the feature branch.
 
 ## Merge hell
 
