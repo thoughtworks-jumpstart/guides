@@ -71,7 +71,7 @@ It is possible to assign, add labels and even add to a project (see Github Proje
 
 Go to any PR and click **Files Changed**.
 
-![review pull request](_media/reviewPullRequest.png)
+![review pull request](_media/revIewPullRequest.png)
 
 - Give general comments by clicking **Review Changes** on the top right corner
 - Click the `+` button on the line that you want to comment on. The review will be **pending** until you finally submit the review.
