@@ -2,9 +2,12 @@
 
 ## Merge conflicts
 
-Merge conflicts can occur when you have an existing commit on your local repo and you try to **pull** the latest commits from the remote repo. Maybe you are behind the remote branch by a few commits. Your commit edits the same line on a same file with another commit (on the remote repo) that you have not integrated with.
+Merge conflicts can occur when you have an existing commit on your local repo and you try to **pull** the latest commits from the remote repo.
 
-Merge conflict can also occur when merging another branch to master branch.
+There are two ways that merge conflicts can occur.
+
+- You are behind the remote branch by a few commits. Your commit edits the same line on a same file with another commit (on the remote repo) that you have not integrated with.
+- You are merging another branch to master branch.
 
 You can manually fix merge conflicts by removing the `<<<<<< HEAD` and `======` strange lines that were added by git when it detected a merge conflict.
 
@@ -15,7 +18,7 @@ If you would like to review the latest commits without causing merge conflicts, 
 ![fix merge conflict](_media/fix-merge-conflict.png)
 
 - Click on **Accept current change** to select the remote changes and delete your change
-- Click on **Accept incomming change** to select your changes and delete the changes from remote
+- Click on **Accept incoming change** to select your changes and delete the changes from remote
 - Click on **Accept both** to select all changes and keep both
 
 Use `Control + Z` to undo if you selected the wrong choice
@@ -23,20 +26,63 @@ Alternatively, you can directly edit in VS Code.
 
 ### Why do we prefer to use rebase when pulling?
 
-Why can't we just pull normally without rebasing? If we do that, then it will create an ugly merge commit when there are merge conflicts. We prefer to `rebase`, solve the merge conflicts, then continue with the rebasing.
+Why can't we just pull normally without rebasing? If we do that, then it will create an ugly merge commit when there are merge conflicts. We prefer to `git pull --rebase`, solve the merge conflicts, then continue with the rebasing.
 
 An extra merge commit might make sense if there are many merge conflicts but that is a good indication that integration was not done often enough.
 
+### Merge hell
+
+If and when we don't follow the practice of (i) committing often and (ii) push often on the master branch (a.k.a. trunk-based development), we can land ourselves in merge hell.
+Merge hell is a sticky place and getting out of it can be painful and time-consuming (it can take hours or even days). Instead of building your application, now you have to spend time tearing your hair out!
+
 ## Pull request
 
-Pull request is a feature by Github, not git.
+Pull request (PR) is a feature by Github (or Gitlab, Bitbucket etc), not git.
 
 There can be two types of pull requests:
 
 - Pull Request from a forked repository
 - Pull Request from a branch within a repository
 
-Lab for git ignore, merge conflicts, pull request: https://github.com/thoughtworks-jumpstart/git-newsroom
+### A Pull Request lifecycle in Github
+
+#### Create a PR
+
+By default, we can create a PR from a branch. Click **compare across forks** to create a PR from a forked repository. It should look something like this:
+
+![create pull request](_media/createPullRequest.png)
+
+#### PR is open
+
+Example of an **open** Pull Request from a **forked** repository:
+
+![open pull request](_media/openPullRequest.png)
+
+A PR should have a good title and description that could summarise the PR.
+Sometimes, we can even have pull request templates for larger projects with many contributors. These templates will automatically load content into the description field when creating a new PR. Look at [an example here](https://blog.axosoft.com/enhancing-pull-request-descriptions-templates/).
+
+See Github help for more information for [PR templates](https://help.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository).
+
+![pull request sidebar](_media/pullRequestSidebar.png)
+
+It is possible to assign, add labels and even add to a project (see Github Project Boards).
+
+#### Review a PR
+
+Go to any PR and click **Files Changed**.
+
+![review pull request](_media/reviewPullRequest.png)
+
+- Give general comments by clicking **Review Changes** on the top right corner
+- Click the `+` button on the line that you want to comment on. The review will be **pending** until you finally submit the review.
+
+You can require a review from contributors before merging any PR. These settings are at the branch protection rules.
+
+![branch protection rule](_media/branchProtectionRule.png)
+
+#### Merge and close a PR
+
+After merging a PR, the PR can be now closed.
 
 ## Git workflows
 
@@ -86,7 +132,7 @@ Might need feature toggles to switch off features that are in testing but not su
 1. If there are conflicts, solve the merge conflicts and then run `git rebase --continue`
 1. `git push`
 
-Note: if switching between different work stash your changes
+Note: if switching between different work (that should be in another commit) remember to stash your changes
 
 ### Feature Branch
 
@@ -116,6 +162,7 @@ Not merging often may lead to less communication between developers and cause in
 1. `git add -p` and `git commit -m "Add..."`
 
 When we decide to merge to master...
+
 1. `git pull --rebase origin master` to pull latest changes from remote master
 1. There could be merge conflicts, solve them.
 1. `git checkout master`
@@ -124,9 +171,10 @@ When we decide to merge to master...
 1. `git push`
 1. `git branch -d new-branch`. Delete the feature branch.
 
-## Merge hell
+## Practice
 
-If and when we don't follow the practice of (i) committing often and (ii) push often on the master branch (a.k.a. trunk-based development), we can land ourselves in merge hell.
-Merge hell is a sticky place and getting out of it can be painful and time-consuming (it can take hours or even days). Instead of building your application, now you have to spend time tearing your hair out!
+We will clone a repo https://github.com/thoughtworks-jumpstart/git-team-pokemon for the lab.
 
-To experience merge hell for yourself, let's all try this lab: https://github.com/thoughtworks-jumpstart/merge-hell-simulation
+Another lab for git ignore, merge conflicts, pull request: https://github.com/thoughtworks-jumpstart/git-newsroom
+
+To experience merge hell for yourself, there is another lab: https://github.com/thoughtworks-jumpstart/merge-hell-simulation
