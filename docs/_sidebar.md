@@ -92,7 +92,8 @@
   - [Agile software delivery](delivering-software/agile)
   - [CI/CD](delivering-software/ci-cd)
   - [Circle CI](delivering-software/circle-ci)
-  - [Git Collab](delivering-software/git-collab)
+  - [Git collab](delivering-software/git-collab)
+  - [Git advanced](delivering-software/git-advanced)
   - [Software engineering practices](delivering-software/software-engineering)
   - [Clean code and refactoring](delivering-software/clean-code-and-refactoring)
 
