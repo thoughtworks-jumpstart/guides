@@ -78,4 +78,4 @@ You’re doing continuous delivery when:
 ### Benefits
 
 1. With incremental changes in code, we can easily identify the necessary changes needs to be done in the deployment pipeline for a successful deployment.
-2. Fast feedback from user and state holders, more ofthan than not, we might build a system that we thought will help the user but it actually doesn't. Fast deployment cycle allow companies to get feedback from the use faster.
+2. Fast feedback from user and state holders, more often than not, we might build a system that we thought will help the user but it actually doesn't. Fast deployment cycle allow companies to get feedback from the use faster.
