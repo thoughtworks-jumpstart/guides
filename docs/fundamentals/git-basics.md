@@ -62,7 +62,7 @@ git remote --verbose
 
 There are two types of files in Git - tracked and untracked files. When you add a new file, it will be untracked. Once Git tracks a file, it falls under one of three states - unmodified, modified, and staged.
 
-![Wow](https://git-scm.com/book/en/v2/images/lifecycle.png)
+![Git lifecycle](https://git-scm.com/book/en/v2/images/lifecycle.png)
 
 ## Add your changes
 
@@ -109,6 +109,10 @@ Push your changes (remote)
 ```sh
 git push origin master
 ```
+
+## Ignore files and folders
+
+You can use .gitignore to ignore files and folders that we do not want inside the repository. A folder commonly ignored is `node_modules` and a file commonly ignored is `.env`.
 
 ## Write good commit messages
 
