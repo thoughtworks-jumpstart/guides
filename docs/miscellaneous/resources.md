@@ -44,8 +44,12 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 ## JavaScript and other programming languages
 
 - [JavaScript Info](https://javascript.info/) - modern JavaScript tutorials
+- [JavaScript Roadmap](https://flaviocopes.com/javascript/)
 - [JavaScript Tutorial](https://www.sololearn.com/Course/JavaScript/) - learn JavaScript fundamentals on SoloLearn
 - [Learn X in Y Minutes](https://learnxinyminutes.com/docs/javascript) - a quick reference to common operations performed in JavaScript
+- [33 concepts every JavaScript developer should know](https://github.com/leonardomso/33-js-concepts)
+- [JavaScript Concepts in a github repo](https://github.com/divyanshu-rawat/JavaScript-Concepts)
+- [Learning ES6](https://github.com/ericdouglas/ES6-Learning)
 - [Reference for scripting languages](http://hyperpolyglot.org/scripting) - a side-by-side reference sheet for JavaScript, Python, Ruby, and PHP
 
 ## Katas
@@ -95,6 +99,8 @@ Have a resource to add? Add your suggestions under an appropriate section (or cr
 - [Free books by Green Tea Press](https://greenteapress.com) - free programming books by Green Tea Press
 - [Free JavaScript books](https://jsbooks.revolunet.com/) - list of JavaScript books
 - [Free programming books by Ebook Foundation](https://ebookfoundation.github.io/free-programming-books/free-programming-books.html) - a massive collection of free programming books
+- [You Dont Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
 
 ## Community
 
