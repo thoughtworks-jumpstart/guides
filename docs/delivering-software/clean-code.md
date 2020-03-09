@@ -14,7 +14,12 @@ It also mentions LeBlanc’s law: Later == never. Read more about how [procrasti
 
 ### What exactly is technical debt?
 
-_Technical debt_ is a metaphor  
+_Technical debt_ is a metaphor first mentioned by Ward Cunningham. He was creating a financial software and used a financial analogy to talk about the refactoring they were doing.
+
+In this analogy, designing software without knowing what the best design should be is like borrowing money. You can do something with the money sooner (or even do greater things!), but then until you pay back that money you'll be paying interest. Interest, in this case, is slowing down the development of new features.
+
+However, this is easily misunderstood. This does not mean you can [code poorly down with the intention of paying back later](http://wiki.c2.com/?WardExplainsDebtMetaphor).
+
 ![technical debt quadrant](https://martinfowler.com/bliki/images/techDebtQuadrant.png)
 (From martinfowler.com)
 
