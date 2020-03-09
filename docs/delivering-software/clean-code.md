@@ -167,7 +167,7 @@ Code taken from https://medium.com/trabe/coding-react-components-single-level-of
 
 #### (mostly) Pure functions
 
-should not have unnecessary "side-effects"
+should not depend on some global object
 
 ```js
 function mouseOnLeftSide(mouseX) {
@@ -192,6 +192,18 @@ document.onmousemove = function(e) {
 ```
 
 Code from https://alistapart.com/article/making-your-javascript-pure/
+
+Should not have unnecessary "side-effects"
+
+```js
+const answer = [];
+
+const add = (a, b) => {
+  answer.push(a + b);
+};
+add(2, 3);
+console.log(answer);
+```
 
 ### Comments
 
