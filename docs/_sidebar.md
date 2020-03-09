@@ -20,9 +20,11 @@
 
 - **JavaScript**
 
+  - [JavaScript basics](javascript/javascript-basics)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)
+  - [Linting](javascript/linting)
   - [Labs for JavaScript](javascript/javascript-labs)
 
 - **Frontend Web Development**
