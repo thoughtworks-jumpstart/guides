@@ -176,12 +176,10 @@ When a change is in made in the project files, you normally would need to restar
 
 Nodemon is a library that will make Node.js server automatically restart when there is a change.
 
-Install nodemon globally:
+Install nodemon:
 
 ```
-npm install -g nodemon
+npm install --save-dev nodemon
 ```
 
-JavaScript utilities like nodemon are generally installed globally. Packages specific to your project should still be only installed locally.
-
-However, if your project team wants to use nodemon in the project, it will be good to add it to devDependencies.
+Though JavaScript utilities like nodemon are often recommended to be installed globally, different projects might use different utilities. Therefore we shall add it to devDependencies.

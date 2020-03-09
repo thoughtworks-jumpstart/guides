@@ -3,6 +3,7 @@
 ## JavaScript
 
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
+- [You Dont Know JS](https://github.com/getify/You-Dont-Know-JS)
 
 ## Interviews
 
