@@ -94,8 +94,8 @@
   - [Circle CI](delivering-software/circle-ci)
   - [Git collab](delivering-software/git-collab)
   - [Git advanced](delivering-software/git-advanced)
-  - [Software engineering practices](delivering-software/software-engineering)
-  - [Clean code and refactoring](delivering-software/clean-code-and-refactoring)
+  - [Clean code](delivering-software/clean-code)
+  - [Refactoring](delivering-software/refactoring)
 
 * **Computer Science**
 

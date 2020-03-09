@@ -1,6 +1,4 @@
-# Software engineering practices
-
-## Clean code
+# Clean code
 
 ![Code Quality Metric: WTFs per minute](https://mk0osnewswb2dmu4h0a.kinstacdn.com/images/comics/wtfm.jpg)
 
