@@ -9,7 +9,7 @@ JavaScript XML
 
 ## What is JSX
 
-In our Hello World app, we saw the following code bellow in App.js.
+In our Hello World app, we saw the following code below in App.js.
 
 ```javascript
 function App() {
