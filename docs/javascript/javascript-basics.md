@@ -14,8 +14,8 @@ Here is a good overview of the JavaScript landscape as of 2018:
 
 ## What are the basics to learn?
 
-- Variables
-- Conditional Statements
+- Values and Types
+- Operators and Conditional Statements
 - Functions
 - Objects
 - Arrays
