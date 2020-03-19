@@ -12,6 +12,39 @@ JavaScript has its idiosyncracies and gotchas, which we will discover over the c
 Here is a good overview of the JavaScript landscape as of 2018:
 [Modern JavaScript Explained For Dinosaurs](https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70)
 
+## Printing output
+
+```js
+console.log("hello world");
+console.log(42);
+```
+
+## Comments
+
+Single line:
+
+```js
+// this will not be executed
+```
+
+Multiline:
+
+```js
+/* this is a comment
+that spans across multiple lines */
+```
+
+Shortcut: ⌘/ (Mac) or Ctrl + / (Windows)
+
+## Semicolons?
+
+- They are optional!
+- Semicolons are inferred, but only before a }, at the end of a line, or at the
+  end of a program.
+- Never omit a semicolon before a statement beginning with (, [, +, -, or /.
+- As a convention in our class, we will use the 'prettier' style guide, which
+  includes semi-colons by default.
+
 ## What are the basics to learn?
 
 - Values and Types
@@ -31,3 +64,8 @@ Commonly used, modern tools when we code in JavaScript:
 - linting with eslint and prettier
 - webpack
 - babel
+
+## Exercises
+
+If you are new to JavaScript, you can try the following simple library (just the first exercise):
+https://github.com/thoughtworks-jumpstart/js-basics-1

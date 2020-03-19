@@ -53,6 +53,33 @@ console.log("abc" < "Abc");
 console.log(NaN == NaN);
 ```
 
+## Automatic type conversion
+
+```js
+console.log(8 * null); // 0
+console.log("5" - 1); // 4
+console.log("5" + 1); // 51
+```
+
+JavaScript will sliently convert the types when an operator is applied to the "wrong" type.
+
+This is **type coercion**.
+
+## Working with numbers
+
+- Arithmetic operators: +, -, /, \_, \*\*, %
+- Math methods (e.g. Math.pow(2,2))
+- Increment/decrement operators (++ and --)
+- Operators with assignment: +=, -=, /=, \_=
+
+## Working with strings
+
+- Single and double quotes
+- Template strings
+- String properties (e.g. `"some string".length`)
+- String methods (e.g. `"some string".toLowerCase()`, `"some string".toUpperCase()`)
+  and much more (see [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))!
+
 ## Declaring and initialization variables
 
 ![JavaScript variable lifecycle](https://scotch-res.cloudinary.com/image/upload/dpr_2,w_800,q_auto:good,f_auto/media/8976/bNTL1QI3RFebh7C1JPYC_variable%20hoisting.png)
@@ -78,9 +105,21 @@ const x = 15;
 const y = x + 20; // y is ???
 ```
 
-### Differences between var and let and const
+## Naming rules and conventions
 
-#### Scoping
+Try to give your variables meaningful names to make it easy for other people
+to understand what your code does.
+
+- Names are case-sensitive
+- Names cannot start with numbers
+- Generally speaking, use only alphabets
+- The name must not be a reserved keyword (e.g. var, for, if, while)
+- See full list of reserved keywords here
+- Use camelCase for names instead of snake_case or kebab-case
+
+## Differences between var and let and const
+
+### Scoping
 
 While `var` is **function scoped**, `let` and `const` is **block scoped**.
 An example of block scoping can be seen in this example:
@@ -166,7 +205,7 @@ console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
 
-#### Variable Hoisting
+### Variable Hoisting
 
 JavaScript treats all variable declarations using `var` as if they are declared at the top of a functional scope (if declared inside a function) or global scope (if declared outside of a function) regardless of where the actual declaration occurs. Only declarations are hoisted (or "lifted"), not initializations.
 
@@ -207,7 +246,7 @@ var name = "James";
 let foo = 1;
 ```
 
-#### Temporal Dead Zone (optional)
+### Temporal Dead Zone (optional)
 
 Temporal Dead Zone is a period between entering scope and variable being declared, in which variable can not be accessed, for `let` and `const`.
 
@@ -242,15 +281,3 @@ console.log(a);
 ```
 
 See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let for more information.
-
-## Automatic type conversion
-
-```js
-console.log(8 * null); // 0
-console.log("5" - 1); // 4
-console.log("5" + 1); // 51
-```
-
-JavaScript will sliently convert the types when an operator is applied to the "wrong" type.
-
-This is **type coercion**.
