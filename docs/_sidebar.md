@@ -103,8 +103,12 @@
 
 * **Computer Science**
 
-  - [Object-oriented programming](computer-science/object-oriented-programming)
   - [Data structures and algorithms](computer-science/data-structures-algorithms)
+
+* **Software Designs**
+
+  - [programming paradigm](software-designs/programming-paradigm)
+  - [Object-oriented programming](software-designs/object-oriented-programming)
 
 * **Life after Jumpstart**
 
