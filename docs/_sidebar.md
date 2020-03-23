@@ -110,6 +110,7 @@
   - [programming paradigm](software-designs/programming-paradigm)
   - [Object-oriented programming](software-designs/object-oriented-programming)
   - [Design Principles](software-designs/design-principles)
+  - [Design Patterns](software-designs/design-patterns)
 
 * **Life after Jumpstart**
 
