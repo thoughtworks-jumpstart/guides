@@ -30,10 +30,10 @@ Duplications of code make maintenance hard for multiple reasons.
 
 Andy Hunt and David Thomas explained that there is four cause of duplication.
 
-Impost duplication: Architecture decision
-Inadvertent duplication: Developers don't know about the duplication
-Impatient duplication: Duplicate the code was easier to do during development
-Interdeveloper duplication: Multiple people on a team duplicate the same piece of information
+- Imposed duplication: Architecture decision
+- Inadvertent duplication: Developers don't know about the duplication
+- Impatient duplication: Duplicate the code was easier to do during development
+- Interdeveloper duplication: Multiple people on a team duplicate the same piece of information
 
 Example of Duplication
 
@@ -145,9 +145,9 @@ router.patch(
 
 ### Law of Demeter
 
-Adapted from "The Pragmatic Programmer" by Andy Hunt and David Thomas, published in 1999.
+Adapted from Ian Holland at Northeastern University in 1987.
 
-Also known as the principle of lease knowledge. Each object can only have access to properties and methods the object has access to
+Also known as the principle of least knowledge. Each object can only have access to properties and methods the object has access to
 Today when you buy chicken rice, do you give auntie your whole wallet or pay him the amount.
 
 ```javascript
@@ -180,7 +180,7 @@ const alice = new Consumer();
 
 class Shop {
     transactionBad(consumer, price) {
-        consumer.wallet.pay(price);  // break law of lemeter, alice should not know about the p
+        consumer.wallet.pay(price);  // break law of Demeter, alice should not know about the price.
     }
 
     transactionBetter(consumer, price) {
@@ -240,7 +240,7 @@ Class Vehicle
 - reverse()
 
 // top up fuel for all vehicle
-vehicles.forEach(vehivle => vehicle.topUpFuel(5))
+vehicles.forEach(vehicle => vehicle.topUpFuel(5))
 ```
 
 ### ISP
@@ -249,11 +249,51 @@ _Clients should not be forced to depend upon interfaces that they do not use._
 
 The above example for bicycle also breaks ISP, bicycle if takes an interface of vehicles would be for to implement the method of `topUpFuel()`
 
-```
+```javascript
 class Bicycle extends Vehicle {
-    topUpFuel() {
-        throw new Error("no a fuel powered vehicle");
-    }
+  topUpFuel() {
+    throw new Error("not a fuel powered vehicle");
+  }
+}
+```
+
+### Composition over inheritance
+
+```javascript
+class FueledPoweredVehicle {
+  constructor(fuelLevel) {
+    this.fuelLevel = fuelLevel;
+  }
+
+  topUpFuel(amountOfFuel) {
+    this.fuelLevel = amountOfFuel;
+  }
+}
+
+// using inheritance
+class Car extends FueledPoweredVehicle {
+  topUpFuel() {}
+}
+
+// using composition
+class fuelTank {
+  constructor(fuelLevel) {
+    this.fuelLevel = fuelLevel;
+  }
+
+  topUpFuel(amountOfFuel) {
+    this.fuelLevel = amountOfFuel;
+  }
+}
+
+class Car {
+  constructor(fuelTank) {
+    this.fuelTank = fuelTank;
+  }
+
+  topUpFuel(amountOfFuel) {
+    this.fuelTank.topUpFuel(amountOfFuel);
+  }
 }
 ```
 
