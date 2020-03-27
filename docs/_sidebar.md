@@ -9,6 +9,7 @@
 
 - **Fundamentals**
 
+  - [How to learn effectively](fundamentals/how-to-learn)
   - [Machine setup](fundamentals/machine)
   - [Command line tools](fundamentals/command-line)
   - [Common shortcuts](fundamentals/shortcuts)
