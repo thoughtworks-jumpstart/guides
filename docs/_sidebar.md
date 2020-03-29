@@ -22,6 +22,7 @@
 - **Building Static Web Pages**
 
   - [HTML Basics](html&css/html)
+  - [Intro to CSS](html&css/css-basics)
 
 - **JavaScript**
 
