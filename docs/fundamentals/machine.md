@@ -13,10 +13,6 @@ Follow the folowing instructions to run commands with administrator privileges:
 - Run [PowerShell with administrator privilege](https://www.thewindowsclub.com/how-to-open-an-elevated-powershell-prompt-in-windows-10)
 - Run [Command Prompt with administrator privilege](https://www.howtogeek.com/194041/how-to-open-the-command-prompt-as-administrator-in-windows-8.1/).
 
-### Windows Subsystem for Linux (WSL)
-
-If you're on Windows 10, you can use [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about?redirectedfrom=MSDN), which provides a familiar Bash environment with Unix command line utilities.
-
 ### Git for Windows
 
 Download and install [Git for Windows](https://gitforwindows.org/).
@@ -49,6 +45,50 @@ choco upgrade nodejs
 
 For more details, see https://chocolatey.org/packages/nodejs.
 Alternatively, you can also download nodejs and npm from the [official website](https://nodejs.org/en/).
+
+## Windows Subsystem for Linux (WSL)
+
+If you're on Windows 10, you can use [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about?redirectedfrom=MSDN), which provides a familiar Bash environment with Unix command line utilities.
+
+- WSL is available only in 64-bit versions of Windows 10 from version 1607. It is also available in Windows Server 2019.
+
+### Update windows to latest version
+
+1. Click on the Home screen button and search for update
+2. Select check for updates, this should bring you to the Windows Update page
+3. Click on download, go for a break, it will take awhile and require several restart
+
+### Enable Window Subsystem
+
+1. Open powershell with admin privillege
+2. Run command `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+3. Restart computer
+
+### Install Ubuntu
+
+1. Go to microsoft page to install Ubuntu
+2. Initialise a new distro instance
+3. Create user with password
+4. Remember your password or store in password manager
+
+### Install Node
+
+1. Open Ubuntu on windows
+2. Update package manager `sudo apt update && sudo apt upgrade`
+3. Update node source `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+4. Install node `sudo apt-get install nodejs`
+5. Install npm `sudo apt-get install npm`
+6. Check node version `node --version`
+7. Check npm version `npm --version`
+
+### Set up VS Code
+
+1. Install VS code
+2. Install wsl extension `remote wsl extension`
+   `https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl`
+3. restart vscode
+4. Open settings.json (ctrl + p, type `settings.json`)
+5. Add this line `Bash on Ubuntu (on Windows) "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe"`
 
 ## Mac
 
