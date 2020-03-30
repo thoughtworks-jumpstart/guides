@@ -63,7 +63,7 @@ for (const char of str) {
 }
 ```
 
-### for...in statement
+## for...in statement
 
 Use for...in to iterate over the object keys:
 

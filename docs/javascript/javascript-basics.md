@@ -12,6 +12,13 @@ JavaScript has its idiosyncracies and gotchas, which we will discover over the c
 Here is a good overview of the JavaScript landscape as of 2018:
 [Modern JavaScript Explained For Dinosaurs](https://medium.com/the-node-js-collection/modern-javascript-explained-for-dinosaurs-f695e9747b70)
 
+## ES6
+
+In this course, we will be teaching modern JavaScript. You might come across the term `ES6` when we talk about newer JavaScript features.
+ES6 means ECMAScript 6, also known as ECMAScript 2015 or ES6, is the version of the ECMAScript standard defined in year 2015. ES6 is a significant update to the JavaScript language.
+
+Are you confused by the terms like "ES6", "ECMAScript 2015"? Are they the same thing as "JavaScript"? Read [this article for more details](https://www.freecodecamp.org/news/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5/).
+
 ## Printing output
 
 ```js
