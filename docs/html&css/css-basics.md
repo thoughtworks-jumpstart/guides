@@ -61,7 +61,7 @@ A class name is specified with a `.` in front of the class name.
 
 For a more specific specifier, you can use more than one specifier and their connecting relationship.
 
-```css {
+```css
 /* child */
 ul li {
   color: red;
