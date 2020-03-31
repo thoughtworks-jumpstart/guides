@@ -34,6 +34,8 @@
   - [Objects basics](javascript/object-basics)
   - [Arrays basics](javascript/arrays-basics)
   - [Errors](javascript/errors)
+  - [Arrow functions](javascript/arrow-functions)
+  - [First class objects](javascript/first-class-objects)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)
