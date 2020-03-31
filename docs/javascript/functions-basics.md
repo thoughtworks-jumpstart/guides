@@ -112,4 +112,70 @@ function showName(firstName, lastName, ...nicknames) {
 showName("Kopi", "Lim", "Boss", "Kopi C");
 ```
 
+## IIFE, Immediate Invoke Function Expression
+
+```js
+(function() {
+  console.log("this runs immediately");
+})();
+
+(function() {
+  console.log("this runs immediately too!!");
+})();
+```
+
+After the function is defined, it runs once and can never be called again.
+
+### Why might we (not) need IIFE?
+
+Normally, functions and variables added to the global scope are available to all scripts that are loaded on a page.
+
+We can use IIFEs to create "private" variables and functions that only can be accessed in our defined function.
+
+```js
+(function initGame() {
+  // "Private" variables that no one has access to outside this IIFE
+  var lives;
+  var weapons;
+
+  init();
+
+  // "Private" function that no one has access to outside this IIFE
+  function init() {
+    lives = 5;
+    weapons = 10;
+  }
+})();
+```
+
+However, in modern JavaScript, we have `let` and `const` now which gives us block scope. We can use block scope to now replace IIFE.
+
+```js
+{
+  const initGame = function() {
+    const lives;
+    const weapons;
+
+    const init = function() {
+      lives = 5;
+      weapons = 10;
+    }
+    init();
+  }
+}
+```
+
+However, knowing about IIFE gives us an understanding of the importance of scope and closure and will be especially useful in maintaining legacy JavaScript code.
+
 See https://github.com/thoughtworks-jumpstart/learning-functions/blob/master/1_basics.js for more info.
+
+## Exercises
+
+- Define a function, invertCase(someString), that returns the input string with its case inverted
+
+```js
+assert(invertCase("Hello") === "hELLO");
+assert(invertCase("hELLO wORLD") === "Hello World");
+```
+
+- https://github.com/thoughtworks-jumpstart/learning-functions/blob/master/lab1.js

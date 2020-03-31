@@ -19,21 +19,19 @@
 - `!false` // returns true
 - `!(1===1)` // returns false
 
-You can also use !! to convert a variable into a boolean type. For example, !!'foo' will return true.
+You can also use [double-not operator](https://repl.it/@MabelLee/DoubleNotOperator) `!!` to convert a variable into a boolean type. For example, !!'foo' will return `true`.
 
-Let's look at an example:
+Example:
 
 ```js
-const names = ["Alice", "Bob"];
-const isFound = names.find(name => name === "Charlie");
+const isFound = undefined;
 console.log(isFound); // returns undefined
 ```
 
 In the code above, if a name is found then isFound will contain the name, otherwise it will be undefined.
 
 ```js
-const names = ["Alice", "Bob"];
-const isFound = !!names.find(name => name === "Charlie");
+const isFound = !!undefined;
 console.log(isFound); // returns false
 ```
 

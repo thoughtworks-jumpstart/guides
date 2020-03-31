@@ -46,11 +46,9 @@ Shortcut: ⌘/ (Mac) or Ctrl + / (Windows)
 ## Semicolons?
 
 - They are optional!
-- Semicolons are inferred, but only before a }, at the end of a line, or at the
-  end of a program.
+- Semicolons are inferred, but only before a }, at the end of a line, or at the end of a program.
 - Never omit a semicolon before a statement beginning with (, [, +, -, or /.
-- As a convention in our class, we will use the 'prettier' style guide, which
-  includes semi-colons by default.
+- As a convention in our class, we will use the 'prettier' style guide, whichincludes semi-colons by default.
 
 ## What are the basics to learn?
 
