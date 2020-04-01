@@ -75,11 +75,42 @@ for (let i = 0; i < friends.length; i++) {
 }
 ```
 
+using forEach
+
 ```js
 friends.forEach(friend => {
   console.log("Hi " + friend + "!");
 });
 ```
+
+Another example of forEach
+
+```js
+[1, 2, 3].forEach(function(element, index, container) {
+  console.log("----");
+  console.log("element value : " + element);
+  console.log("index number  : " + index);
+  console.log("container     : " + container);
+});
+
+// ----
+// element value : 1
+// index number  : 0
+// container     : 1,2,3
+// ----
+// element value : 2
+// index number  : 1
+// container     : 1,2,3
+// ----
+// element value : 3
+// index number  : 2
+// container     : 1,2,3
+```
+
+- The callback function can either be an anonymous or named function (like all callbacks).
+- This function can receive 3 positional parameters: element, index, container. The position matters, so the first variable name that you pass into this callback will always refer to element, no matter what you call it.
+- You can omit parameters from the parameter list if you are not using them
+- .forEach() is just like .map(), except .forEach() always returns `undefined`, map() returns a new array.
 
 ## Exercises
 

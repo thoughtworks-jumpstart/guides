@@ -39,6 +39,8 @@
   - [Execution context](javascript/execution-context)
   - [Lexical scope](javascript/lexical-scope)
   - [More arrays](javascript/arrays)
+  - [Map Reduce Filter](javascript/map-reduce-filter)
+  - [More objects](javascript/objects)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)
