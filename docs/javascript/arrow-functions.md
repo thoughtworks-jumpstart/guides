@@ -61,8 +61,8 @@ Arrow functions do not have their own `this` value. The value of `this` inside a
 
 - "this" keyword refers to the the context(where the code has reference to)
 - the outermost context in browser is "window" object
-- the outermost context in nodejs is module.exports
-- we will cover module.exports in another topic
+- the outermost context in nodejs is `module.exports`
+- we will cover `module.exports` in another topic
 
 ```js
 assert(module.exports === this, "hello from windows");

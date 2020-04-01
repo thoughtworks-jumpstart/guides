@@ -62,6 +62,17 @@ someArray.join(someDelimiter);
 ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"].join(""); // hello world
 ```
 
+## concat
+
+Merge two or more arrays together. See MDN docs!
+
+```js
+const cats = ["kitten", "tom"];
+const dogs = ["bulldog", "chihuahua"];
+const catsAndDogs = cats.concat(dogs);
+console.log(catsAndDogs);
+```
+
 ## Creating arrays from strings
 
 ```js
@@ -109,5 +120,3 @@ We will learn more about arrow functions later.
 ## Exercises
 
 - [Array Explorer](https://sdras.github.io/array-explorer/)
-
-https://github.com/thoughtworks-jumpstart/javascript-basics/blob/master/2-arrays.js

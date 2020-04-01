@@ -38,6 +38,7 @@
   - [Arrow functions](javascript/arrow-functions)
   - [Execution context](javascript/execution-context)
   - [Lexical scope](javascript/lexical-scope)
+  - [More arrays](javascript/arrays)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)
