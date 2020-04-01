@@ -31,7 +31,7 @@
   - [Operators and conditionals](javascript/operators-conditional)
   - [Loops](javascript/loops)
   - [Functions basics](javascript/functions-basics)
-  - [Objects basics](javascript/object-basics)
+  - [Objects basics](javascript/objects-basics)
   - [Arrays basics](javascript/arrays-basics)
   - [Errors](javascript/errors)
   - [Arrow functions](javascript/arrow-functions)

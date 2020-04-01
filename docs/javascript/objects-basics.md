@@ -50,7 +50,7 @@ const drink = {
 drink.printMessage();
 ```
 
-Use the this keyword to refer to the object (e.g. this.myKey)
+Use the `this` keyword to refer to the object (e.g. this.myKey)
 
 ```js
 const drink = {
@@ -73,10 +73,14 @@ Setting values by keys (after object has been created)
 const cat = {};
 
 // Add a new property
-cat.name = 'Fluffy';
+cat.name = "Fluffy";
 
 // Add a new method
-myObject.awesomeMethod = function () {
-    console.log("i'm an awesome method!");
-}
+myObject.awesomeMethod = function() {
+  console.log("i'm an awesome method!");
+};
 ```
+
+## Exercises
+
+https://github.com/thoughtworks-jumpstart/javascript-basics/blob/master/3-objects.js
