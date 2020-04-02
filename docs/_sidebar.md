@@ -45,6 +45,7 @@
   - [Callbacks](javascript/callbacks)
   - [Scopes](javascript/scopes)
   - [Closure and Currying](javascript/closure-currying)
+  - [Call Apply Bind](javascript/call-apply-bind)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)
