@@ -40,6 +40,7 @@
   - [Lexical scope](javascript/lexical-scope)
   - [More arrays](javascript/arrays)
   - [Map Reduce Filter](javascript/map-reduce-filter)
+  - [Some Every](javascript/some-every)
   - [More objects](javascript/objects)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
