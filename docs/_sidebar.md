@@ -42,6 +42,7 @@
   - [Map Reduce Filter](javascript/map-reduce-filter)
   - [Some Every](javascript/some-every)
   - [More objects](javascript/objects)
+  - [Callbacks](javascript/callbacks)
   - [Scopes](javascript/scopes)
   - [Closure and Currying](javascript/closure-currying)
   - [Node.js basics](javascript/node-basics)
