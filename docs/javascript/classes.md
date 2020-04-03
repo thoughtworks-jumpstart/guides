@@ -181,15 +181,16 @@ class Person = {
   }
 
   set language(lang) {
-    this.language = lang;
-  },
+    this.language = lang.toUpperCase();
+  }
 };
 ```
 
-language is now exposed as a property to be set too.
+language is now exposed as a property to be set too, and will be converted to upper case.
 
 ```js
 person.language = "en";
+console.log(person.language);
 ```
 
 ## Create sub-classes
