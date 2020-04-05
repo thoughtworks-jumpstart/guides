@@ -9,6 +9,8 @@ Refer to the github repository: [Create simple Node.js modules with no server](h
 The `require` function is provided by Node.js to import modules into a file.
 It returns what the module is exporting.
 
+First, we have two files, `math.js` and `calculate.js`.
+
 Import a module named `math.js` into `calculate.js` file and put whatever the module is exporting into a variable named `math`.
 
 ```js
@@ -31,7 +33,7 @@ The `exports` object will be the object exported from the module.
 
 ```js
 // math.js
-exports.add = function(number1, number2) {
+exports.add = function (number1, number2) {
   return number1 + number2;
 };
 ```
@@ -54,7 +56,7 @@ var sum = math.add(1, 2); //sum is 3
 How do you export a function but not export it inside an object? You can use the `module` object to do this.
 It contains information about the module and also a key called `exports`.
 
-The `exports` object you youre using previously points to exports key on the module object.
+The `exports` object you youre using previously points to exports key on the `module` object.
 
 Exporting a function as `exports.add` is the same as exporting it as `module.exports.add`.
 
@@ -68,7 +70,7 @@ Thus you can export the the same function in `math.js` like this:
 
 ```js
 // math.js
-module.exports = function(number1, number2) {
+module.exports = function (number1, number2) {
   return number1 + number2;
 };
 ```
@@ -92,6 +94,19 @@ var math = require("./math.js");
 console.log(math); // [Function]
 var sum = math(1, 2);
 console.log(sum); // 3
+```
+
+What is the `module.exports` object?
+
+Referring back to what we have learnt about the "global execution context" and arrow functions, `module.exports` in a module was explained to be the **global object** that we are referring to when we use `this`.
+
+```js
+const assert = require("assert");
+console.log(module.exports === this);
+
+this.hello = "hello";
+console.log(this.hello === "hello");
+console.log(module.exports.hello === "hello");
 ```
 
 ## Packages in node_modules
@@ -143,7 +158,7 @@ Now you can import `math.js` file from the `lib` package.
 var math = require("lib/math");
 ```
 
-Note that if you use `require("lib")`, Node.js will try to search for a index.js file inside the lib package directory.
+Note that if you use `require("lib")`, Node.js will try to search for an **index.js** file inside the lib package directory.
 
 Package management gets tough when we add more packages, especially those that are 3rd party and open-source. This is why we will use a package manager such as `npm` to manage and update our packages.
 

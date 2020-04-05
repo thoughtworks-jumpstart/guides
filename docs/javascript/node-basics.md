@@ -29,16 +29,12 @@ Many of the frontend developer tools (e.g. webpack, gulp, etc) are built on top 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jOupHNvDIq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### What is an event loop?
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8aGhZQkoFbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Node.js architecture
 
 <img src="_media/nodejs.jpg" alt="node.js architecture" width="400"/>
 
-- libuv: the low-level I/O engine of Node.js. it encapsulate the details of different I/O APIs on various operating systems
-- V8: the JavaScript engine originally developed by Google for the Chrome browser
+- libuv: the low-level I/O engine of Node.js written in C. it encapsulate the details of different I/O APIs on various operating systems
+- V8: the open source JavaScript engine written in C++ originally developed by Google for the Chrome browser
 - bindings: responsible for wrapping and exposing libuv and other low-level functionality to JavaScript
 - node-core, a core JavaScript library that implements the high-level Node.js API
 
