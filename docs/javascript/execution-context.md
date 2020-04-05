@@ -12,7 +12,7 @@ There are three types of execution context in JavaScript.
 
 This is the default or base execution context. The code that is not inside any function is in the global execution context.
 
-- it creates a **global object** which is a window object (in the case of browsers). It will be `module.exports` for Node.js but we will learn more about this in another topic.
+- it creates a **global object** which is the window object (in the case of browsers). It will be `module.exports` for Node.js but we will learn more about this in another topic.
 - sets the value of `this` to equal to the global object. There can only be one global execution context in a program.
 
 ### Functional Execution Context

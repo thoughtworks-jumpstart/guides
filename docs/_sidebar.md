@@ -47,6 +47,7 @@
   - [Closure and Currying](javascript/closure-currying)
   - [Classes](javascript/classes)
   - [Call Apply Bind](javascript/call-apply-bind)
+  - [Recursive](javascript/recursive)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)

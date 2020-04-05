@@ -17,17 +17,17 @@ Example of a simple callback to return an array with each element multiplied by 
 
 ```js
 // ES5
-[1, 2, 3].map(function(element) {
+[1, 2, 3].map(function (element) {
   return element * 2;
 });
 
 // ES6
-[1, 2, 3].map(element => {
+[1, 2, 3].map((element) => {
   return element * 2;
 });
 
 // ES6 (optional curly braces removed + implicit return)
-[1, 2, 3].map(element => element * 2);
+[1, 2, 3].map((element) => element * 2);
 ```
 
 To implicitly return object literals, you need to surround the object's braces ({}) with brackets(()). This is because `{}` can mean a block and also a JavaScript object.
@@ -60,8 +60,13 @@ Arrow functions do not have their own `this` value. The value of `this` inside a
 ### Context
 
 - "this" keyword refers to the the context(where the code has reference to)
-- the outermost context in browser is "window" object
-- the outermost context in nodejs is `module.exports`
+- the global "outermost" context, the global object in browser is the "window" object
+
+```js
+console.log(this === window); // true
+```
+
+- the global context, the global object in a module in nodejs is `module.exports`
 - we will cover `module.exports` in another topic
 
 ```js
