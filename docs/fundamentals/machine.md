@@ -77,9 +77,8 @@ If you're on Windows 10, you can use [Windows Subsystem for Linux (WSL)](https:/
 2. Update package manager `sudo apt update && sudo apt upgrade`
 3. Update node source `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
 4. Install node `sudo apt-get install nodejs`
-5. Install npm `sudo apt-get install npm`
-6. Check node version `node --version`
-7. Check npm version `npm --version`
+5. Check node version `node --version`
+6. Check npm version `npm --version`
 
 ### Set up VS Code
 
