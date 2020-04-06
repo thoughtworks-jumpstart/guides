@@ -53,6 +53,7 @@
   - [[Bonus] Planning for a new UI project](frontend-web-development/planning-new-project)
   - [[Bonus] React Environment Variable](frontend-web-development/react-env-variable)
   - [[Bonus] Different ways to style react](frontend-web-development/ways-to-style-react)
+  - [[Bonus] Setup React Bootstrap setup in 3 mins](frontend-web-development/react-bootstrap)
   - [[Bonus] React Hooks](frontend-web-development/react-hooks)
   - [[Bonus] React Context](frontend-web-development/react-context)
   - [[Bonus] React Redux](frontend-web-development/react-redux)
