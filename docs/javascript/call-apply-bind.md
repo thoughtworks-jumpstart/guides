@@ -57,7 +57,10 @@ Simple example:
 // problem:
 const tom = {
   name: "tom",
-  introduceSelf: function() {
+  introduceSelf: function () {
+    console.log("hi i am", this.name);
+  },
+  introduceSelfArrow: () => {
     console.log("hi i am", this.name);
   },
 };
@@ -67,6 +70,8 @@ introduceFunction(); // prints 'hi i am undefined'
 ```
 
 If we ran `tom.introduceSelf()` it would have worked perfectly because the method is called from the object `tom` and so the `this` inside `introduceSelf` will have a reference to the caller object.
+
+We cannot use arrow functions with `introduceSelf` if not `this.name` will not work as intended.
 
 However when we assign the function to another variable and call the variable instead, the value of `this` passed to the function when it is invoked is the global scope's `this`.
 
@@ -85,13 +90,13 @@ Another example:
 ```js
 var tom = {
   name: "tom",
-  introduceSelf: printIntroMessage => {
+  introduceSelf: (printIntroMessage) => {
     printIntroMessage();
   },
 };
 
 const introMessageSingapore = {
-  print: function() {
+  print: function () {
     console.log(`Hi, i am ${this.name} from Singapore`);
   },
 };
@@ -102,6 +107,16 @@ tom.introduceSelf(introMessageSingapore.print);
 introduceFunction = introMessageSingapore.print.bind(tom);
 tom.introduceSelf(introduceFunction); // prints 'hi i am tom'
 ```
+
+## Arrow vs bind
+
+Arrow functions VS bind
+There’s a subtle difference between an arrow function => and a regular function called with .bind(this):
+
+.bind(this) creates a “bound version” of the function.
+The arrow => doesn’t create any binding. The function simply doesn’t have this. The lookup of this is made exactly the same way as a regular variable search: in the outer lexical environment.
+
+We now use arrow functions instead of bind to have lexical scope. 
 
 ## Exercises
 

@@ -55,6 +55,7 @@
   - [Asynchronous JavaScript](javascript/asynchronous-js)
   - [Callback hell](javascript/callback-hell)
   - [Promises](javascript/promises)
+  - [Async / Await](javascript/async-await)
   - [Labs for JavaScript](javascript/javascript-labs)
 
 - **Frontend Web Development**
