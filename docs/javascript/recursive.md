@@ -45,26 +45,63 @@ Let's write an iterative version
 
 ```js
 function fibonacci(num) {
-  let first = 1;
-  let second = 0;
+  let first = 0;
+  let second = 1;
 
   while (num >= 0) {
-    const temp = first;
-    first = first + second;
-    second = temp;
+    const temp = second;
+    second = second + first;
+    first = temp;
     num--;
   }
-  return second;
+  return first;
 }
 ```
 
+fib(10) gives you 89.
+
 What's the corresponding recursive version?
+
+This is converting the while loop to a base case by inverting the while loop condition.
 
 ```js
 function fibonacci(num) {
-  if (num <= 1) return 1;
+  if (num < 0) {
+    return 1;
+  }
 
   return fibonacci(num - 1) + fibonacci(num - 2);
+}
+```
+
+However, you see that it becomes slightly different.
+fib(10) gives you 233 instead of 89.
+
+This is because we only used one base case which is the value of `second` in the previous example.
+
+```js
+function fibonacci(num) {
+  if (num < 0) {
+    return 0;
+  }
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+```
+
+Returning zero does not work as adding zero to zero will always give you zero. The function will only be able to return zero.
+
+Considering we start with two variables and have two variables `first` and `second` that change, we can consider having two base cases.
+
+```js
+function fibonacci(pos) {
+  if (pos === 0) {
+    return 0;
+  }
+  if (pos === 1) {
+    return 1;
+  }
+  return fibonacci(pos - 1) + fibonacci(pos - 2);
 }
 ```
 
@@ -90,6 +127,15 @@ Some examples are Anna, Civic, Kayak, Level, Madam, Mom, Noon, Racecar, Radar, R
 Try to solve this recursively.
 
 You can consider using string methods such as `substr()` or `substring()`. (Which are two different string methods in JavaScript!)
+
+```js
+const assert = require("assert");
+function isPalindrome(string) {
+  // fill in your code here recursive solution
+  return false;
+}
+assert(isPalindrome("Anna") === true);
+```
 
 2. Count the number of keys in a nested object recursively!
    Hint: Use `typeof`? How to differentiate an array from a literal object?

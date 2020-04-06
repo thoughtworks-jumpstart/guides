@@ -162,6 +162,8 @@ Note that if you use `require("lib")`, Node.js will try to search for an **index
 
 Package management gets tough when we add more packages, especially those that are 3rd party and open-source. This is why we will use a package manager such as `npm` to manage and update our packages.
 
+Normally we will not commit nor push the folder `node_modules` to our git repository.
+
 ## Node.js Core Modules
 
 Node.js comes with core modules (built-in packages) provided as the Node Standard Library. Being built-in packages, you do not need to install them to import them.

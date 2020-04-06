@@ -53,6 +53,7 @@
   - [npm](javascript/npm)
   - [Linting](javascript/linting)
   - [Asynchronous JavaScript](javascript/asynchronous-js)
+  - [Callback hell](javascript/callback-hell)
   - [Labs for JavaScript](javascript/javascript-labs)
 
 - **Frontend Web Development**
