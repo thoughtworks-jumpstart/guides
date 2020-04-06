@@ -29,6 +29,7 @@
   - [JavaScript basics](javascript/javascript-basics)
   - [Values and types](javascript/values-types)
   - [Operators and conditionals](javascript/operators-conditional)
+  - [Loops](javascript/loops)
   - [Node.js basics](javascript/node-basics)
   - [Node.js modules and packages](javascript/node-modules)
   - [npm](javascript/npm)
