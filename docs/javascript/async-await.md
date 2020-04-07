@@ -94,6 +94,33 @@ If the promise is fulfilled, you will see the hidden secret value.
 
 If the promise is rejected, then you open a box with a bomb and the bomb blows when the box opens. To protect yourself against such scenario, you need to use try...catch block to catch the errors.
 
+## Another example with fetch
+
+Another example using fetch that you can try on the developer tools console:
+
+```js
+const getDogPicture = async () => {
+  try {
+    const response = await fetch("https://dog.ceo/api/breeds/image/random");
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+getDogPicture();
+```
+
+Compare this using promises:
+
+```js
+fetch("https://dog.ceo/api/breeds/image/random")
+  .then((response) => response.json())
+  .then((json) => console.log(JSON.stringify(json)));
+  .catch((error) => console.log(error));
+```
+
 ## What if there are errors thrown directly from an Async Function?
 
 If you try to throw error from an Async function, can it be handled with try-catch when you call that async function? The answer is 'No'.
@@ -180,7 +207,52 @@ async/await is a part of ES7, and is supported in the [latest versions of main-s
 
 ## Comparing async await to callbacks and promises
 
-In the code snippet below, you can compare and contrast the syntax differences between callbacks, promises and async await.
+In the code snippets below, you can compare and contrast the syntax differences between callbacks, promises and async await.
+
+First snippet:
+
+```js
+function watchTutorialPromise() {
+  const userLeft = true;
+  const userWatchingCatMeme = false;
+  return new Promise((resolve, reject) => {
+    if (userLeft) {
+      reject({
+        name: "User Left",
+        message: ":(",
+      });
+    } else if (userWatchingCatMeme) {
+      reject({
+        name: "User Watching Cat Meme",
+        message: "WebDevSimplified < Cat",
+      });
+    } else {
+      resolve("Thumbs up and Subscribe");
+    }
+  });
+}
+
+watchTutorialPromise()
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.log(error.name + " " + error.message);
+  });
+
+const watchTutorialAsyncAwait = async () => {
+  try {
+    const message = await watchTutorialPromise();
+    console.log(message);
+  } catch (error) {
+    console.log(`${error.name} ${error.message}`);
+  }
+};
+
+watchTutorialAsyncAwait();
+```
+
+Second snippet:
 
 This snippet will be better understood if you have covered the chapters on express and mongoose. Nonetheless, even if you haven't learned those, it can still be useful to compare how the same thing is done in the 3 different flavours of handling asynchronous methods.
 
@@ -216,4 +288,19 @@ router.get("/", async function(req, res, next) {
     next(err)
   }
 });
+```
+
+## Exercises
+
+Install axios.
+
+Use axios to send a get request to a URL. Console.log the response data. Use a try-catch and console log the error if caught.
+
+You can use a url like https://jsonplaceholder.typicode.com/posts/1
+
+```js
+const getData = async (url) => {
+  // your code here
+};
+getData(url);
 ```
