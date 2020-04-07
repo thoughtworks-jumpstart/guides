@@ -1,5 +1,15 @@
 # Mongoose testing
 
+## Mock database vs real database
+
+If we are writing unit tests, by definition we need to mock the interaction with database and we don't depend on a real database.
+
+For integration test/contract test (e.g. on web service build using Express + MongoDB), we need to make the server up and running before we can send requests to it. Most of the time, that would require us to have a real database.
+
+If somehow your tests need to depend on a real database, you need to make sure each test case has a clean database to start with. One solution is to set up and tear down all the collections in the database is necessary for ensuring there are no side effects between unit tests. In practice, this means a `beforeEach()` where you reconnect to the database and drop all collections, and an `afterEach()` where you disconnect from the database.
+
+Another solution is to set up an **in-memory database** for each test case programmatically to avoid some of the issues with setting up a real database and sharing one database with all tests.
+
 ## MongoDB memory server
 
 To write API tests for an Express app that uses MongoDB as the database, we are going to use a library called **mongodb-memory-server**. It spins up an in-memory instance of MongoDB, which is faster than running a separate MongoDB instance.
