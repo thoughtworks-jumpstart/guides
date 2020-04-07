@@ -80,6 +80,7 @@
   - [[Bonus] React Hooks](frontend-web-development/react-hooks)
   - [[Bonus] React Context](frontend-web-development/react-context)
   - [[Bonus] React Redux](frontend-web-development/react-redux)
+  - [[Bonus] Redux Thunk](frontend-web-development/redux-thunk)
   - [[Bonus] Webpack and Babel](frontend-web-development/webpack-babel)
 
 - **Backend Web Development**
