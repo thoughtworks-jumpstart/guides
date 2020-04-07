@@ -127,3 +127,10 @@ function App() {
   );
 }
 ```
+
+## Lab
+
+We have an application that is not working currently due to missing import and export statement.
+
+1. git clone from `git clone https://github.com/thoughtworks-jumpstart/react-import-export.git`
+2. Read the readme and fix the application
