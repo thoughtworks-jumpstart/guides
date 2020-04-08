@@ -59,6 +59,7 @@
   - [Test pyramid](javascript/test-pyramid)
   - [Jest](javascript/jest)
   - [Mocks](javascript/mocks)
+  - [TDD](javascript/tdd)
   - [Labs for JavaScript](javascript/javascript-labs)
 
 - **Frontend Web Development**
