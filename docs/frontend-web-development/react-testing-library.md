@@ -15,7 +15,8 @@
 
 ## Overview
 
-From: https://testing-library.com/docs/react-testing-library/intro
+- From: https://testing-library.com/docs/react-testing-library/intro
+- Intro Video: https://youtu.be/JKOwJUM4_RM
 
 ### The problem
 
@@ -141,8 +142,8 @@ We want to display all the items. When I add text into an inbox box, we want to 
 <input aria-label="filter-text" onChange={this.updateFilterText} />;
 {
   this.state.data
-    .filter(text => text.indexOf(this.state.filterText) >= 0)
-    .map(data => <div key={data}>{data}</div>);
+    .filter((text) => text.indexOf(this.state.filterText) >= 0)
+    .map((data) => <div key={data}>{data}</div>);
 }
 ```
 
@@ -266,7 +267,7 @@ export class Todolist extends React.Component {
   }
 
   componentDidMount() {
-    axios("https://jsonplaceholder.typicode.com/todos").then(res => {
+    axios("https://jsonplaceholder.typicode.com/todos").then((res) => {
       this.setState({ todos: res.data });
     });
   }
@@ -274,7 +275,7 @@ export class Todolist extends React.Component {
   render() {
     return (
       <div>
-        {this.state.todos.map(todo => (
+        {this.state.todos.map((todo) => (
           <div key={todo.id}>{todo.title}</div>
         ))}
       </div>
