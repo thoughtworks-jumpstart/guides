@@ -1,6 +1,13 @@
 # Express.js basics
 
-Express.js framework is built on top of Node.js for simpler web server development. Express.js comes with parsing, security, user sessions, error handling etc, that are not handled by Node.js
+- Installing Express.js
+- Features of Express.js
+- Your first Express.js app
+- Start Express.js server
+
+Express.js framework is built on top of Node.js for simpler web server development. Express.js comes with parsing, security, user sessions, error handling etc, that are not handled by Node.js. If you use Node.js, you will have to constantly reimplement all these.
+
+It is minimalistic, does not restrict you to any design patterns or file structure, and often requires you to install more packages to add functionality.
 
 ## Installing Express.js
 
@@ -32,37 +39,3 @@ const server = app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}...`);
 });
 ```
-
-## Testing the server
-
-### cURL
-
-Client URL
-cURL is by default already installed in Mac OS. For Windows, you can download cURL separately.
-You can send different HTTP requests.
-
-For example, let's send a POST request to https://localhost:3000/users with a JSON message body.
-
-```sh
-curl --request POST \
-  --url https://localhost:3000/users \
-  --header 'content-type: application/json' \
-  --data '{
-    "username": "babel",
-}'
-```
-
-Alternatives to the flags:
-
-```sh
-curl -X POST \
-  http://localhost:3000/users \
-  -H 'content-type: application/json' \
-  -d '{
-    "username": "babel"
-}'
-```
-
-### API testing tool
-
-Instead of cURL, you can use an API testing tool like Postman or Insomnia. You can even save your requests and organise them into folders. Using those tools, compose a request to "http://localhost:port/" where `port` is the port that your server is listening to.

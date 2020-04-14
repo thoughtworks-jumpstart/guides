@@ -1,5 +1,10 @@
 # Express.js responses
 
+- Ending response with res.end()
+- Sending back response with res.send() and res.json()
+- Writing to res.write() and comparing to res.send()
+- Setting status code of response
+
 The handler function or middleware function usually needs to call a method on the response object (res) to modify and send back a response.
 
 ## Ending a response
@@ -55,7 +60,7 @@ Read [this blog at Fullstacktraining](https://blog.fullstacktraining.com/res-jso
 
 ## Writing parts of response body
 
-In the multiple handler functions routing example, we used `res.write()` to update the response before sending the response back to the client.
+In the multiple handler functions routing example, we used `res.write()` to update the response before sending the response back to the client. Normally, you will not need to use this.
 
 ```js
 res.write("Here is a list of students:\n");
@@ -107,3 +112,37 @@ res.sendStatus(500);
 ```
 
 See [Express.js api docs](https://expressjs.com/en/api.html#res.sendStatus) for more info.
+
+## Should we implement many status codes?
+
+No. The more status codes your API deals with, the more status codes you have to maintain. Your clients (possibly your frontend) will also have to maintain more code to react accordingly to these status codes. Use the status codes only as needed.
+
+## Exercises
+
+Implement an API with the following endpoint:
+
+1. Route: GET /songs
+   HTTP Response status code: 200
+
+Expected response:
+
+if empty:
+
+```json
+[]
+```
+
+if not empty, we will get an array of song objects in JSON.
+
+```json
+[
+  {
+    "name": "someSongName",
+    "artist": "someSongArtist"
+  },
+  {
+    "name": "anotherSongName",
+    "artist": "anotherArtist"
+  }
+]
+```

@@ -1,5 +1,12 @@
 # Express.js routing
 
+- What is routing
+- Request and response methods and objects
+- Route paths
+- Route parameters
+- Route querystrings
+- Multiple handler functions
+
 ## What is routing?
 
 Routing is a way to map requests to specific handlers depending on their URI and HTTP verb.
@@ -49,7 +56,7 @@ app.post("/", (req, res) => {
 });
 ```
 
-The handler function (callback function) is called when a GET request is sent by the browser to the root `/`. In the handler function, "Welcome to my homepage" is sent as the response.
+The handler function (callback function) is called when a GET or POST request is sent by the browser to the root `/`. In the handler function for GET request, "Welcome to my homepage" is sent as the response.
 
 Express.js will call the handler function with two parameters. The first parameter is the request object and the second parameter is the response object.
 
@@ -141,12 +148,13 @@ app.get(/.*fly$/, function (req, res) {
 
 We can grab data from the route using route parameters. Route parameters are named segments of the URL used to capture values at their specified position.
 
+The parameters are stored in `req.params`.
+
 GET a specific book with ID:
 
 ```js
 app.get("/books/:bookId", (req, res) => {
   res.send(`You requested information on book ${req.params.bookId}`);
-  // NOTE: the above line poses a security issue, we should always treat any user input as unsafe (see XSS attack)
 });
 ```
 
@@ -189,6 +197,8 @@ req.params: { "userId": "34", "bookId": "8989" }
 Refer to the script: [Express.js playground: query_parameter_example](https://github.com/thoughtworks-jumpstart/express-playground/blob/master/query_parameter_example.js).
 
 We can use querystrings to filter data, provide information to a page or even alter the action of a page. This is typically used with a GET request.
+
+The queries are stored in `req.query`.
 
 Considering that we have the following data:
 
@@ -249,8 +259,6 @@ req.query: { "color": "red", "type": "FRUIT" }
 
 ```js
 app.get("/food", (req, res) => {
-  //console.log(req.query);
-
   const results = data
     // Using if statements
     .filter((item) => {

@@ -147,8 +147,10 @@ Source: [https://www.youtube.com/watch?v=LtNSd_4txVc](https://www.youtube.com/wa
 #### Commonly used status codes
 
 - 200 OK: The request is successful. The meaning of success depends on the request method. The response includes information.
+- 201 Created: The request has been fulfilled, resulting in the creation of a new resource
 - 204 No Content: The server successfully processed the request, but is not returning any content
-- 301 Moved Permanently: The resource requested has permanently moved to the URL given by the Location headers. Browsers and search engines can be redirected.
+- 301 Moved Permanently: The resource requested has permanently moved to the URL given by the Location headers. Browsers and search engines can be redirected. This could be important for SEO. This will also retain users and provide more information than 404.
+- 400 Bad Request: The request could not be understood by the server due to malformed syntax
 - 401 Unauthorized: The access is not authorized.
 - 403 Forbidden: The access is forbidden and the response includes information on access denied.
 - 404 Not Found
