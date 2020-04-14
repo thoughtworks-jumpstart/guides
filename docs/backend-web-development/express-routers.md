@@ -2,7 +2,20 @@
 
 For a very small app, we can define all the API endpoints in one file, like what we did in the previous examples. However, as our application grows, it's a good idea to break the application into smaller modules. In terms of the API end points, it would be better to group API endpoints by their nature.
 
-Each Router is like a mini-app or subapplication, which means it can contain its own API endpoints, together with many other things such as middleware and error handlers, as you will notice later.
+Use the express.Router class to create modular, mountable route handlers.Each Router is like a mini-app or subapplication, which means it can contain its own API endpoints, together with many other things such as middleware and error handlers, as you will notice later.
+
+## Example
+
+You can mount them to an app. For example, a router can be mounted to the `/empty` route of an app.
+
+```js
+const router = express.Router();
+
+router.get("/", (res, req) => res.end());
+router.post("/", (res, req) => res.end());
+
+app.use("/empty", router);
+```
 
 ## Implementation
 
@@ -13,8 +26,6 @@ const router = express.Router();
 ```
 
 The difficult part is deciding / designing what to put in it.
-
-## Exercises
 
 For example, if we are implementing an API for a library system, the API endpoint for users and books can be put into their own routers / modules. We can refactor our basic example to use routers.
 

@@ -4,13 +4,23 @@
 
 Routing is a way to map requests to specific handlers depending on their URI and HTTP verb.
 
-When using a browser to visit example.com/jumpstart, the raw HTTP request might look like this:
+When using a browser to visit example.com/books, the raw HTTP request might look like this:
 
 ```
-GET /jumpstart http/1.1
+GET /books http/1.1
 ```
 
-The HTTP request consist of a verb (GET), a URI (/jumpstart), and the HTTP version (1.1). When we are routing, we take the verb and the URI and map it to a handler function. In this case, when Express sees a GET request to /jumpstart, some code is run.
+The HTTP request consist of a verb (GET), a URI (/books), and the HTTP version (1.1). When we are routing, we take the verb and the URI and map it to a handler function. In this case, when Express sees a GET request to /books, some code is run.
+
+Routing is to add a handler function (a callback function) that is called when a user visit a particular route, for example the homepage `/` or `/books`. When you listen for connections on a route in Express, the handler function will be invoked when a request comes in.
+
+The request object and response object are passed to the handler function when the handler function is called.
+
+```js
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+```
 
 A browser (the client) can make a GET, POST, PUT or DELETE HTTP request for various URLs (e.g. GET http://localhost:3000/books or DELETE http://localhost:3000/students/42).
 
@@ -43,6 +53,58 @@ The handler function (callback function) is called when a GET request is sent by
 
 Express.js will call the handler function with two parameters. The first parameter is the request object and the second parameter is the response object.
 
+### Request object
+
+The Request object (req) passed to a callback function holds all the HTTP request information that was sent to your server like query strings.
+
+It starts off as an instance of _http.IncomingMessage_, a core Node object. Express then extends the object to add further functionality.
+
+These are the commonly used properties of the request object:
+
+- `req.params`
+  Added by Express. An array containing named route parameters. This will be further explained below.
+
+- `req.query`
+  Added by Express. An object containing querystring parameters as name/value pairs. This will also be further explained below.
+
+- `req.url`
+  The request URL string.
+
+- `req.method`
+  The HTTP method (GET, POST, PUT, DELETE).
+
+These could be used for debugging.
+
+```js
+console.log("Method: " + req.method);
+console.log("Path: " + req.url);
+```
+
+You are unable to access the body of a request with `req.body` if the body is not parsed yet. This will be further explained in the [parsing request body](express-parsing-request-body) page.
+
+### Response object
+
+The Response object (res) passed to a callback function holds information that your server will respond with when the connection is ended with the client.
+
+It starts off as an instance of _http.ServerResponse_, a core Node object. The res object is an enhanced version of the response object found in Node.js.
+
+These are the commonly used properties or methods of the response object:
+
+- `res.send()`
+  Added by Express. Use it to send a response back to the client.
+
+- `res.json()`
+  Added by Express. Use it to send a JSON response back to the client.
+
+- `res.status(statusCode)`
+  Added by Express. Use it to set the status code of the response.
+
+- `res.sendStatus(statusCode)`
+  Added by Express. Shortcut for the above and sending the string representation of the status code as the response body.
+
+- `res.end()`
+  Send an empty response back to the client without any body.
+
 ## Route paths
 
 Route paths, in combination with a request method, define the endpoints at which requests can be made. Route paths can be strings, string patterns, or regular expressions.
@@ -62,7 +124,7 @@ app.get("/books", (req, res) => {
 This route path will match /books and /book.
 
 ```js
-app.get("/books?", function(req, res) {
+app.get("/books?", function (req, res) {
   res.send("You requested a list of books...");
 });
 ```
@@ -70,7 +132,7 @@ app.get("/books?", function(req, res) {
 This route path will match butterfly and dragonfly, but not butterflyman, dragonflyman, and so on.
 
 ```js
-app.get(/.*fly$/, function(req, res) {
+app.get(/.*fly$/, function (req, res) {
   res.send("/.*fly$/");
 });
 ```
@@ -191,7 +253,7 @@ app.get("/food", (req, res) => {
 
   const results = data
     // Using if statements
-    .filter(item => {
+    .filter((item) => {
       if (req.query.type) {
         return item.type === req.query.type;
       }
@@ -199,8 +261,10 @@ app.get("/food", (req, res) => {
       return true;
     })
     // Using the ternary operator
-    .filter(item => (req.query.name ? item.name === req.query.name : true))
-    .filter(item => (req.query.color ? item.color === req.query.color : true));
+    .filter((item) => (req.query.name ? item.name === req.query.name : true))
+    .filter((item) =>
+      req.query.color ? item.color === req.query.color : true
+    );
 
   res.json(results);
 });

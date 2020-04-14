@@ -1,11 +1,26 @@
 # Express.js middleware
 
-Middlewares are all the functions that are invoked by the Express.js routing layer before the final handler function is called. They sit in the middle between a raw request and the final intended route. We often refer to these functions as the middleware stack since they are always invoked in the order they are added.
+Middlewares are all the functions that are invoked by the Express.js routing layer on the request before the final handler function is called. They sit in the middle between a raw request and the final intended route. We often refer to these functions as the middleware stack since they are always invoked in the order they are added.
+
 The following diagram shows how the middlewares work together in a _pipeline_ like water flowing in a pipe:
 
 <img src="backend-web-development/_media/middleware.png" alt="how middleware work together" width="700"/>
 
 (image source: https://manuel-rauber.com)
+
+You could also imagine that it is a factory. For the request "assembly line", the request is passed from one middleware to another before it reaches the final handler function where the response is finally sent back to the client.
+
+## Example
+
+The request object, response object and the `next` function are passed to each middleware function. To move on to the `next` function to be run in the stack (could be a middleware function or handler function), the `next` function needs to be called.
+
+```js
+app.use(function(req, res, next) {
+  console.log("Method: " + req.method);
+  console.log("Path: " + req.url);
+  next();
+}
+```
 
 ## Why do we need middlewares?
 
@@ -60,7 +75,7 @@ Refer to the script: [Express.js playground: middleware_example_1](https://githu
 Add a middleware function that will be called for all routes. It has no mount path.
 
 ```js
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   console.log("common middleware function was called!");
   next();
 });
@@ -69,7 +84,7 @@ app.use(function(req, res, next) {
 Add a middleware function that will only be called if a request goes to the `/users` route.
 
 ```js
-app.use("/users", function(req, res, next) {
+app.use("/users", function (req, res, next) {
   console.log("middleware function for /users was called!");
   next();
 });
@@ -78,7 +93,7 @@ app.use("/users", function(req, res, next) {
 Add a middleware function that will only be called if a POST request goes to the `/users` route.
 
 ```js
-app.post("/users", function(req, res, next) {
+app.post("/users", function (req, res, next) {
   console.log("second middleware function for /users was called!");
   next();
 });
@@ -87,7 +102,7 @@ app.post("/users", function(req, res, next) {
 Add a middleware function that will only be called if a GET request goes to the `/users` route.
 
 ```js
-app.get("/users", function(req, res, next) {
+app.get("/users", function (req, res, next) {
   console.log("third middleware function for /users was called!");
   next();
 });

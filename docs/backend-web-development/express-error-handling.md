@@ -40,7 +40,7 @@ Within an error handler, you typically need to do one of two things:
 - call `next(err)` to pass the execution to the next error handler
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(500);
   res.send(
     `Error: ${err} </br>
@@ -67,7 +67,7 @@ app.get("/", (req, res) => {
 Return the correct status code in the response header if `err.code` is defined. Else we will default to the error code `500`.
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(err.code || 500);
   res.send(
     `Error: ${err} </br>
@@ -84,7 +84,7 @@ Refer to the script: [Express.js playground: error_handler_example_3](https://gi
 If you call an asynchronous API in a route handler and you would like to handle errors returned/thrown by those asynchronous operations, you just need to call `next(err)` when some error happens. That is, you call the `next` callback (which is an argument of every middleware and route handler) with an instance of _Error_.
 
 ```js
-app.get("/", function(req, res, next) {
+app.get("/", function (req, res, next) {
   // assume some asynchronous error happens because of an network issue
   const err = new Error("Unexpected network error");
   next(err);
@@ -94,7 +94,7 @@ app.get("/", function(req, res, next) {
 Let's add a route handler that will not be called because it will be skipped when the error is thrown.
 
 ```js
-app.get("/", function(req, res, next) {
+app.get("/", function (req, res, next) {
   console.log("You should not see this line in the console 😡");
 });
 ```
@@ -102,7 +102,7 @@ app.get("/", function(req, res, next) {
 Add a custom error handler that will catch the error and then pass it on to the next error handler.
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   if (err.message === "Unexpected network error") {
     console.log("I don't know how to handle network error. Pass it on.");
     next(err);
@@ -116,7 +116,7 @@ app.use(function(err, req, res, next) {
 Add a final custom error handler that will return a response to the client.
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(500);
   res.send({ error: "internal server error" });
 });
@@ -127,8 +127,8 @@ An example of error handling with an asynchronous API is as follows:
 ```js
 const fs = require("fs");
 
-app.get("/", function(req, res, next) {
-  fs.readFile("/file-does-not-exist", function(err, data) {
+app.get("/", function (req, res, next) {
+  fs.readFile("/file-does-not-exist", function (err, data) {
     if (err) {
       next(err);
     } else {
@@ -145,8 +145,8 @@ To see the value of having error handling middleware, imagine having the followi
 ```js
 const fs = require("fs");
 
-app.get("/", function(req, res, next) {
-  fs.readFile("/file-does-not-exist", function(err, data) {
+app.get("/", function (req, res, next) {
+  fs.readFile("/file-does-not-exist", function (err, data) {
     if (err) {
       res.status(500).json({ error: error.toString() });
     } else {
@@ -192,3 +192,19 @@ You can see now that error handling middleware allows you to consolidate error h
 ## Best practices
 
 As a best practice, we should always declare a default error handler for all requests, to ensure we handle all unforeseeable error scenarios. You will define error-handling middleware last, after other app.use() and routes calls.
+
+## Layer stack
+
+How does middleware, route, error handler, routers work together?
+
+When we call `app.use` or `app.get` etc, we are adding a layer into the app or router.
+Every app or router will have a layer stack - a stack of layers where every _Layer_ has its own _path_.
+
+This layer can be a
+
+- middleware
+- route
+- error handler
+- another router
+
+See this [Medium article](https://medium.com/@viral_shah/express-middlewares-demystified-f0c2c37ea6a1) if you are curious to understand how this layer stack works.
