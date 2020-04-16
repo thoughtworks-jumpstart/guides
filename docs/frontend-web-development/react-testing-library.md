@@ -36,7 +36,13 @@
 As of create-react-app 3.3.0 (2019-12-04), you do not have to do the following steps. `create-react-app` installs the required package for you.
 
 ```sh
-npm install --save @testing-library/react @testing-library/jest-dom
+npm install --save-dev @testing-library/react @testing-library/jest-dom
+```
+
+Import `jest-dom` at the beginning for test file
+
+```
+import '@testing-library/jest-dom/extend-expect';
 ```
 
 ## Running test
