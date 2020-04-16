@@ -122,7 +122,8 @@ No. The more status codes your API deals with, the more status codes you have to
 Implement an API with the following endpoint:
 
 1. Route: GET /songs
-   HTTP Response status code: 200
+
+HTTP Response status code: 200
 
 Expected response:
 

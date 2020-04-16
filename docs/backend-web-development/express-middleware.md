@@ -15,7 +15,7 @@ You could also imagine that it is a factory. For the request "assembly line", th
 The request object, response object and the `next` function are passed to each middleware function. To move on to the `next` function to be run in the stack (could be a middleware function or handler function), the `next` function needs to be called.
 
 ```js
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   console.log("Method: " + req.method);
   console.log("Path: " + req.url);
   next();
@@ -75,7 +75,7 @@ Refer to the script: [Express.js playground: middleware_example_1](https://githu
 Add a middleware function that will be called for all routes. It has no mount path.
 
 ```js
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   console.log("common middleware function was called!");
   next();
 });
@@ -84,7 +84,7 @@ app.use(function (req, res, next) {
 Add a middleware function that will only be called if a request goes to the `/users` route.
 
 ```js
-app.use("/users", function (req, res, next) {
+app.use("/users", (req, res, next) => {
   console.log("middleware function for /users was called!");
   next();
 });
@@ -93,7 +93,7 @@ app.use("/users", function (req, res, next) {
 Add a middleware function that will only be called if a POST request goes to the `/users` route.
 
 ```js
-app.post("/users", function (req, res, next) {
+app.post("/users", (req, res, next) => {
   console.log("second middleware function for /users was called!");
   next();
 });
@@ -102,7 +102,7 @@ app.post("/users", function (req, res, next) {
 Add a middleware function that will only be called if a GET request goes to the `/users` route.
 
 ```js
-app.get("/users", function (req, res, next) {
+app.get("/users", (req, res, next) => {
   console.log("third middleware function for /users was called!");
   next();
 });
@@ -192,7 +192,7 @@ You are also able to add middleware on the router level instead of the applicati
 Add a middleware function that is executed for every request to the router. It has no mount path.
 
 ```js
-var router = express.Router();
+const router = express.Router();
 
 router.use((req, res, next) => {
   console.log("I am middleware for the router");

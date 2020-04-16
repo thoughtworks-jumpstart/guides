@@ -60,7 +60,8 @@ Add more API endpoints to the previous songs API that we had:
 Add middleware for parsing JSON request body.
 
 1. Route: POST /songs
-   HTTP Response status code: 201
+
+HTTP Response status code: 201
 
 Add a new song with id, and return new song
 
@@ -84,7 +85,8 @@ Expected response:
 ```
 
 2. Route: GET /songs/:id
-   HTTP Response status code: 200
+
+HTTP Response status code: 200
 
 Return a song with id using route parameters.
 
@@ -99,7 +101,8 @@ if route path is /songs/1, expected response is:
 ```
 
 3. Route: PUT /songs/:id
-   HTTP Response status code: 200
+
+HTTP Response status code: 200
 
 Replace a song with id, and return modified song
 
@@ -125,7 +128,8 @@ Expected response:
 ```
 
 4. Route: DELETE /songs/:id
-   HTTP Response status code: 200
+
+HTTP Response status code: 200
 
 delete a song with id, and return deleted song
 
