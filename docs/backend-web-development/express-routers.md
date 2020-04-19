@@ -197,3 +197,10 @@ Now we can support both API versions!
 
 What do you see when you go to http://localhost:3000/v1 on the browser?
 How about http://localhost:3000/v2 ?
+
+## Exercises
+
+Now that we have both movies and songs routes on the same App.js file, we should split them into a movies router and songs router.
+
+Make sure that the tests are passing as you refactor the routes.
+After refactoring the code to their individual routers, we shall refactor the tests to their individual test files too.

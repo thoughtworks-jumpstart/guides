@@ -50,9 +50,10 @@ app.delete("/", (req, res) => {
 
 ### cURL
 
-Client URL
-cURL is by default already installed in Mac OS. For Windows, you can download cURL separately.
-You can send different HTTP requests.
+cURL stands for Client URL.
+cURL is by default already installed in Mac OS. For Windows, if you have anything older than Windows 10 build 1706, you can download cURL separately. Else, you might already have cURL.
+
+You can send different HTTP requests using cURL.
 
 For example, let's send a POST request to https://localhost:3000/ with a JSON message body.
 

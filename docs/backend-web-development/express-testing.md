@@ -234,6 +234,78 @@ describe("POST /", () => {
 });
 ```
 
+### Writing test for routes
+
+Let's see an example of writing an actual test for a route.
+
+We want to make a test for the following endpoint:
+
+POST /songs route of the songs API
+
+Test: POST /songs should return a new song object
+Route: POST /songs
+Expected response status code: 201
+Example request body:
+
+```json
+{ "name": "test movie", "artist": "rhianna" }
+```
+
+Example JSON response:
+
+```json
+{ "id": 1, "name": "test movie", "artist": "rhianna" }
+```
+
+```js
+it("POST /songs should add a song and return a new song object", async () => {
+  const newSong = { name: "test movie", artist: "rhianna" };
+  const expectedSong = { id: 1, name: "test movie", artist: "rhianna" };
+
+  const { response } = await request(app)
+    .post("/songs")
+    .send(newSong)
+    .expect(201);
+
+  expect(response.status).toEqual(201);
+  expect(response.body).toEqual(expectedSong);
+});
+```
+
+Could also be written as:
+
+```js
+it("POST /songs should add a song and return a new song object", async () => {
+  const newSong = { name: "test movie", artist: "rhianna" };
+  const expectedSong = { id: 1, name: "test movie", artist: "rhianna" };
+
+  const { body: actualSong } = await request(app)
+    .post("/songs")
+    .send(newSong)
+    .expect(201);
+
+  expect(actualSong).toEqual(expectedSong);
+});
+```
+
+### toMatchObject
+
+Sometimes, we do not want to test for an exact match for the response object. We are satisfied with having certain object properties. We can make use of a useful Jest method called `toMatchObject`.
+
+One possible use of this is for the GET /songs/:id route.
+
+```js
+  it("GET /songs/:id should return the correct song", () => {
+    const expectedSong = {name: "test song", artist: "rhianna"};
+
+    const {body: actualSong} = await request(app)
+    .get("/songs/1")
+    .expect(200)
+
+    expect(actualSong).toMatchObject(expectedSong);
+  });
+```
+
 ### Accessing agent in SuperTest
 
 ```js
@@ -262,6 +334,112 @@ There are some cases where we need to reuse the agent again. For example, we mig
 
 Check the [github page for supertest](https://github.com/visionmedia/supertest) for an example on how to access the agent in SuperTest and reuse the agent to persist a request and its cookies.
 
-## Exercises 
+## Exercises
 
-Add tests to the songs API we have been building.
+Add tests to the existing songs API we have been building.
+
+## TDD with Express.js
+
+Besides songs and the music industry, now our company would like to go into the movie industry. We need more routes on our API. They will now return movie information.
+
+Let's try TDD for movie routes.
+
+Add the tests for the movies endpoints.
+
+Test: POST /movies should return a new movie object
+Route: POST /movies
+Expected response status code: 201
+Example request body:
+
+```json
+{
+  "movieName": "Lion King"
+}
+```
+
+Example JSON response:
+
+```json
+{
+  "id": 1,
+  "movieName": "Lion King"
+}
+```
+
+Test: GET /songs should return an array containing one song
+Route: GET /movies
+Expected response status code: 200
+Example JSON response:
+
+```json
+[
+  {
+    "id": 1,
+    "movieName": "Lion King"
+  }
+]
+```
+
+Test: GET /movies/:id should return the movie with id
+Route: GET /movies/1
+Expected response status code: 200
+Example JSON response:
+
+```json
+{
+  "id": 1,
+  "movieName": "Lion King"
+}
+```
+
+Test: PUT /movies/:id should return the updated movie
+Route: PUT /movies/1
+Expected response status code: 200
+
+Example request body:
+
+```json
+{
+  "movieName": "Frozen 2"
+}
+```
+
+Example JSON response:
+
+```json
+{
+  "id": 1,
+  "movieName": "Frozen 2"
+}
+```
+
+Test: DELETE /movies/:id should return the deleted movie
+Route: DELETE /movies/1
+Expected response status code: 200
+
+Example request body:
+
+```json
+{
+  "movieName": "Frozen 2"
+}
+```
+
+Example JSON response:
+
+```json
+{
+  "id": 1,
+  "movieName": "Frozen 2"
+}
+```
+
+Test: GET /movies should return an empty array
+Route: GET /movies
+Expected response status code: 200
+
+Example JSON response:
+
+```json
+[]
+```

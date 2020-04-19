@@ -69,8 +69,4 @@ To define the parameter callbacks on a router instead, use `router.param`.
 ## Exercises
 
 Refactor the previous songs route to use `app.param` for the `id` parameter.
-Find the song of that particular id and put the song in the request object.
-
-```js
-req.song = song;
-```
+Find the song of that particular id and put the song in the request object as a property of the request object.
