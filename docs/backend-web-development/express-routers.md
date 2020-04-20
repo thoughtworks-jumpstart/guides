@@ -198,6 +198,12 @@ Now we can support both API versions!
 What do you see when you go to http://localhost:3000/v1 on the browser?
 How about http://localhost:3000/v2 ?
 
+## How to really solve the versioning problem?
+
+Should we stick to versioning like what we do in REST or change to an evolution style where we still try to support old endpoints as much as possible? There is no easy answer.
+
+https://github.com/graphql/graphql-spec/issues/134
+
 ## Exercises
 
 Now that we have both movies and songs routes on the same App.js file, we should split them into a movies router and songs router.

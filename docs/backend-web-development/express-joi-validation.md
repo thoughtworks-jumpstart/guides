@@ -84,10 +84,7 @@ const schema = Joi.object({
   password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
   repeat_password: Joi.ref("password"), // must equal to password
 
-  birthyear: Joi.number()
-    .integer()
-    .min(1900)
-    .max(2013), // an integer between 1900 and 2013
+  birthyear: Joi.number().integer().min(1900).max(2013), // an integer between 1900 and 2013
 
   //email a valid email address string
   //must have two domain parts e.g. example.com
@@ -132,12 +129,8 @@ We could put the schema in a function that will return the result object.
 function validateSong(song) {
   const schema = Joi.object({
     id: Joi.number().integer(),
-    name: Joi.string()
-      .min(3)
-      .required(),
-    artist: Joi.string()
-      .min(3)
-      .required(),
+    name: Joi.string().min(3).required(),
+    artist: Joi.string().min(3).required(),
   });
   return schema.validate(song);
 }
@@ -151,6 +144,6 @@ if (validation.error) {
   const error = new Error(validation.error.details[0].message);
   // 400 Bad Request
   error.statusCode = 400;
-  return next(error);
+  next(error);
 }
 ```

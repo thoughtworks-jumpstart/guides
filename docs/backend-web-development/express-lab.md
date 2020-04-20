@@ -139,10 +139,6 @@ Implement tests with Jest and Supertest (include testing for errors)
 
 Integrate Express.js routers to organise your "who is next" routes (put into routes folder)
 
-## Refactoring to controllers folder
-
-Lab: refactoring of routes
-
 ## Error
 
 Integrate a default error handler middleware for your "who is next" routes
@@ -156,6 +152,5 @@ Integrate Joi validation library to validate data
 - package.json
 - package-lock.json
 - src
-  - controllers
   - routes
 - \_\_tests\_\_

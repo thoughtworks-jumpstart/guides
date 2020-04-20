@@ -40,7 +40,7 @@ Within an error handler, you typically need to do one of two things:
 - call `next(err)` to pass the execution to the next error handler
 
 ```js
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   res.status(500);
   res.send(
     `Error: ${err} </br>
@@ -59,19 +59,19 @@ We can define properties to the error object such as a `code` so that we can ret
 app.get("/", (req, res) => {
   // synchronous error
   error = new Error(" 😱! Error! Error!");
-  error.code = 200;
+  error.statusCode = 200;
   throw error;
 });
 ```
 
-Return the correct status code in the response header if `err.code` is defined. Else we will default to the error code `500`.
+Return the correct status code in the response header if `err.statusCode` is defined. Else we will default to the error code `500`.
 
 ```js
-app.use(function (err, req, res, next) {
-  res.status(err.code || 500);
+app.use((err, req, res, next) => {
+  res.status(err.statusCode || 500);
   res.send(
     `Error: ${err} </br>
-    Error Status Code: ${err.code} <br>
+    Error Status Code: ${err.statusCode} <br>
     Error stack: ${err.stack}`
   );
 });
@@ -84,7 +84,7 @@ Refer to the script: [Express.js playground: error_handler_example_3](https://gi
 If you call an asynchronous API in a route handler and you would like to handle errors returned/thrown by those asynchronous operations, you just need to call `next(err)` when some error happens. That is, you call the `next` callback (which is an argument of every middleware and route handler) with an instance of _Error_.
 
 ```js
-app.get("/", function (req, res, next) {
+app.get("/", (req, res, next) => {
   // assume some asynchronous error happens because of an network issue
   const err = new Error("Unexpected network error");
   next(err);
@@ -94,7 +94,7 @@ app.get("/", function (req, res, next) {
 Let's add a route handler that will not be called because it will be skipped when the error is thrown.
 
 ```js
-app.get("/", function (req, res, next) {
+app.get("/", (req, res, next) => {
   console.log("You should not see this line in the console 😡");
 });
 ```
@@ -102,7 +102,7 @@ app.get("/", function (req, res, next) {
 Add a custom error handler that will catch the error and then pass it on to the next error handler.
 
 ```js
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   if (err.message === "Unexpected network error") {
     console.log("I don't know how to handle network error. Pass it on.");
     next(err);
@@ -116,9 +116,9 @@ app.use(function (err, req, res, next) {
 Add a final custom error handler that will return a response to the client.
 
 ```js
-app.use(function (err, req, res, next) {
-  res.status(500);
-  res.send({ error: "internal server error" });
+app.use((err, req, res, next) => {
+  err.statusCode = err.statusCode || 500;
+  res.status(err.statusCode).send(err.message);
 });
 ```
 
