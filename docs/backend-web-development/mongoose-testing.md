@@ -26,35 +26,16 @@ Here is an example on using it with Jest: https://github.com/nodkz/mongodb-memor
 
 before writing any test...
 
+pokemons.route.test.js
+
 ```js
-//pokemons.route.test.js
 const request = require("supertest");
 const app = require("../../src/app");
 const Pokemon = require("../../src/models/pokemon.model");
-const mongoose = require("mongoose");
-const { MongoMemoryServer } = require("mongodb-memory-server");
-
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useFindAndModify", false);
-mongoose.set("useCreateIndex", true);
-mongoose.set("useUnifiedTopology", true);
+const { teardownMongoose } = require("../../test/mongoose");
 
 describe("pokemons", () => {
-  let mongoServer;
-  beforeAll(async () => {
-    try {
-      mongoServer = new MongoMemoryServer();
-      const mongoUri = await mongoServer.getConnectionString();
-      await mongoose.connect(mongoUri);
-    } catch (err) {
-      console.error(err);
-    }
-  });
-
-  afterAll(async () => {
-    await mongoose.disconnect();
-    await mongoServer.stop();
-  });
+  afterAll(async () => await teardownMongoose());
 
   beforeEach(async () => {
     const pokemonData = [
@@ -82,6 +63,49 @@ describe("pokemons", () => {
 
 ```
 
+In package.json:
+
+```json
+"jest": {
+    "globalSetup": "./test/setup.js",
+    "globalTeardown": "./test/teardown.js"
+  }
+```
+
+test/setup.js
+
+```js
+const { MongoMemoryServer } = require("mongodb-memory-server");
+
+module.exports = async () => {
+  const mongoServer = new MongoMemoryServer();
+  const mongoUri = await mongoServer.getConnectionString();
+  process.env.MONGODB_URI = mongoUri;
+  // Set reference to mongo server in order to close the server during teardown
+  global.__MONGOSERVER__ = mongoServer;
+};
+```
+
+test/teardown.js
+
+```js
+module.exports = async () => {
+  await global.__MONGOSERVER__.stop();
+};
+```
+
+test/mongoose.js
+
+```js
+const mongoose = require("mongoose");
+
+const teardownMongoose = async () => {
+  // proper teardown of mongoose to prevent leaks
+  await mongoose.disconnect();
+};
+module.exports = { teardownMongoose };
+```
+
 If you try testing with mongoose now, you will see the following warning
 
 ```sh
@@ -93,6 +117,7 @@ Add this to package.json
 ```json
 //package.json
 "jest": {
+  ...
     "testEnvironment": "node"
   }
 ```
@@ -157,3 +182,7 @@ https://formidable.com/blog/2019/fast-node-testing-mongodb/
 In the example above, we make use of the mongodb-memory-server to automatically give us a fresh database in each test case.
 
 Without that library, another possible solution is to explicitly delete all data in the test database after each test finishes running. That's a bit tedious but still works. Here is a [sample project showing this approach](https://github.com/thoughtworks-jumpstart/express-blog-api-mongoose-and-tests). Check out the test cases in tests/integration-tests to see the sample tests.
+
+## Exercises
+
+Integrate mongoose into your testing for your song routes.

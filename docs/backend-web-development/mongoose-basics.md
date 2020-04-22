@@ -33,7 +33,7 @@ const mongoOptions = {
 
 // will create a new db if does not exist
 const dbName = "pokedex";
-const dbUrl = global.__MONGO_URI__ || "mongodb://localhost:27017/" + dbName;
+const dbUrl = process.env.MONGODB_URI || "mongodb://localhost:27017/" + dbName;
 mongoose.connect(dbUrl, mongoOptions);
 const db = mongoose.connection;
 
@@ -42,16 +42,16 @@ const db = mongoose.connection;
 // read https://www.tjvantoll.com/2015/12/29/console-error-bind/
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
-  console.log("connected to mongodb");
+  console.log(`connected to mongodb at ${dbUrl}`);
 });
 ```
 
 We put this in a "db.js" file in a utils folder.
 
-To connect to the database:
+To connect to the database, "require" this file in app.js:
 
 ```js
-//index.js
+//app.js
 require("./utils/db");
 ```
 
@@ -89,7 +89,9 @@ We define a property called `name` with a schema type `String` which maps to an 
 
 `name` is also a `required` field, which means that a document using this schema must have this field. The value of `name` has to have a length of at least 3.
 
-Note that the `unique` field of `name` does not enforce uniqueness with validation but instead will try to an unique index in your the MongoDB database. If the index is not built correctly, this might not always work.
+The `unique` field of `name` does not enforce uniqueness with validation but instead will try to an unique index in your the MongoDB database. If the index is not built correctly, this might not always work. See the index being created in the database using MongoDB Compass.
+
+(Note that if you try to enforce uniqueness for a field that could be null or empty, you might need to create the unique index as a partial index that ignores null or empty values. See https://stackoverflow.com/questions/52094484/mongodb-create-unique-index-on-a-field-not-in-all-documents for more details.)
 
 The following Schema Types are allowed:
 

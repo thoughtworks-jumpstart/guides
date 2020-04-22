@@ -113,6 +113,7 @@
   - [Mongoose CRUD](backend-web-development/mongoose-crud)
   - [Mongoose virtuals](backend-web-development/mongoose-virtuals)
   - [Mongoose validation](backend-web-development/mongoose-validation)
+  - [Mongoose and express controllers](backend-web-development/mongoose-express)
   - [Mongoose testing](backend-web-development/mongoose-testing)
   - [Security auth](backend-web-development/security-auth)
   - [Security cryptography basics](backend-web-development/security-cryptography-basics)
