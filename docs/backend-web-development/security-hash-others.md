@@ -32,6 +32,16 @@ Common cryptographic hash functions including:
 
 (From: https://hackernoon.com/cryptographic-hashing-c25da23609c3)
 
+### MD5 failure
+
+> One basic requirement of any cryptographic hash function is that it should be computationally infeasible to find two distinct messages that hash to the same value. MD5 fails this requirement catastrophically; such collisions can be found in seconds on an ordinary home computer.
+
+In 2004,it was shown that MD5 is not collision-resistant. Thus MD5 is not suitable for applications like SSL certificates or digital signatures that rely on this property for digital security.
+
+### SHA-2 Hashing
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DMtFhACPnTY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Protecting Passwords
 
 Websites store their user passwords in their databases. For security reasons, those passwords are not stored in plaintext. Instead, the values stored in the databases are actually the hashes of the original passwords, generated using cryptographic hash functions like bcrypt.
@@ -65,31 +75,16 @@ We have three aims:
 
 - Non-repudiation: If the recipient passes the message and the proof to a third party, can the third party be confident that the message originated from the sender?
 
-| Security        | Hash | MAC       | Digital    |
-| --------------- | ---- | --------- | ---------- |
-| Integrity       | Yes  | Yes       | Yes        |
-| Authentication  | No   | Yes       | Yes        |
-| Non-repudiation | No   | No        | Yes        |
-| Kind of keys    | none | symmetric | asymmetric |
+| Security        | Hash | MAC       | Digital signature |
+| --------------- | ---- | --------- | ----------------- |
+| Integrity       | Yes  | Yes       | Yes               |
+| Authentication  | No   | Yes       | Yes               |
+| Non-repudiation | No   | No        | Yes               |
+| Kind of keys    | none | symmetric | asymmetric        |
 
 For MAC, receiver can forge any message the sender sends as the key is shared.
 
 ## Other Use Cases of Cryptography
-
-### SSL Certificates
-
-When you visit a website, you may notice a green lock icon on the URL address bar. That indicates the website has a certificate to prove its identity.
-
-Each certificate has a private key and public key. The web server hosting the website holds the private key, and the browsers download the certificates which contains the public key.
-
-Then the browser can send a challenge (**nonce**) to the web server. The challenge is basically some random number encrypted with the public key of the certificate. If the web server holds the corresponding private key, it should be able to decrypt the challenge and return the correct random number to the browser.
-
-Upon receiving the correct random number sent in the challenge, the browser can confirm the web server holds the correct private key, hence its identify (as declared in the certificate) can be trusted.
-
-### HTTPS
-
-Hypertext Transfer Protocol Secure (HTTPS) is an extension of the HTTP for secure communication over a computer network, and is widely used on the Internet. In HTTPS, the communication protocol is encrypted using Transport Layer Security (TLS), or formerly, its predecessor, Secure Sockets Layer (SSL). The protocol is therefore also often referred to as HTTP over TLS, or HTTP over SSL.
-A website that supports HTTPS uses the public/private key associated with its SSL certificate to create a random number and share it with the browser. That random number is used as a secret to encrypt/decrypt the HTTP requests/responses between the browser and the server.
 
 ### Blockchain
 
