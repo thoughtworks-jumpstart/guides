@@ -1,29 +1,32 @@
 # Mongoose middleware
 
-Middleware are functions that run at specific stages of a pipeline. Mongoose supports middleware for the following operations:
+Middleware are functions that run at specific stages of a pipeline. For Mongoose, [middleware is specified on the schema level](https://mongoosejs.com/docs/middleware.html).
+
+Mongoose has 4 types of middleware.
 
 Aggregate
 Document
 Model
 Query
 
-For instance, models have `pre` and `post` functions that take two parameters:
+For instance, for document middleware, the `pre` and `post` functions will take two parameters:
 
-- Type of event (‘init’, ‘validate’, ‘save’, ‘remove’)
-- A callback that is executed with this referencing the model instance
+- Type of event ('init', 'validate', 'save', 'remove', 'updateOne' and 'deleteOne' )
+- A callback that is executed with `this` referencing the document
 
-https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/
+All middleware types support pre and post hooks.
+
+Also see https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/.
 
 ## Hashing password with bcrypt
 
 Hashing user's password with bcrypt before saving to database.
 
 ```js
-userSchema.pre("save", async function (next) {
+userSchema.pre("save", async function () {
   if (this.isModified("password")) {
     const rounds = 10;
     this.password = await bcrypt.hash(this.password, rounds);
-    next();
   }
 });
 ```

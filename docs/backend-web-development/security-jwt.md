@@ -56,7 +56,9 @@ Decoding it using base64url, we can see the plaintext of the three parts.
 We have been using this term a few times above. What exactly is this thing? Why do we need it?
 This is one algorithm that converts binary data (or text data) into a format that can be carried in HTTP request URL or headers.
 
-According to the specification of HTTP protocol, there are certain characters (such as + and =) that are not allowed to apppar as part of URL or request/response header. On the other hand, people usually include JWT tokens as part of their HTTP requests (as we will show below), so it's important to make sure JWT token value do not contain those forbidden characters.
+According to the specification of HTTP protocol, there are certain characters (such as + and =) that are not allowed to apppar as part of URL or request/response header. Both characters have a special meaning in the URI address: “+” is interpreted as space, while “=” is used to send data via query string as “key=value” pair.
+
+On the other hand, people often include JWT tokens as part of their HTTP requests (as we will show below), so it's important to make sure JWT token value do not contain those forbidden characters.
 
 People created this base64url encoding scheme for this purpose.
 
@@ -66,7 +68,7 @@ Base64url is an **encoding** scheme, not an **encryption** scheme. It is easily 
 
 ## Why have a signature? What is RS256 or HS256?
 
-Text from https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720
+Adapted from https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720
 
 > Both choices refer to what algorithm the identity provider uses to sign the JWT. Signing is a cryptographic operation that generates a “signature” (part of the JWT) that the recipient of the token can validate to ensure that the token has not been tampered with.
 >
@@ -76,7 +78,7 @@ Text from https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/77
 
 ### A good secret for HS256
 
-Text from https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/
+Text adapted from https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/
 
 [JSON Web Algorithms](https://tools.ietf.org/html/rfc7518) defines the minimum key length to be equal to the size in bits of the hash function used along with the HMAC algorithm:
 
@@ -84,7 +86,7 @@ Text from https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/
 
 If a short key like `secret` (which is ironically very not secret!) is used, we can use [brute force attacks to guess the key](https://auth0.com/blog/brute-forcing-hs256-is-possible-the-importance-of-using-strong-keys-to-sign-jwts/).
 
-Alternatively, use HS256.
+Alternatively, use RS256.
 
 ## Using JWT for http request authentication and authorization
 
@@ -125,29 +127,11 @@ For us to read cookies, we need `cookie-parser`.
 npm install cookie-parser
 ```
 
-For front-end to use this backend, we use `cors`.
-Same origin policy, see https://jonhilton.net/cross-origin-request-blocked/
-
-`cors` helps us to efficiently handle cross domain requests.
-
-```
-npm install cors
-```
-
-In app.js, we use these middleware.
+In app.js, we use this middleware.
 
 ```js
 // app.js
 const cookieParser = require("cookie-parser");
-const cors = require("cors");
-
-const corsOptions = {
-  credentials: true,
-  allowedHeaders: "content-type",
-  origin: "http://localhost:3001",
-};
-
-app.use(cors(corsOptions));
 
 app.use(cookieParser());
 ```
@@ -179,7 +163,6 @@ const trainerSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    index: true, // helps us to find by username, note that this has a significant production impact
     unique: true,
     minlength: 3,
     lowercase: true,
@@ -197,18 +180,19 @@ const trainerSchema = new mongoose.Schema({
   },
 });
 
-trainerSchema.virtual("fullName").get(function() {
+trainerSchema.virtual("fullName").get(function () {
   return `${this.salutation} ${this.firstName} ${this.lastName}`;
 });
 
-trainerSchema.virtual("reverseName").get(function() {
+trainerSchema.virtual("reverseName").get(function () {
   return `${this.lastName}, ${this.firstName}`;
 });
 
-trainerSchema.pre("save", async function(next) {
-  const rounds = 10;
-  this.password = await bcrypt.hash(this.password, rounds);
-  next();
+trainerSchema.pre("save", async function () {
+  if (this.isModified("password")) {
+    const rounds = 10;
+    this.password = await bcrypt.hash(this.password, rounds);
+  }
 });
 
 const Trainer = mongoose.model("Trainer", trainerSchema);
@@ -222,7 +206,6 @@ module.exports = Trainer;
 router.post("/", async (req, res, next) => {
   try {
     const trainer = new Trainer(req.body);
-    await Trainer.init();
     const newTrainer = await trainer.save();
     res.send(newTrainer);
   } catch (err) {
@@ -283,12 +266,12 @@ const getJWTSecret = () => {
   return secret;
 };
 
-const createJWTToken = username => {
+const createJWTToken = (username) => {
   const today = new Date();
   const exp = new Date(today);
 
   const secret = getJWTSecret();
-  exp.setDate(today.getDate() + 60);
+  exp.setDate(today.getDate() + 60); // adding days
 
   const payload = { name: username, exp: parseInt(exp.getTime() / 1000) };
   const token = jwt.sign(payload, secret);
@@ -345,10 +328,9 @@ router.post("/login", async (req, res, next) => {
     // Can expiry date on cookie be changed? How about JWT token?
     res.cookie("token", token, {
       expires: expiryDate,
-      httpOnly: true,
+      httpOnly: true, // client-side js cannot access cookie info
+      secure: true, // use HTTPS
     });
-
-    // why can't we have secure: true?
 
     res.send("You are now logged in!");
   } catch (err) {
@@ -367,6 +349,14 @@ You can generate a good random 256 bits key (crypographically strong pseudorando
 ```sh
 node -e "console.log(require('crypto').randomBytes(256 / 8).toString('hex'));"
 ```
+
+You can also generate a base64 key with:
+
+```sh
+node -e "console.log(require('crypto').randomBytes(256 / 8).toString('base64'));"
+```
+
+If you choose to use a base64 key, read the key into a Buffer using `Buffer.from(key, "base64")` and use it with `jwt.sign` and `jwt.verify`.
 
 Save it in `.env` file and do not commit it. Remember to add the `.env` file to `.gitignore`.
 
@@ -428,3 +418,7 @@ This solution works, however, if you do this, there is not much benefit of using
 
 If you use JWT token for session tracking, all the session information is in the JWT token. When a user logout, your client side application needs to remove this token from its memory.
 If the JWT token is saved in a cookie, the logout route handler on the server side needs to delete the cookie that stores JWT token upon user logout. That can be done via the response.clearCookie() provided by Express framework.
+
+## Exercises
+
+Add `user` model to your songs API and protect the routes for PUT and DELETE. You will need to login to PUT and DELETE any of the songs.
