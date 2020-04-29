@@ -1,6 +1,6 @@
-## Pokemon
+## Company reviews
 
-We will be building a React frontend with Express.js backend API for users giving reviews of companies data with Mongoose.
+We will be building a Express.js backend API for users giving reviews of companies data with Mongoose. A React frontend can also be built to retrieve and store data to and from this backend API.
 
 ## Planning the CRUD API
 
@@ -20,7 +20,10 @@ Expected response:`
   "1": "GET /companies",
   "2": "GET /companies/:id",
   "3": "POST /companies/:id/reviews",
-  "4": "GET /user"
+  "4": "GET /user",
+  "5": "POST /user/register",
+  "6": "POST /user/login",
+  "7": "POST /user/logout"
 }
 ```
 
@@ -61,7 +64,7 @@ const companiesData = [
       {
         id: "7da4d967-715b-4dc1-a74b-82a7992704f3",
         userId: "f6e016e6-e254-4375-bf82-797e6c00e3eb",
-        userName: "Brennan Fisher",
+        username: "brenfish",
         rating: 0,
         title: "eligendi adipisci",
         review:
@@ -70,7 +73,7 @@ const companiesData = [
       {
         id: "fa07ef47-5849-4642-8af0-640e4887b1e6",
         userId: "13d0782f-2793-4c83-8279-93c9a03b3ac3",
-        userName: "Annalise Nicolas",
+        username: "annanico",
         rating: 4,
         title: "iusto consequatur",
         review:
@@ -103,7 +106,7 @@ Expected reponse:
     {
       "id":"7da4d967-715b-4dc1-a74b-82a7992704f3",
       "userId":"f6e016e6-e254-4375-bf82-797e6c00e3eb",
-      "userName":"Brennan Fisher",
+      "username":"brenfish",
       "rating":0,
       "title":"eligendi adipisci",
       "review":"Consequatur esse beatae voluptate voluptatibus expedita aperiam perspiciatis cumque voluptatem. Cum quasi dolor ut dignissimos illum magni eos. Et aspernatur illum commodi."
@@ -111,7 +114,7 @@ Expected reponse:
     {
       "id":"fa07ef47-5849-4642-8af0-640e4887b1e6",
       "userId":"13d0782f-2793-4c83-8279-93c9a03b3ac3",
-      "userName":"Annalise Nicolas",
+      "username":"annanico",
       "rating":4,
       "title":"iusto consequatur",
       "review":"Facere dicta delectus impedit sunt sed officia omnis. Officiis vel optio corrupti iure. Atque iusto nemo. Ut voluptas quaerat omnis quis impedit maiores nihil ipsam. Quod ea sed voluptates. Dolorem officia esse enim."
@@ -141,19 +144,18 @@ If you are logged in as:
 ```json
 {
   "userId": "754aece9-64bf-42ab-b91c-bb65e2db3a37",
-  "userName": "Humberto Bruen"
+  "username": "humburn"
 }
 ```
 
 Expected response:
-You can also choose to respond with all reviews for the company, not just the new review.
 
 New review:
 
 ```json
 {
   "userId": "754aece9-64bf-42ab-b91c-bb65e2db3a37",
-  "userName": "Humberto Bruen",
+  "username": "humburn",
   "rating": 4,
   "title": "eligendi adipisci",
   "review": "Et voluptatem voluptas quisquam quos officia assumenda. Mollitia delectus vitae quia molestias nulla ut hic praesentium. Sed et assumenda et iusto velit laborum sunt non."
@@ -179,9 +181,57 @@ Expected response: (you get information about who you are logged in as)
   "id": "754aece9-64bf-42ab-b91c-bb65e2db3a37",
   "firstName": "Humberto",
   "lastName": "Bruen",
+  "username": "humburn",
   "email": "Timothy_VonRueden62@hotmail.com"
 }
 ```
+
+#### 5. POST /user/register to register
+
+Route: POST /user/register
+HTTP Response status code: 201
+
+Sample request:
+
+```json
+{
+  "username": "aberkhoo",
+  "firstName": "Aber",
+  "lastName": "Khoo",
+  "password": "123456789",
+  "email": "Aber_Hoo@gmail.com",
+};
+```
+
+Expected response:
+
+```json
+{
+  "id": "456abcd9-64bf-ab42-4c1f-ab4f23aa3a42",
+  "username": "aberkhoo",
+  "firstName": "Aber",
+  "lastName": "Khoo",
+  "password": "123456789",
+  "email": "Aber_Hoo@gmail.com"
+}
+```
+
+#### 6. POST /user/login to login
+
+Route: POST /user/login
+
+HTTP Response status code: 200
+
+Sample request:
+
+```json
+{
+  "username": "aberkhoo",
+  "password": "123456789",
+};
+```
+
+#### 7. POST /user/logout to logout
 
 Setup a new Github project and install Express.js, `git init`, `npm init -y`.
 
@@ -217,6 +267,7 @@ Lab: Add basic routes, integrate Express routers to organise your routes
 
 Lab: Integrate a default error handler middleware
 Lab: Give 400 Bad Request response when doing POST request
+Lab: Add Joi Validation and 400 errors
 
 ## Mongo and Mongoose
 
@@ -227,8 +278,6 @@ const dbUrl = process.env.MONGODB_URI || "mongodb://localhost:27017/" + dbName;
 ```
 
 ### Create schema, validate, create model
-
-How do we get the userName of a user with only firstName and lastName?
 
 ## Add authentication to protect routes
 

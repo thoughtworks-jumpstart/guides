@@ -126,7 +126,7 @@
   - [Express.js Mongoose lab](backend-web-development/express-mongoose-lab)
   - [Express.js to production](backend-web-development/express-to-production)
   - [Express.js deploy](backend-web-development/express-deploy)
-  - [Express.js Mongoose frontend lab](backend-web-development/express-mongoose-with-frontend-lab)
+  - [Company reviews lab](backend-web-development/company-reviews-lab)
   - [Labs for backend](backend-web-development/backend-labs)
 
 - **Delivering software**
