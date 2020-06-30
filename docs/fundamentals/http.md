@@ -92,7 +92,7 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
 `GET /index.html HTTP/1.1` is called the _request line_.
 `Host: www.example.com`, `User-Agent: Mozilla/4.0` are some of the _request headers_ that exist in the HTTP request. HTTP Headers are key-value pairs that are separated by a colon.
 
-You can find a list of valid headers on [MDN’s HTTP Headers Reference](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
+You can find a list of valid headers on [MDN's HTTP Headers Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 ### Response
 

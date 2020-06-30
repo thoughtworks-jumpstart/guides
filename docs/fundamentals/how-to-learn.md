@@ -97,8 +97,7 @@ There is also a famous book named [How to Read a Book](https://www.amazon.com/Ho
 - use it like a dictionary. know the structure. know where to find things
 - find the API docs (e.g. MDN is great for JavaScript)
 - figure out what you want to do (e.g. split a string into an array)
-- zoom in to the right place in the docs (e.g. .split()) (google is always helpful) - Understand the method - what it does - what parameters it takes in - what should the parameters look like (e.g. string, number, array, object, etc.?) - which parameters are required / optional? - what the return value is
-  pause when confused
+- zoom in to the right place in the docs (e.g. `.split()`) (Google is always helpful) - understand the method, what it does, what parameters it takes in, what the parameters should look like (e.g. string, number, array, object, etc.), which parameters are required/optional, what the return value is
 
 ## Don't be afraid of making mistakes. Embrace failures.
 

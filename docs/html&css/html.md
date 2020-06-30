@@ -195,9 +195,8 @@ HTML5 gives us semantic tags that have built-in keyboard accessibility — they 
 
 Using these various HTML elements to reinforce the meaning of information on our websites will often give us accessibility for free.
 
-you can read more about it here:
+You can read more about it here:
 
-https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
-http://www.html5accessibility.com/
-
-https://developer.chrome.com/apps/a11y
+- https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
+- http://www.html5accessibility.com/
+- https://developer.chrome.com/apps/a11y

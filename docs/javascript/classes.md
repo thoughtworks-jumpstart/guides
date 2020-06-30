@@ -112,7 +112,7 @@ console.log(bob.name);
 
 It is an [experimental feature, available with Node 12](https://github.com/tc39/proposal-class-fields).
 
-You can read the [d]ocumentation at MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Public_fields).
+You can read the [documentation at MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Public_fields).
 
 ## Static Properties
 

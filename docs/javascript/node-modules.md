@@ -56,7 +56,7 @@ var sum = math.add(1, 2); //sum is 3
 How do you export a function but not export it inside an object? You can use the `module` object to do this.
 It contains information about the module and also a key called `exports`.
 
-The `exports` object you youre using previously points to exports key on the `module` object.
+The `exports` object you were using previously points to exports key on the `module` object.
 
 Exporting a function as `exports.add` is the same as exporting it as `module.exports.add`.
 
