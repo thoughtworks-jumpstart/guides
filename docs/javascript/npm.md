@@ -60,7 +60,10 @@ See more examples of a `package.json` file in the [npm docs for creating a packa
 In the above example, notice that there are already two scripts in the `scripts` object. npm scripts are just JSON key-value pairs where the key is the name of the script (such as `start`) and the value contains the script you want to execute (such as `node index.js`).
 
 ```json
-"scripts": {    "start": "node index.js",    ...}
+"scripts": {    
+  "start": "node index.js",    
+  ...
+}
 ```
 
 Being a popular npm script, it can be run like this:
@@ -72,7 +75,10 @@ npm start
 What if you have custom npm scripts such as `start:dev` like in the above example?
 
 ```json
-"scripts": {...    "start:dev": "nodemon index.js"   }
+"scripts": {
+  ...    
+  "start:dev": "nodemon index.js"   
+}
 ```
 
 Now, npm start:dev would not work because it is a custom npm script. Custom npm scripts must be preceded by either `run-script` or `run` for them to be executed.

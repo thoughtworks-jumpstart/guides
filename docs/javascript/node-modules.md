@@ -172,7 +172,7 @@ Their sources are on [Github](https://github.com/nodejs/node/tree/master/lib).
 The main (not all!) core modules are:
 
 - [http](http://nodejs.org/api/http.html#http_http): HTTP clients and servers
-- [util]http://nodejs.org/api/util.html): Utilities
+- [util](http://nodejs.org/api/util.html): Utilities
 - [querystring](http://nodejs.org/api/querystring.html): Parses query-string formatted data
 - [url](http://nodejs.org/api/url.html): Parses URL data
 - [fs](http://nodejs.org/api/fs.html): Writing and reading files
