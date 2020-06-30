@@ -173,10 +173,10 @@ c.area; // data is exposed as a property
 We also can use a setter.
 
 ```js
-class Person = {
+class Person {
   constructor(firstName, lastName) {
     this.firstName = "John";
-    this.lastName: "Doe";
+    this.lastName = "Doe";
     this.language = "";
   }
 

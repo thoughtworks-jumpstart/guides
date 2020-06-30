@@ -49,7 +49,7 @@ for (variable of iterable) {
 ```js
 const numbers = [10, 20, 30];
 for (const number of numbers) {
-  console.log(value);
+  console.log(number);
 }
 ```
 
